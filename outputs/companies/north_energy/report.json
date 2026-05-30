@@ -1,0 +1,396 @@
+{
+  "company": "north_energy",
+  "name": "North Energy ASA",
+  "ticker": "NORTH",
+  "exchange": "Euronext Expand Oslo",
+  "middelborg_link": "Middelborg/Middelboe appears in North Energy top-shareholder disclosures (~1.29% as of 2026-04-07).",
+  "generated_at_utc": "2026-05-30T06:36:03+00:00",
+  "current_period": "FY 2025",
+  "prior_period": "FY 2024",
+  "source_used": {
+    "current_file": "data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+    "current_kind": "pdf",
+    "prior": {
+      "label": "FY 2024",
+      "file": "data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+      "kind": "pdf"
+    }
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf",
+      "issuer_page": "https://northenergy.no/investor-relations/financial-reports-calendar/annual-reports/",
+      "language": "en",
+      "label": "Annual Report 2025",
+      "period": "2025-FY",
+      "sha256": "ad12857e79ea2b9d757f6fb605521de33537acdf3c0a45d64b830c065dbac8f7",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": {
+      "local_path": "data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2025/03/19/641596_North%20Energy%20annual%20report%202024.pdf",
+      "issuer_page": "https://northenergy.no/annual-report-for-2024/",
+      "language": "en",
+      "label": "Annual Report 2024",
+      "period": "2024-FY",
+      "sha256": "9faecd1f17913a9bbbe55ff2f8ca360db710349031f9664586715a53f0f4b1d3",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    }
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": null,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": 3176.0,
+    "ebitda_for_leverage_msek_raw": null
+  },
+  "auto_metrics_provenance": {
+    "interest_expense_msek_raw": {
+      "value": 3176.0,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "Interest costs on lease debt  145  201 \n 3 176",
+      "char_span": [
+        67197,
+        67243
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Interest costs on lease debt 145 201 3 176"
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": 0.8,
+    "organic_growth_pct": 0.8,
+    "gross_margin_yoy_change_pct": -0.5,
+    "ebita_margin_pct": 5.0,
+    "ebitda_margin_pct": 8.0,
+    "interest_coverage_ratio": 2.2,
+    "net_debt_to_ebitda": 3.8,
+    "working_capital_to_revenue_pct": 14.0,
+    "capex_to_depreciation_ratio": 0.9,
+    "order_intake_yoy_pct": null
+  },
+  "manual_metrics_provenance": {},
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": null,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": 5.0,
+    "ebitda_margin_pct": 8.0,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": 3176.0,
+    "ebitda_for_leverage_msek_raw": null,
+    "revenue_yoy_pct": 0.8,
+    "organic_growth_pct": 0.8,
+    "gross_margin_yoy_change_pct": -0.5,
+    "interest_coverage_ratio": 2.2,
+    "net_debt_to_ebitda": 3.8,
+    "working_capital_to_revenue_pct": 14.0,
+    "capex_to_depreciation_ratio": 0.9
+  },
+  "metrics_audit": {
+    "capex_to_depreciation_ratio": {
+      "auto": null,
+      "manual": 0.9,
+      "chosen": 0.9,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": 5.0,
+      "chosen": 5.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": 8.0,
+      "chosen": 8.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "gross_margin_yoy_change_pct": {
+      "auto": null,
+      "manual": -0.5,
+      "chosen": -0.5,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": null,
+      "manual": 2.2,
+      "chosen": 2.2,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": null,
+      "manual": 3.8,
+      "chosen": 3.8,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": 0.8,
+      "chosen": 0.8,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": 0.8,
+      "chosen": 0.8,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "working_capital_to_revenue_pct": {
+      "auto": null,
+      "manual": 14.0,
+      "chosen": 14.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "efficiency",
+      "mention_count": 2,
+      "mention_density_per_10k_chars": 0.15,
+      "term_hits": [
+        {
+          "term": "efficiency",
+          "count": 2
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -0.5,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 5.0,
+          "expected_direction": "up",
+          "score": 1
+        }
+      ],
+      "alignment_score": 0.0,
+      "verdict": "weak_support",
+      "severity": "info",
+      "claim_excerpt": "increase efficiency significantly in comparison to",
+      "claim_excerpt_matched_term": "efficiency",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'efficiency' qualitatively, yet supporting metrics (gross_margin_yoy_change_pct=-0.5, ebita_margin_pct=5.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 0.3,
+      "headline": "North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-0.5, ebita_margin_pct=5.0).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf",
+          "issuer_page": "https://northenergy.no/investor-relations/financial-reports-calendar/annual-reports/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "ad12857e79ea2b9d757f6fb605521de33537acdf3c0a45d64b830c065dbac8f7",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "excerpt_locator": {
+            "page": 9,
+            "bbox": {
+              "x0": 310.9621000000001,
+              "top": 434.79080000000016,
+              "x1": 528.8423500000002,
+              "bottom": 445.29080000000016,
+              "width": 217.88025000000016,
+              "height": 10.5
+            },
+            "sentence_context": {
+              "prev": "Wind Catching Systems AS WCS is a developer of floating offshore wind technology and intends to enable offshore wind operators and developers to produce electricity at a cost that competes with other energy sources, without subsidies.",
+              "match": "The company is currently developing floating multi-turbine technology (“WCS concept”) that is expected to cut acreage use by more than 80% and increase efficiency significantly in comparison to conventional floating offshore wind farms.",
+              "next": "Wind Catching Systems continued making good progress in developing its innovative solution for floating offshore wind production and attracted further financial support through additional With the successful introduction of Reach Remote 1 and 2, Reach Subsea went ahead with the scale-up plan through ordering Reach Remote 3 and 4 from Kongsberg Maritime, with expected delivery in 2027."
+            },
+            "normalised_search": "increase efficiency significantly in comparison to"
+          },
+          "pdf_page_hit": 9,
+          "issuer_url_at_page": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf#page=9",
+          "issuer_url_at_phrase": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf#page=9&search=increase%20efficiency%20significantly%20in%20comparison%20to",
+          "evidence_snippet": {
+            "path": "outputs/evidence/north_energy/6d56ded422d8.png",
+            "width": 1588,
+            "height": 62,
+            "size_bytes": 21022,
+            "page": 9,
+            "bbox": {
+              "x0": 310.9621000000001,
+              "top": 434.79080000000016,
+              "x1": 528.8423500000002,
+              "bottom": 445.29080000000016,
+              "width": 217.88025000000016,
+              "height": 10.5
+            },
+            "key": "6d56ded422d8"
+          }
+        },
+        "prior": {
+          "local_path": "data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2025/03/19/641596_North%20Energy%20annual%20report%202024.pdf",
+          "issuer_page": "https://northenergy.no/annual-report-for-2024/",
+          "language": "en",
+          "label": "Annual Report 2024",
+          "period": "2024-FY",
+          "sha256": "9faecd1f17913a9bbbe55ff2f8ca360db710349031f9664586715a53f0f4b1d3",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -0.5,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 11,
+            "bbox": {
+              "x0": 688.3602905273438,
+              "top": 491.7549743652344,
+              "x1": 702.923828125,
+              "bottom": 505.24749755859375,
+              "width": 14.56353759765625,
+              "height": 13.492523193359375
+            },
+            "matched_str": "0.5",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/north_energy/metric_65ee83de5487.png",
+            "width": 1588,
+            "height": 68,
+            "size_bytes": 26235,
+            "page": 11,
+            "bbox": {
+              "x0": 688.3602905273438,
+              "top": 491.7549743652344,
+              "x1": 702.923828125,
+              "bottom": 505.24749755859375,
+              "width": 14.56353759765625,
+              "height": 13.492523193359375
+            },
+            "matched_str": "0.5",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 5.0,
+          "expected_direction": "up",
+          "score": 1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 54,
+            "bbox": {
+              "x0": 622.9288330078125,
+              "top": 363.3724060058594,
+              "x1": 642.9942626953125,
+              "bottom": 376.86492919921875,
+              "width": 20.0654296875,
+              "height": 13.492523193359375
+            },
+            "matched_str": "5.00",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/north_energy/metric_0a92378f52f0.png",
+            "width": 1588,
+            "height": 68,
+            "size_bytes": 27262,
+            "page": 54,
+            "bbox": {
+              "x0": 622.9288330078125,
+              "top": 363.3724060058594,
+              "x1": 642.9942626953125,
+              "bottom": 376.86492919921875,
+              "width": 20.0654296875,
+              "height": 13.492523193359375
+            },
+            "matched_str": "5.00",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ]
+    }
+  ],
+  "severity_tally": {
+    "critical": 0,
+    "warning": 0,
+    "info": 1
+  },
+  "findings_count": 1
+}

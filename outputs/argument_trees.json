@@ -1,0 +1,3457 @@
+{
+  "generated_at_utc": "2026-05-30T06:36:03+00:00",
+  "schema_version": 1,
+  "trees": {
+    "qben_infra|narrative_dissonance|Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the": {
+      "id": "argnode-bf6f7e7aa2",
+      "label": "Qben Infra AB: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the opposite way (revenue_yoy_pct=-13.3, organic_growth_pct=-13.3).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 5.85
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-baa8a524c0",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Aktien handlas på Nasdaq First North Premier Growth",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline": {
+      "id": "argnode-3d537ea87c",
+      "label": "Qben Infra AB: Qben Infra's Q1 2026 reported continuing-operations revenue of 169 MSEK is grounded in real external order flow from Norwegian and EU public",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Qben Infra's Q1 2026 reported continuing-operations revenue of 169 MSEK is grounded in real external order flow from Norwegian and EU public-sector buyers, and the CEO narrative description of the quarter is consistent with the measured revenue trajectory (no explanatory slippage between negative numbers and uniformly positive language).",
+      "metadata": {
+        "hypothesis_id": "hyp_qben_q1_2026_revenue_pipeline",
+        "entity": "Qben Infra AB",
+        "claim_category": "revenue_pipeline_support",
+        "total_ledger_entries": 3
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-a38e7fc25c",
+          "label": "Summary verdict landscape",
+          "kind": "summary",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Severity: critical. Taps reporting: ted=not_found, derived_revenue_support=refutes, derived_explanatory_slippage=refutes",
+          "metadata": {
+            "claim_category": "revenue_pipeline_support",
+            "derived_severity": "critical",
+            "distinct_taps": [
+              "derived_explanatory_slippage",
+              "derived_revenue_support",
+              "ted"
+            ],
+            "verdict_summary": {
+              "not_found": 1,
+              "refutes": 2
+            }
+          },
+          "links": [],
+          "children": []
+        },
+        {
+          "id": "argnode-cdfb3fd48e",
+          "label": "Q: fq_revenue_backed_by_external_awards",
+          "kind": "question",
+          "verdict": "refutes",
+          "severity": null,
+          "glyph": "✗",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-a33d725b3f",
+              "label": "derived_revenue_support: refutes (confidence 0.65)",
+              "kind": "evidence",
+              "verdict": "refutes",
+              "severity": null,
+              "glyph": "✗",
+              "detail": "Only 25% of 4 operating subsidiaries show a post-acquisition prime-contract footprint in Doffin or TED (4 awards). This is below the 50% external-support threshold; reported revenue of 169.0 MSEK is poorly grounded in public-registry order flow.",
+              "metadata": {
+                "tap_kind": "derived_analysis",
+                "addresses_questions": [
+                  "fq_revenue_backed_by_external_awards"
+                ],
+                "payload_sha256": "0e7aa3ebd14d9e6ec43c55b3e18f34cb2fca9a2f72c0b162a729dc46cc7834bc",
+                "gathered_at_utc": "2026-05-30T06:24:41+00:00",
+                "payload_summary": {
+                  "any_support_pct": 50.0,
+                  "confidence_weighted_support_pct": 25.0,
+                  "external_support_pct": 25.0,
+                  "external_support_threshold_pct": 50.0,
+                  "method": "v10.revenue_support_calculator",
+                  "peers_evaluated": 4,
+                  "peers_with_any_confirmed_awards": 2,
+                  "peers_with_post_acq_confirmed_awards": 1,
+                  "per_peer_breakdown": [
+                    {
+                      "confirmed_count": 6,
+                      "peer_entity": "Banefjell AS",
+                      "peer_hypothesis_id": "hyp_qben_banefjell_established",
+                      "post_acq_count": 4,
+                      "pre_acq_count": 2,
+                      "tap_breakdown": [
+                        {
+                          "confidence": 0.85,
+                          "confirmed_award_count": 4,
+                          "post_acquisition_award_count": 2,
+                          "pre_acquisition_award_count": 2,
+                          "tap_id": "doffin",
+                          "tap_signal": 0.85,
+                          "verdict": "confirms"
+                        },
+                        {
+                          "confidence": 0.85,
+                          "confirmed_award_count": 2,
+                          "post_acquisition_award_count": 2,
+                          "pre_acquisition_award_count": 0,
+                          "tap_id": "ted",
+                          "tap_signal": 0.85,
+                          "verdict": "confirms"
+                        }
+                      ],
+                      "weighted_signal": 1.0
+                    },
+                    {
+                      "confirmed_count": 0,
+                      "peer_entity": "SLAM Jernbaneteknikk AS",
+                      "peer_hypothesis_id": "hyp_qben_slam_specialist",
+                      "post_acq_count": 0,
+                      "pre_acq_count": 0,
+                      "tap_breakdown": [
+                        {
+                          "confidence": 0.7,
+                          "confirmed_award_count": 0,
+                          "post_acquisition_award_count": 0,
+                          "pre_acquisition_award_count": 0,
+                          "tap_id": "doffin",
+                          "tap_signal": 0.0,
+                          "verdict": "not_found"
+                        },
+                        {
+                          "confidence": 0.45,
+                          "confirmed_award_count": 0,
+                          "post_acquisition_award_count": 0,
+                          "pre_acquisition_award_count": 0,
+                          "tap_id": "ted",
+                          "tap_signal": 0.0,
+                          "verdict": "not_found"
+                        }
+                      ],
+                      "weighted_signal": 0.0
+                    },
+                    {
+                      "confirmed_count": 0,
+                      "peer_entity": "Team Bygg AS",
+                      "peer_hypothesis_id": "hyp_qben_team_bygg_player",
+                      "post_acq_count": 0,
+                      "pre_acq_count": 0,
+                      "tap_breakdown": [
+                        {
+                          "confidence": 0.6,
+                          "confirmed_award_count": 0,
+                          "post_acquisition_award_count": 0,
+                          "pre_acquisition_award_count": 0,
+                          "tap_id": "doffin",
+                          "tap_signal": 0.0,
+                          "verdict": "refutes"
+                        },
+                        {
+                          "confidence": 0.45,
+                          "confirmed_award_count": 0,
+                          "post_acquisition_award_count": 0,
+                          "pre_acquisition_award_count": 0,
+                          "tap_id": "ted",
+                          "tap_signal": 0.0,
+                          "verdict": "not_found"
+                        }
+                      ],
+                      "weighted_signal": 0.0
+                    },
+                    {
+                      "confirmed_count": 1,
+                      "peer_entity": "Nordnes Narvik AS",
+                      "peer_hypothesis_id": "hyp_qben_nordnes_narvik_player",
+                      "post_acq_count": 0,
+                      "pre_acq_count": 1,
+                      "tap_breakdown": [
+                        {
+                          "confidence": 0.35,
+                          "confirmed_award_count": 1,
+                          "post_acquisition_award_count": 0,
+                          "pre_acquisition_award_count": 1,
+                          "tap_id": "doffin",
+                          "tap_signal": 0.0,
+                          "verdict": "partial"
+                        },
+                        {
+                          "confidence": 0.45,
+                          "confirmed_award_count": 0,
+                          "post_acquisition_award_count": 0,
+                          "pre_acquisition_award_count": 0,
+                          "tap_id": "ted",
+                          "tap_signal": 0.0,
+                          "verdict": "not_found"
+                        }
+                      ],
+                      "weighted_signal": 0.0
+                    }
+                  ],
+                  "reported_revenue_msek": 169.0,
+                  "total_post_acq_awards": 4,
+                  "total_pre_acq_awards": 3
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: /Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_revenue_support/qben_infra/hyp_qben_q1_2026_revenue_pipeline_revenue_support.json",
+                  "href": "/Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_revenue_support/qben_infra/hyp_qben_q1_2026_revenue_pipeline_revenue_support.json"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-df6f8af43b",
+          "label": "Q: fq_explanatory_narrative_consistent",
+          "kind": "question",
+          "verdict": "refutes",
+          "severity": null,
+          "glyph": "✗",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-2af26f6657",
+              "label": "derived_explanatory_slippage: refutes (confidence 0.75)",
+              "kind": "evidence",
+              "verdict": "refutes",
+              "severity": null,
+              "glyph": "✗",
+              "detail": "Revenue declined (-13.3%) and EBITA margin is -26.0%, yet the CEO-comment region contains 12 positive-framing tokens and zero acknowledgement tokens. Pure positive framing despite a negative directional move -- classic explanatory slippage.",
+              "metadata": {
+                "tap_kind": "derived_analysis",
+                "addresses_questions": [
+                  "fq_explanatory_narrative_consistent"
+                ],
+                "payload_sha256": "44f89128dd9930d06197d06bf22f6cd30897cd14edce20ee9b2e4c16dc5b7ba9",
+                "gathered_at_utc": "2026-05-30T06:24:41+00:00",
+                "payload_summary": {
+                  "acknowledgement_match_count": 0,
+                  "acknowledgement_matches": {},
+                  "kpi_inputs": {
+                    "kpis_deteriorated": true,
+                    "reported_period_ebita_margin_pct": -26.0,
+                    "reported_revenue_yoy_pct": -13.3
+                  },
+                  "method": "v10.explanatory_slippage_scanner",
+                  "offending_sentences": [
+                    "Delårsrapport Q1 2026 Click or tap here to enter text. 2 (31) Fokusering och lönsamhet Qben Infra har gått in i 2026 med en tydlig riktning.",
+                    "Med B45 Anlegg ombord stärker vi vår närvaro infrastruktur, med målet att driva högre tillväxt och ytterligare och täcker nu även kustlinjen från Oslo till lönsamhet.",
+                    "Under kvartalet ingick vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för plattform. att utveckla storskaliga energilagringsprojekt i norra Europa – ett område där vi ser växande behov och Efter ett händelserikt 2025 slutförde vi de strategiska attraktiva möjligheter. avyttringarna av Kvalitetsbygg och Rail under första kvartalet 2026.",
+                    "Tillsammans med den pågående processen Marknadens drivkrafter är fortsatt starka. att avyttra Inspekt – där vi har tecknat en Energiomställning, elektrifiering och modernisering av avsiktsförklaring – blir Qben Infra både tydligare och mer åldrande infrastruktur skapar långsiktig, strukturell fokuserat.",
+                    "Inom Qben Power har vi stärkt vår kapacitet genom förvärvet av B45 Anlegg AS – en snabbväxande specialist Sammanfattningsvis befinner sig Qben Infra i början av en inom betongarbeten för kritisk infrastruktur såsom ny fas."
+                  ],
+                  "positive_density_per_1000_words": 15.71,
+                  "positive_framing_match_count": 12,
+                  "positive_matches": {
+                    "fokuserat": [
+                      "struktur skapar långsiktig, strukturell fokuserat. Vi frigör kapital och ledningskapacitet för att efterfråga"
+                    ],
+                    "lönsamhet": [
+                      "re to enter text. 2 (31) Fokusering och lönsamhet Qben Infra har gått in i 2026 med en tydlig riktning. Under",
+                      "äcker nu även kustlinjen från Oslo till lönsamhet. Detta arbete har fortsatt under första kvartalet Kristians"
+                    ],
+                    "ny fas": [
+                      "garbeten för kritisk infrastruktur såsom ny fas."
+                    ],
+                    "plattform": [
+                      "trategiskt partnerskap med Byhmgard för plattform. att utveckla storskaliga energilagringsprojekt i norra Eur"
+                    ],
+                    "renodlad": [
+                      "rtalet ingick vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med By"
+                    ],
+                    "slagkraftig": [
+                      "vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för platt"
+                    ],
+                    "specialist": [
+                      "rvet av B45 Anlegg AS – en snabbväxande specialist Sammanfattningsvis befinner sig Qben Infra i början av en i"
+                    ],
+                    "strategiskt": [
+                      "r renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för plattform. att utveckla storsk"
+                    ],
+                    "tillväxt": [
+                      "nfrastruktur, med målet att driva högre tillväxt och ytterligare och täcker nu även kustlinjen från Oslo til"
+                    ],
+                    "tydlig": [
+                      "et Qben Infra har gått in i 2026 med en tydlig riktning. Under Vår verksamhet täcker i dag hela den östra"
+                    ],
+                    "växande": [
+                      "i norra Europa – ett område där vi ser växande behov och Efter ett händelserikt 2025 slutförde vi de strat"
+                    ]
+                  },
+                  "scan_actual_chars": 5000,
+                  "scan_window_chars": 5000,
+                  "source_pdf": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf"
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: /Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_explanatory_slippage/qben_infra/hyp_qben_q1_2026_revenue_pipeline_explanatory_slippage.json",
+                  "href": "/Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_explanatory_slippage/qben_infra/hyp_qben_q1_2026_revenue_pipeline_explanatory_slippage.json"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-752666a02c",
+          "label": "Q: fq_eu_threshold_contracts",
+          "kind": "question",
+          "verdict": "not_found",
+          "severity": null,
+          "glyph": "?",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-9d3f970e4d",
+              "label": "ted: not_found (confidence 0.45)",
+              "kind": "evidence",
+              "verdict": "not_found",
+              "severity": null,
+              "glyph": "?",
+              "detail": "TED returned 0 notices where Qben Infra AB appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_eu_threshold_contracts"
+                ],
+                "payload_sha256": "c39194ff7c9fc89beddbf960f92f3aa832a97c7002d2d8cc1c8ee512896f9872",
+                "gathered_at_utc": "2026-05-30T06:23:17+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 0,
+                  "confirmed_awards": [],
+                  "post_acquisition_award_count": 0,
+                  "pre_acquisition_award_count": 0,
+                  "search_hits_total": 0,
+                  "ted_threshold_caveat": "TED carries EU-directive-threshold notices only (~NOK 45M for works, ~NOK 1.4-2M for goods/services). Absence on TED is weaker evidence than absence on Doffin."
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/ted/qben_infra/qben-infra-ab_2026-05-30.json",
+                  "href": "external/ted/qben_infra/qben-infra-ab_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.ted.europa.eu/v3/notices/search",
+                  "href": "https://api.ted.europa.eu/v3/notices/search"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-99e966b672",
+          "label": "Q (pending): fq_segment_disclosure_consistency",
+          "kind": "question",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Are the same KPI dimensions (segments, organic-growth split, headline-profit decomposition) disclosed in Q1 2026 as in Q2 2025? | This question has no tap evidence yet; the audit roadmap may recommend a tap.",
+          "metadata": {
+            "blocking_for_critical": false,
+            "relevant_tap_kinds": [
+              "derived_analysis"
+            ]
+          },
+          "links": [],
+          "children": []
+        },
+        {
+          "id": "argnode-feb9b201d7",
+          "label": "Engine derivation rules applied",
+          "kind": "engine_rule",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "The TriangulationEngine applied the following category-specific rules to arrive at the final severity.",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-d0c6b3d74a",
+              "label": "Rule #1",
+              "kind": "engine_rule",
+              "verdict": null,
+              "severity": null,
+              "glyph": "",
+              "detail": "R7 (revenue_pipeline_support): both derived dimensions refute (revenue_support=refutes, explanatory_slippage=refutes). Two independent axes failing in the same direction is treated as critical even without peer-tap confirms.",
+              "metadata": {},
+              "links": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "qben_infra_annual_2025|narrative_dissonance|Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, ": {
+      "id": "argnode-3c99a54918",
+      "label": "Qben Infra AB (FY2025 standalone attack): narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, but supporting metrics move the opposite way (ebita_margin_pct=-10.6).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 6.75
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-f54b95b061",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "nettonollutsläpp av koldioxid och EU -direktiv om energieffektivitet",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'continuing_operations' framing in": {
+      "id": "argnode-04f0fd78e0",
+      "label": "Qben Infra AB (FY2025 standalone attack): selective_disclosure (?)",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Qben Infra AB (FY2025 standalone attack): new 'continuing_operations' framing introduced in FY 2025 Årsredovisning, absent in FY 2024 Årsredovisning.",
+      "metadata": {
+        "rule_id": "selective_disclosure"
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-bfc3211e3d",
+          "label": "KPI: ?",
+          "kind": "calculation",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Verdict: reclassification_introduced. KPI emphasis changed between prior and current reports.",
+          "metadata": {
+            "verdict": "reclassification_introduced",
+            "weight": null,
+            "prior_emphasis": null,
+            "current_emphasis": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'discontinued_operations' framing ": {
+      "id": "argnode-04f0fd78e0",
+      "label": "Qben Infra AB (FY2025 standalone attack): selective_disclosure (?)",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Qben Infra AB (FY2025 standalone attack): new 'discontinued_operations' framing introduced in FY 2025 Årsredovisning, absent in FY 2024 Årsredovisning.",
+      "metadata": {
+        "rule_id": "selective_disclosure"
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-bfc3211e3d",
+          "label": "KPI: ?",
+          "kind": "calculation",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Verdict: reclassification_introduced. KPI emphasis changed between prior and current reports.",
+          "metadata": {
+            "verdict": "reclassification_introduced",
+            "weight": null,
+            "prior_emphasis": null,
+            "current_emphasis": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in ": {
+      "id": "argnode-04f0fd78e0",
+      "label": "Qben Infra AB (FY2025 standalone attack): selective_disclosure (?)",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "warning",
+      "glyph": "⚠",
+      "detail": "Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in FY 2024 Årsredovisning disappeared in FY 2025 Årsredovisning.",
+      "metadata": {
+        "rule_id": "selective_disclosure"
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-bfc3211e3d",
+          "label": "KPI: ?",
+          "kind": "calculation",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Verdict: disclosure_drop. KPI emphasis changed between prior and current reports.",
+          "metadata": {
+            "verdict": "disclosure_drop",
+            "weight": null,
+            "prior_emphasis": null,
+            "current_emphasis": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_2024|lag_causality|Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attribu": {
+      "id": "argnode-2ff3b08e76",
+      "label": "Qben Infra AB (FY2024 standalone attack): lag_causality",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "info",
+      "glyph": "ⓘ",
+      "detail": "Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attributed to current period appears mechanical (IFRS consolidation language detected); lag=0Q is accounting, not synergy.",
+      "metadata": {
+        "rule_id": "lag_causality",
+        "lag_quarters": null,
+        "consolidation_caveat": true
+      },
+      "links": [],
+      "children": []
+    },
+    "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'growth' narrative cited 34 times, but": {
+      "id": "argnode-f856b48dc9",
+      "label": "Qben Infra AB (FY2024 standalone attack): narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Qben Infra AB (FY2024 standalone attack): 'growth' narrative cited 34 times, but supporting metrics move the opposite way (revenue_yoy_pct=-2.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 19.8
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-6f7a23436c",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Premier Growth Market",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, ": {
+      "id": "argnode-f856b48dc9",
+      "label": "Qben Infra AB (FY2024 standalone attack): narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "warning",
+      "glyph": "⚠",
+      "detail": "Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, but supporting metrics move the opposite way (interest_coverage_ratio=1.2, net_debt_to_ebitda=8.5).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 2.48
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-6f7a23436c",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "a robust growth in demand.",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, ": {
+      "id": "argnode-f856b48dc9",
+      "label": "Qben Infra AB (FY2024 standalone attack): narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "info",
+      "glyph": "ⓘ",
+      "detail": "Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, but supporting metrics move the opposite way (working_capital_to_revenue_pct=25.0, capex_to_depreciation_ratio=1.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 0.28
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-6f7a23436c",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "supplemented with selective acquisitions and efficient",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but ": {
+      "id": "argnode-f856b48dc9",
+      "label": "Qben Infra AB (FY2024 standalone attack): narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "warning",
+      "glyph": "⚠",
+      "detail": "Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but supporting metrics move the opposite way (revenue_yoy_pct=-2.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 2.48
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-6f7a23436c",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "development, which creates favourable conditions for our",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist": {
+      "id": "argnode-aa942e7d71",
+      "label": "SLAM Jernbaneteknikk AS: SLAM Jernbaneteknikk AS is a specialist in rail signalling and electrification in Norway",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "SLAM Jernbaneteknikk AS is a specialist in rail signalling and electrification in Norway",
+      "metadata": {
+        "hypothesis_id": "hyp_qben_slam_specialist",
+        "entity": "SLAM Jernbaneteknikk AS",
+        "claim_category": "subsidiary_specialist",
+        "total_ledger_entries": 5
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-6a18fb076a",
+          "label": "Summary verdict landscape",
+          "kind": "summary",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Severity: critical. Taps reporting: doffin=not_found, brreg=confirms, ted=not_found",
+          "metadata": {
+            "claim_category": "subsidiary_specialist",
+            "derived_severity": "critical",
+            "distinct_taps": [
+              "brreg",
+              "doffin",
+              "ted"
+            ],
+            "verdict_summary": {
+              "not_found": 2,
+              "confirms": 1
+            }
+          },
+          "links": [],
+          "children": []
+        },
+        {
+          "id": "argnode-ebeffd7a56",
+          "label": "Q: fq_direct_prime_contracts",
+          "kind": "question",
+          "verdict": "not_found",
+          "severity": null,
+          "glyph": "?",
+          "detail": "Falsification question addressed by 2 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-54a61b6f92",
+              "label": "doffin: not_found (confidence 0.70)",
+              "kind": "evidence",
+              "verdict": "not_found",
+              "severity": null,
+              "glyph": "?",
+              "detail": "Doffin returned 0 search hits and 0 confirmed awards for SLAM Jernbaneteknikk AS. For a Norwegian state-rail-adjacent specialist this is the canonical registry; absence is a weak-to-moderate refute. Subcontractor chains, private-sector clients, and consortium framework agreements remain as alternative hypotheses that this tap cannot test.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_direct_prime_contracts"
+                ],
+                "payload_sha256": "70b1a7558963abf80af39415275323726e4134a5d205bdd8268f103ec53c6ea9",
+                "gathered_at_utc": "2026-05-30T06:23:49+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 0,
+                  "confirmed_awards": [],
+                  "post_acquisition_award_count": 0,
+                  "pre_acquisition_award_count": 0,
+                  "search_hits_total": 0
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/doffin/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+                  "href": "external/doffin/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.doffin.no/webclient/api/v2/search-api/search",
+                  "href": "https://api.doffin.no/webclient/api/v2/search-api/search"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "argnode-0a3dd367e2",
+              "label": "ted: not_found (confidence 0.45)",
+              "kind": "evidence",
+              "verdict": "not_found",
+              "severity": null,
+              "glyph": "?",
+              "detail": "TED returned 0 notices where SLAM Jernbaneteknikk AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_direct_prime_contracts"
+                ],
+                "payload_sha256": "e86f020506070d2d5a4b011ff38fbdba0a7840b52157e782762b3900009da7f9",
+                "gathered_at_utc": "2026-05-30T06:23:58+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 0,
+                  "confirmed_awards": [],
+                  "post_acquisition_award_count": 0,
+                  "pre_acquisition_award_count": 0,
+                  "search_hits_total": 0,
+                  "ted_threshold_caveat": "TED carries EU-directive-threshold notices only (~NOK 45M for works, ~NOK 1.4-2M for goods/services). Absence on TED is weaker evidence than absence on Doffin."
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/ted/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+                  "href": "external/ted/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.ted.europa.eu/v3/notices/search",
+                  "href": "https://api.ted.europa.eu/v3/notices/search"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-9482993a4f",
+          "label": "Q: fq_entity_age_and_existence",
+          "kind": "question",
+          "verdict": "confirms",
+          "severity": null,
+          "glyph": "✓",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-24848e7b98",
+              "label": "brreg: confirms (confidence 0.85)",
+              "kind": "evidence",
+              "verdict": "confirms",
+              "severity": null,
+              "glyph": "✓",
+              "detail": "BRREG resolved 'SLAM Jernbaneteknikk AS' to orgnr 926465252 'SLAM JERNBANETEKNIKK AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433581 dataset entries containing any of the name tokens). Founded 2021-01-13 (~5.4 years old). Reports 36 employees. NAICS=42.120 (Bygging av jernbaner og undergrunnsbaner).",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match"
+                ],
+                "payload_sha256": "72b68c424c6f539d386c597983ee7d5d2f8609bfd6832c60b972f758a77cbc8d",
+                "gathered_at_utc": "2026-05-30T06:23:52+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": 36,
+                      "konkurs": false,
+                      "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                      "naeringskode1": "42.120",
+                      "navn": "SLAM JERNBANETEKNIKK AS",
+                      "orgnr": "926465252",
+                      "slettedato": null,
+                      "stiftelsesdato": "2021-01-13",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 13,
+                      "konkurs": false,
+                      "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                      "naeringskode1": "42.120",
+                      "navn": "JERNBANETEKNIKK AS",
+                      "orgnr": "922383650",
+                      "slettedato": null,
+                      "stiftelsesdato": "2019-02-20",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Uoppgitt",
+                      "naeringskode1": "00.000",
+                      "navn": "GRAND SLAM AS",
+                      "orgnr": "931799290",
+                      "slettedato": null,
+                      "stiftelsesdato": "2023-06-16",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Annen teknisk konsulentvirksomhet",
+                      "naeringskode1": "71.129",
+                      "navn": "FINN HOLOM JERNBANETEKNIKK",
+                      "orgnr": "918101497",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Aktiviteter i andre medlemsorganisasjoner ellers",
+                      "naeringskode1": "94.992",
+                      "navn": "FORENINGEN SLAM!KOLLEKTIVET",
+                      "orgnr": "914891310",
+                      "slettedato": null,
+                      "stiftelsesdato": "2015-01-09",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Frisering og barbering",
+                      "naeringskode1": "96.210",
+                      "navn": "SLAM QUEEN INDUSTRY FUNDERUD",
+                      "orgnr": "934375874",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 6,
+                      "konkurs": false,
+                      "naering_label": "Oppsamling og behandling av avløpsvann",
+                      "naeringskode1": "37.000",
+                      "navn": "IGLAND & NYHAVEN SLAM OG RØRSPYLING AS",
+                      "orgnr": "919712724",
+                      "slettedato": null,
+                      "stiftelsesdato": "2017-10-01",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 12,
+                      "konkurs": false,
+                      "naering_label": "Oppsamling og behandling av avløpsvann",
+                      "naeringskode1": "37.000",
+                      "navn": "SLAM OG SPYLESERVICE INDRE ØSTFOLD AS",
+                      "orgnr": "981891341",
+                      "slettedato": null,
+                      "stiftelsesdato": "2000-03-24",
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact+naics",
+                  "top_match": {
+                    "antallAnsatte": 36,
+                    "konkurs": false,
+                    "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                    "naeringskode1": "42.120",
+                    "navn": "SLAM JERNBANETEKNIKK AS",
+                    "orgnr": "926465252",
+                    "slettedato": null,
+                    "stiftelsesdato": "2021-01-13",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 433581
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=SLAM%20Jernbaneteknikk%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=SLAM%20Jernbaneteknikk%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-af363967db",
+          "label": "Q: fq_industry_classification_match",
+          "kind": "question",
+          "verdict": "confirms",
+          "severity": null,
+          "glyph": "✓",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-46190c7f64",
+              "label": "brreg: confirms (confidence 0.85)",
+              "kind": "evidence",
+              "verdict": "confirms",
+              "severity": null,
+              "glyph": "✓",
+              "detail": "BRREG resolved 'SLAM Jernbaneteknikk AS' to orgnr 926465252 'SLAM JERNBANETEKNIKK AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433581 dataset entries containing any of the name tokens). Founded 2021-01-13 (~5.4 years old). Reports 36 employees. NAICS=42.120 (Bygging av jernbaner og undergrunnsbaner).",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match"
+                ],
+                "payload_sha256": "72b68c424c6f539d386c597983ee7d5d2f8609bfd6832c60b972f758a77cbc8d",
+                "gathered_at_utc": "2026-05-30T06:23:52+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": 36,
+                      "konkurs": false,
+                      "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                      "naeringskode1": "42.120",
+                      "navn": "SLAM JERNBANETEKNIKK AS",
+                      "orgnr": "926465252",
+                      "slettedato": null,
+                      "stiftelsesdato": "2021-01-13",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 13,
+                      "konkurs": false,
+                      "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                      "naeringskode1": "42.120",
+                      "navn": "JERNBANETEKNIKK AS",
+                      "orgnr": "922383650",
+                      "slettedato": null,
+                      "stiftelsesdato": "2019-02-20",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Uoppgitt",
+                      "naeringskode1": "00.000",
+                      "navn": "GRAND SLAM AS",
+                      "orgnr": "931799290",
+                      "slettedato": null,
+                      "stiftelsesdato": "2023-06-16",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Annen teknisk konsulentvirksomhet",
+                      "naeringskode1": "71.129",
+                      "navn": "FINN HOLOM JERNBANETEKNIKK",
+                      "orgnr": "918101497",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Aktiviteter i andre medlemsorganisasjoner ellers",
+                      "naeringskode1": "94.992",
+                      "navn": "FORENINGEN SLAM!KOLLEKTIVET",
+                      "orgnr": "914891310",
+                      "slettedato": null,
+                      "stiftelsesdato": "2015-01-09",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Frisering og barbering",
+                      "naeringskode1": "96.210",
+                      "navn": "SLAM QUEEN INDUSTRY FUNDERUD",
+                      "orgnr": "934375874",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 6,
+                      "konkurs": false,
+                      "naering_label": "Oppsamling og behandling av avløpsvann",
+                      "naeringskode1": "37.000",
+                      "navn": "IGLAND & NYHAVEN SLAM OG RØRSPYLING AS",
+                      "orgnr": "919712724",
+                      "slettedato": null,
+                      "stiftelsesdato": "2017-10-01",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 12,
+                      "konkurs": false,
+                      "naering_label": "Oppsamling og behandling av avløpsvann",
+                      "naeringskode1": "37.000",
+                      "navn": "SLAM OG SPYLESERVICE INDRE ØSTFOLD AS",
+                      "orgnr": "981891341",
+                      "slettedato": null,
+                      "stiftelsesdato": "2000-03-24",
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact+naics",
+                  "top_match": {
+                    "antallAnsatte": 36,
+                    "konkurs": false,
+                    "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                    "naeringskode1": "42.120",
+                    "navn": "SLAM JERNBANETEKNIKK AS",
+                    "orgnr": "926465252",
+                    "slettedato": null,
+                    "stiftelsesdato": "2021-01-13",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 433581
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=SLAM%20Jernbaneteknikk%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=SLAM%20Jernbaneteknikk%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-86cad9e811",
+          "label": "Q (pending): fq_subcontractor_chain",
+          "kind": "question",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Does the entity appear as a named subcontractor on prime contracts in the claimed domain? | This question has no tap evidence yet; the audit roadmap may recommend a tap.",
+          "metadata": {
+            "blocking_for_critical": false,
+            "relevant_tap_kinds": [
+              "subcontractor_directory"
+            ]
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established": {
+      "id": "argnode-7b712375db",
+      "label": "Banefjell AS: Banefjell AS is an established player in track maintenance, concrete renovation and signal in Norway",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "info",
+      "glyph": "ⓘ",
+      "detail": "Banefjell AS is an established player in track maintenance, concrete renovation and signal in Norway",
+      "metadata": {
+        "hypothesis_id": "hyp_qben_banefjell_established",
+        "entity": "Banefjell AS",
+        "claim_category": "subsidiary_specialist",
+        "total_ledger_entries": 5
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-8e6f898ece",
+          "label": "Summary verdict landscape",
+          "kind": "summary",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Severity: info. Taps reporting: doffin=confirms, brreg=confirms, ted=confirms",
+          "metadata": {
+            "claim_category": "subsidiary_specialist",
+            "derived_severity": "info",
+            "distinct_taps": [
+              "brreg",
+              "doffin",
+              "ted"
+            ],
+            "verdict_summary": {
+              "confirms": 3
+            }
+          },
+          "links": [],
+          "children": []
+        },
+        {
+          "id": "argnode-53bcdb22c5",
+          "label": "Q: fq_direct_prime_contracts",
+          "kind": "question",
+          "verdict": "confirms",
+          "severity": null,
+          "glyph": "✓",
+          "detail": "Falsification question addressed by 2 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-6a6bf9771c",
+              "label": "doffin: confirms (confidence 0.85)",
+              "kind": "evidence",
+              "verdict": "confirms",
+              "severity": null,
+              "glyph": "✓",
+              "detail": "Doffin returned 4 confirmed prime-contract awards to Banefjell AS, 2 post-acquisition and 2 pre-acquisition. This is consistent with the claim.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_direct_prime_contracts"
+                ],
+                "payload_sha256": "acfb8d71b7d16ff14a4e15b3e7ac1dcaa0aebb5b1e0e61046cfd55d28fe5688c",
+                "gathered_at_utc": "2026-05-30T06:23:37+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 4,
+                  "confirmed_awards": [
+                    {
+                      "awarded_names": [
+                        "ØYNEBRÅTEN ANLEGGSTEKNIKK AS",
+                        "Banefjell AS"
+                      ],
+                      "buyer_names": [
+                        "Bane NOR SF"
+                      ],
+                      "heading": "Rammeavtale - Drenering Sørlands-, Vestfold- og Gjøvikbanen m/sidebaner",
+                      "notice_id": "2026-106600",
+                      "public_url": "https://www.doffin.no/notices/2026-106600",
+                      "publication_date": "2026-04-13"
+                    },
+                    {
+                      "awarded_names": [
+                        "Veidekke Entreprenør AS",
+                        "Banefjell AS"
+                      ],
+                      "buyer_names": [
+                        "Bane NOR SF"
+                      ],
+                      "heading": "Drenering Område Sør-Vest Bergensbanen og Sørlandsbanen",
+                      "notice_id": "2024-113007",
+                      "public_url": "https://www.doffin.no/notices/2024-113007",
+                      "publication_date": "2024-09-13"
+                    },
+                    {
+                      "awarded_names": [
+                        "Anton W. Johansen",
+                        "Banefjell AS",
+                        "GARDA SIKRING AS",
+                        "ALLSIKRING AS"
+                      ],
+                      "buyer_names": [
+                        "Bane NOR SF"
+                      ],
+                      "heading": "Rammeavtale - Gjerding - Område Sør/Vest",
+                      "notice_id": "2023-307031",
+                      "public_url": "https://www.doffin.no/notices/2023-307031",
+                      "publication_date": "2023-08-02"
+                    },
+                    {
+                      "awarded_names": [
+                        "Banedrift AS",
+                        "Nettpartner AS",
+                        "Rail Production AS",
+                        "Otera Infra",
+                        "Veidekke Entreprenør AS",
+                        "Baneservice AS",
+                        "Rallarservice AS",
+                        "Team 1435 AS",
+                        "Railcom AS",
+                        "OneCo Infra AS",
+                        "Totalprosjekt Namsskogan AS",
+                        "Spordrift Prosjekt AS",
+                        "NRC Norge AS",
+                        "Res Track Nordic AS",
+                        "Infranord Norge AS",
+                        "Trym Bygg og Anlegg AS",
+                        "Banefjell AS",
+                        "Sæterdal Elektro",
+                        "Rail Infrastructure AS"
+                      ],
+                      "buyer_names": [
+                        "Bane NOR SF"
+                      ],
+                      "heading": "Parallelle rammeavtaler jernbanetekniske entrepriser",
+                      "notice_id": "2022-982593",
+                      "public_url": "https://www.doffin.no/notices/2022-982593",
+                      "publication_date": "2022-09-05"
+                    }
+                  ],
+                  "post_acquisition_award_count": 2,
+                  "pre_acquisition_award_count": 2,
+                  "search_hits_total": 4
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/doffin/qben_infra_2024/banefjell-as_2026-05-30.json",
+                  "href": "external/doffin/qben_infra_2024/banefjell-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.doffin.no/webclient/api/v2/search-api/search",
+                  "href": "https://api.doffin.no/webclient/api/v2/search-api/search"
+                }
+              ],
+              "children": [
+                {
+                  "id": "argnode-a20137f10c",
+                  "label": "2026-106600 | 2026-04-13 | Rammeavtale - Drenering Sørlands-, Vestfold- og Gjøvikbanen m/sidebaner",
+                  "kind": "source",
+                  "verdict": null,
+                  "severity": null,
+                  "glyph": "",
+                  "detail": "",
+                  "metadata": {
+                    "buyer_names": [
+                      "Bane NOR SF"
+                    ],
+                    "winner_names": [
+                      "ØYNEBRÅTEN ANLEGGSTEKNIKK AS",
+                      "Banefjell AS"
+                    ]
+                  },
+                  "links": [
+                    {
+                      "label": "Open notice",
+                      "href": "https://www.doffin.no/notices/2026-106600"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "argnode-a2e1395f9c",
+                  "label": "2024-113007 | 2024-09-13 | Drenering Område Sør-Vest Bergensbanen og Sørlandsbanen",
+                  "kind": "source",
+                  "verdict": null,
+                  "severity": null,
+                  "glyph": "",
+                  "detail": "",
+                  "metadata": {
+                    "buyer_names": [
+                      "Bane NOR SF"
+                    ],
+                    "winner_names": [
+                      "Veidekke Entreprenør AS",
+                      "Banefjell AS"
+                    ]
+                  },
+                  "links": [
+                    {
+                      "label": "Open notice",
+                      "href": "https://www.doffin.no/notices/2024-113007"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "argnode-9afb09ec96",
+                  "label": "2023-307031 | 2023-08-02 | Rammeavtale - Gjerding - Område Sør/Vest",
+                  "kind": "source",
+                  "verdict": null,
+                  "severity": null,
+                  "glyph": "",
+                  "detail": "",
+                  "metadata": {
+                    "buyer_names": [
+                      "Bane NOR SF"
+                    ],
+                    "winner_names": [
+                      "Anton W. Johansen",
+                      "Banefjell AS",
+                      "GARDA SIKRING AS",
+                      "ALLSIKRING AS"
+                    ]
+                  },
+                  "links": [
+                    {
+                      "label": "Open notice",
+                      "href": "https://www.doffin.no/notices/2023-307031"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "argnode-066ce7f434",
+                  "label": "2022-982593 | 2022-09-05 | Parallelle rammeavtaler jernbanetekniske entrepriser",
+                  "kind": "source",
+                  "verdict": null,
+                  "severity": null,
+                  "glyph": "",
+                  "detail": "",
+                  "metadata": {
+                    "buyer_names": [
+                      "Bane NOR SF"
+                    ],
+                    "winner_names": [
+                      "Banedrift AS",
+                      "Nettpartner AS",
+                      "Rail Production AS",
+                      "Otera Infra",
+                      "Veidekke Entreprenør AS",
+                      "Baneservice AS",
+                      "Rallarservice AS",
+                      "Team 1435 AS",
+                      "Railcom AS",
+                      "OneCo Infra AS",
+                      "Totalprosjekt Namsskogan AS",
+                      "Spordrift Prosjekt AS",
+                      "NRC Norge AS",
+                      "Res Track Nordic AS",
+                      "Infranord Norge AS",
+                      "Trym Bygg og Anlegg AS",
+                      "Banefjell AS",
+                      "Sæterdal Elektro",
+                      "Rail Infrastructure AS"
+                    ]
+                  },
+                  "links": [
+                    {
+                      "label": "Open notice",
+                      "href": "https://www.doffin.no/notices/2022-982593"
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "argnode-c5f2b91d34",
+              "label": "ted: confirms (confidence 0.85)",
+              "kind": "evidence",
+              "verdict": "confirms",
+              "severity": null,
+              "glyph": "✓",
+              "detail": "TED returned 2 EU-tier prime-contract notice(s) where Banefjell AS appears as a winner (2 post-acquisition, 0 pre-acquisition). TED is the canonical EU-wide public-procurement registry; above-threshold awards here are hard evidence of executing capability.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_direct_prime_contracts"
+                ],
+                "payload_sha256": "ee7960d097783eda3c39303b8120f8fd4556f565750d17a9c1b4fb41468358a2",
+                "gathered_at_utc": "2026-05-30T06:23:47+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 2,
+                  "confirmed_awards": [
+                    {
+                      "buyer_names": [
+                        "Bane NOR SF"
+                      ],
+                      "heading": "Norway – Construction work – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+                      "notice_id": "549796-2024",
+                      "place_of_performance": [
+                        "anyw",
+                        "anyw"
+                      ],
+                      "public_url": "https://ted.europa.eu/en/notice/-/detail/549796-2024",
+                      "publication_date": "2024-09-13",
+                      "winner_names": [
+                        "Veidekke Entreprenør AS",
+                        "Banefjell AS"
+                      ]
+                    },
+                    {
+                      "buyer_names": [
+                        "Bane NOR SF"
+                      ],
+                      "heading": "Norway – Construction work for railways and cable transport systems – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+                      "notice_id": "250458-2026",
+                      "place_of_performance": [
+                        "NOR",
+                        "NOR"
+                      ],
+                      "public_url": "https://ted.europa.eu/en/notice/-/detail/250458-2026",
+                      "publication_date": "2026-04-13",
+                      "winner_names": [
+                        "ØYNEBRÅTEN ANLEGGSTEKNIKK AS",
+                        "Banefjell AS"
+                      ]
+                    }
+                  ],
+                  "post_acquisition_award_count": 2,
+                  "pre_acquisition_award_count": 0,
+                  "search_hits_total": 2,
+                  "ted_threshold_caveat": "TED carries EU-directive-threshold notices only (~NOK 45M for works, ~NOK 1.4-2M for goods/services). Absence on TED is weaker evidence than absence on Doffin."
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/ted/qben_infra_2024/banefjell-as_2026-05-30.json",
+                  "href": "external/ted/qben_infra_2024/banefjell-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.ted.europa.eu/v3/notices/search",
+                  "href": "https://api.ted.europa.eu/v3/notices/search"
+                }
+              ],
+              "children": [
+                {
+                  "id": "argnode-4d1203fa25",
+                  "label": "549796-2024 | 2024-09-13 | Norway – Construction work – Drainage area South-Vest Bergen Railway and Sørland",
+                  "kind": "source",
+                  "verdict": null,
+                  "severity": null,
+                  "glyph": "",
+                  "detail": "",
+                  "metadata": {
+                    "buyer_names": [
+                      "Bane NOR SF"
+                    ],
+                    "winner_names": [
+                      "Veidekke Entreprenør AS",
+                      "Banefjell AS"
+                    ]
+                  },
+                  "links": [
+                    {
+                      "label": "Open notice",
+                      "href": "https://ted.europa.eu/en/notice/-/detail/549796-2024"
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "argnode-d0a9754bca",
+                  "label": "250458-2026 | 2026-04-13 | Norway – Construction work for railways and cable transport systems – Framework ",
+                  "kind": "source",
+                  "verdict": null,
+                  "severity": null,
+                  "glyph": "",
+                  "detail": "",
+                  "metadata": {
+                    "buyer_names": [
+                      "Bane NOR SF"
+                    ],
+                    "winner_names": [
+                      "ØYNEBRÅTEN ANLEGGSTEKNIKK AS",
+                      "Banefjell AS"
+                    ]
+                  },
+                  "links": [
+                    {
+                      "label": "Open notice",
+                      "href": "https://ted.europa.eu/en/notice/-/detail/250458-2026"
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "argnode-ced0207f65",
+          "label": "Q: fq_entity_age_and_existence",
+          "kind": "question",
+          "verdict": "confirms",
+          "severity": null,
+          "glyph": "✓",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-f4dc2a4789",
+              "label": "brreg: confirms (confidence 0.85)",
+              "kind": "evidence",
+              "verdict": "confirms",
+              "severity": null,
+              "glyph": "✓",
+              "detail": "BRREG resolved 'Banefjell AS' to orgnr 914019087 'BANEFJELL AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433577 dataset entries containing any of the name tokens). Founded 2014-07-30 (~11.8 years old). Reports 60 employees. NAICS=42.120 (Bygging av jernbaner og undergrunnsbaner).",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match"
+                ],
+                "payload_sha256": "179020ab1cc3f3bdfaa8303ab63fedb51fa5376506f730feb9fa57ad02122097",
+                "gathered_at_utc": "2026-05-30T06:23:41+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": 60,
+                      "konkurs": false,
+                      "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                      "naeringskode1": "42.120",
+                      "navn": "BANEFJELL AS",
+                      "orgnr": "914019087",
+                      "slettedato": null,
+                      "stiftelsesdato": "2014-07-30",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Kjøp og salg av egen fast eiendom",
+                      "naeringskode1": "68.110",
+                      "navn": "AS SITT AS",
+                      "orgnr": "929139550",
+                      "slettedato": null,
+                      "stiftelsesdato": "2022-04-07",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "AS & AS HOLDING AS",
+                      "orgnr": "929647238",
+                      "slettedato": null,
+                      "stiftelsesdato": "2022-07-31",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Uoppgitt",
+                      "naeringskode1": "00.000",
+                      "navn": "AS BEST AS",
+                      "orgnr": "933664716",
+                      "slettedato": null,
+                      "stiftelsesdato": "2024-05-29",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer",
+                      "naeringskode1": "62.200",
+                      "navn": "AS HARBITZ AS",
+                      "orgnr": "927026872",
+                      "slettedato": null,
+                      "stiftelsesdato": "2021-04-08",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Uoppgitt",
+                      "naeringskode1": "00.000",
+                      "navn": "AS HOLDING AS",
+                      "orgnr": "918591052",
+                      "slettedato": null,
+                      "stiftelsesdato": "2017-01-10",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Andre egeninvesteringsselskaper",
+                      "naeringskode1": "64.323",
+                      "navn": "AS INVEST AS",
+                      "orgnr": "989028774",
+                      "slettedato": null,
+                      "stiftelsesdato": "2005-11-01",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Byggeteknisk konsulentvirksomhet",
+                      "naeringskode1": "71.121",
+                      "navn": "AS KONSULT AS",
+                      "orgnr": "919161426",
+                      "slettedato": null,
+                      "stiftelsesdato": "2017-05-29",
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact+naics",
+                  "top_match": {
+                    "antallAnsatte": 60,
+                    "konkurs": false,
+                    "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                    "naeringskode1": "42.120",
+                    "navn": "BANEFJELL AS",
+                    "orgnr": "914019087",
+                    "slettedato": null,
+                    "stiftelsesdato": "2014-07-30",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 433577
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/banefjell-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/banefjell-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=Banefjell%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=Banefjell%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-2237463874",
+          "label": "Q: fq_industry_classification_match",
+          "kind": "question",
+          "verdict": "confirms",
+          "severity": null,
+          "glyph": "✓",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-40e57d620f",
+              "label": "brreg: confirms (confidence 0.85)",
+              "kind": "evidence",
+              "verdict": "confirms",
+              "severity": null,
+              "glyph": "✓",
+              "detail": "BRREG resolved 'Banefjell AS' to orgnr 914019087 'BANEFJELL AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433577 dataset entries containing any of the name tokens). Founded 2014-07-30 (~11.8 years old). Reports 60 employees. NAICS=42.120 (Bygging av jernbaner og undergrunnsbaner).",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match"
+                ],
+                "payload_sha256": "179020ab1cc3f3bdfaa8303ab63fedb51fa5376506f730feb9fa57ad02122097",
+                "gathered_at_utc": "2026-05-30T06:23:41+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": 60,
+                      "konkurs": false,
+                      "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                      "naeringskode1": "42.120",
+                      "navn": "BANEFJELL AS",
+                      "orgnr": "914019087",
+                      "slettedato": null,
+                      "stiftelsesdato": "2014-07-30",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Kjøp og salg av egen fast eiendom",
+                      "naeringskode1": "68.110",
+                      "navn": "AS SITT AS",
+                      "orgnr": "929139550",
+                      "slettedato": null,
+                      "stiftelsesdato": "2022-04-07",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "AS & AS HOLDING AS",
+                      "orgnr": "929647238",
+                      "slettedato": null,
+                      "stiftelsesdato": "2022-07-31",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Uoppgitt",
+                      "naeringskode1": "00.000",
+                      "navn": "AS BEST AS",
+                      "orgnr": "933664716",
+                      "slettedato": null,
+                      "stiftelsesdato": "2024-05-29",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer",
+                      "naeringskode1": "62.200",
+                      "navn": "AS HARBITZ AS",
+                      "orgnr": "927026872",
+                      "slettedato": null,
+                      "stiftelsesdato": "2021-04-08",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Uoppgitt",
+                      "naeringskode1": "00.000",
+                      "navn": "AS HOLDING AS",
+                      "orgnr": "918591052",
+                      "slettedato": null,
+                      "stiftelsesdato": "2017-01-10",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Andre egeninvesteringsselskaper",
+                      "naeringskode1": "64.323",
+                      "navn": "AS INVEST AS",
+                      "orgnr": "989028774",
+                      "slettedato": null,
+                      "stiftelsesdato": "2005-11-01",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Byggeteknisk konsulentvirksomhet",
+                      "naeringskode1": "71.121",
+                      "navn": "AS KONSULT AS",
+                      "orgnr": "919161426",
+                      "slettedato": null,
+                      "stiftelsesdato": "2017-05-29",
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact+naics",
+                  "top_match": {
+                    "antallAnsatte": 60,
+                    "konkurs": false,
+                    "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                    "naeringskode1": "42.120",
+                    "navn": "BANEFJELL AS",
+                    "orgnr": "914019087",
+                    "slettedato": null,
+                    "stiftelsesdato": "2014-07-30",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 433577
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/banefjell-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/banefjell-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=Banefjell%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=Banefjell%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player": {
+      "id": "argnode-63ec9fd70f",
+      "label": "Team Bygg AS: Team Bygg AS provides comprehensive resources for executing real estate projects in the Norwegian housing market",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Team Bygg AS provides comprehensive resources for executing real estate projects in the Norwegian housing market",
+      "metadata": {
+        "hypothesis_id": "hyp_qben_team_bygg_player",
+        "entity": "Team Bygg AS",
+        "claim_category": "subsidiary_specialist",
+        "total_ledger_entries": 5
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-db7df41b89",
+          "label": "Summary verdict landscape",
+          "kind": "summary",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Severity: critical. Taps reporting: doffin=refutes, brreg=refutes, ted=not_found",
+          "metadata": {
+            "claim_category": "subsidiary_specialist",
+            "derived_severity": "critical",
+            "distinct_taps": [
+              "brreg",
+              "doffin",
+              "ted"
+            ],
+            "verdict_summary": {
+              "refutes": 2,
+              "not_found": 1
+            }
+          },
+          "links": [],
+          "children": []
+        },
+        {
+          "id": "argnode-650a9c341e",
+          "label": "Q: fq_direct_prime_contracts",
+          "kind": "question",
+          "verdict": "refutes",
+          "severity": null,
+          "glyph": "✗",
+          "detail": "Falsification question addressed by 2 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-5ffd7a3c21",
+              "label": "doffin: refutes (confidence 0.60)",
+              "kind": "evidence",
+              "verdict": "refutes",
+              "severity": null,
+              "glyph": "✗",
+              "detail": "Doffin returned 5 text-search hit(s) but none had Team Bygg AS in the official awardedNames field. The search space is noisy (name collisions) but the entity itself does not appear as a winner.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_direct_prime_contracts"
+                ],
+                "payload_sha256": "ae3411e2f082da7ba98d194e3c84e8cd43b1c9ade7e6b7a943e0b08365811a64",
+                "gathered_at_utc": "2026-05-30T06:24:17+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 0,
+                  "confirmed_awards": [],
+                  "post_acquisition_award_count": 0,
+                  "pre_acquisition_award_count": 0,
+                  "search_hits_total": 5
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/doffin/qben_infra_2024/team-bygg-as_2026-05-30.json",
+                  "href": "external/doffin/qben_infra_2024/team-bygg-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.doffin.no/webclient/api/v2/search-api/search",
+                  "href": "https://api.doffin.no/webclient/api/v2/search-api/search"
+                }
+              ],
+              "children": []
+            },
+            {
+              "id": "argnode-09baf66e5e",
+              "label": "ted: not_found (confidence 0.45)",
+              "kind": "evidence",
+              "verdict": "not_found",
+              "severity": null,
+              "glyph": "?",
+              "detail": "TED returned 0 notices where Team Bygg AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_direct_prime_contracts"
+                ],
+                "payload_sha256": "3ec3ee00b1ad2af71ca19fa4bd779c0445692fb22eba71e00b42ef9e33961bca",
+                "gathered_at_utc": "2026-05-30T06:24:27+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 0,
+                  "confirmed_awards": [],
+                  "post_acquisition_award_count": 0,
+                  "pre_acquisition_award_count": 0,
+                  "search_hits_total": 0,
+                  "ted_threshold_caveat": "TED carries EU-directive-threshold notices only (~NOK 45M for works, ~NOK 1.4-2M for goods/services). Absence on TED is weaker evidence than absence on Doffin."
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/ted/qben_infra_2024/team-bygg-as_2026-05-30.json",
+                  "href": "external/ted/qben_infra_2024/team-bygg-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.ted.europa.eu/v3/notices/search",
+                  "href": "https://api.ted.europa.eu/v3/notices/search"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-68c5a1a224",
+          "label": "Q: fq_entity_age_and_existence",
+          "kind": "question",
+          "verdict": "refutes",
+          "severity": null,
+          "glyph": "✗",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-2ca72fd1ea",
+              "label": "brreg: refutes (confidence 0.80)",
+              "kind": "evidence",
+              "verdict": "refutes",
+              "severity": null,
+              "glyph": "✗",
+              "detail": "BRREG resolved 'Team Bygg AS' to orgnr 984738161 'TEAM BYGG AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 440102 dataset entries containing any of the name tokens). Founded 2002-06-21 (~23.9 years old). NAICS=68.120 (Utvikling og salg av byggeprosjekter). NAICS prefix MISMATCH: expected 41*, got 68.120. The entity exists but operates in a different industry than claimed.",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match",
+                  "fq_entity_identity_unambiguous"
+                ],
+                "payload_sha256": "59dba2f6c7b8f4ae1725e5de3a30e2a288cea5019b4e2d9bf70b96666f8b2c44",
+                "gathered_at_utc": "2026-05-30T06:24:21+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Utvikling og salg av byggeprosjekter",
+                      "naeringskode1": "68.120",
+                      "navn": "TEAM BYGG AS",
+                      "orgnr": "984738161",
+                      "slettedato": null,
+                      "stiftelsesdato": "2002-06-21",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 7,
+                      "konkurs": false,
+                      "naering_label": "Snekkerarbeid",
+                      "naeringskode1": "43.320",
+                      "navn": "RAM TEAM BYGG AS",
+                      "orgnr": "925929603",
+                      "slettedato": null,
+                      "stiftelsesdato": "2020-10-15",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "T & M TEAM BYGG AS",
+                      "orgnr": "916069502",
+                      "slettedato": null,
+                      "stiftelsesdato": "2015-09-25",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 20,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BYGG TEAM AS",
+                      "orgnr": "983547486",
+                      "slettedato": null,
+                      "stiftelsesdato": "2001-06-15",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 8,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BYGG-TEAM AS",
+                      "orgnr": "979653638",
+                      "slettedato": null,
+                      "stiftelsesdato": "1998-02-11",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 6,
+                      "konkurs": false,
+                      "naering_label": "Snekkerarbeid",
+                      "naeringskode1": "43.320",
+                      "navn": "BERGEN BYGG TEAM AS",
+                      "orgnr": "932499029",
+                      "slettedato": null,
+                      "stiftelsesdato": "2023-10-03",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BIALON BYGG TEAM AS",
+                      "orgnr": "922150273",
+                      "slettedato": null,
+                      "stiftelsesdato": "2019-01-14",
+                      "underAvvikling": true
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Utleie av egen eller leid fast eiendom",
+                      "naeringskode1": "68.200",
+                      "navn": "BYGG TEAM EIENDOM AS",
+                      "orgnr": "985268959",
+                      "slettedato": null,
+                      "stiftelsesdato": "2002-11-25",
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact",
+                  "top_match": {
+                    "antallAnsatte": null,
+                    "konkurs": false,
+                    "naering_label": "Utvikling og salg av byggeprosjekter",
+                    "naeringskode1": "68.120",
+                    "navn": "TEAM BYGG AS",
+                    "orgnr": "984738161",
+                    "slettedato": null,
+                    "stiftelsesdato": "2002-06-21",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 440102
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=Team%20Bygg%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=Team%20Bygg%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-e8697905fe",
+          "label": "Q: fq_industry_classification_match",
+          "kind": "question",
+          "verdict": "refutes",
+          "severity": null,
+          "glyph": "✗",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-80af14baea",
+              "label": "brreg: refutes (confidence 0.80)",
+              "kind": "evidence",
+              "verdict": "refutes",
+              "severity": null,
+              "glyph": "✗",
+              "detail": "BRREG resolved 'Team Bygg AS' to orgnr 984738161 'TEAM BYGG AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 440102 dataset entries containing any of the name tokens). Founded 2002-06-21 (~23.9 years old). NAICS=68.120 (Utvikling og salg av byggeprosjekter). NAICS prefix MISMATCH: expected 41*, got 68.120. The entity exists but operates in a different industry than claimed.",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match",
+                  "fq_entity_identity_unambiguous"
+                ],
+                "payload_sha256": "59dba2f6c7b8f4ae1725e5de3a30e2a288cea5019b4e2d9bf70b96666f8b2c44",
+                "gathered_at_utc": "2026-05-30T06:24:21+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Utvikling og salg av byggeprosjekter",
+                      "naeringskode1": "68.120",
+                      "navn": "TEAM BYGG AS",
+                      "orgnr": "984738161",
+                      "slettedato": null,
+                      "stiftelsesdato": "2002-06-21",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 7,
+                      "konkurs": false,
+                      "naering_label": "Snekkerarbeid",
+                      "naeringskode1": "43.320",
+                      "navn": "RAM TEAM BYGG AS",
+                      "orgnr": "925929603",
+                      "slettedato": null,
+                      "stiftelsesdato": "2020-10-15",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "T & M TEAM BYGG AS",
+                      "orgnr": "916069502",
+                      "slettedato": null,
+                      "stiftelsesdato": "2015-09-25",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 20,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BYGG TEAM AS",
+                      "orgnr": "983547486",
+                      "slettedato": null,
+                      "stiftelsesdato": "2001-06-15",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 8,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BYGG-TEAM AS",
+                      "orgnr": "979653638",
+                      "slettedato": null,
+                      "stiftelsesdato": "1998-02-11",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 6,
+                      "konkurs": false,
+                      "naering_label": "Snekkerarbeid",
+                      "naeringskode1": "43.320",
+                      "navn": "BERGEN BYGG TEAM AS",
+                      "orgnr": "932499029",
+                      "slettedato": null,
+                      "stiftelsesdato": "2023-10-03",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BIALON BYGG TEAM AS",
+                      "orgnr": "922150273",
+                      "slettedato": null,
+                      "stiftelsesdato": "2019-01-14",
+                      "underAvvikling": true
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Utleie av egen eller leid fast eiendom",
+                      "naeringskode1": "68.200",
+                      "navn": "BYGG TEAM EIENDOM AS",
+                      "orgnr": "985268959",
+                      "slettedato": null,
+                      "stiftelsesdato": "2002-11-25",
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact",
+                  "top_match": {
+                    "antallAnsatte": null,
+                    "konkurs": false,
+                    "naering_label": "Utvikling og salg av byggeprosjekter",
+                    "naeringskode1": "68.120",
+                    "navn": "TEAM BYGG AS",
+                    "orgnr": "984738161",
+                    "slettedato": null,
+                    "stiftelsesdato": "2002-06-21",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 440102
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=Team%20Bygg%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=Team%20Bygg%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-411b7a47b6",
+          "label": "Q: fq_entity_identity_unambiguous",
+          "kind": "question",
+          "verdict": "refutes",
+          "severity": null,
+          "glyph": "✗",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-f41960dedc",
+              "label": "brreg: refutes (confidence 0.80)",
+              "kind": "evidence",
+              "verdict": "refutes",
+              "severity": null,
+              "glyph": "✗",
+              "detail": "BRREG resolved 'Team Bygg AS' to orgnr 984738161 'TEAM BYGG AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 440102 dataset entries containing any of the name tokens). Founded 2002-06-21 (~23.9 years old). NAICS=68.120 (Utvikling og salg av byggeprosjekter). NAICS prefix MISMATCH: expected 41*, got 68.120. The entity exists but operates in a different industry than claimed.",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match",
+                  "fq_entity_identity_unambiguous"
+                ],
+                "payload_sha256": "59dba2f6c7b8f4ae1725e5de3a30e2a288cea5019b4e2d9bf70b96666f8b2c44",
+                "gathered_at_utc": "2026-05-30T06:24:21+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Utvikling og salg av byggeprosjekter",
+                      "naeringskode1": "68.120",
+                      "navn": "TEAM BYGG AS",
+                      "orgnr": "984738161",
+                      "slettedato": null,
+                      "stiftelsesdato": "2002-06-21",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 7,
+                      "konkurs": false,
+                      "naering_label": "Snekkerarbeid",
+                      "naeringskode1": "43.320",
+                      "navn": "RAM TEAM BYGG AS",
+                      "orgnr": "925929603",
+                      "slettedato": null,
+                      "stiftelsesdato": "2020-10-15",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "T & M TEAM BYGG AS",
+                      "orgnr": "916069502",
+                      "slettedato": null,
+                      "stiftelsesdato": "2015-09-25",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 20,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BYGG TEAM AS",
+                      "orgnr": "983547486",
+                      "slettedato": null,
+                      "stiftelsesdato": "2001-06-15",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 8,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BYGG-TEAM AS",
+                      "orgnr": "979653638",
+                      "slettedato": null,
+                      "stiftelsesdato": "1998-02-11",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 6,
+                      "konkurs": false,
+                      "naering_label": "Snekkerarbeid",
+                      "naeringskode1": "43.320",
+                      "navn": "BERGEN BYGG TEAM AS",
+                      "orgnr": "932499029",
+                      "slettedato": null,
+                      "stiftelsesdato": "2023-10-03",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Oppføring av bygninger",
+                      "naeringskode1": "41.000",
+                      "navn": "BIALON BYGG TEAM AS",
+                      "orgnr": "922150273",
+                      "slettedato": null,
+                      "stiftelsesdato": "2019-01-14",
+                      "underAvvikling": true
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Utleie av egen eller leid fast eiendom",
+                      "naeringskode1": "68.200",
+                      "navn": "BYGG TEAM EIENDOM AS",
+                      "orgnr": "985268959",
+                      "slettedato": null,
+                      "stiftelsesdato": "2002-11-25",
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact",
+                  "top_match": {
+                    "antallAnsatte": null,
+                    "konkurs": false,
+                    "naering_label": "Utvikling og salg av byggeprosjekter",
+                    "naeringskode1": "68.120",
+                    "navn": "TEAM BYGG AS",
+                    "orgnr": "984738161",
+                    "slettedato": null,
+                    "stiftelsesdato": "2002-06-21",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 440102
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=Team%20Bygg%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=Team%20Bygg%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player": {
+      "id": "argnode-c99610d8da",
+      "label": "Nordnes Narvik AS: Nordnes Narvik AS is a key player in railway construction in North Norway",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Nordnes Narvik AS is a key player in railway construction in North Norway",
+      "metadata": {
+        "hypothesis_id": "hyp_qben_nordnes_narvik_player",
+        "entity": "Nordnes Narvik AS",
+        "claim_category": "subsidiary_specialist",
+        "total_ledger_entries": 5
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-b46f0b5744",
+          "label": "Summary verdict landscape",
+          "kind": "summary",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Severity: critical. Taps reporting: doffin=partial, brreg=refutes, ted=not_found",
+          "metadata": {
+            "claim_category": "subsidiary_specialist",
+            "derived_severity": "critical",
+            "distinct_taps": [
+              "brreg",
+              "doffin",
+              "ted"
+            ],
+            "verdict_summary": {
+              "partial": 1,
+              "refutes": 1,
+              "not_found": 1
+            }
+          },
+          "links": [],
+          "children": []
+        },
+        {
+          "id": "argnode-4d8c1a8868",
+          "label": "Q: fq_direct_prime_contracts",
+          "kind": "question",
+          "verdict": "not_found",
+          "severity": null,
+          "glyph": "?",
+          "detail": "Falsification question addressed by 2 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-0c2afab1f3",
+              "label": "doffin: partial (confidence 0.35)",
+              "kind": "evidence",
+              "verdict": "partial",
+              "severity": null,
+              "glyph": "≈",
+              "detail": "Doffin returned 1 confirmed award(s) to Nordnes Narvik AS, but 1 of them predate the acquisition. The post-acquisition activity that would substantiate organic growth is absent.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_direct_prime_contracts"
+                ],
+                "payload_sha256": "1d398f2412253f4d30fa025899c314c117ac21ffc276ecde2f0695f28785dcf4",
+                "gathered_at_utc": "2026-05-30T06:24:33+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 1,
+                  "confirmed_awards": [
+                    {
+                      "awarded_names": [
+                        "Nordnes Narvik AS",
+                        "Veidekke Entreprenør AS",
+                        "Nvk Maskin AS"
+                      ],
+                      "buyer_names": [
+                        "Spordrift AS"
+                      ],
+                      "heading": "Maskin entrepriser Ofotbanen",
+                      "notice_id": "2021-386711",
+                      "public_url": "https://www.doffin.no/notices/2021-386711",
+                      "publication_date": "2021-09-28"
+                    }
+                  ],
+                  "post_acquisition_award_count": 0,
+                  "pre_acquisition_award_count": 1,
+                  "search_hits_total": 1
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/doffin/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+                  "href": "external/doffin/qben_infra_2024/nordnes-narvik-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.doffin.no/webclient/api/v2/search-api/search",
+                  "href": "https://api.doffin.no/webclient/api/v2/search-api/search"
+                }
+              ],
+              "children": [
+                {
+                  "id": "argnode-a1b2f44f64",
+                  "label": "2021-386711 | 2021-09-28 | Maskin entrepriser Ofotbanen",
+                  "kind": "source",
+                  "verdict": null,
+                  "severity": null,
+                  "glyph": "",
+                  "detail": "",
+                  "metadata": {
+                    "buyer_names": [
+                      "Spordrift AS"
+                    ],
+                    "winner_names": [
+                      "Nordnes Narvik AS",
+                      "Veidekke Entreprenør AS",
+                      "Nvk Maskin AS"
+                    ]
+                  },
+                  "links": [
+                    {
+                      "label": "Open notice",
+                      "href": "https://www.doffin.no/notices/2021-386711"
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "argnode-37a389be00",
+              "label": "ted: not_found (confidence 0.45)",
+              "kind": "evidence",
+              "verdict": "not_found",
+              "severity": null,
+              "glyph": "?",
+              "detail": "TED returned 0 notices where Nordnes Narvik AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence.",
+              "metadata": {
+                "tap_kind": "public_procurement",
+                "addresses_questions": [
+                  "fq_direct_prime_contracts"
+                ],
+                "payload_sha256": "69b95e3e8eb5a888490d883abddb9739c9f88d5f6b22fe01295a80f7a0aa15fe",
+                "gathered_at_utc": "2026-05-30T06:24:41+00:00",
+                "payload_summary": {
+                  "confirmed_award_count": 0,
+                  "confirmed_awards": [],
+                  "post_acquisition_award_count": 0,
+                  "pre_acquisition_award_count": 0,
+                  "search_hits_total": 0,
+                  "ted_threshold_caveat": "TED carries EU-directive-threshold notices only (~NOK 45M for works, ~NOK 1.4-2M for goods/services). Absence on TED is weaker evidence than absence on Doffin."
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: external/ted/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+                  "href": "external/ted/qben_infra_2024/nordnes-narvik-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://api.ted.europa.eu/v3/notices/search",
+                  "href": "https://api.ted.europa.eu/v3/notices/search"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-edaf2bfcc9",
+          "label": "Q: fq_entity_age_and_existence",
+          "kind": "question",
+          "verdict": "refutes",
+          "severity": null,
+          "glyph": "✗",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-a517c6cff6",
+              "label": "brreg: refutes (confidence 0.80)",
+              "kind": "evidence",
+              "verdict": "refutes",
+              "severity": null,
+              "glyph": "✗",
+              "detail": "BRREG resolved 'Nordnes Narvik AS' to orgnr 991683011 'NORDNES NARVIK AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 433917 dataset entries containing any of the name tokens). Founded 2007-09-03 (~18.7 years old). Reports 6 employees. NAICS=47.520 (Detaljhandel med jernvarer, byggevarer, fargevarer og glass). NAICS prefix MISMATCH: expected 42.12*, got 47.520. The entity exists but operates in a different industry than claimed.",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match"
+                ],
+                "payload_sha256": "d3db54c9a6a11532be50886d3e538e8527693716c57f1a79c480306aabbe5a4e",
+                "gathered_at_utc": "2026-05-30T06:24:36+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": 6,
+                      "konkurs": false,
+                      "naering_label": "Detaljhandel med jernvarer, byggevarer, fargevarer og glass",
+                      "naeringskode1": "47.520",
+                      "navn": "NORDNES NARVIK AS",
+                      "orgnr": "991683011",
+                      "slettedato": null,
+                      "stiftelsesdato": "2007-09-03",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 13,
+                      "konkurs": false,
+                      "naering_label": "Fiske og fangst i sjø",
+                      "naeringskode1": "03.110",
+                      "navn": "NORDNES AS",
+                      "orgnr": "979397720",
+                      "slettedato": null,
+                      "stiftelsesdato": "1997-11-17",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Rengjøring av bygninger",
+                      "naeringskode1": "81.210",
+                      "navn": "NORDN AS",
+                      "orgnr": "928119386",
+                      "slettedato": null,
+                      "stiftelsesdato": "2021-10-21",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Produksjon av reiseeffekter og salmakerartikler",
+                      "naeringskode1": "15.120",
+                      "navn": "ATELIER NORDNES",
+                      "orgnr": "928251233",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Dataprogrammeringstjenester",
+                      "naeringskode1": "62.100",
+                      "navn": "BITMOUDE NORDNES",
+                      "orgnr": "913684575",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Annen utøvende kunstnerisk virksomhet og underholdningsvirksomhet ikke nevnt annet sted",
+                      "naeringskode1": "90.209",
+                      "navn": "C NORDNES",
+                      "orgnr": "933153037",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Avvirkning",
+                      "naeringskode1": "02.200",
+                      "navn": "CHRISTOFFER NORDNES",
+                      "orgnr": "929440676",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Skapende kunstnerisk virksomhet innenfor visuell kunst",
+                      "naeringskode1": "90.120",
+                      "navn": "KARI NORDNES",
+                      "orgnr": "995593823",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact",
+                  "top_match": {
+                    "antallAnsatte": 6,
+                    "konkurs": false,
+                    "naering_label": "Detaljhandel med jernvarer, byggevarer, fargevarer og glass",
+                    "naeringskode1": "47.520",
+                    "navn": "NORDNES NARVIK AS",
+                    "orgnr": "991683011",
+                    "slettedato": null,
+                    "stiftelsesdato": "2007-09-03",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 433917
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/nordnes-narvik-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=Nordnes%20Narvik%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=Nordnes%20Narvik%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "argnode-cdce3d64e0",
+          "label": "Q: fq_industry_classification_match",
+          "kind": "question",
+          "verdict": "refutes",
+          "severity": null,
+          "glyph": "✗",
+          "detail": "Falsification question addressed by 1 tap(s).",
+          "metadata": {},
+          "links": [],
+          "children": [
+            {
+              "id": "argnode-51803f0e8b",
+              "label": "brreg: refutes (confidence 0.80)",
+              "kind": "evidence",
+              "verdict": "refutes",
+              "severity": null,
+              "glyph": "✗",
+              "detail": "BRREG resolved 'Nordnes Narvik AS' to orgnr 991683011 'NORDNES NARVIK AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 433917 dataset entries containing any of the name tokens). Founded 2007-09-03 (~18.7 years old). Reports 6 employees. NAICS=47.520 (Detaljhandel med jernvarer, byggevarer, fargevarer og glass). NAICS prefix MISMATCH: expected 42.12*, got 47.520. The entity exists but operates in a different industry than claimed.",
+              "metadata": {
+                "tap_kind": "company_registry",
+                "addresses_questions": [
+                  "fq_entity_age_and_existence",
+                  "fq_industry_classification_match"
+                ],
+                "payload_sha256": "d3db54c9a6a11532be50886d3e538e8527693716c57f1a79c480306aabbe5a4e",
+                "gathered_at_utc": "2026-05-30T06:24:36+00:00",
+                "payload_summary": {
+                  "candidates_summary": [
+                    {
+                      "antallAnsatte": 6,
+                      "konkurs": false,
+                      "naering_label": "Detaljhandel med jernvarer, byggevarer, fargevarer og glass",
+                      "naeringskode1": "47.520",
+                      "navn": "NORDNES NARVIK AS",
+                      "orgnr": "991683011",
+                      "slettedato": null,
+                      "stiftelsesdato": "2007-09-03",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": 13,
+                      "konkurs": false,
+                      "naering_label": "Fiske og fangst i sjø",
+                      "naeringskode1": "03.110",
+                      "navn": "NORDNES AS",
+                      "orgnr": "979397720",
+                      "slettedato": null,
+                      "stiftelsesdato": "1997-11-17",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Rengjøring av bygninger",
+                      "naeringskode1": "81.210",
+                      "navn": "NORDN AS",
+                      "orgnr": "928119386",
+                      "slettedato": null,
+                      "stiftelsesdato": "2021-10-21",
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Produksjon av reiseeffekter og salmakerartikler",
+                      "naeringskode1": "15.120",
+                      "navn": "ATELIER NORDNES",
+                      "orgnr": "928251233",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Dataprogrammeringstjenester",
+                      "naeringskode1": "62.100",
+                      "navn": "BITMOUDE NORDNES",
+                      "orgnr": "913684575",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Annen utøvende kunstnerisk virksomhet og underholdningsvirksomhet ikke nevnt annet sted",
+                      "naeringskode1": "90.209",
+                      "navn": "C NORDNES",
+                      "orgnr": "933153037",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Avvirkning",
+                      "naeringskode1": "02.200",
+                      "navn": "CHRISTOFFER NORDNES",
+                      "orgnr": "929440676",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    },
+                    {
+                      "antallAnsatte": null,
+                      "konkurs": false,
+                      "naering_label": "Skapende kunstnerisk virksomhet innenfor visuell kunst",
+                      "naeringskode1": "90.120",
+                      "navn": "KARI NORDNES",
+                      "orgnr": "995593823",
+                      "slettedato": null,
+                      "stiftelsesdato": null,
+                      "underAvvikling": false
+                    }
+                  ],
+                  "matched_by": "exact",
+                  "top_match": {
+                    "antallAnsatte": 6,
+                    "konkurs": false,
+                    "naering_label": "Detaljhandel med jernvarer, byggevarer, fargevarer og glass",
+                    "naeringskode1": "47.520",
+                    "navn": "NORDNES NARVIK AS",
+                    "orgnr": "991683011",
+                    "slettedato": null,
+                    "stiftelsesdato": "2007-09-03",
+                    "underAvvikling": false
+                  },
+                  "total_hits": 433917
+                }
+              },
+              "links": [
+                {
+                  "label": "raw payload: data/external/brreg/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+                  "href": "data/external/brreg/qben_infra_2024/nordnes-narvik-as_2026-05-30.json"
+                },
+                {
+                  "label": "upstream query: https://data.brreg.no/enhetsregisteret/api/enheter?navn=Nordnes%20Narvik%20AS&size=25",
+                  "href": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=Nordnes%20Narvik%20AS&size=25"
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "inin_group|narrative_dissonance|ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move": {
+      "id": "argnode-f9e150471d",
+      "label": "ININ Group AS: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "warning",
+      "glyph": "⚠",
+      "detail": "ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move the opposite way (interest_coverage_ratio=1.5, net_debt_to_ebitda=4.2).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 2.48
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-951c42afec",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "robust megatrends.",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "inin_group|selective_disclosure|ININ Group AS: new 'continuing_operations' framing introduced in FY 2025, absent": {
+      "id": "argnode-7f8e59a28f",
+      "label": "ININ Group AS: selective_disclosure (?)",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "ININ Group AS: new 'continuing_operations' framing introduced in FY 2025, absent in Q3 2024 Interim.",
+      "metadata": {
+        "rule_id": "selective_disclosure"
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-ec62a8a1e9",
+          "label": "KPI: ?",
+          "kind": "calculation",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Verdict: reclassification_introduced. KPI emphasis changed between prior and current reports.",
+          "metadata": {
+            "verdict": "reclassification_introduced",
+            "weight": null,
+            "prior_emphasis": null,
+            "current_emphasis": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "inin_group|selective_disclosure|ININ Group AS: new 'held_for_sale' framing introduced in FY 2025, absent in Q3 2": {
+      "id": "argnode-7f8e59a28f",
+      "label": "ININ Group AS: selective_disclosure (?)",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "ININ Group AS: new 'held_for_sale' framing introduced in FY 2025, absent in Q3 2024 Interim.",
+      "metadata": {
+        "rule_id": "selective_disclosure"
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-ec62a8a1e9",
+          "label": "KPI: ?",
+          "kind": "calculation",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Verdict: reclassification_introduced. KPI emphasis changed between prior and current reports.",
+          "metadata": {
+            "verdict": "reclassification_introduced",
+            "weight": null,
+            "prior_emphasis": null,
+            "current_emphasis": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "inin_group|selective_disclosure|ININ Group AS: new 'discontinued_operations' framing introduced in FY 2025, abse": {
+      "id": "argnode-7f8e59a28f",
+      "label": "ININ Group AS: selective_disclosure (?)",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "ININ Group AS: new 'discontinued_operations' framing introduced in FY 2025, absent in Q3 2024 Interim.",
+      "metadata": {
+        "rule_id": "selective_disclosure"
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-ec62a8a1e9",
+          "label": "KPI: ?",
+          "kind": "calculation",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Verdict: reclassification_introduced. KPI emphasis changed between prior and current reports.",
+          "metadata": {
+            "verdict": "reclassification_introduced",
+            "weight": null,
+            "prior_emphasis": null,
+            "current_emphasis": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "techstep|narrative_dissonance|Techstep ASA: 'growth' narrative cited 57 times, but supporting metrics move the": {
+      "id": "argnode-8196f5ccf5",
+      "label": "Techstep ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Techstep ASA: 'growth' narrative cited 57 times, but supporting metrics move the opposite way (revenue_yoy_pct=-6.7, organic_growth_pct=-6.7).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 27.0
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-b7c820e3d2",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "sustainable growth and long-term value creation.",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "techstep|narrative_dissonance|Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move": {
+      "id": "argnode-8196f5ccf5",
+      "label": "Techstep ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "warning",
+      "glyph": "⚠",
+      "detail": "Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-1.0, ebita_margin_pct=1.2).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 1.72
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-b7c820e3d2",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "customers maximise the value of their mobile estate while strengthening security, efficiency, sustainability and user",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "techstep|narrative_dissonance|Techstep ASA: 'resilience' narrative cited 10 times, but supporting metrics move": {
+      "id": "argnode-8196f5ccf5",
+      "label": "Techstep ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Techstep ASA: 'resilience' narrative cited 10 times, but supporting metrics move the opposite way (interest_coverage_ratio=1.1, net_debt_to_ebitda=3.9).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 9.0
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-b7c820e3d2",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "a resilient foundation as Techstep continues to scale it’s our own software and services portfolio.",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "techstep|narrative_dissonance|Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move ": {
+      "id": "argnode-8196f5ccf5",
+      "label": "Techstep ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "info",
+      "glyph": "ⓘ",
+      "detail": "Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move the opposite way (working_capital_to_revenue_pct=15.0, capex_to_depreciation_ratio=1.5).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 0.28
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-b7c820e3d2",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "predictability, and disciplined capital allocation.",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "techstep|selective_disclosure|Techstep ASA: new 'held_for_sale' framing introduced in FY 2025, absent in FY 20": {
+      "id": "argnode-3a9d7dbd8e",
+      "label": "Techstep ASA: selective_disclosure (?)",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Techstep ASA: new 'held_for_sale' framing introduced in FY 2025, absent in FY 2024.",
+      "metadata": {
+        "rule_id": "selective_disclosure"
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-dff9f577cf",
+          "label": "KPI: ?",
+          "kind": "calculation",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Verdict: reclassification_introduced. KPI emphasis changed between prior and current reports.",
+          "metadata": {
+            "verdict": "reclassification_introduced",
+            "weight": null,
+            "prior_emphasis": null,
+            "current_emphasis": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "techstep|selective_disclosure|Techstep ASA: new 'discontinued_operations' framing introduced in FY 2025, absen": {
+      "id": "argnode-3a9d7dbd8e",
+      "label": "Techstep ASA: selective_disclosure (?)",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Techstep ASA: new 'discontinued_operations' framing introduced in FY 2025, absent in FY 2024.",
+      "metadata": {
+        "rule_id": "selective_disclosure"
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-dff9f577cf",
+          "label": "KPI: ?",
+          "kind": "calculation",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Verdict: reclassification_introduced. KPI emphasis changed between prior and current reports.",
+          "metadata": {
+            "verdict": "reclassification_introduced",
+            "weight": null,
+            "prior_emphasis": null,
+            "current_emphasis": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "otovo|narrative_dissonance|Otovo ASA: 'growth' narrative cited 46 times, but supporting metrics move the op": {
+      "id": "argnode-fc5d2f18c5",
+      "label": "Otovo ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Otovo ASA: 'growth' narrative cited 46 times, but supporting metrics move the opposite way (revenue_yoy_pct=-42.0, organic_growth_pct=-42.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 25.2
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-7e59f9e973",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "Cost cut, portfolio sold, now re-growth",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "otovo|narrative_dissonance|Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the": {
+      "id": "argnode-fc5d2f18c5",
+      "label": "Otovo ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-8.0, ebita_margin_pct=-51.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 8.55
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-7e59f9e973",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "efficiency program (completed",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "otovo|narrative_dissonance|Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the": {
+      "id": "argnode-fc5d2f18c5",
+      "label": "Otovo ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the opposite way (interest_coverage_ratio=0.5, net_debt_to_ebitda=9.9).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 7.2
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-7e59f9e973",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "greener and more robust by providing",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "otovo|narrative_dissonance|Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opp": {
+      "id": "argnode-fc5d2f18c5",
+      "label": "Otovo ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "warning",
+      "glyph": "⚠",
+      "detail": "Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opposite way (revenue_yoy_pct=-42.0, order_intake_yoy_pct=-30.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 2.48
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-7e59f9e973",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "● Creating favourable conditions and",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting": {
+      "id": "argnode-8e0f5beffb",
+      "label": "Norwegian Air Shuttle ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "warning",
+      "glyph": "⚠",
+      "detail": "Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-3.4, ebita_margin_pct=5.3).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 3.53
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-d3da6daebf",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "In 2025, we will have more focus on harvesting these investments while intensifying our costs-efficiency efforts.",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting ": {
+      "id": "argnode-8e0f5beffb",
+      "label": "Norwegian Air Shuttle ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting metrics move the opposite way (interest_coverage_ratio=2.4, net_debt_to_ebitda=4.8).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 5.85
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-d3da6daebf",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "and robust governance of sustainability matters for all",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting": {
+      "id": "argnode-25ba0bddae",
+      "label": "Norse Atlantic Airways ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-1.0, ebita_margin_pct=-16.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 8.1
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-80a1b00663",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "The affordability of tickets can largely be attributed to improved fleet efficiency, driven by advancements in technology, and more fuel-efficient aircraft.",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting": {
+      "id": "argnode-25ba0bddae",
+      "label": "Norse Atlantic Airways ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "critical",
+      "glyph": "‼",
+      "detail": "Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting metrics move the opposite way (interest_coverage_ratio=0.3, net_debt_to_ebitda=99.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 5.85
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-80a1b00663",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "The Company’s robust operational performance was again demonstrated in 2024 as 99.6 per cent of all scheduled flights were completed as scheduled during another period of substantial growth.",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    },
+    "north_energy|narrative_dissonance|North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics m": {
+      "id": "argnode-817b5567ad",
+      "label": "North Energy ASA: narrative_dissonance",
+      "kind": "claim",
+      "verdict": null,
+      "severity": "info",
+      "glyph": "ⓘ",
+      "detail": "North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-0.5, ebita_margin_pct=5.0).",
+      "metadata": {
+        "rule_id": "narrative_dissonance",
+        "priority_score": 0.3
+      },
+      "links": [],
+      "children": [
+        {
+          "id": "argnode-060f93d309",
+          "label": "Narrative claim excerpt",
+          "kind": "source",
+          "verdict": null,
+          "severity": null,
+          "glyph": "",
+          "detail": "increase efficiency significantly in comparison to",
+          "metadata": {
+            "pdf": null,
+            "matched_term": null
+          },
+          "links": [],
+          "children": []
+        }
+      ]
+    }
+  }
+}

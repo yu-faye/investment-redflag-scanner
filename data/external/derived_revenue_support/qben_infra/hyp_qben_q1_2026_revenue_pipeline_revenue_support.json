@@ -1,0 +1,127 @@
+{
+  "any_support_pct": 50.0,
+  "confidence_weighted_support_pct": 25.0,
+  "external_support_pct": 25.0,
+  "external_support_threshold_pct": 50.0,
+  "method": "v10.revenue_support_calculator",
+  "peers_evaluated": 4,
+  "peers_with_any_confirmed_awards": 2,
+  "peers_with_post_acq_confirmed_awards": 1,
+  "per_peer_breakdown": [
+    {
+      "confirmed_count": 6,
+      "peer_entity": "Banefjell AS",
+      "peer_hypothesis_id": "hyp_qben_banefjell_established",
+      "post_acq_count": 4,
+      "pre_acq_count": 2,
+      "tap_breakdown": [
+        {
+          "confidence": 0.85,
+          "confirmed_award_count": 4,
+          "post_acquisition_award_count": 2,
+          "pre_acquisition_award_count": 2,
+          "tap_id": "doffin",
+          "tap_signal": 0.85,
+          "verdict": "confirms"
+        },
+        {
+          "confidence": 0.85,
+          "confirmed_award_count": 2,
+          "post_acquisition_award_count": 2,
+          "pre_acquisition_award_count": 0,
+          "tap_id": "ted",
+          "tap_signal": 0.85,
+          "verdict": "confirms"
+        }
+      ],
+      "weighted_signal": 1.0
+    },
+    {
+      "confirmed_count": 0,
+      "peer_entity": "SLAM Jernbaneteknikk AS",
+      "peer_hypothesis_id": "hyp_qben_slam_specialist",
+      "post_acq_count": 0,
+      "pre_acq_count": 0,
+      "tap_breakdown": [
+        {
+          "confidence": 0.7,
+          "confirmed_award_count": 0,
+          "post_acquisition_award_count": 0,
+          "pre_acquisition_award_count": 0,
+          "tap_id": "doffin",
+          "tap_signal": 0.0,
+          "verdict": "not_found"
+        },
+        {
+          "confidence": 0.45,
+          "confirmed_award_count": 0,
+          "post_acquisition_award_count": 0,
+          "pre_acquisition_award_count": 0,
+          "tap_id": "ted",
+          "tap_signal": 0.0,
+          "verdict": "not_found"
+        }
+      ],
+      "weighted_signal": 0.0
+    },
+    {
+      "confirmed_count": 0,
+      "peer_entity": "Team Bygg AS",
+      "peer_hypothesis_id": "hyp_qben_team_bygg_player",
+      "post_acq_count": 0,
+      "pre_acq_count": 0,
+      "tap_breakdown": [
+        {
+          "confidence": 0.6,
+          "confirmed_award_count": 0,
+          "post_acquisition_award_count": 0,
+          "pre_acquisition_award_count": 0,
+          "tap_id": "doffin",
+          "tap_signal": 0.0,
+          "verdict": "refutes"
+        },
+        {
+          "confidence": 0.45,
+          "confirmed_award_count": 0,
+          "post_acquisition_award_count": 0,
+          "pre_acquisition_award_count": 0,
+          "tap_id": "ted",
+          "tap_signal": 0.0,
+          "verdict": "not_found"
+        }
+      ],
+      "weighted_signal": 0.0
+    },
+    {
+      "confirmed_count": 1,
+      "peer_entity": "Nordnes Narvik AS",
+      "peer_hypothesis_id": "hyp_qben_nordnes_narvik_player",
+      "post_acq_count": 0,
+      "pre_acq_count": 1,
+      "tap_breakdown": [
+        {
+          "confidence": 0.35,
+          "confirmed_award_count": 1,
+          "post_acquisition_award_count": 0,
+          "pre_acquisition_award_count": 1,
+          "tap_id": "doffin",
+          "tap_signal": 0.0,
+          "verdict": "partial"
+        },
+        {
+          "confidence": 0.45,
+          "confirmed_award_count": 0,
+          "post_acquisition_award_count": 0,
+          "pre_acquisition_award_count": 0,
+          "tap_id": "ted",
+          "tap_signal": 0.0,
+          "verdict": "not_found"
+        }
+      ],
+      "weighted_signal": 0.0
+    }
+  ],
+  "reported_revenue_msek": 169.0,
+  "total_post_acq_awards": 4,
+  "total_pre_acq_awards": 3
+}

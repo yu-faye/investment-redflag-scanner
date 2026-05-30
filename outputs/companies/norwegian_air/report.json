@@ -1,0 +1,406 @@
+{
+  "company": "norwegian_air",
+  "name": "Norwegian Air Shuttle ASA",
+  "ticker": "NAS",
+  "exchange": "Oslo Bors",
+  "middelborg_link": "Not a Middelborg holding. Used as large-cap Nordic listed test target.",
+  "generated_at_utc": "2026-05-30T06:35:56+00:00",
+  "current_period": "FY 2024",
+  "prior_period": null,
+  "source_used": {
+    "current_file": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+    "current_kind": "txt",
+    "prior": null
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+      "kind": "local_txt",
+      "issuer_url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+      "issuer_page": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+      "language": "en",
+      "label": "Annual Report 2024 (text cache)",
+      "period": "2024-FY",
+      "sha256": "9aca2a33c7f92aa1620541b3bce9ffabeef9e840b82285c283ae54faa2789b59",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": null
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": 6.907,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": 2024.0,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": 5.197,
+    "interest_expense_msek_raw": 11259.3,
+    "ebitda_for_leverage_msek_raw": null
+  },
+  "auto_metrics_provenance": {
+    "ebitda_msek": {
+      "value": 6.907,
+      "regex_id": "ebitda",
+      "raw_match": "EBITDAR), amounted to NOK 6,907",
+      "char_span": [
+        48114,
+        48145
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDAR), amounted to NOK 6,907"
+    },
+    "cash_flow_operating_msek": {
+      "value": 2024.0,
+      "regex_id": "ocf",
+      "raw_match": "Cash flow from operating activities in 2024",
+      "char_span": [
+        61254,
+        61297
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Cash flow from operating activities in 2024"
+    },
+    "net_debt_msek_raw": {
+      "value": 5.197,
+      "regex_id": "net_debt_anchor",
+      "raw_match": "Net interest-bearing debt at the end of 2024 amounted to NOK 5,197",
+      "char_span": [
+        62710,
+        62776
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Net interest-bearing debt at the end of 2024 amounted to NOK 5,197"
+    },
+    "interest_expense_msek_raw": {
+      "value": 11259.3,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "Interest expense (1,135.0) (848.0) Other financial income (expense) 11 259.3",
+      "char_span": [
+        416056,
+        416132
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Interest expense (1,135.0) (848.0) Other financial income (expense) 11 259.3"
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": 17.0,
+    "organic_growth_pct": 5.0,
+    "gross_margin_yoy_change_pct": -3.4,
+    "ebita_margin_pct": 5.3,
+    "ebitda_margin_pct": 10.0,
+    "interest_coverage_ratio": 2.4,
+    "net_debt_to_ebitda": 4.8,
+    "working_capital_to_revenue_pct": -2.0,
+    "capex_to_depreciation_ratio": 1.1,
+    "order_intake_yoy_pct": null
+  },
+  "manual_metrics_provenance": {},
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": 6.907,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": 2024.0,
+    "ebita_margin_pct": 5.3,
+    "ebitda_margin_pct": 10.0,
+    "net_debt_msek_raw": 5.197,
+    "interest_expense_msek_raw": 11259.3,
+    "ebitda_for_leverage_msek_raw": null,
+    "revenue_yoy_pct": 17.0,
+    "organic_growth_pct": 5.0,
+    "gross_margin_yoy_change_pct": -3.4,
+    "interest_coverage_ratio": 2.4,
+    "net_debt_to_ebitda": 4.8,
+    "working_capital_to_revenue_pct": -2.0,
+    "capex_to_depreciation_ratio": 1.1
+  },
+  "metrics_audit": {
+    "capex_to_depreciation_ratio": {
+      "auto": null,
+      "manual": 1.1,
+      "chosen": 1.1,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "cash_flow_operating_msek": {
+      "auto": 2024.0,
+      "manual": null,
+      "chosen": 2024.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": 5.3,
+      "chosen": 5.3,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": 10.0,
+      "chosen": 10.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_msek": {
+      "auto": 6.907,
+      "manual": null,
+      "chosen": 6.907,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "gross_margin_yoy_change_pct": {
+      "auto": null,
+      "manual": -3.4,
+      "chosen": -3.4,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": null,
+      "manual": 2.4,
+      "chosen": 2.4,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": null,
+      "manual": 4.8,
+      "chosen": 4.8,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": 5.0,
+      "chosen": 5.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": 17.0,
+      "chosen": 17.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "working_capital_to_revenue_pct": {
+      "auto": null,
+      "manual": -2.0,
+      "chosen": -2.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "efficiency",
+      "mention_count": 37,
+      "mention_density_per_10k_chars": 0.56,
+      "term_hits": [
+        {
+          "term": "efficiency",
+          "count": 35
+        },
+        {
+          "term": "cost control",
+          "count": 2
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -3.4,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 5.3,
+          "expected_direction": "up",
+          "score": 1
+        }
+      ],
+      "alignment_score": 0.0,
+      "verdict": "weak_support",
+      "severity": "warning",
+      "claim_excerpt": "In 2025, we will have more focus on harvesting these investments while intensifying our costs-efficiency efforts.",
+      "claim_excerpt_matched_term": "efficiency",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'efficiency' qualitatively, yet supporting metrics (gross_margin_yoy_change_pct=-3.4, ebita_margin_pct=5.3) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 3.53,
+      "headline": "Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-3.4, ebita_margin_pct=5.3).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+          "issuer_page": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+          "language": "en",
+          "label": "Annual Report 2024 (text cache)",
+          "period": "2024-FY",
+          "sha256": "9aca2a33c7f92aa1620541b3bce9ffabeef9e840b82285c283ae54faa2789b59",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -3.4,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 5.3,
+          "expected_direction": "up",
+          "score": 1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "resilience",
+      "mention_count": 3,
+      "mention_density_per_10k_chars": 0.05,
+      "term_hits": [
+        {
+          "term": "resilient",
+          "count": 1
+        },
+        {
+          "term": "robust",
+          "count": 2
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 2.4,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 4.8,
+          "expected_direction": "down",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "and robust governance of sustainability matters for all",
+      "claim_excerpt_matched_term": "robust",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'resilience' qualitatively, yet supporting metrics (interest_coverage_ratio=2.4, net_debt_to_ebitda=4.8) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 5.85,
+      "headline": "Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting metrics move the opposite way (interest_coverage_ratio=2.4, net_debt_to_ebitda=4.8).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+          "issuer_page": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+          "language": "en",
+          "label": "Annual Report 2024 (text cache)",
+          "period": "2024-FY",
+          "sha256": "9aca2a33c7f92aa1620541b3bce9ffabeef9e840b82285c283ae54faa2789b59",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 2.4,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 4.8,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "severity_tally": {
+    "critical": 1,
+    "warning": 1,
+    "info": 0
+  },
+  "findings_count": 2
+}

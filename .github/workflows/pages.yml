@@ -1,0 +1,61 @@
+name: Deploy dashboard to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble static site
+        run: |
+          set -euo pipefail
+          mkdir -p _site/dashboard _site/outputs _site/data
+          cp dashboard/* _site/dashboard/
+          cp outputs/*.json _site/outputs/ 2>/dev/null || true
+          cp data/sources.json _site/data/sources.json 2>/dev/null || true
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+            <head>
+              <meta charset="utf-8" />
+              <title>Investment Red-Flag Scanner</title>
+              <meta http-equiv="refresh" content="0; url=dashboard/index.html" />
+            </head>
+            <body>
+              <p>Redirecting to <a href="dashboard/index.html">dashboard/index.html</a>...</p>
+            </body>
+          </html>
+          HTML
+          ls -la _site
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

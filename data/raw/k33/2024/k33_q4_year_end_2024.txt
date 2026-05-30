@@ -1,0 +1,706 @@
+Q4 2024
+
+January - December
+K33 AB (publ)
+
+556668-3933
+Quarterly ReportQ4
+Torbjørn Bull Jenssen
+CEO, K33 AB (publ)
+K33’s takeover of Arcario has been a 
+great success. We are experiencing 
+accelerated growth while preparing 
+for partnerships with banks and 
+financial service providers.
+Introduction
+Strong growth and preparing for partners
+
+Record-Breaking Quarter
+
+K33 achieved 375M SEK in revenue, a 50% increase from Q3 2024.
+Successful Rebrand
+
+The transition to K33 was successfully completed, reinforcing 
+K33’s market position with a stronger brand and core focus of 
+redefining wealth management in the digital era.
+Positive EBITDA
+
+K33 posted a positive EBITDA of 1.3M SEK, reflecting its 
+disciplined approach to growth and operational efficiency.
+Onboarding partners (Subsequent event)
+
+K33 has onboarded its first bank as a corporate client and is in 
+the process of developing its first “brokerage-as-a-service” 
+model with Stack, laying the foundation for future growth.
+Highlights of the quarter:
+K33 Quarterly Report Q4 Q4 2024 January - December 01
+Revenue by quarter (kSEK)
+400,000
+350,000
+300,000
+250,000
+200,000
+150,000
+100,000
+50,000
+Q1 Q2 Q1
+2023 2024
+Q3 Q4 Q2 Q3 Q4
+*Compared to the fourth quarter of 2023
+*Compared to full year 2023
+Revenue
+
+Operating expenses
+
+EBITDA
+
+Total assets
+
+Total liabilities
+
+Equity
+375,432
+
+-374,083
+
+1,349
+
+41,328
+
+11,156
+
+30,172
+85,730
+
+-92,704
+
+-6,974
+
+43,800
+
+43,817
+
+-17
+250,742
+
+-254,400
+
+-3,658
+
+51,728
+
+15,016
+
+36,712
+969,515
+
+-962,861
+
+6,654
+
+41,328
+
+11,156
+
+30,172
+154,305
+
+-176,172
+
+-21,867
+
+43,800
+
+43,817
+
+-17
+→ Group revenue increased to 375,432  kSEK (85,730)
+→ EBIT amounted to -533 kSEK (-11,140)
+→ EBITDA amounted to 1,349 kSEK (-6,974)
+→ The result for the period amounted to 72 kSEK (-27,119)
+→ Earnings per share before dilution amounted to SEK 0.000 (-0.003)
+Financial Overview (kSEK) Q4 2024 Q4 2023 Q3 2024 Jan Dec 2024 Jan Dec 2023
+→ Group revenue increased to 969,515 kSEK (154,305)
+→ EBIT amounted to -1,556 kSEK (-70,879)
+→ EBITDA amounted to 6,654 kSEK (-21,867)
+→ The result for the period amounted to -3,870 kSEK (-89,997)
+→ Earnings per share before dilution amounted to SEK 0.000 (-0.006)
+Fourth quarter of 2024
+Full year 2024
+
+Financials
+K33 Quarterly Report Q4 Q4 2024 January - December 02
+Dear Investors,
+
+K33’s takeover of Arcario has been a great success. We are experiencing accelerated growth while preparing for 
+partnerships with banks and financial service providers.  
+2024 - A record year
+ 
+I couldn’t be more proud of the team for delivering a record-breaking year of growth. 2024 marks the best full-year and 
+Q4 by gross revenue in K33’s history. Our revenue increased 528% compared to 2023 and the EBITDA amounted to 6.7 
+MSEK (-21.9).
+
+In 2025 we will work hard to continue the trend. We are currently increasing our investment in marketing to position the 
+company for key partnerships and strong growth later in the year.
+
+K33 - The New Gold Standard
+
+Focus and dedication to high standards are the main drivers of our success. 
+
+Our current client base includes active investors, family offices, corporate clients, hedge funds, and crypto exchange 
+services. We have optimized our offering for these larger clients, who benefit from superior pricing, deep liquidity, and 
+first-class support. In addition, all clients can choose to deposit and trade in their preferred fiat currency while having 
+access to a broad selection of cryptocurrencies without any costs or limits on withdrawals.
+
+Looking ahead, we will continue our iterative development approach. Users should expect new products and features 
+in the months and quarters to come. Instantaneous bank deposits, leveraging PSD2, has just been released, and 
+(synthetic) limit orders will follow shortly. Lending, staking, and enhanced custody are also features that are currently 
+in live testing internally.
+
+Growing with partners
+
+The big shift for K33 in 2025 will be our increased focus on partners. We are confident that all financial institutions will 
+launch a digital assets offering during the coming years, and K33 should be the preferred partner in the Nordics and 
+beyond.
+
+We are already working with hedge funds and crypto brokers as clients of K33. We have onboarded our first bank as a 
+corporate client and are in the process of developing our first “brokerage-as-a-service” model with the independent 
+investment service Stack x me. 
+
+This is just the start. Over the coming years, we expect strong growth in revenue generated through partnerships 
+taking over as the dominant source of revenue over time.
+
+Onwards and upwards
+
+As anticipated in the Q3 report 2024, the crypto market is yet again on the rise and 2025 is shaping up as a potentially 
+transformative year for the young crypto industry. Bitcoin is about to become an institutional asset and continues its 
+march towards becoming a new global reserve asset, while the broader crypto space gets an acceleration from a more 
+accommodative regulatory landscape in the US. In the EU, MiCA is opening the regulatory doors for banks and other 
+financial institutions. 
+
+Against this backdrop, I believe that K33 is in a great position to continue to grow and seize new market opportunities in 
+the years to come.
+
+Torbjørn Bull Jenssen
+
+CEO, K33 AB (publ)
+CEO Letter Q4 2024
+Commentary
+K33 Quarterly Report Q4 Q4 2024 January - December 03
+Bitcoin closed Q4 at $93,350, seeing a 47% gain after facing a massive rally in the aftermath of the U.S. 
+election. This rally pushed BTC to new all-time highs of $108,000 within the quarter. The strong market 
+reaction to Trump’s election stems from anticipated regulatory improvements in the U.S., alongside 
+expectations of the U.S. introducing a national digital asset stockpile. 
+
+Global spot volumes increased by 71% in Q4 compared to Q3, with global BTC spot volumes pushing to levels 
+consistent with the Q4 2021 bull market of $455bn. The quarter saw both retail and institutional activity 
+thrive on the backdrop of Trump’s election, with higher prices re-engaging retail traders and lifted 
+uncertainty and expectations of regulatory clarity attracting institutional capital. 
+
+The increased institutional activity in the market is best exemplified by U.S. spot BTC ETF flows. In Q4, U.S. 
+spot ETFs saw net inflows of $16.4bn, exceeding the Q1 record net inflow of $12.1bn. Bitcoin ETFs absorbed 
+1% of BTC’s circulating supply in Q4 alone after adding 194,000 BTC to its holdings in Q4. The launch of U.S. 
+spot ETFs exceeded market expectations and was a key contributor to BTC’s strong performance in 2024. 
+The products absorbed 550,000 BTC throughout the year, and IBIT saw the third-highest net flow in 2024, 
+only beaten by VOO and IVV. More remarkably, 2024 ended with assets under management in U.S. BTC ETFs 
+exceeding the AUM in U.S. gold ETFs despite gold’s 20-year head start.
+
+Sector Development Updated Q3 2024
+K33 Quarterly Report Q4 Q4 2024 January - December 04
+Assets Under Management: Gold ETFs vs. BTC ETFs
+Gold ETF AUM All US Bitcoin ETFs Grayscale pre-ETF conversion Futures-based ETFs
+$129.3bn
+$128.9bn
+Sector Development Updated Q3 2024
+Substantial demand in Q4 also originated from MicroStrategy. The company introduced its 21/21 plan in the 
+quarter, committing to buy $21 billion worth of BTC through ATM sales and $21 billion worth of BTC through 
+senior notes offerings. MicroStrategy started the quarter with 252,200 BTC and ended the quarter with 
+446,400 BTC, adding 194,180 BTC in the quarter, equivalent to the buying pressure stemming from BTC ETFs. 
+Together, these two entities absorbed a staggering 2% of BTC’s circulating supply in Q4. 
+
+Following Trump’s election victory, the market is adjusting to a more predictable regulatory environment in 
+the United States. The past few years have seen the SEC commit to an aggressive approach towards crypto 
+companies, being accused of regulation via enforcement and lacking clear regulatory guidelines. Following 
+the election, the SEC has seen administrative changes and moved to scale back its crypto enforcement 
+efforts. Further, SAB 121, a bulletin introducing restrictive measures for traditional custodian banks to launch 
+digital asset offerings, has been rescinded. With SAB 121 rescinded, the outlook for crypto custody launches 
+from BNY, State Street, Citi, and JP Morgan (Combined AUC: $130tn) is promising, with all four custodians 
+reportedly being ready to launch offerings within 2025. 
+
+The new U.S. administration also seeks to explore building a national digital asset stockpile, assigning the 
+evaluation task to a designated crypto working group. This move has been followed by other nation-state 
+officials in states such as Japan, Brazil, and the Czech Republic proposing similar approaches. These 
+tendencies point toward Bitcoin entering a new era of becoming an asset adopted at a nation-state level, 
+setting the stage for an exciting year ahead.
+
+K33 Quarterly Report Q4 Q4 2024 January - December 05
+K33
+
+K33 operating companies generated 370,664 kSEK of revenue 
+in the fourth quarter of the year, compared to 78,278 kSEK for 
+the same period prior year.
+
+Revenue is made up of 371,246 kSEK from K33 Markets, 
+compared to 77,239 kSEK generated in Q4 2023. K33 Assets 
+generated 624 kSEK in Q4 2024 compared to 516 kSEK 
+generated in Q4 2023. K33 Research generated 552 kSEK 
+revenue this quarter compared to 522 kSEK for the same 
+period last year.
+
+Total AUM in the fund (K33 Assets) amounted to 8.5 MUSD 
+compared to 6.1 MUSD for the previous quarter.
+
+K33 Markets revenue for the quarter includes SEK 18,407K of 
+trades with related parties (not eliminated in group accounts) 
+and SEK 286K of trades with group companies (eliminated in 
+group accounts). 
+
+Green Data
+
+The Bitcoin halving on April 19, 2024, rendered Green Data’s 
+mining operations unviable. Mining activities were terminated 
+during the third quarter. During the fourth quarter, Green Data 
+incurred expenses of SEK 200K related to termination of 
+operations.
+Vanir Finance
+
+Vanir is a FinTech company developing a platform to facilitate 
+crypto collateralised lending, integrating both traditional and 
+decentralised finance.
+
+The acquisition of all shares in Vanir was completed in January 
+2024. Vanir is fully consolidated into group accounts from 
+January 2024. Vanir generated a profit of 3,078 kSEK  for the 
+quarter, compared to 3,888 kSEK for the prior quarter.
+Finpeers
+
+During 2023, the Swiss startup Finpeers was added to 
+Arcario's portfolio.
+
+Finpeers was sold during the first quarter of 2025 generating 
+a profit of SEK 780K.
+Portfolio Development
+K33 Markets trading volume (kSEK)
+400,000
+350,000
+300,000
+250,000
+200,000
+150,000
+100,000
+50,000
+Q1 Q2 Q1
+2023 2024
+Q3 Q4 Q2 Q3 Q4
+K33 Quarterly Report Q4 Q4 2024 January December 06
+*K33 owned 3% of Finpeers at the end of 2024 but sold off the entire 
+position during Q1 2025. All other legal entities are wholly owned. 
+
+K33 AB (publ)
+K33 Operations AS
+K33 Assets AS
+K33 Holding AS
+K33 Markets AS
+Green Data Holding AS
+Green Data Services AS
+Finpeers SA Vanir Finance As
+Organization as of December 31, 2024
+K33 Quarterly Report Q4 Q4 2024 January - December 07
+Financials
+The financial statements have been prepared in accordance with the company accounting policies, aligned 
+with BFNAR Annual Reports and Consolidated Financial Statements (K3) and the Annual Accounts Act (Sw. 
+årsredovisningslagen).
+
+Revenue generated by K33 Markets is from cryptocurrency accounted for according to the Norwegian 
+accounting principle for goods (NRS 1). When selling cryptocurrency to customers, the acquisition cost is 
+expensed as the cost of goods and the sales value of the cryptocurrency is recognized as sales revenue. 
+When K33 Markets acquires cryptocurrencies from a customer and off-sets the trade by exchanging the 
+cryptocurrencies with another counterparty, the off-setting trade is classified as sales revenue while 
+purchase from the customer is classified as cost of goods.
+Comments January - December 2024
+Balance Sheet
+
+The increase in intangible assets stems from Goodwill as a 
+result of the Vanir acquisition.
+
+The decrease in financial assets reflects the sale of the 
+Group’s stake in LN Markets.
+
+Reduction of current liabilities are due to the repayment of a 
+convertible loan from Cowa and an off-set issue to clear debts 
+that arose due to short term funding needs last year.
+
+Income statement
+
+The revenue increased for the quarter. This is mainly driven by 
+trading volumes from K33 Markets. Other operating income 
+this year consists of reversal of write downs for an FTX claim 
+that was recovered in the first quarter, an additional earn-out 
+consideration for the sale of Ijort Invest AB (Trijo), triggered in 
+Q2,  and a capital gain for sale of shares in ITOAM Sarl (LN 
+Markets).
+
+Compared to the corresponding quarter last year, Personnel 
+expenses decreased from 4,421 kSEK to 3,746 kSEK. This 
+reflects a lower head count as adjustments were made to 
+reduce expenses.
+
+Cash flow
+
+Adjustments for items that are not included in the cash flow 
+consists of items such as deprecations and unrealised losses.
+Dividend Policy Update
+
+The board has elected not to declare a dividend for the fiscal 
+year 2024. Instead, all proceeds will be reinvested to ensure 
+further growth and strengthen the company’s market 
+position. This decision reflects our commitment to long-term 
+value creation for shareholders.
+K33 Quarterly Report Q4 Q4 2024 January December 08
+The Share and Shareholders
+As of December 31, 2024, there were 21,680 shareholders holding 12,260,639,239 shares in K33 available for 
+trade. During the year 5,745,126,788 shares were traded at an average price of 0.02 SEK per share, a total 
+traded value of over 127 MSEK.
+Total Volume Average price
+Klein Invest AS 
+Middelborg Invest AS 
+Tigerstaden AS 
+Avarius AS 
+Modiola AS 
+Hortulan AS 
+Muunilinst AS 
+Avanza Pension 
+Kabaal Crypto AS 
+Nordnet Livsforsikring AS
+2,521,706,715 
+1,854,322,715
+
+1,756,589,288 
+487,669,218
+
+432,337,599
+
+327,378,646
+
+279,776,596
+
+157,696,016
+
+139,765,048 
+83,620,052
+20.66% 
+15.19% 
+14.39% 
+4.00% 
+3.54% 
+2.68% 
+2.29% 
+1.29% 
+1.14% 
+0.69%
+Top 10 shareholders, 
+
+31 December 2024 Number of shares % of shares
+Total 10
+
+Others
+Total number of shares
+ 8,040,861,893
+
+4,165,777,346
+12,206,639,239
+65.87%
+
+34.13%
+100%
+K33 Quarterly Report Q4 Q4 2024 January - December 09
+Share price and volume January 2024 December 2024
+Additional Comments
+Organization and Employees
+
+As of the end of Q4, the Group had a total 10 full-time 
+employees across the various business units and wholly 
+owned subsidiaries. 
+Significant Risks
+
+and Uncertainty
+
+K33 operates in the cryptocurrency industry, which is still 
+largely unregulated and subject to continual and rapid 
+technological and regulatory changes. There are 
+uncertainties related to the development of the 
+cryptocurrency market, including its future size, and the 
+future success of K33’s business is, therefore, difficult to 
+predict. The legal status of cryptocurrencies varies between 
+different countries and is very much in transition. There is a 
+lack of regulatory consensus concerning the regulation of 
+cryptocurrencies in Europe. Future regulatory or political 
+developments could adversely affect markets for 
+cryptocurrencies, their adoption, and ultimately, their prices. 
+Please see our last annual report for further description of the 
+business of the company and associated risk factors.
+Contact
+
+Torbjørn Bull Jenssen, CEO, K33 AB (publ)
+
+e-mail: ir@k33.com
+
+web: k33.com/ir
+
+This Report has not been subject to review by the company’s 
+auditor. The information disclosed in this Interim Report is 
+mandatory for K33 AB (publ) to publish pursuant to the EU’s 
+Market Abuse Regulation (MAR). This information was 
+submitted for publication at 07:00 a.m. (CEST) on 27 February 
+2025, through the agency of the CEO.
+
+The Company is listed on Nasdaq First North Growth Market 
+and Mangold Fondkommission is Certified Adviser.
+
+Company Address
+
+Sweden
+
+K33 AB (publ)
+
+Box 12172
+
+102 25 Stockholm
+
+Sweden
+Accounting Principles
+
+The financial statements have been prepared in accordance 
+with BFNAR Annual Reports and Consolidated Financial 
+Statements (K3) and the Annual Accounts Act (Sw. 
+Årsredovisningslagen), which are the accounting principles 
+that are the basis for the annual reports.
+Transactions with Related Parties
+
+K33 AB (publ) has a consultancy agreement with The 
+Networked Nation AB for work performed by Fredrik Burvall 
+beyond normal duties as Chairman of the Board. The 
+Networked Nation AB is entitled to a monthly fee of 37.5 kSEK.
+*The annual report will be published by press release and 
+available on the company’s website no later than 30 April 2025.
+Date Event
+Financial Calendar (2025)
+30
+
+Apr
+22
+
+May
+05
+
+Jun
+28
+
+Aug
+20
+
+Nov
+26
+
+Feb
+Annual report 2024
+Interim report Q1 2025
+Annual General Meeting
+Interim report Q2 2025
+Interim report Q3 2025
+Interim report Year end and Q4 report 2025
+K33 Quarterly Report Q4 Q4 2024 January December 10
+Consolidated income statement
+kSEK Q4 2024 Q4 2023 Q3 2024 Jan - Dec
+
+2024
+Jan - Dec
+
+2023
+Net sales 373,131 85,678 249,681 958,462 154,093
+Other operating income 2,301 52 1,061 11,053 212
+Total revenue 375,432 85,730 250,742 969,515 154,305
+Cost of goods sold -365,829 -84,922 -245,473 -929,033 -144,727
+Other external expenses -4,342 -3,255 -5,440 -16,546 -11,076
+Personnel costs -3,746 -4,421 -3,565 -14,414 -18,263
+Other operating expenses -166 -106 78 -2,868 -2,106
+EBITDA 1,349 -6,974 -3,658 6,654 -21,867
+Depreciation and amortization -1,882 -4,166 -2,844 -8,210 -49,012
+Operating profit -533 -11,140 -6,502 -1,556 -70,879
+Profit from participation in associated companies -6,685 21
+Realized gain on sale of financial assets
+Amortization of financial assets and short term investments -1,600
+Interest income and other financial income -1653 15,188 233 853 9,574
+Interest expenses and other financial costs 2258 -24,482 -1,936 -3188 -27,092
+Total financial items 605 -15,979 -1,703 -2,314 -19,118
+Profit after financial items 72 -27,119 -8,205 -3,870 -89,997
+Profit before tax 72 -27,119 -8,205 -3,870 -89,997
+Tax on profit for the period
+The result for the period 72 -27,119 -8,205 -3,870 -89,997
+K33 Quarterly Report Q4 Q4 2024 January December 11
+Net earnings per share
+kSEK Q4 2024 Q4 2023 Q3 2024 Jan - Dec
+
+2024
+Jan - Dec
+
+2023
+Before dilution
+Number of shares 12,206,639,239 12,178,525,260 12,206,639,239 12,178,525,260 12,178,525,260
+Weighted average 12,206,639,239 10,474,086,470 12,178,525,260 10,474,086,470 10,474,086,470
+Net earning kSEK 72 -27,119 -3,870 -65,378 -89,997
+Net earnings per share 
+
+before dilution, SEK 0.000 -0.003 -0.000 -0.006 -0.009
+After dilution
+Weighted average 
+
+number of shares 12,206,639,239 10,474,086,470 12,178,525,260 10,474,086,470 10,474,086,470
+Issued shares not 
+
+yet registered
+Issue warrants not yet
+
+converted to shares 600,000,000 201,951,259 600,000,000 199,687,778 199,687,778
+Total number of shares 
+
+after dilution 12,806,639,239 10,676,037,729 12,778,525,260 10,673,774,248 10,673,774,248
+Net earning, kSEK 72 -27,119 -3,870 -65,378 -89,997
+Net earnings per share 
+
+after dilution, SEK 0.000 -0.003 -0.000 -0.006 -0.008
+K33 Quarterly Report Q4 Q4 2024 January - December 12
+Consolidated Balance Sheet
+kSEK 12/31/2024 12/31/2023
+ASSETS
+Fixed assets
+Intangible assets 28,252 8,268
+Tangible assets 15 3,984
+Financial assets 860 20,610
+Total fixed assets 29,127 32,862
+Current assets
+Recievables 3,777 3,642
+Short-term investments 396 458
+Cash and bank balances 8,028 6,838
+Total current assets 12,201 10,938
+TOTAL ASSETS 41,328 43,800
+Equity
+Share capital 44,539 34,276
+Other contributed capital 341,046 317,036
+Other equity including profit for the year -355,413 -351,329
+Total equity 30,172 -17
+Liabilities
+Long-term liabilities 6,769 9,231
+Current liabilities 4,387 34,586
+Total liabilities 11,156 43,817
+TOTAL EQUITY AND LIABILITIES 41,328 43,800
+K33 Quarterly Report Q4 Q4 2024 January - December 13
+Consolidated Cash Flow
+kSEK Q4 2024 Q4 2023 Q3 2024 Jan - Dec
+
+2024
+Jan - Dec
+
+2023
+Operating profit -533 -11,140 -6,504 -1,556 -40,743
+Adjustment for items that are not included in the cash flow -5,380 4,233 12,153 -3,308 20,092
+Cash flow from operating activities 
+before changes in working capital -5,913 -6,907 5,649 -4,864 -20,651
+Increase / decrease in operating receivables 6,828 -1,332 -2,663 -135 -1,338
+Increase / decrease in operating liabilities -2,629 6,464 -6,034 -30,199 19,635
+Change in working capital 4,199 5,132 -8,697 -30,334 18,247
+Cash flow from operating activities -1,714 -1,775 -3,047 -35,198 -2,404
+Investment activities
+Acquisition of financial assets
+Acquisition of fixed assets 85
+Sale of financial assets 2104 4,573
+Sale of fixed assets 50
+Cash flow from investment activities 2,104 4,573 136
+Financing activities
+Share issue 858 7500 34273 7,500
+Issue cost
+Borrowings
+Loan repayments -1,231 -384 -1,231 -2,462 -3,463
+Cash flow from financing activities -373 7,116 -1,231 31,811 4,037
+Increase / decrease in cash and cash equivalents -2,087 5,341 -2,174 1,186 1,769
+Cash and cash equivalents at the beginnig of the period 10,115 1,501 12,289 6,842 5,073
+Cash and cash equivalents at the end of the period 8,028 6,842 10,115 8,028 6,842
+K33 Quarterly Report Q4 Q4 2024 January - December 14
+Change in Consolidated Equity
+kSEK Share capital
+Other 
+contributed 
+equity
+Other equity
+
+incl. Profit
+
+for the year
+Total 
+
+Equity
+Equity 2023-12-31 34,276 317,036 -351,329 - 17
+Employee options 963 963
+Share issue 10,263 24,010 34,273
+Exchange rate difference -1,177 - 1,177
+Result for the period -3,870 - 3,870
+Equity 2024-12-31 44,539 341,046 -355,413 30,172
+K33 Quarterly Report Q4 Q4 2024 January - December 15
+Parent Company
+
+The Parent Company only carries out supporting functions for 
+the Group with its main task to raise capital and manage the 
+listing of its shares. All income in the parent company is 
+related to billing of services to the Group.
+Parent Company Income Statement
+kSEK Q4 2024 Q4 2023 Q3 2024 Jan - Dec
+
+2024
+Jan - Dec
+
+2023
+Net sales 7506 1 4765 7596
+Other operating income 0 52 33 968 212
+Total revenue 0 7,558 34 5,733 7,718
+Other external expenses -215 -716 -443 -2,434 -3,746
+Personnel costs -256 -1,206 -811 -2,676 -4,470
+Non-recurring amoritzation of current assets -47198
+Other operating expenses -245 -80 -14 -14 -106
+EBITDA -716 5,556 -1,234 609 -47,802
+Depreciation and amortization
+Operating profit -716 5,556 -1,234 609 -47,802
+Impairment of shares in group companies 7144 -217000 7144 -217000
+Interest income and other financial income 3504 10373 3504 10373
+Interest expenses and other financial costs -302 -625 -312 -1963 -2117
+Total financial items 10,346 -207,252 -312 8,685 -208,744
+Profit after financial items 9,630 -201,696 -1,546 9,294 -256,546
+Profit before tax 9,630 -201,696 -1,546 9,294 -256,546
+Tax on profit for the period
+The result for the period 9,630 -201,696 -1,546 9,294 -256,546
+K33 Quarterly Report Q4 Q4 2024 January - December 16
+Parent Company Balance Sheet
+kSEK 12/31/2024 12/31/2023
+ASSETS
+Fixed assets
+Intangible assets
+Tangible assets
+Financial assets 289,190 218,445
+Total fixed assets 289,190 218,445
+Current assets
+Recievables 33,694 64,196
+Short-term investments
+Cash and bank balances 3,282 4,036
+Total current assets 36,976 68,232
+TOTAL ASSETS 326,166 286,677
+Equity
+Share capital 44,539 34,276
+Other contributed capital 816,842 792,831
+Other equity including profit for the year -554,688 -564,945
+Total equity 306,693 262,162
+Liabilities
+Long-term liabilities 6,769 9,231
+Current liabilities 12,704 15,284
+Total liabilities 19,473 24,515
+TOTAL EQUITY AND LIABILITIES 326,166 286,677
+K33 Quarterly Report Q4 Q4 2024 January - December 17
+Quarterly ReportQ4

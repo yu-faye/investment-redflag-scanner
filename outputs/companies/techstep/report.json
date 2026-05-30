@@ -1,0 +1,1366 @@
+{
+  "company": "techstep",
+  "name": "Techstep ASA",
+  "ticker": "TECH",
+  "exchange": "Oslo Bors",
+  "middelborg_link": "Middelborg Invest AS listed as major shareholder in Techstep prospectus (11.2% direct as of 2021-07-09; plus forward exposure).",
+  "generated_at_utc": "2026-05-30T06:35:55+00:00",
+  "current_period": "FY 2025",
+  "prior_period": "FY 2024",
+  "source_used": {
+    "current_file": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+    "current_kind": "pdf",
+    "prior": {
+      "label": "FY 2024",
+      "file": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+      "kind": "pdf"
+    }
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+      "issuer_page": "https://mfn.se/ob/a/techstep/",
+      "language": "en",
+      "label": "Annual Report 2025",
+      "period": "2025-FY",
+      "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": {
+      "local_path": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+      "issuer_page": "https://mfn.se/ob/a/techstep/techstep-asa-annual-report-2024-95d9f617",
+      "language": "en",
+      "label": "Annual Report 2024",
+      "period": "2024-FY",
+      "sha256": "ec186728679320a74fba198a83b13d83269d14acd411bfdfbba78df22d511711",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2024/techstep_annual_2024.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    }
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": 123.496,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": 12.2,
+    "adjusted_ebita_msek": 12.2,
+    "cash_flow_operating_msek": 112.5,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": 5.1,
+    "net_debt_msek_raw": 52.257,
+    "interest_expense_msek_raw": 13.341,
+    "ebitda_for_leverage_msek_raw": 148.175,
+    "interest_coverage_ratio_auto": 11.11,
+    "net_debt_to_ebitda_auto": 2.2,
+    "interest_coverage_ratio": 11.11,
+    "interest_coverage_ratio_source": "auto_regex",
+    "net_debt_to_ebitda": 2.2,
+    "net_debt_to_ebitda_source": "auto_regex"
+  },
+  "auto_metrics_provenance": {
+    "ebitda_msek": {
+      "value": 123.496,
+      "regex_id": "ebitda",
+      "raw_match": "EBITDA adjusted 123,496",
+      "char_span": [
+        14867,
+        14890
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA adjusted 123,496"
+    },
+    "ebita_msek": {
+      "value": 12.2,
+      "regex_id": "ebita",
+      "raw_match": "EBITA for the year amounted to NOK 12.2",
+      "char_span": [
+        7509,
+        7548
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITA for the year amounted to NOK 12.2"
+    },
+    "adjusted_ebita_msek": {
+      "value": 12.2,
+      "regex_id": "adjusted_ebita",
+      "raw_match": "Adjusted EBITA for the year amounted to NOK 12.2",
+      "char_span": [
+        7500,
+        7548
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Adjusted EBITA for the year amounted to NOK 12.2"
+    },
+    "cash_flow_operating_msek": {
+      "value": 112.5,
+      "regex_id": "ocf",
+      "raw_match": "cash flow from operating activities was NOK 112.5",
+      "char_span": [
+        40370,
+        40419
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "cash flow from operating activities was NOK 112.5"
+    },
+    "ebitda_margin_pct": {
+      "value": 5.1,
+      "regex_id": "ebitda_margin",
+      "raw_match": "EBITDA margin 1) 5.1 %",
+      "char_span": [
+        221413,
+        221435
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA margin 1) 5.1 %"
+    },
+    "net_debt_msek_raw": {
+      "value": 52.257,
+      "regex_id": "net_debt_anchor",
+      "raw_match": "Net interest-bearing debt 154,418 108,540\nCapex (52,257",
+      "char_span": [
+        15388,
+        15443
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Net interest-bearing debt 154,418 108,540 Capex (52,257"
+    },
+    "interest_expense_msek_raw": {
+      "value": 13.341,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "Interest expense (revenue) reclassified to investing/financing activities 13,341",
+      "char_span": [
+        173413,
+        173493
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Interest expense (revenue) reclassified to investing/financing activities 13,341"
+    },
+    "ebitda_for_leverage_msek_raw": {
+      "value": 148.175,
+      "regex_id": "ebitda_for_leverage_anchor",
+      "raw_match": "EBITDA adjusted 123,496 153,613\nEBITDA rep. 123,572 148,175",
+      "char_span": [
+        14867,
+        14926
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA adjusted 123,496 153,613 EBITDA rep. 123,572 148,175"
+    },
+    "interest_coverage_ratio_auto": {
+      "value": 11.11,
+      "regex_id": "interest_coverage_derived",
+      "raw_match": "(derived) EBITDA / Interest expense",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "ebitda_for_leverage_msek_raw",
+        "interest_expense_msek_raw"
+      ]
+    },
+    "net_debt_to_ebitda_auto": {
+      "value": 2.2,
+      "regex_id": "leverage_explicit",
+      "raw_match": "leverage ratio*: 2.2x",
+      "char_span": [
+        235379,
+        235400
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "leverage ratio*: 2.2x"
+    },
+    "interest_coverage_ratio": {
+      "value": 11.11,
+      "regex_id": "interest_coverage_derived",
+      "raw_match": "(derived) EBITDA / Interest expense",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "ebitda_for_leverage_msek_raw",
+        "interest_expense_msek_raw"
+      ]
+    },
+    "net_debt_to_ebitda": {
+      "value": 2.2,
+      "regex_id": "leverage_explicit",
+      "raw_match": "leverage ratio*: 2.2x",
+      "char_span": [
+        235379,
+        235400
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "leverage ratio*: 2.2x"
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": -6.7,
+    "organic_growth_pct": -6.7,
+    "gross_margin_yoy_change_pct": -1.0,
+    "ebita_margin_pct": 1.2,
+    "ebitda_margin_pct": 12.3,
+    "interest_coverage_ratio": 1.1,
+    "net_debt_to_ebitda": 3.9,
+    "working_capital_to_revenue_pct": 15.0,
+    "capex_to_depreciation_ratio": 1.5,
+    "order_intake_yoy_pct": null
+  },
+  "manual_metrics_provenance": {
+    "revenue_yoy_pct": {
+      "anchor": "Techstep had total revenue of NOK 1 001 million in 2025, a decrease of 7%",
+      "note": "Narrative on page 16 reports the rounded -7%. Precise -6.7% derived from NOK 1,001m (2025) vs NOK 1,073m (2024)."
+    },
+    "organic_growth_pct": {
+      "anchor": "Techstep had total revenue of NOK 1 001 million in 2025, a decrease of 7%",
+      "note": "Same group revenue decline used as organic proxy (no separate organic disclosure)."
+    },
+    "ebita_margin_pct": {
+      "anchor": "EBITA margin",
+      "note": "EBITA margin row in the multi-year highlights table."
+    }
+  },
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": 123.496,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": 12.2,
+    "adjusted_ebita_msek": 12.2,
+    "cash_flow_operating_msek": 112.5,
+    "ebita_margin_pct": 1.2,
+    "ebitda_margin_pct": 12.3,
+    "net_debt_msek_raw": 52.257,
+    "interest_expense_msek_raw": 13.341,
+    "ebitda_for_leverage_msek_raw": 148.175,
+    "interest_coverage_ratio_auto": 11.11,
+    "net_debt_to_ebitda_auto": 2.2,
+    "interest_coverage_ratio": 1.1,
+    "interest_coverage_ratio_source": "auto_regex",
+    "net_debt_to_ebitda": 3.9,
+    "net_debt_to_ebitda_source": "auto_regex",
+    "revenue_yoy_pct": -6.7,
+    "organic_growth_pct": -6.7,
+    "gross_margin_yoy_change_pct": -1.0,
+    "working_capital_to_revenue_pct": 15.0,
+    "capex_to_depreciation_ratio": 1.5
+  },
+  "metrics_audit": {
+    "adjusted_ebita_msek": {
+      "auto": 12.2,
+      "manual": null,
+      "chosen": 12.2,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "capex_to_depreciation_ratio": {
+      "auto": null,
+      "manual": 1.5,
+      "chosen": 1.5,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "cash_flow_operating_msek": {
+      "auto": 112.5,
+      "manual": null,
+      "chosen": 112.5,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": 1.2,
+      "chosen": 1.2,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_msek": {
+      "auto": 12.2,
+      "manual": null,
+      "chosen": 12.2,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": 5.1,
+      "manual": 12.3,
+      "chosen": 12.3,
+      "source": "manual",
+      "agrees_within_10pct": false
+    },
+    "ebitda_msek": {
+      "auto": 123.496,
+      "manual": null,
+      "chosen": 123.496,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "gross_margin_yoy_change_pct": {
+      "auto": null,
+      "manual": -1.0,
+      "chosen": -1.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": 11.11,
+      "manual": 1.1,
+      "chosen": 1.1,
+      "source": "manual",
+      "agrees_within_10pct": false
+    },
+    "interest_coverage_ratio_auto": {
+      "auto": 11.11,
+      "manual": null,
+      "chosen": 11.11,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": 2.2,
+      "manual": 3.9,
+      "chosen": 3.9,
+      "source": "manual",
+      "agrees_within_10pct": false
+    },
+    "net_debt_to_ebitda_auto": {
+      "auto": 2.2,
+      "manual": null,
+      "chosen": 2.2,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": -6.7,
+      "chosen": -6.7,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": -6.7,
+      "chosen": -6.7,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "working_capital_to_revenue_pct": {
+      "auto": null,
+      "manual": 15.0,
+      "chosen": 15.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "growth",
+      "mention_count": 57,
+      "mention_density_per_10k_chars": 1.95,
+      "term_hits": [
+        {
+          "term": "strong growth",
+          "count": 1
+        },
+        {
+          "term": "growth",
+          "count": 46
+        },
+        {
+          "term": "expansion",
+          "count": 5
+        },
+        {
+          "term": "scaling",
+          "count": 4
+        },
+        {
+          "term": "vekst",
+          "count": 1
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -6.7,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "organic_growth_pct",
+          "value": -6.7,
+          "expected_direction": "up",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "sustainable growth and long-term value creation.",
+      "claim_excerpt_matched_term": "growth",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'growth' qualitatively, yet supporting metrics (revenue_yoy_pct=-6.7, organic_growth_pct=-6.7) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 27.0,
+      "headline": "Techstep ASA: 'growth' narrative cited 57 times, but supporting metrics move the opposite way (revenue_yoy_pct=-6.7, organic_growth_pct=-6.7).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "excerpt_locator": {
+            "page": 6,
+            "bbox": {
+              "x0": 50.0,
+              "top": 184.35000000000002,
+              "x1": 249.41600000000003,
+              "bottom": 192.35000000000002,
+              "width": 199.41600000000003,
+              "height": 8.0
+            },
+            "sentence_context": {
+              "prev": "2.",
+              "match": "Letter from the CEO Dear shareholders In a year marked by transformation and strategic repositioning, Techstep has laid the essential groundwork for sustainable growth and long-term value creation.",
+              "next": "The year 2025 was defined by decisive action to sharpen our focus, rationalise operations and strengthen the foundation for the “new Techstep” to be a leaner, more scalable, and commercially agile organisation."
+            },
+            "normalised_search": "sustainable growth and long-term value creation."
+          },
+          "pdf_page_hit": 6,
+          "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=6",
+          "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=6&search=sustainable%20growth%20and%20long-term%20value%20creation.",
+          "evidence_snippet": {
+            "path": "outputs/evidence/techstep/91232bc6c780.png",
+            "width": 1095,
+            "height": 57,
+            "size_bytes": 18589,
+            "page": 6,
+            "bbox": {
+              "x0": 50.0,
+              "top": 184.35000000000002,
+              "x1": 249.41600000000003,
+              "bottom": 192.35000000000002,
+              "width": 199.41600000000003,
+              "height": 8.0
+            },
+            "key": "91232bc6c780"
+          }
+        },
+        "prior": {
+          "local_path": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/techstep-asa-annual-report-2024-95d9f617",
+          "language": "en",
+          "label": "Annual Report 2024",
+          "period": "2024-FY",
+          "sha256": "ec186728679320a74fba198a83b13d83269d14acd411bfdfbba78df22d511711",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -6.7,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_curation",
+          "locator": {
+            "page": 16,
+            "bbox": {
+              "x0": 50.0,
+              "top": 468.84527587890625,
+              "x1": 338.6799011230469,
+              "bottom": 480.0452575683594,
+              "width": 288.6799011230469,
+              "height": 11.199981689453125
+            },
+            "matched_str": "Techstep had total revenue of NOK 1 001 million in 2025, a decrease of 7%",
+            "strategy": "anchor",
+            "context_distance": null,
+            "context_term": null
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_e3370a5cf0fb.png",
+            "width": 1095,
+            "height": 64,
+            "size_bytes": 14925,
+            "page": 16,
+            "bbox": {
+              "x0": 50.0,
+              "top": 468.84527587890625,
+              "x1": 338.6799011230469,
+              "bottom": 480.0452575683594,
+              "width": 288.6799011230469,
+              "height": 11.199981689453125
+            },
+            "matched_str": "Techstep had total revenue of NOK 1 001 million in 2025, a decrease of 7%",
+            "confidence": null,
+            "context_term": null
+          },
+          "note": "Narrative on page 16 reports the rounded -7%. Precise -6.7% derived from NOK 1,001m (2025) vs NOK 1,073m (2024)."
+        },
+        {
+          "metric": "organic_growth_pct",
+          "value": -6.7,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_curation",
+          "locator": {
+            "page": 16,
+            "bbox": {
+              "x0": 50.0,
+              "top": 468.84527587890625,
+              "x1": 338.6799011230469,
+              "bottom": 480.0452575683594,
+              "width": 288.6799011230469,
+              "height": 11.199981689453125
+            },
+            "matched_str": "Techstep had total revenue of NOK 1 001 million in 2025, a decrease of 7%",
+            "strategy": "anchor",
+            "context_distance": null,
+            "context_term": null
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_65c45c7e41ca.png",
+            "width": 1095,
+            "height": 64,
+            "size_bytes": 14925,
+            "page": 16,
+            "bbox": {
+              "x0": 50.0,
+              "top": 468.84527587890625,
+              "x1": 338.6799011230469,
+              "bottom": 480.0452575683594,
+              "width": 288.6799011230469,
+              "height": 11.199981689453125
+            },
+            "matched_str": "Techstep had total revenue of NOK 1 001 million in 2025, a decrease of 7%",
+            "confidence": null,
+            "context_term": null
+          },
+          "note": "Same group revenue decline used as organic proxy (no separate organic disclosure)."
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "efficiency",
+      "mention_count": 13,
+      "mention_density_per_10k_chars": 0.44,
+      "term_hits": [
+        {
+          "term": "efficiency",
+          "count": 13
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -1.0,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 1.2,
+          "expected_direction": "up",
+          "score": 1
+        }
+      ],
+      "alignment_score": 0.0,
+      "verdict": "weak_support",
+      "severity": "warning",
+      "claim_excerpt": "customers maximise the value of their mobile estate while strengthening security, efficiency, sustainability and user",
+      "claim_excerpt_matched_term": "efficiency",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'efficiency' qualitatively, yet supporting metrics (gross_margin_yoy_change_pct=-1.0, ebita_margin_pct=1.2) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 1.72,
+      "headline": "Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-1.0, ebita_margin_pct=1.2).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "excerpt_locator": {
+            "page": 4,
+            "bbox": {
+              "x0": 50.0,
+              "top": 240.10000000000002,
+              "x1": 510.90400000000017,
+              "bottom": 248.10000000000002,
+              "width": 460.90400000000017,
+              "height": 8.0
+            },
+            "sentence_context": {
+              "prev": "Our solutions enable a modern, mobile workforce across both office workers and frontline environments in sectors such as retail, finance, energy, logistics, manufacturing and healthcare.",
+              "match": "By combining proprietary software, deep expertise and strong partnerships across the mobility ecosystem, we help customers maximise the value of their mobile estate while strengthening security, efficiency, sustainability and user experience.",
+              "next": "Techstep is recognised by Gartner as a “Managed Mobility Service provider” in its Market Guide—reflecting our position and ambition to transform workplace mobility."
+            },
+            "normalised_search": "customers maximise the value of their mobile estate"
+          },
+          "pdf_page_hit": 4,
+          "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=4",
+          "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=4&search=customers%20maximise%20the%20value%20of%20their%20mobile%20estate",
+          "evidence_snippet": {
+            "path": "outputs/evidence/techstep/8fa0c845af3b.png",
+            "width": 1095,
+            "height": 57,
+            "size_bytes": 20050,
+            "page": 4,
+            "bbox": {
+              "x0": 50.0,
+              "top": 240.10000000000002,
+              "x1": 510.90400000000017,
+              "bottom": 248.10000000000002,
+              "width": 460.90400000000017,
+              "height": 8.0
+            },
+            "key": "8fa0c845af3b"
+          }
+        },
+        "prior": {
+          "local_path": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/techstep-asa-annual-report-2024-95d9f617",
+          "language": "en",
+          "label": "Annual Report 2024",
+          "period": "2024-FY",
+          "sha256": "ec186728679320a74fba198a83b13d83269d14acd411bfdfbba78df22d511711",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -1.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 97,
+            "bbox": {
+              "x0": 450.79730224609375,
+              "top": 602.6749877929688,
+              "x1": 460.97930908203125,
+              "bottom": 611.074951171875,
+              "width": 10.1820068359375,
+              "height": 8.39996337890625
+            },
+            "matched_str": "-1,0",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_fd8a5d3aa208.png",
+            "width": 1095,
+            "height": 58,
+            "size_bytes": 8840,
+            "page": 97,
+            "bbox": {
+              "x0": 450.79730224609375,
+              "top": 602.6749877929688,
+              "x1": 460.97930908203125,
+              "bottom": 611.074951171875,
+              "width": 10.1820068359375,
+              "height": 8.39996337890625
+            },
+            "matched_str": "-1,0",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 1.2,
+          "expected_direction": "up",
+          "score": 1,
+          "source": "manual_curation",
+          "locator": {
+            "page": 118,
+            "bbox": {
+              "x0": 301.6399841308594,
+              "top": 504.8999328613281,
+              "x1": 353.59991455078125,
+              "bottom": 516.0999145507812,
+              "width": 51.959930419921875,
+              "height": 11.199981689453125
+            },
+            "matched_str": "EBITA margin",
+            "strategy": "anchor",
+            "context_distance": null,
+            "context_term": null
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_26ae6f9c82da.png",
+            "width": 1095,
+            "height": 64,
+            "size_bytes": 10034,
+            "page": 118,
+            "bbox": {
+              "x0": 301.6399841308594,
+              "top": 504.8999328613281,
+              "x1": 353.59991455078125,
+              "bottom": 516.0999145507812,
+              "width": 51.959930419921875,
+              "height": 11.199981689453125
+            },
+            "matched_str": "EBITA margin",
+            "confidence": null,
+            "context_term": null
+          },
+          "note": "EBITA margin row in the multi-year highlights table."
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "resilience",
+      "mention_count": 10,
+      "mention_density_per_10k_chars": 0.34,
+      "term_hits": [
+        {
+          "term": "resilient",
+          "count": 4
+        },
+        {
+          "term": "robust",
+          "count": 6
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 1.1,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 3.9,
+          "expected_direction": "down",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "a resilient foundation as Techstep continues to scale it’s our own software and services portfolio.",
+      "claim_excerpt_matched_term": "resilient",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'resilience' qualitatively, yet supporting metrics (interest_coverage_ratio=1.1, net_debt_to_ebitda=3.9) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 9.0,
+      "headline": "Techstep ASA: 'resilience' narrative cited 10 times, but supporting metrics move the opposite way (interest_coverage_ratio=1.1, net_debt_to_ebitda=3.9).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "excerpt_locator": {
+            "page": 6,
+            "bbox": {
+              "x0": 50.0,
+              "top": 320.6,
+              "x1": 434.312,
+              "bottom": 328.6,
+              "width": 384.312,
+              "height": 8.0
+            },
+            "sentence_context": {
+              "prev": "Reported revenue for the year reached over NOK 1.0 billion, supporting our continued leadership in managed mobility services (MMS) across Europe.",
+              "match": "Within this, recurring revenues remained stable, providing a resilient foundation as Techstep continues to scale it’s our own software and services portfolio.",
+              "next": "Adjusted EBITA for the year amounted to NOK 12.2 million for the full year, compared with NOK 39.8 million in 2024."
+            },
+            "normalised_search": "a resilient foundation as Techstep continues to scale"
+          },
+          "pdf_page_hit": 6,
+          "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=6",
+          "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=6&search=a%20resilient%20foundation%20as%20Techstep%20continues%20to%20scale",
+          "evidence_snippet": {
+            "path": "outputs/evidence/techstep/552a24aa363e.png",
+            "width": 1095,
+            "height": 57,
+            "size_bytes": 11878,
+            "page": 6,
+            "bbox": {
+              "x0": 50.0,
+              "top": 320.6,
+              "x1": 434.312,
+              "bottom": 328.6,
+              "width": 384.312,
+              "height": 8.0
+            },
+            "key": "552a24aa363e"
+          }
+        },
+        "prior": {
+          "local_path": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/techstep-asa-annual-report-2024-95d9f617",
+          "language": "en",
+          "label": "Annual Report 2024",
+          "period": "2024-FY",
+          "sha256": "ec186728679320a74fba198a83b13d83269d14acd411bfdfbba78df22d511711",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 1.1,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 68,
+            "bbox": {
+              "x0": 527.6300048828125,
+              "top": 261.9749755859375,
+              "x1": 536.4259643554688,
+              "bottom": 270.3749694824219,
+              "width": 8.79595947265625,
+              "height": 8.399993896484375
+            },
+            "matched_str": "1,10",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_5f2257c7e2d0.png",
+            "width": 1095,
+            "height": 58,
+            "size_bytes": 10066,
+            "page": 68,
+            "bbox": {
+              "x0": 527.6300048828125,
+              "top": 261.9749755859375,
+              "x1": 536.4259643554688,
+              "bottom": 270.3749694824219,
+              "width": 8.79595947265625,
+              "height": 8.399993896484375
+            },
+            "matched_str": "1,10",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 3.9,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "auto_regex",
+          "locator": {
+            "page": 94,
+            "bbox": {
+              "x0": 106.83200073242188,
+              "top": 141.39999389648438,
+              "x1": 184.93601989746094,
+              "bottom": 152.59999084472656,
+              "width": 78.10401916503906,
+              "height": 11.199996948242188
+            },
+            "matched_str": "leverage ratio*: 2.2x",
+            "strategy": "anchor",
+            "context_distance": null,
+            "context_term": null
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_3341f3f1788a.png",
+            "width": 1095,
+            "height": 64,
+            "size_bytes": 5943,
+            "page": 94,
+            "bbox": {
+              "x0": 106.83200073242188,
+              "top": 141.39999389648438,
+              "x1": 184.93601989746094,
+              "bottom": 152.59999084472656,
+              "width": 78.10401916503906,
+              "height": 11.199996948242188
+            },
+            "matched_str": "leverage ratio*: 2.2x",
+            "confidence": null,
+            "context_term": null
+          },
+          "note": "leverage ratio*: 2.2x",
+          "regex_id": "leverage_explicit"
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "discipline",
+      "mention_count": 1,
+      "mention_density_per_10k_chars": 0.03,
+      "term_hits": [
+        {
+          "term": "disciplined capital allocation",
+          "count": 1
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "working_capital_to_revenue_pct",
+          "value": 15.0,
+          "expected_direction": "down",
+          "score": 1
+        },
+        {
+          "metric": "capex_to_depreciation_ratio",
+          "value": 1.5,
+          "expected_direction": "neutral",
+          "score": -1
+        }
+      ],
+      "alignment_score": 0.0,
+      "verdict": "weak_support",
+      "severity": "info",
+      "claim_excerpt": "predictability, and disciplined capital allocation.",
+      "claim_excerpt_matched_term": "disciplined capital allocation",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'discipline' qualitatively, yet supporting metrics (working_capital_to_revenue_pct=15.0, capex_to_depreciation_ratio=1.5) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 0.28,
+      "headline": "Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move the opposite way (working_capital_to_revenue_pct=15.0, capex_to_depreciation_ratio=1.5).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "excerpt_locator": {
+            "page": 8,
+            "bbox": {
+              "x0": 50.0,
+              "top": 93.60000000000002,
+              "x1": 241.35999999999993,
+              "bottom": 101.60000000000002,
+              "width": 191.35999999999993,
+              "height": 8.0
+            },
+            "sentence_context": {
+              "prev": "",
+              "match": "Our strategic focus remains firmly anchored in long-term value creation through profitable growth, increased predictability, and disciplined capital allocation.",
+              "next": "In closing, I extend my gratitude to our employees, partners, and shareholders for their continued support."
+            },
+            "normalised_search": "predictability, and disciplined capital allocation."
+          },
+          "pdf_page_hit": 8,
+          "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=8",
+          "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=8&search=predictability%2C%20and%20disciplined%20capital%20allocation.",
+          "evidence_snippet": {
+            "path": "outputs/evidence/techstep/6ad63340b647.png",
+            "width": 1095,
+            "height": 57,
+            "size_bytes": 9495,
+            "page": 8,
+            "bbox": {
+              "x0": 50.0,
+              "top": 93.60000000000002,
+              "x1": 241.35999999999993,
+              "bottom": 101.60000000000002,
+              "width": 191.35999999999993,
+              "height": 8.0
+            },
+            "key": "6ad63340b647"
+          }
+        },
+        "prior": {
+          "local_path": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/techstep-asa-annual-report-2024-95d9f617",
+          "language": "en",
+          "label": "Annual Report 2024",
+          "period": "2024-FY",
+          "sha256": "ec186728679320a74fba198a83b13d83269d14acd411bfdfbba78df22d511711",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "working_capital_to_revenue_pct",
+          "value": 15.0,
+          "expected_direction": "down",
+          "score": 1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 109,
+            "bbox": {
+              "x0": 446.7959899902344,
+              "top": 480.5249938964844,
+              "x1": 461.2080078125,
+              "bottom": 488.92498779296875,
+              "width": 14.412017822265625,
+              "height": 8.399993896484375
+            },
+            "matched_str": "15,00",
+            "strategy": "value",
+            "context_distance": 576.0880432128906,
+            "context_term": "working capital",
+            "confidence": "medium"
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_53bbeb69d0f7.png",
+            "width": 1095,
+            "height": 57,
+            "size_bytes": 11275,
+            "page": 109,
+            "bbox": {
+              "x0": 446.7959899902344,
+              "top": 480.5249938964844,
+              "x1": 461.2080078125,
+              "bottom": 488.92498779296875,
+              "width": 14.412017822265625,
+              "height": 8.399993896484375
+            },
+            "matched_str": "15,00",
+            "confidence": "medium",
+            "context_term": "working capital"
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "capex_to_depreciation_ratio",
+          "value": 1.5,
+          "expected_direction": "neutral",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 88,
+            "bbox": {
+              "x0": 307.0959777832031,
+              "top": 137.62498474121094,
+              "x1": 320.1999816894531,
+              "bottom": 146.02499389648438,
+              "width": 13.10400390625,
+              "height": 8.400009155273438
+            },
+            "matched_str": "1.5 %",
+            "strategy": "value",
+            "context_distance": 379.4409637451172,
+            "context_term": "depreciation",
+            "confidence": "medium"
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_84eadef16394.png",
+            "width": 1095,
+            "height": 58,
+            "size_bytes": 8797,
+            "page": 88,
+            "bbox": {
+              "x0": 307.0959777832031,
+              "top": 137.62498474121094,
+              "x1": 320.1999816894531,
+              "bottom": 146.02499389648438,
+              "width": 13.10400390625,
+              "height": 8.400009155273438
+            },
+            "matched_str": "1.5 %",
+            "confidence": "medium",
+            "context_term": "depreciation"
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ]
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "kpi_id": "reclassification:held_for_sale",
+      "previous_period": "FY 2024",
+      "current_period": "FY 2025",
+      "previous_hits": 0,
+      "current_hits": 13,
+      "weight": 1.0,
+      "status": "new_classification_introduced",
+      "comparability_warning": false,
+      "verdict": "reclassification_introduced",
+      "severity": "critical",
+      "follow_up_questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:held_for_sale' (previously emphasised in FY 2024) not reported in FY 2025? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ],
+      "priority_score": 10.5,
+      "headline": "Techstep ASA: new 'held_for_sale' framing introduced in FY 2025, absent in FY 2024.",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        },
+        "prior": {
+          "local_path": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/techstep-asa-annual-report-2024-95d9f617",
+          "language": "en",
+          "label": "Annual Report 2024",
+          "period": "2024-FY",
+          "sha256": "ec186728679320a74fba198a83b13d83269d14acd411bfdfbba78df22d511711",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "kpi_id": "reclassification:discontinued_operations",
+      "previous_period": "FY 2024",
+      "current_period": "FY 2025",
+      "previous_hits": 0,
+      "current_hits": 2,
+      "weight": 1.0,
+      "status": "new_classification_introduced",
+      "comparability_warning": false,
+      "verdict": "reclassification_introduced",
+      "severity": "critical",
+      "follow_up_questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:discontinued_operations' (previously emphasised in FY 2024) not reported in FY 2025? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ],
+      "priority_score": 10.5,
+      "headline": "Techstep ASA: new 'discontinued_operations' framing introduced in FY 2025, absent in FY 2024.",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        },
+        "prior": {
+          "local_path": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+          "issuer_page": "https://mfn.se/ob/a/techstep/techstep-asa-annual-report-2024-95d9f617",
+          "language": "en",
+          "label": "Annual Report 2024",
+          "period": "2024-FY",
+          "sha256": "ec186728679320a74fba198a83b13d83269d14acd411bfdfbba78df22d511711",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    }
+  ],
+  "severity_tally": {
+    "critical": 4,
+    "warning": 1,
+    "info": 1
+  },
+  "findings_count": 6
+}

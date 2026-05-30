@@ -1,0 +1,1666 @@
+{
+  "aliases_used": [
+    "Nordnes Narvik AS",
+    "Nordnes Narvik",
+    "NORDNES NARVIK AS"
+  ],
+  "confirmed_awards": [
+    {
+      "awarded_names": [
+        "Nordnes Narvik AS",
+        "Veidekke Entreprenør AS",
+        "Nvk Maskin AS"
+      ],
+      "buyer_names": [
+        "Spordrift AS"
+      ],
+      "currency": null,
+      "description": "Maskin entrepriser og maskintjenester Ofotbanen.",
+      "estimated_value": null,
+      "heading": "Maskin entrepriser Ofotbanen",
+      "issue_date": "2021-09-28T12:00:00+02:00",
+      "matched_alias": "Nordnes Narvik AS",
+      "notice_id": "2021-386711",
+      "public_url": "https://www.doffin.no/notices/2021-386711",
+      "publication_date": "2021-09-28",
+      "raw_detail": {
+        "allCpvCodes": [
+          "60181000",
+          "60000000",
+          "60100000",
+          "60180000"
+        ],
+        "allReceivedTenders": [
+          {
+            "total": 9,
+            "type": "tenders"
+          },
+          {
+            "total": 3,
+            "type": "t-esubm"
+          }
+        ],
+        "allTypes": [
+          "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+          "RESULT"
+        ],
+        "awardedNames": [
+          "Nordnes Narvik AS",
+          "Veidekke Entreprenør AS",
+          "Nvk Maskin AS"
+        ],
+        "buyer": [
+          {
+            "id": "918 276 467",
+            "name": "Spordrift AS"
+          }
+        ],
+        "changeNotices": null,
+        "competitionDocsUrl": null,
+        "core": {
+          "estimatedValue": null,
+          "mainActivity": "gen-pub"
+        },
+        "deadline": null,
+        "description": "Maskin entrepriser og maskintjenester Ofotbanen.",
+        "directCpvCodes": [
+          "60181000"
+        ],
+        "eFormId": "2021-386711",
+        "eform": [
+          {
+            "label": "Buyer",
+            "sectionId": "1",
+            "sections": [
+              {
+                "label": "Buyer",
+                "sectionId": "1.1",
+                "sections": [
+                  {
+                    "label": "Official name",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block010101",
+                    "useLabelAsValue": false,
+                    "value": "[Spordrift AS] --- "
+                  },
+                  {
+                    "label": "Legal type of the buyer",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block010102",
+                    "useLabelAsValue": false,
+                    "value": "Body governed by public law"
+                  },
+                  {
+                    "label": "Activity of the contracting authority",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block010103",
+                    "useLabelAsValue": false,
+                    "value": "General public services"
+                  }
+                ],
+                "title": "block0101",
+                "useLabelAsValue": false,
+                "value": null
+              }
+            ],
+            "title": "block01",
+            "useLabelAsValue": false,
+            "value": null
+          },
+          {
+            "label": "Procedure",
+            "sectionId": "2",
+            "sections": [
+              {
+                "label": "Procedure",
+                "sectionId": "2.1",
+                "sections": [
+                  {
+                    "label": "Title",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block020101",
+                    "useLabelAsValue": false,
+                    "value": "Maskin entrepriser Ofotbanen"
+                  },
+                  {
+                    "label": "Description",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block020102",
+                    "useLabelAsValue": false,
+                    "value": "Maskin entrepriser og maskintjenester Ofotbanen."
+                  },
+                  {
+                    "label": "Procedure identifier",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block020103",
+                    "useLabelAsValue": false,
+                    "value": "2021-386711"
+                  },
+                  {
+                    "label": "Internal identifier",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block020104",
+                    "useLabelAsValue": false,
+                    "value": "210039"
+                  },
+                  {
+                    "label": "Type of procedure",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block020105",
+                    "useLabelAsValue": false,
+                    "value": "Open"
+                  },
+                  {
+                    "label": "Purpose",
+                    "sectionId": "2.1.1",
+                    "sections": [
+                      {
+                        "label": "Nature of the contract",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block02010901",
+                        "useLabelAsValue": false,
+                        "value": "Services"
+                      },
+                      {
+                        "label": "Main classification",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block02010903",
+                        "useLabelAsValue": false,
+                        "value": "Utleie av lastebiler med sjåfør"
+                      }
+                    ],
+                    "title": "block020109",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Generell informasjon",
+                    "sectionId": "2.1.4",
+                    "sections": [
+                      {
+                        "label": "Additional information",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block02011203",
+                        "useLabelAsValue": false,
+                        "value": "Mercell kunngjøring: https://opic.com/id/aflnpgnxhq"
+                      },
+                      {
+                        "label": "Legal basis",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block02011204",
+                        "useLabelAsValue": false,
+                        "value": null
+                      },
+                      {
+                        "label": "Directive 2014/24/EU",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block02011205",
+                        "useLabelAsValue": true,
+                        "value": null
+                      }
+                    ],
+                    "title": "block020112",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0201",
+                "useLabelAsValue": false,
+                "value": null
+              }
+            ],
+            "title": "block02",
+            "useLabelAsValue": false,
+            "value": null
+          },
+          {
+            "label": "Lot",
+            "sectionId": "5",
+            "sections": [
+              {
+                "label": "Lot",
+                "sectionId": "5.1",
+                "sections": [
+                  {
+                    "label": "Title",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block040101",
+                    "useLabelAsValue": false,
+                    "value": "Maskin entrepriser Ofotbanen"
+                  },
+                  {
+                    "label": "Description",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block040102",
+                    "useLabelAsValue": false,
+                    "value": "Maskin entrepriser Ofotbanen."
+                  },
+                  {
+                    "label": "Internal identifier",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block040103",
+                    "useLabelAsValue": false,
+                    "value": ""
+                  },
+                  {
+                    "label": "Purpose",
+                    "sectionId": "5.1.1",
+                    "sections": [
+                      {
+                        "label": "Nature of the contract",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04010401",
+                        "useLabelAsValue": false,
+                        "value": "Services"
+                      },
+                      {
+                        "label": "Main classification",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04010403",
+                        "useLabelAsValue": false,
+                        "value": "Utleie av lastebiler med sjåfør"
+                      },
+                      {
+                        "label": "Additional classification",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04010405",
+                        "useLabelAsValue": false,
+                        "value": "Utleie av entreprenørmateriell og -utstyr med operatør"
+                      },
+                      {
+                        "label": "Additional classification",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04010405",
+                        "useLabelAsValue": false,
+                        "value": "Utleie av anleggsmaskiner med sjåfør"
+                      }
+                    ],
+                    "title": "block040104",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Place of performance",
+                    "sectionId": "5.1.2",
+                    "sections": [
+                      {
+                        "label": "Postal address",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04010501",
+                        "useLabelAsValue": false,
+                        "value": "Narvik  "
+                      },
+                      {
+                        "label": "Country subentity",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04010504",
+                        "useLabelAsValue": false,
+                        "value": "Nordland (NO071)"
+                      }
+                    ],
+                    "title": "block040105",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Generell informasjon",
+                    "sectionId": "5.1.6",
+                    "sections": [
+                      {
+                        "label": "Procurement Project not financed with EU Funds.",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04010902",
+                        "useLabelAsValue": true,
+                        "value": null
+                      },
+                      {
+                        "label": "The procurement is covered by the Government Procurement Agreement (GPA)",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04010903",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block040109",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Award criteria",
+                    "sectionId": "5.1.10",
+                    "sections": [
+                      {
+                        "label": "Criterion",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "Type",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0401120101",
+                            "useLabelAsValue": false,
+                            "value": "Cost"
+                          },
+                          {
+                            "label": "Description",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0401120103",
+                            "useLabelAsValue": false,
+                            "value": "Pris/Kostnad"
+                          },
+                          {
+                            "label": "Weight (percentage, exact)",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0401120104",
+                            "useLabelAsValue": false,
+                            "value": "80"
+                          }
+                        ],
+                        "title": "block04011201",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block040112",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Terms of procurement",
+                    "sectionId": "5.1.12",
+                    "sections": null,
+                    "title": "block040113",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Techniques",
+                    "sectionId": "5.1.15",
+                    "sections": [
+                      {
+                        "label": "Rammeavtale",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "None",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0401140101",
+                            "useLabelAsValue": true,
+                            "value": null
+                          }
+                        ],
+                        "title": "block04011401",
+                        "useLabelAsValue": false,
+                        "value": null
+                      },
+                      {
+                        "label": "Information about the dynamic purchasing system",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "None",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0401140201",
+                            "useLabelAsValue": true,
+                            "value": null
+                          }
+                        ],
+                        "title": "block04011402",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block040114",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Further information, mediation and review",
+                    "sectionId": "5.1.16",
+                    "sections": [
+                      {
+                        "label": "Review organisation",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block04011502",
+                        "useLabelAsValue": false,
+                        "value": "[ Oslo tingrett ] --- "
+                      }
+                    ],
+                    "title": "block040115",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0401",
+                "useLabelAsValue": false,
+                "value": "LOT-0000"
+              }
+            ],
+            "title": "block04",
+            "useLabelAsValue": false,
+            "value": null
+          },
+          {
+            "label": "Results",
+            "sectionId": "6",
+            "sections": [
+              {
+                "label": "Value of all contracts awarded in this procedure",
+                "sectionId": null,
+                "sections": null,
+                "title": "block0501",
+                "useLabelAsValue": false,
+                "value": "20 000 000 NOK"
+              },
+              {
+                "label": "Result Lot Identifier",
+                "sectionId": "6.1",
+                "sections": [
+                  {
+                    "label": "At least one winner was chosen.",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block050601",
+                    "useLabelAsValue": true,
+                    "value": null
+                  },
+                  {
+                    "label": "Information about winners",
+                    "sectionId": "6.1.2",
+                    "sections": [
+                      {
+                        "label": "Winner",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "Official name",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040101",
+                            "useLabelAsValue": false,
+                            "value": "[ Nordnes Narvik AS ] --- "
+                          },
+                          {
+                            "label": "Tenderer",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040103",
+                            "useLabelAsValue": false,
+                            "value": null
+                          },
+                          {
+                            "label": "Tender identifier",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040104",
+                            "useLabelAsValue": false,
+                            "value": ""
+                          },
+                          {
+                            "label": "Identifier of lot or group of lots",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040105",
+                            "useLabelAsValue": false,
+                            "value": "LOT-0000"
+                          },
+                          {
+                            "label": "Value of the result",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040106",
+                            "useLabelAsValue": false,
+                            "value": "2 000 000 NOK"
+                          },
+                          {
+                            "label": "Subcontracting",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040110",
+                            "useLabelAsValue": false,
+                            "value": "no"
+                          },
+                          {
+                            "label": "Subcontracting value is known",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040111",
+                            "useLabelAsValue": false,
+                            "value": "0"
+                          },
+                          {
+                            "label": "Subcontracting percentage is known",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040113",
+                            "useLabelAsValue": false,
+                            "value": "0"
+                          },
+                          {
+                            "label": "Contract information",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Identifier of the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011601",
+                                "useLabelAsValue": false,
+                                "value": ""
+                              },
+                              {
+                                "label": "Date of the conclusion of the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011604",
+                                "useLabelAsValue": false,
+                                "value": "2021-09-20"
+                              },
+                              {
+                                "label": "The contract is awarded within a framework agreement",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011605",
+                                "useLabelAsValue": false,
+                                "value": "false"
+                              },
+                              {
+                                "label": "Organisation signing the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011608",
+                                "useLabelAsValue": false,
+                                "value": ""
+                              }
+                            ],
+                            "title": "block0506040116",
+                            "useLabelAsValue": false,
+                            "value": null
+                          }
+                        ],
+                        "title": "block05060401",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block050604",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Statistical information",
+                    "sectionId": "6.1.4",
+                    "sections": [
+                      {
+                        "label": "Received tenders or requests to participate",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "Type of received submissions",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Number of tenders or requests to participate received",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050606030104",
+                                "useLabelAsValue": false,
+                                "value": "3"
+                              }
+                            ],
+                            "title": "block0506060301",
+                            "useLabelAsValue": false,
+                            "value": "Tenders"
+                          },
+                          {
+                            "label": "Type of received submissions",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Number of tenders or requests to participate received",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050606030104",
+                                "useLabelAsValue": false,
+                                "value": "2"
+                              }
+                            ],
+                            "title": "block0506060301",
+                            "useLabelAsValue": false,
+                            "value": "Tenders from micro, small or medium tenderers"
+                          },
+                          {
+                            "label": "Type of received submissions",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Number of tenders or requests to participate received",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050606030104",
+                                "useLabelAsValue": false,
+                                "value": "3"
+                              }
+                            ],
+                            "title": "block0506060301",
+                            "useLabelAsValue": false,
+                            "value": "Tenders from tenderers registered in other European Economic Area countries than the country of the buyer"
+                          },
+                          {
+                            "label": "Type of received submissions",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Number of tenders or requests to participate received",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050606030104",
+                                "useLabelAsValue": false,
+                                "value": "3"
+                              }
+                            ],
+                            "title": "block0506060301",
+                            "useLabelAsValue": false,
+                            "value": "Tenders submitted electronically"
+                          }
+                        ],
+                        "title": "block05060603",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block050606",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0506",
+                "useLabelAsValue": false,
+                "value": "LOT-0000"
+              },
+              {
+                "label": "Result Lot Identifier",
+                "sectionId": "6.1",
+                "sections": [
+                  {
+                    "label": "At least one winner was chosen.",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block050601",
+                    "useLabelAsValue": true,
+                    "value": null
+                  },
+                  {
+                    "label": "Information about winners",
+                    "sectionId": "6.1.2",
+                    "sections": [
+                      {
+                        "label": "Winner",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "Official name",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040101",
+                            "useLabelAsValue": false,
+                            "value": "[ Veidekke Entreprenør AS ] --- "
+                          },
+                          {
+                            "label": "Tenderer",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040103",
+                            "useLabelAsValue": false,
+                            "value": null
+                          },
+                          {
+                            "label": "Tender identifier",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040104",
+                            "useLabelAsValue": false,
+                            "value": ""
+                          },
+                          {
+                            "label": "Identifier of lot or group of lots",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040105",
+                            "useLabelAsValue": false,
+                            "value": "LOT-0000"
+                          },
+                          {
+                            "label": "Value of the result",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040106",
+                            "useLabelAsValue": false,
+                            "value": "20 000 000 NOK"
+                          },
+                          {
+                            "label": "Subcontracting",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040110",
+                            "useLabelAsValue": false,
+                            "value": "no"
+                          },
+                          {
+                            "label": "Subcontracting value is known",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040111",
+                            "useLabelAsValue": false,
+                            "value": "0"
+                          },
+                          {
+                            "label": "Subcontracting percentage is known",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040113",
+                            "useLabelAsValue": false,
+                            "value": "0"
+                          },
+                          {
+                            "label": "Contract information",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Identifier of the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011601",
+                                "useLabelAsValue": false,
+                                "value": ""
+                              },
+                              {
+                                "label": "Date of the conclusion of the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011604",
+                                "useLabelAsValue": false,
+                                "value": "2021-09-20"
+                              },
+                              {
+                                "label": "The contract is awarded within a framework agreement",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011605",
+                                "useLabelAsValue": false,
+                                "value": "false"
+                              },
+                              {
+                                "label": "Organisation signing the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011608",
+                                "useLabelAsValue": false,
+                                "value": ""
+                              }
+                            ],
+                            "title": "block0506040116",
+                            "useLabelAsValue": false,
+                            "value": null
+                          }
+                        ],
+                        "title": "block05060401",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block050604",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Statistical information",
+                    "sectionId": "6.1.4",
+                    "sections": [
+                      {
+                        "label": "Received tenders or requests to participate",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "Type of received submissions",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Number of tenders or requests to participate received",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050606030104",
+                                "useLabelAsValue": false,
+                                "value": "3"
+                              }
+                            ],
+                            "title": "block0506060301",
+                            "useLabelAsValue": false,
+                            "value": "Tenders"
+                          }
+                        ],
+                        "title": "block05060603",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block050606",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0506",
+                "useLabelAsValue": false,
+                "value": "LOT-0000"
+              },
+              {
+                "label": "Result Lot Identifier",
+                "sectionId": "6.1",
+                "sections": [
+                  {
+                    "label": "At least one winner was chosen.",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block050601",
+                    "useLabelAsValue": true,
+                    "value": null
+                  },
+                  {
+                    "label": "Information about winners",
+                    "sectionId": "6.1.2",
+                    "sections": [
+                      {
+                        "label": "Winner",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "Official name",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040101",
+                            "useLabelAsValue": false,
+                            "value": "[ Nvk Maskin AS ] --- "
+                          },
+                          {
+                            "label": "Tenderer",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040103",
+                            "useLabelAsValue": false,
+                            "value": null
+                          },
+                          {
+                            "label": "Tender identifier",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040104",
+                            "useLabelAsValue": false,
+                            "value": ""
+                          },
+                          {
+                            "label": "Identifier of lot or group of lots",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040105",
+                            "useLabelAsValue": false,
+                            "value": "LOT-0000"
+                          },
+                          {
+                            "label": "Value of the result",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040106",
+                            "useLabelAsValue": false,
+                            "value": "2 000 000 NOK"
+                          },
+                          {
+                            "label": "Subcontracting",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040110",
+                            "useLabelAsValue": false,
+                            "value": "no"
+                          },
+                          {
+                            "label": "Subcontracting value is known",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040111",
+                            "useLabelAsValue": false,
+                            "value": "0"
+                          },
+                          {
+                            "label": "Subcontracting percentage is known",
+                            "sectionId": null,
+                            "sections": null,
+                            "title": "block0506040113",
+                            "useLabelAsValue": false,
+                            "value": "0"
+                          },
+                          {
+                            "label": "Contract information",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Identifier of the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011601",
+                                "useLabelAsValue": false,
+                                "value": ""
+                              },
+                              {
+                                "label": "Date of the conclusion of the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011604",
+                                "useLabelAsValue": false,
+                                "value": "2021-09-20"
+                              },
+                              {
+                                "label": "The contract is awarded within a framework agreement",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011605",
+                                "useLabelAsValue": false,
+                                "value": "false"
+                              },
+                              {
+                                "label": "Organisation signing the contract",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050604011608",
+                                "useLabelAsValue": false,
+                                "value": ""
+                              }
+                            ],
+                            "title": "block0506040116",
+                            "useLabelAsValue": false,
+                            "value": null
+                          }
+                        ],
+                        "title": "block05060401",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block050604",
+                    "useLabelAsValue": false,
+                    "value": null
+                  },
+                  {
+                    "label": "Statistical information",
+                    "sectionId": "6.1.4",
+                    "sections": [
+                      {
+                        "label": "Received tenders or requests to participate",
+                        "sectionId": null,
+                        "sections": [
+                          {
+                            "label": "Type of received submissions",
+                            "sectionId": null,
+                            "sections": [
+                              {
+                                "label": "Number of tenders or requests to participate received",
+                                "sectionId": null,
+                                "sections": null,
+                                "title": "block050606030104",
+                                "useLabelAsValue": false,
+                                "value": "3"
+                              }
+                            ],
+                            "title": "block0506060301",
+                            "useLabelAsValue": false,
+                            "value": "Tenders"
+                          }
+                        ],
+                        "title": "block05060603",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block050606",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0506",
+                "useLabelAsValue": false,
+                "value": "LOT-0000"
+              }
+            ],
+            "title": "block05",
+            "useLabelAsValue": false,
+            "value": null
+          },
+          {
+            "label": "Organisations",
+            "sectionId": "8",
+            "sections": [
+              {
+                "label": null,
+                "sectionId": "8.1",
+                "sections": [
+                  {
+                    "label": "Official name",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060101",
+                    "useLabelAsValue": false,
+                    "value": "Spordrift AS"
+                  },
+                  {
+                    "label": "Registration number",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060104",
+                    "useLabelAsValue": false,
+                    "value": "918 276 467"
+                  },
+                  {
+                    "label": "Postal address",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060106",
+                    "useLabelAsValue": false,
+                    "value": "Jernbanetorget 1  "
+                  },
+                  {
+                    "label": "Town",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060107",
+                    "useLabelAsValue": false,
+                    "value": "Oslo"
+                  },
+                  {
+                    "label": "Postcode",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060108",
+                    "useLabelAsValue": false,
+                    "value": "0154"
+                  },
+                  {
+                    "label": "Country subentity",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060109",
+                    "useLabelAsValue": false,
+                    "value": "Nordland (NO071)"
+                  },
+                  {
+                    "label": "Country",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060110",
+                    "useLabelAsValue": false,
+                    "value": "Norge"
+                  },
+                  {
+                    "label": "Contact point",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060111",
+                    "useLabelAsValue": false,
+                    "value": "Per K. Ustad"
+                  },
+                  {
+                    "label": "Email",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060112",
+                    "useLabelAsValue": false,
+                    "value": "per.k.ustad@spordrift.no"
+                  },
+                  {
+                    "label": "Internet address",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060115",
+                    "useLabelAsValue": false,
+                    "value": "http://www.spordrift.no"
+                  },
+                  {
+                    "label": "Roles of this organisation",
+                    "sectionId": null,
+                    "sections": [
+                      {
+                        "label": "Buyer",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block06011901",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block060119",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0601",
+                "useLabelAsValue": false,
+                "value": "ORG-0001"
+              },
+              {
+                "label": null,
+                "sectionId": "8.1",
+                "sections": [
+                  {
+                    "label": "Official name",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060101",
+                    "useLabelAsValue": false,
+                    "value": "Nordnes Narvik AS"
+                  },
+                  {
+                    "label": "Size of the economic operator",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060102",
+                    "useLabelAsValue": false,
+                    "value": "sme"
+                  },
+                  {
+                    "label": "Registration number",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060104",
+                    "useLabelAsValue": false,
+                    "value": "991 683 011"
+                  },
+                  {
+                    "label": "Town",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060107",
+                    "useLabelAsValue": false,
+                    "value": "Narvik"
+                  },
+                  {
+                    "label": "Postcode",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060108",
+                    "useLabelAsValue": false,
+                    "value": "8514"
+                  },
+                  {
+                    "label": "Country",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060110",
+                    "useLabelAsValue": false,
+                    "value": "Norge"
+                  },
+                  {
+                    "label": "Roles of this organisation",
+                    "sectionId": null,
+                    "sections": [
+                      {
+                        "label": "Tenderer",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block06011917",
+                        "useLabelAsValue": false,
+                        "value": null
+                      },
+                      {
+                        "label": "Winner of these lots",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block06011920",
+                        "useLabelAsValue": false,
+                        "value": "LOT-0000"
+                      }
+                    ],
+                    "title": "block060119",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0601",
+                "useLabelAsValue": false,
+                "value": "ORG-0002"
+              },
+              {
+                "label": null,
+                "sectionId": "8.1",
+                "sections": [
+                  {
+                    "label": "Official name",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060101",
+                    "useLabelAsValue": false,
+                    "value": "Veidekke Entreprenør AS"
+                  },
+                  {
+                    "label": "Size of the economic operator",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060102",
+                    "useLabelAsValue": false,
+                    "value": "sme"
+                  },
+                  {
+                    "label": "Registration number",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060104",
+                    "useLabelAsValue": false,
+                    "value": "984 024 290"
+                  },
+                  {
+                    "label": "Postal address",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060106",
+                    "useLabelAsValue": false,
+                    "value": "Skabos vei 4  "
+                  },
+                  {
+                    "label": "Town",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060107",
+                    "useLabelAsValue": false,
+                    "value": "Oslo"
+                  },
+                  {
+                    "label": "Postcode",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060108",
+                    "useLabelAsValue": false,
+                    "value": "0214"
+                  },
+                  {
+                    "label": "Country",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060110",
+                    "useLabelAsValue": false,
+                    "value": "Norge"
+                  },
+                  {
+                    "label": "Internet address",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060115",
+                    "useLabelAsValue": false,
+                    "value": "http://www.veidekke.no"
+                  },
+                  {
+                    "label": "Roles of this organisation",
+                    "sectionId": null,
+                    "sections": [
+                      {
+                        "label": "Tenderer",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block06011917",
+                        "useLabelAsValue": false,
+                        "value": null
+                      },
+                      {
+                        "label": "Winner of these lots",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block06011920",
+                        "useLabelAsValue": false,
+                        "value": "LOT-0000"
+                      }
+                    ],
+                    "title": "block060119",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0601",
+                "useLabelAsValue": false,
+                "value": "ORG-0003"
+              },
+              {
+                "label": null,
+                "sectionId": "8.1",
+                "sections": [
+                  {
+                    "label": "Official name",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060101",
+                    "useLabelAsValue": false,
+                    "value": "Nvk Maskin AS"
+                  },
+                  {
+                    "label": "Size of the economic operator",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060102",
+                    "useLabelAsValue": false,
+                    "value": "sme"
+                  },
+                  {
+                    "label": "Registration number",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060104",
+                    "useLabelAsValue": false,
+                    "value": "916 161 352"
+                  },
+                  {
+                    "label": "Postal address",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060106",
+                    "useLabelAsValue": false,
+                    "value": "Silsandmoen 8  "
+                  },
+                  {
+                    "label": "Town",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060107",
+                    "useLabelAsValue": false,
+                    "value": "Narvik"
+                  },
+                  {
+                    "label": "Postcode",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060108",
+                    "useLabelAsValue": false,
+                    "value": "8514"
+                  },
+                  {
+                    "label": "Country",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060110",
+                    "useLabelAsValue": false,
+                    "value": "Norge"
+                  },
+                  {
+                    "label": "Roles of this organisation",
+                    "sectionId": null,
+                    "sections": [
+                      {
+                        "label": "Tenderer",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block06011917",
+                        "useLabelAsValue": false,
+                        "value": null
+                      },
+                      {
+                        "label": "Winner of these lots",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block06011920",
+                        "useLabelAsValue": false,
+                        "value": "LOT-0000"
+                      }
+                    ],
+                    "title": "block060119",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0601",
+                "useLabelAsValue": false,
+                "value": "ORG-0004"
+              },
+              {
+                "label": null,
+                "sectionId": "8.1",
+                "sections": [
+                  {
+                    "label": "Official name",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060101",
+                    "useLabelAsValue": false,
+                    "value": "Oslo tingrett"
+                  },
+                  {
+                    "label": "Town",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060107",
+                    "useLabelAsValue": false,
+                    "value": "Oslo"
+                  },
+                  {
+                    "label": "Country",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block060110",
+                    "useLabelAsValue": false,
+                    "value": "Norge"
+                  },
+                  {
+                    "label": "Roles of this organisation",
+                    "sectionId": null,
+                    "sections": [
+                      {
+                        "label": "Review organisation",
+                        "sectionId": null,
+                        "sections": null,
+                        "title": "block06011908",
+                        "useLabelAsValue": false,
+                        "value": null
+                      }
+                    ],
+                    "title": "block060119",
+                    "useLabelAsValue": false,
+                    "value": null
+                  }
+                ],
+                "title": "block0601",
+                "useLabelAsValue": false,
+                "value": "ORG-0005"
+              }
+            ],
+            "title": "block06",
+            "useLabelAsValue": false,
+            "value": null
+          },
+          {
+            "label": "Notice information",
+            "sectionId": "11",
+            "sections": [
+              {
+                "label": "Notice information",
+                "sectionId": "11.1",
+                "sections": [
+                  {
+                    "label": "Notice identifier/version",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block080101",
+                    "useLabelAsValue": false,
+                    "value": "2021-386711 01"
+                  },
+                  {
+                    "label": "Form type",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block080102",
+                    "useLabelAsValue": false,
+                    "value": "Result"
+                  },
+                  {
+                    "label": "Notice type",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block080103",
+                    "useLabelAsValue": false,
+                    "value": "Contract or concession award notice – standard regime"
+                  },
+                  {
+                    "label": "Notice dispatch date",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block080104",
+                    "useLabelAsValue": false,
+                    "value": "28.09.2021 12:00:00+02:00"
+                  },
+                  {
+                    "label": "Languages in which this notice is officially available",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block080105",
+                    "useLabelAsValue": false,
+                    "value": "norsk (bokmål)"
+                  }
+                ],
+                "title": "block0801",
+                "useLabelAsValue": false,
+                "value": null
+              },
+              {
+                "label": "Publication information",
+                "sectionId": "11.2",
+                "sections": [
+                  {
+                    "label": "Notice publication number",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block080201",
+                    "useLabelAsValue": false,
+                    "value": "2021/S 126-335417"
+                  },
+                  {
+                    "label": "Publication date",
+                    "sectionId": null,
+                    "sections": null,
+                    "title": "block080203",
+                    "useLabelAsValue": false,
+                    "value": "28.09.2021"
+                  }
+                ],
+                "title": "block0802",
+                "useLabelAsValue": false,
+                "value": null
+              }
+            ],
+            "title": "block08",
+            "useLabelAsValue": false,
+            "value": null
+          }
+        ],
+        "heading": "Maskin entrepriser Ofotbanen",
+        "id": "2021-386711",
+        "issueDate": "2021-09-28T12:00:00+02:00",
+        "limitedDataFlag": false,
+        "locationId": [],
+        "noticeStatus": null,
+        "noticeType": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "parentCpvCodes": [
+          "60000000",
+          "60100000",
+          "60180000"
+        ],
+        "placeOfPerformance": [],
+        "plannedDateTed": null,
+        "preferredPublicationDateTed": null,
+        "procedureId": "2021-386711",
+        "procurementStrategicLabels": [],
+        "procurementTimeline": [
+          {
+            "allType": [
+              "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+              "RESULT"
+            ],
+            "id": "2021-386711",
+            "publicationDate": "2021-09-28",
+            "selectedNotice": true
+          }
+        ],
+        "publicationDate": "2021-09-28",
+        "qualificationDeadline": null,
+        "regulationUrl": "https://lovdata.no/dokument/SF/forskrift/2016-08-12-974?q=foa",
+        "sentToTed": true,
+        "tedId": null
+      },
+      "ted_id": null
+    }
+  ],
+  "details_fetched": 1,
+  "fetched_at_utc": "2026-05-27T13:43:33+00:00",
+  "query_body": {
+    "facets": {},
+    "hitsPerPage": 50,
+    "page": 1,
+    "searchString": "Nordnes Narvik AS",
+    "sortBy": "PUBLICATION_DATE_DESC"
+  },
+  "query_url": "https://api.doffin.no/webclient/api/v2/search-api/search",
+  "search_hits": [
+    {
+      "allTypes": [
+        "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT",
+        "RESULT"
+      ],
+      "buyer": [
+        {
+          "id": "b7a668833aa45b13f415f7371f08d1bd",
+          "name": "Spordrift AS",
+          "organizationId": "918 276 467"
+        }
+      ],
+      "deadline": null,
+      "description": "Maskin entrepriser og maskintjenester Ofotbanen.",
+      "estimatedValue": null,
+      "heading": "Maskin entrepriser Ofotbanen",
+      "id": "2021-386711",
+      "issueDate": "2021-09-28T10:00:00Z",
+      "locationId": [
+        "NO071"
+      ],
+      "placeOfPerformance": [],
+      "procurementStrategicLabels": [],
+      "publicationDate": "2021-09-28",
+      "sentToTed": true,
+      "status": null,
+      "type": "ANNOUNCEMENT_OF_CONCLUSION_OF_CONTRACT"
+    }
+  ],
+  "search_hits_post_filter": 1,
+  "search_hits_total": 1,
+  "search_ok": true,
+  "supplier_name": "Nordnes Narvik AS",
+  "unconfirmed_awards": []
+}

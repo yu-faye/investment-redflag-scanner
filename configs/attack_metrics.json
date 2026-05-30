@@ -1,0 +1,87 @@
+{
+  "project": "qben_offensive_audit",
+  "version": "0.1",
+  "attack_categories": [
+    {
+      "id": "cash_conversion_gap",
+      "description": "Profit growth outpaces operating cash generation",
+      "metric": "cash_conversion_ratio",
+      "threshold": {
+        "warning_below": 0.85,
+        "critical_below": 0.7
+      }
+    },
+    {
+      "id": "margin_narrative_dissonance",
+      "description": "Narrative claims efficiency while gross margin deteriorates",
+      "metric": "gross_margin_yoy_change_pct",
+      "threshold": {
+        "warning_below_pct": -1.5,
+        "critical_below_pct": -3.0
+      }
+    },
+    {
+      "id": "working_capital_stress",
+      "description": "Working capital expansion consumes cash disproportionately",
+      "metric": "working_capital_to_revenue_pct",
+      "threshold": {
+        "warning_above_pct": 22.0,
+        "critical_above_pct": 28.0
+      }
+    },
+    {
+      "id": "related_party_dependency",
+      "description": "High related-party exposure vs total revenue",
+      "metric": "related_party_revenue_share_pct",
+      "threshold": {
+        "warning_above_pct": 8.0,
+        "critical_above_pct": 15.0
+      }
+    },
+    {
+      "id": "debt_refinancing_pressure",
+      "description": "Short-term debt concentration and weaker interest coverage",
+      "metric": "interest_coverage_ratio",
+      "threshold": {
+        "warning_below": 3.0,
+        "critical_below": 2.0
+      }
+    },
+    {
+      "id": "tax_rate_anomaly",
+      "description": "Effective tax rate swings without clear jurisdictional explanation",
+      "metric": "effective_tax_rate_delta_pct",
+      "threshold": {
+        "warning_abs_above_pct": 5.0,
+        "critical_abs_above_pct": 9.0
+      }
+    },
+    {
+      "id": "capex_underinvestment_signal",
+      "description": "Capex too low versus depreciation during growth narrative",
+      "metric": "capex_to_depreciation_ratio",
+      "threshold": {
+        "warning_below": 0.8,
+        "critical_below": 0.6
+      }
+    },
+    {
+      "id": "inventory_build_up_risk",
+      "description": "Inventory growth materially exceeds revenue growth",
+      "metric": "inventory_growth_minus_revenue_growth_pct",
+      "threshold": {
+        "warning_above_pct": 8.0,
+        "critical_above_pct": 15.0
+      }
+    },
+    {
+      "id": "goodwill_impairment_watch",
+      "description": "Goodwill remains elevated while returns weaken",
+      "metric": "goodwill_to_equity_pct",
+      "threshold": {
+        "warning_above_pct": 35.0,
+        "critical_above_pct": 50.0
+      }
+    }
+  ]
+}

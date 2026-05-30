@@ -1,0 +1,22 @@
+{
+  "aliases_used": [
+    "SLAM Jernbaneteknikk AS"
+  ],
+  "confirmed_awards": [],
+  "details_fetched": 0,
+  "fetched_at_utc": "2026-05-27T03:27:00+00:00",
+  "query_body": {
+    "facets": {},
+    "hitsPerPage": 50,
+    "page": 1,
+    "searchString": "SLAM Jernbaneteknikk AS",
+    "sortBy": "PUBLICATION_DATE_DESC"
+  },
+  "query_url": "https://api.doffin.no/webclient/api/v2/search-api/search",
+  "search_hits": [],
+  "search_hits_post_filter": 0,
+  "search_hits_total": 0,
+  "search_ok": true,
+  "supplier_name": "SLAM Jernbaneteknikk AS",
+  "unconfirmed_awards": []
+}

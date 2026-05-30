@@ -1,0 +1,954 @@
+{
+  "company": "qben_infra",
+  "name": "Qben Infra AB",
+  "ticker": "QBEN",
+  "exchange": "Nasdaq First North Premier",
+  "middelborg_link": "Middelborg Invest AS acquired stake October 22, 2025 (RSG/HKL block transfer).",
+  "generated_at_utc": "2026-05-30T06:35:26+00:00",
+  "current_period": "Q1 2026",
+  "prior_period": "Q2 2025",
+  "source_used": {
+    "current_file": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+    "current_kind": "pdf",
+    "prior": {
+      "label": "Q2 2025",
+      "file": "data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+      "kind": "txt"
+    }
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf",
+      "issuer_page": "https://mfn.se/a/qben-infra/interim-report-january-march-2026",
+      "language": "sv",
+      "label": "Q1 2026 interim report (Swedish)",
+      "period": "2026-Q1",
+      "sha256": "df8a94c604a7e48d63a31311139da3ad5733c5167220d38b17c0ddc284e94b11",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": {
+      "local_path": "data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+      "kind": "local_txt",
+      "issuer_url": "https://storage.mfn.se/a331fe1a-d7b7-4ca9-9fa9-c3e59f4a7812/qben-infras-q2-report-2025.pdf",
+      "issuer_page": "https://www.qben.se/en/qben-infras-q2-report-2025/",
+      "language": "en",
+      "label": "Q2 2025 interim report (English)",
+      "period": "2025-Q2",
+      "sha256": "66d7912928171febb3307c91566f4067b0e84a74b19051c6384ac75353861dfa",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    }
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": -34.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": -26.0,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": -12093.0,
+    "ebitda_for_leverage_msek_raw": -111.0,
+    "interest_coverage_ratio_auto": 0.01,
+    "net_debt_to_ebitda_auto": 2.0,
+    "interest_coverage_ratio": 0.01,
+    "interest_coverage_ratio_source": "auto_regex",
+    "net_debt_to_ebitda": 2.0,
+    "net_debt_to_ebitda_source": "auto_regex"
+  },
+  "auto_metrics_provenance": {
+    "ebitda_msek": {
+      "value": -34.0,
+      "regex_id": "ebitda",
+      "raw_match": "EBITDA -34",
+      "char_span": [
+        1030,
+        1040
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA -34"
+    },
+    "ebita_msek": {
+      "value": -26.0,
+      "regex_id": "ebita",
+      "raw_match": "EBITA -marginalen uppgick till  -26,0",
+      "char_span": [
+        427,
+        464
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITA -marginalen uppgick till -26,0"
+    },
+    "interest_expense_msek_raw": {
+      "value": -12093.0,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "Finansiella kostnader -13 849 -66 842 -189 263\nFinansnetto -12 093",
+      "char_span": [
+        20237,
+        20303
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Finansiella kostnader -13 849 -66 842 -189 263 Finansnetto -12 093"
+    },
+    "ebitda_for_leverage_msek_raw": {
+      "value": -111.0,
+      "regex_id": "ebitda_for_leverage_anchor",
+      "raw_match": "EBITDA -34 1 -43\nJusterad EBITDA -19 8 22\nEBITA -44 -22 -111",
+      "char_span": [
+        1030,
+        1090
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA -34 1 -43 Justerad EBITDA -19 8 22 EBITA -44 -22 -111"
+    },
+    "interest_coverage_ratio_auto": {
+      "value": 0.01,
+      "regex_id": "interest_coverage_derived",
+      "raw_match": "(derived) EBITDA / Interest expense",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "ebitda_for_leverage_msek_raw",
+        "interest_expense_msek_raw"
+      ]
+    },
+    "net_debt_to_ebitda_auto": {
+      "value": 2.0,
+      "regex_id": "leverage_explicit",
+      "raw_match": "Nettoskuld / EBITDA: Under 2,0x",
+      "char_span": [
+        18989,
+        19020
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Nettoskuld / EBITDA: Under 2,0x"
+    },
+    "interest_coverage_ratio": {
+      "value": 0.01,
+      "regex_id": "interest_coverage_derived",
+      "raw_match": "(derived) EBITDA / Interest expense",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "ebitda_for_leverage_msek_raw",
+        "interest_expense_msek_raw"
+      ]
+    },
+    "net_debt_to_ebitda": {
+      "value": 2.0,
+      "regex_id": "leverage_explicit",
+      "raw_match": "Nettoskuld / EBITDA: Under 2,0x",
+      "char_span": [
+        18989,
+        19020
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Nettoskuld / EBITDA: Under 2,0x"
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": -13.3,
+    "organic_growth_pct": -13.3,
+    "gross_margin_yoy_change_pct": null,
+    "ebita_margin_pct": -26.0,
+    "ebitda_margin_pct": -20.1,
+    "interest_coverage_ratio": null,
+    "net_debt_to_ebitda": null,
+    "working_capital_to_revenue_pct": null,
+    "capex_to_depreciation_ratio": null,
+    "order_intake_yoy_pct": null,
+    "revenue_msek_current": 169.0,
+    "revenue_msek_prior": 195.0,
+    "ebita_msek_current": -44.0,
+    "adjusted_ebita_msek_current": -29.0,
+    "net_debt_msek": 404.0,
+    "equity_msek": 425.0,
+    "cash_msek_current": 60.0,
+    "cash_msek_prior": 183.0,
+    "period_result_continuing_msek": -53.0,
+    "period_result_reported_msek": 147.0,
+    "operating_cashflow_msek": 51.0
+  },
+  "manual_metrics_provenance": {
+    "revenue_yoy_pct": {
+      "anchor": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK (195)",
+      "note": "Continuing operations only. Reported figures: 169 / 195 MSEK -> -13.3% YoY decline."
+    },
+    "ebita_margin_pct": {
+      "anchor": "EBITA-marginal (%) -26,0% -11,1%",
+      "note": "Q1 2026 EBITA -44 MSEK on 169 MSEK = -26.0% (kvarvarande verksamhet)."
+    },
+    "period_result_reported_msek": {
+      "anchor": "Kvartalets resultat, inklusive försäljningsintäkter från affärsområdet Rail, uppgick till 147 MSEK (-113)",
+      "note": "Headline 'profit' of 147 MSEK is driven by the Rail divestment gain; continuing-ops result is -53 MSEK."
+    }
+  },
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": -34.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": -26.0,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": -26.0,
+    "ebitda_margin_pct": -20.1,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": -12093.0,
+    "ebitda_for_leverage_msek_raw": -111.0,
+    "interest_coverage_ratio_auto": 0.01,
+    "net_debt_to_ebitda_auto": 2.0,
+    "interest_coverage_ratio": 0.01,
+    "interest_coverage_ratio_source": "auto_regex",
+    "net_debt_to_ebitda": 2.0,
+    "net_debt_to_ebitda_source": "auto_regex",
+    "revenue_yoy_pct": -13.3,
+    "organic_growth_pct": -13.3,
+    "revenue_msek_current": 169.0,
+    "revenue_msek_prior": 195.0,
+    "ebita_msek_current": -44.0,
+    "adjusted_ebita_msek_current": -29.0,
+    "net_debt_msek": 404.0,
+    "equity_msek": 425.0,
+    "cash_msek_current": 60.0,
+    "cash_msek_prior": 183.0,
+    "period_result_continuing_msek": -53.0,
+    "period_result_reported_msek": 147.0,
+    "operating_cashflow_msek": 51.0
+  },
+  "metrics_audit": {
+    "adjusted_ebita_msek_current": {
+      "auto": null,
+      "manual": -29.0,
+      "chosen": -29.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "cash_msek_current": {
+      "auto": null,
+      "manual": 60.0,
+      "chosen": 60.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "cash_msek_prior": {
+      "auto": null,
+      "manual": 183.0,
+      "chosen": 183.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": -26.0,
+      "chosen": -26.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_msek": {
+      "auto": -26.0,
+      "manual": null,
+      "chosen": -26.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebita_msek_current": {
+      "auto": null,
+      "manual": -44.0,
+      "chosen": -44.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": -20.1,
+      "chosen": -20.1,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_msek": {
+      "auto": -34.0,
+      "manual": null,
+      "chosen": -34.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "equity_msek": {
+      "auto": null,
+      "manual": 425.0,
+      "chosen": 425.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": 0.01,
+      "manual": null,
+      "chosen": 0.01,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio_auto": {
+      "auto": 0.01,
+      "manual": null,
+      "chosen": 0.01,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "net_debt_msek": {
+      "auto": null,
+      "manual": 404.0,
+      "chosen": 404.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": 2.0,
+      "manual": null,
+      "chosen": 2.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda_auto": {
+      "auto": 2.0,
+      "manual": null,
+      "chosen": 2.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "operating_cashflow_msek": {
+      "auto": null,
+      "manual": 51.0,
+      "chosen": 51.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": -13.3,
+      "chosen": -13.3,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "period_result_continuing_msek": {
+      "auto": null,
+      "manual": -53.0,
+      "chosen": -53.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "period_result_reported_msek": {
+      "auto": null,
+      "manual": 147.0,
+      "chosen": 147.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_msek_current": {
+      "auto": null,
+      "manual": 169.0,
+      "chosen": 169.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_msek_prior": {
+      "auto": null,
+      "manual": 195.0,
+      "chosen": 195.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": -13.3,
+      "chosen": -13.3,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "growth",
+      "mention_count": 3,
+      "mention_density_per_10k_chars": 0.47,
+      "term_hits": [
+        {
+          "term": "growth",
+          "count": 3
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -13.3,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "organic_growth_pct",
+          "value": -13.3,
+          "expected_direction": "up",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "Aktien handlas på Nasdaq First North Premier Growth",
+      "claim_excerpt_matched_term": "growth",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'growth' qualitatively, yet supporting metrics (revenue_yoy_pct=-13.3, organic_growth_pct=-13.3) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 5.85,
+      "headline": "Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the opposite way (revenue_yoy_pct=-13.3, organic_growth_pct=-13.3).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf",
+          "issuer_page": "https://mfn.se/a/qben-infra/interim-report-january-march-2026",
+          "language": "sv",
+          "label": "Q1 2026 interim report (Swedish)",
+          "period": "2026-Q1",
+          "sha256": "df8a94c604a7e48d63a31311139da3ad5733c5167220d38b17c0ddc284e94b11",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "excerpt_locator": {
+            "page": 10,
+            "bbox": {
+              "x0": 311.23,
+              "top": 611.1368799999999,
+              "x1": 529.2099999999999,
+              "bottom": 635.698,
+              "width": 217.9799999999999,
+              "height": 24.561120000000074
+            },
+            "sentence_context": {
+              "prev": "Organisk tillväxt: >10% i genomsnittlig årlig tillväxt EBITA-marginal: >10% Nettoskuld / EBITDA: Under 2,0x Utdelning: Upp till 30% av periodens resultat M&A-aktivitet: Aktivt söka och genomföra kompletterande förvärv Organisation Antalet anställda i Qben Infra var 385 vid periodens slut.",
+              "match": "Aktien Aktien handlas på Nasdaq First North Premier Growth Market under tickern QBEN.",
+              "next": "Antalet aktier uppgick till 79 827 620 vid kvartalets slut och aktiekapitalet uppgick till 1 108 717 kr."
+            },
+            "normalised_search": "Aktien handlas på Nasdaq First North Premier Growth"
+          },
+          "pdf_page_hit": 10,
+          "issuer_url_at_page": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf#page=10",
+          "issuer_url_at_phrase": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf#page=10&search=Aktien%20handlas%20p%C3%A5%20Nasdaq%20First%20North%20Premier%20Growth",
+          "evidence_snippet": {
+            "path": "outputs/evidence/qben_infra/c29a841a3ade.png",
+            "width": 1095,
+            "height": 90,
+            "size_bytes": 23550,
+            "page": 10,
+            "bbox": {
+              "x0": 311.23,
+              "top": 611.1368799999999,
+              "x1": 529.2099999999999,
+              "bottom": 635.698,
+              "width": 217.9799999999999,
+              "height": 24.561120000000074
+            },
+            "key": "c29a841a3ade"
+          }
+        },
+        "prior": {
+          "local_path": "data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://storage.mfn.se/a331fe1a-d7b7-4ca9-9fa9-c3e59f4a7812/qben-infras-q2-report-2025.pdf",
+          "issuer_page": "https://www.qben.se/en/qben-infras-q2-report-2025/",
+          "language": "en",
+          "label": "Q2 2025 interim report (English)",
+          "period": "2025-Q2",
+          "sha256": "66d7912928171febb3307c91566f4067b0e84a74b19051c6384ac75353861dfa",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -13.3,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_curation",
+          "locator": {
+            "page": 2,
+            "bbox": {
+              "x0": 63.86399841308594,
+              "top": 75.58995056152344,
+              "x1": 365.18798828125,
+              "bottom": 86.13795471191406,
+              "width": 301.32398986816406,
+              "height": 10.548004150390625
+            },
+            "matched_str": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK (195)",
+            "strategy": "anchor",
+            "context_distance": null,
+            "context_term": null
+          },
+          "snippet": {
+            "path": "outputs/evidence/qben_infra/metric_351a459b3697.png",
+            "width": 1095,
+            "height": 62,
+            "size_bytes": 20188,
+            "page": 2,
+            "bbox": {
+              "x0": 63.86399841308594,
+              "top": 75.58995056152344,
+              "x1": 365.18798828125,
+              "bottom": 86.13795471191406,
+              "width": 301.32398986816406,
+              "height": 10.548004150390625
+            },
+            "matched_str": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK (195)",
+            "confidence": null,
+            "context_term": null
+          },
+          "note": "Continuing operations only. Reported figures: 169 / 195 MSEK -> -13.3% YoY decline."
+        },
+        {
+          "metric": "organic_growth_pct",
+          "value": -13.3,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "rule_id": "triangulated_hypothesis",
+      "subtype": "revenue_pipeline_support",
+      "company": "qben_infra",
+      "company_name": "Qben Infra AB",
+      "hypothesis_id": "hyp_qben_q1_2026_revenue_pipeline",
+      "entity": "Qben Infra AB",
+      "claim": "Qben Infra's Q1 2026 reported continuing-operations revenue of 169 MSEK is grounded in real external order flow from Norwegian and EU public-sector buyers, and the CEO narrative description of the quarter is consistent with the measured revenue trajectory (no explanatory slippage between negative numbers and uniformly positive language).",
+      "severity": "critical",
+      "priority_score": 19.2,
+      "headline": "Qben Infra AB: claim 'Qben Infra's Q1 2026 reported continuing-operations revenue of 169 MSEK is grounded in real external order flow from Norwegian and EU public-sector buyers, and the CEO narrative description of the quarter is consistent with the measured revenue trajectory (no explanatory slippage between negative numbers and uniformly positive language).' -- triangulation = ted=not_found, derived_revenue_support=refutes, derived_explanatory_slippage=refutes; derived severity = critical.",
+      "claim_excerpt": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK",
+      "claim_excerpt_matched_term": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK",
+      "triangulation": {
+        "hypothesis_id": "hyp_qben_q1_2026_revenue_pipeline",
+        "claim_category": "revenue_pipeline_support",
+        "derived_severity": "critical",
+        "verdict_summary": {
+          "not_found": 1,
+          "refutes": 2
+        },
+        "confirming_taps": [],
+        "refuting_taps": [
+          "ted",
+          "derived_revenue_support",
+          "derived_explanatory_slippage"
+        ],
+        "distinct_taps": [
+          "derived_explanatory_slippage",
+          "derived_revenue_support",
+          "ted"
+        ],
+        "total_ledger_entries": 3,
+        "resolved_falsification_questions": [
+          "fq_revenue_backed_by_external_awards",
+          "fq_explanatory_narrative_consistent",
+          "fq_eu_threshold_contracts"
+        ],
+        "pending_falsification_questions": [
+          {
+            "question_id": "fq_segment_disclosure_consistency",
+            "text": "Are the same KPI dimensions (segments, organic-growth split, headline-profit decomposition) disclosed in Q1 2026 as in Q2 2025?",
+            "blocking_for_critical": false,
+            "relevant_tap_kinds": [
+              "derived_analysis"
+            ]
+          }
+        ],
+        "blockers_for_critical": [],
+        "peer_control_status": {
+          "checked": true,
+          "peer_ids": [
+            "hyp_qben_banefjell_established",
+            "hyp_qben_slam_specialist",
+            "hyp_qben_team_bygg_player",
+            "hyp_qben_nordnes_narvik_player"
+          ],
+          "taps_with_passing_peer": [
+            "ted"
+          ]
+        },
+        "next_recommended_taps": [],
+        "latest_per_tap": {
+          "ted": {
+            "addresses_questions": [
+              "fq_eu_threshold_contracts"
+            ],
+            "confidence": 0.45,
+            "entity_match_orgnr": null,
+            "error": null,
+            "gathered_at_utc": "2026-05-30T06:23:17+00:00",
+            "hypothesis_id": "hyp_qben_q1_2026_revenue_pipeline",
+            "narrative": "TED returned 0 notices where Qben Infra AB appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence.",
+            "payload_sha256": "c39194ff7c9fc89beddbf960f92f3aa832a97c7002d2d8cc1c8ee512896f9872",
+            "payload_summary": {
+              "confirmed_award_count": 0,
+              "confirmed_awards": [],
+              "post_acquisition_award_count": 0,
+              "pre_acquisition_award_count": 0,
+              "search_hits_total": 0,
+              "ted_threshold_caveat": "TED carries EU-directive-threshold notices only (~NOK 45M for works, ~NOK 1.4-2M for goods/services). Absence on TED is weaker evidence than absence on Doffin."
+            },
+            "query_url": "https://api.ted.europa.eu/v3/notices/search",
+            "raw_payload_ref": "external/ted/qben_infra/qben-infra-ab_2026-05-30.json",
+            "tap_id": "ted",
+            "tap_kind": "public_procurement",
+            "verdict": "not_found"
+          },
+          "derived_revenue_support": {
+            "addresses_questions": [
+              "fq_revenue_backed_by_external_awards"
+            ],
+            "confidence": 0.65,
+            "entity_match_orgnr": null,
+            "error": null,
+            "gathered_at_utc": "2026-05-30T06:24:41+00:00",
+            "hypothesis_id": "hyp_qben_q1_2026_revenue_pipeline",
+            "narrative": "Only 25% of 4 operating subsidiaries show a post-acquisition prime-contract footprint in Doffin or TED (4 awards). This is below the 50% external-support threshold; reported revenue of 169.0 MSEK is poorly grounded in public-registry order flow.",
+            "payload_sha256": "0e7aa3ebd14d9e6ec43c55b3e18f34cb2fca9a2f72c0b162a729dc46cc7834bc",
+            "payload_summary": {
+              "any_support_pct": 50.0,
+              "confidence_weighted_support_pct": 25.0,
+              "external_support_pct": 25.0,
+              "external_support_threshold_pct": 50.0,
+              "method": "v10.revenue_support_calculator",
+              "peers_evaluated": 4,
+              "peers_with_any_confirmed_awards": 2,
+              "peers_with_post_acq_confirmed_awards": 1,
+              "per_peer_breakdown": [
+                {
+                  "confirmed_count": 6,
+                  "peer_entity": "Banefjell AS",
+                  "peer_hypothesis_id": "hyp_qben_banefjell_established",
+                  "post_acq_count": 4,
+                  "pre_acq_count": 2,
+                  "tap_breakdown": [
+                    {
+                      "confidence": 0.85,
+                      "confirmed_award_count": 4,
+                      "post_acquisition_award_count": 2,
+                      "pre_acquisition_award_count": 2,
+                      "tap_id": "doffin",
+                      "tap_signal": 0.85,
+                      "verdict": "confirms"
+                    },
+                    {
+                      "confidence": 0.85,
+                      "confirmed_award_count": 2,
+                      "post_acquisition_award_count": 2,
+                      "pre_acquisition_award_count": 0,
+                      "tap_id": "ted",
+                      "tap_signal": 0.85,
+                      "verdict": "confirms"
+                    }
+                  ],
+                  "weighted_signal": 1.0
+                },
+                {
+                  "confirmed_count": 0,
+                  "peer_entity": "SLAM Jernbaneteknikk AS",
+                  "peer_hypothesis_id": "hyp_qben_slam_specialist",
+                  "post_acq_count": 0,
+                  "pre_acq_count": 0,
+                  "tap_breakdown": [
+                    {
+                      "confidence": 0.7,
+                      "confirmed_award_count": 0,
+                      "post_acquisition_award_count": 0,
+                      "pre_acquisition_award_count": 0,
+                      "tap_id": "doffin",
+                      "tap_signal": 0.0,
+                      "verdict": "not_found"
+                    },
+                    {
+                      "confidence": 0.45,
+                      "confirmed_award_count": 0,
+                      "post_acquisition_award_count": 0,
+                      "pre_acquisition_award_count": 0,
+                      "tap_id": "ted",
+                      "tap_signal": 0.0,
+                      "verdict": "not_found"
+                    }
+                  ],
+                  "weighted_signal": 0.0
+                },
+                {
+                  "confirmed_count": 0,
+                  "peer_entity": "Team Bygg AS",
+                  "peer_hypothesis_id": "hyp_qben_team_bygg_player",
+                  "post_acq_count": 0,
+                  "pre_acq_count": 0,
+                  "tap_breakdown": [
+                    {
+                      "confidence": 0.6,
+                      "confirmed_award_count": 0,
+                      "post_acquisition_award_count": 0,
+                      "pre_acquisition_award_count": 0,
+                      "tap_id": "doffin",
+                      "tap_signal": 0.0,
+                      "verdict": "refutes"
+                    },
+                    {
+                      "confidence": 0.45,
+                      "confirmed_award_count": 0,
+                      "post_acquisition_award_count": 0,
+                      "pre_acquisition_award_count": 0,
+                      "tap_id": "ted",
+                      "tap_signal": 0.0,
+                      "verdict": "not_found"
+                    }
+                  ],
+                  "weighted_signal": 0.0
+                },
+                {
+                  "confirmed_count": 1,
+                  "peer_entity": "Nordnes Narvik AS",
+                  "peer_hypothesis_id": "hyp_qben_nordnes_narvik_player",
+                  "post_acq_count": 0,
+                  "pre_acq_count": 1,
+                  "tap_breakdown": [
+                    {
+                      "confidence": 0.35,
+                      "confirmed_award_count": 1,
+                      "post_acquisition_award_count": 0,
+                      "pre_acquisition_award_count": 1,
+                      "tap_id": "doffin",
+                      "tap_signal": 0.0,
+                      "verdict": "partial"
+                    },
+                    {
+                      "confidence": 0.45,
+                      "confirmed_award_count": 0,
+                      "post_acquisition_award_count": 0,
+                      "pre_acquisition_award_count": 0,
+                      "tap_id": "ted",
+                      "tap_signal": 0.0,
+                      "verdict": "not_found"
+                    }
+                  ],
+                  "weighted_signal": 0.0
+                }
+              ],
+              "reported_revenue_msek": 169.0,
+              "total_post_acq_awards": 4,
+              "total_pre_acq_awards": 3
+            },
+            "query_url": null,
+            "raw_payload_ref": "/Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_revenue_support/qben_infra/hyp_qben_q1_2026_revenue_pipeline_revenue_support.json",
+            "tap_id": "derived_revenue_support",
+            "tap_kind": "derived_analysis",
+            "verdict": "refutes"
+          },
+          "derived_explanatory_slippage": {
+            "addresses_questions": [
+              "fq_explanatory_narrative_consistent"
+            ],
+            "confidence": 0.75,
+            "entity_match_orgnr": null,
+            "error": null,
+            "gathered_at_utc": "2026-05-30T06:24:41+00:00",
+            "hypothesis_id": "hyp_qben_q1_2026_revenue_pipeline",
+            "narrative": "Revenue declined (-13.3%) and EBITA margin is -26.0%, yet the CEO-comment region contains 12 positive-framing tokens and zero acknowledgement tokens. Pure positive framing despite a negative directional move -- classic explanatory slippage.",
+            "payload_sha256": "44f89128dd9930d06197d06bf22f6cd30897cd14edce20ee9b2e4c16dc5b7ba9",
+            "payload_summary": {
+              "acknowledgement_match_count": 0,
+              "acknowledgement_matches": {},
+              "kpi_inputs": {
+                "kpis_deteriorated": true,
+                "reported_period_ebita_margin_pct": -26.0,
+                "reported_revenue_yoy_pct": -13.3
+              },
+              "method": "v10.explanatory_slippage_scanner",
+              "offending_sentences": [
+                "Delårsrapport Q1 2026 Click or tap here to enter text. 2 (31) Fokusering och lönsamhet Qben Infra har gått in i 2026 med en tydlig riktning.",
+                "Med B45 Anlegg ombord stärker vi vår närvaro infrastruktur, med målet att driva högre tillväxt och ytterligare och täcker nu även kustlinjen från Oslo till lönsamhet.",
+                "Under kvartalet ingick vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för plattform. att utveckla storskaliga energilagringsprojekt i norra Europa – ett område där vi ser växande behov och Efter ett händelserikt 2025 slutförde vi de strategiska attraktiva möjligheter. avyttringarna av Kvalitetsbygg och Rail under första kvartalet 2026.",
+                "Tillsammans med den pågående processen Marknadens drivkrafter är fortsatt starka. att avyttra Inspekt – där vi har tecknat en Energiomställning, elektrifiering och modernisering av avsiktsförklaring – blir Qben Infra både tydligare och mer åldrande infrastruktur skapar långsiktig, strukturell fokuserat.",
+                "Inom Qben Power har vi stärkt vår kapacitet genom förvärvet av B45 Anlegg AS – en snabbväxande specialist Sammanfattningsvis befinner sig Qben Infra i början av en inom betongarbeten för kritisk infrastruktur såsom ny fas."
+              ],
+              "positive_density_per_1000_words": 15.71,
+              "positive_framing_match_count": 12,
+              "positive_matches": {
+                "fokuserat": [
+                  "struktur skapar långsiktig, strukturell fokuserat. Vi frigör kapital och ledningskapacitet för att efterfråga"
+                ],
+                "lönsamhet": [
+                  "re to enter text. 2 (31) Fokusering och lönsamhet Qben Infra har gått in i 2026 med en tydlig riktning. Under",
+                  "äcker nu även kustlinjen från Oslo till lönsamhet. Detta arbete har fortsatt under första kvartalet Kristians"
+                ],
+                "ny fas": [
+                  "garbeten för kritisk infrastruktur såsom ny fas."
+                ],
+                "plattform": [
+                  "trategiskt partnerskap med Byhmgard för plattform. att utveckla storskaliga energilagringsprojekt i norra Eur"
+                ],
+                "renodlad": [
+                  "rtalet ingick vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med By"
+                ],
+                "slagkraftig": [
+                  "vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för platt"
+                ],
+                "specialist": [
+                  "rvet av B45 Anlegg AS – en snabbväxande specialist Sammanfattningsvis befinner sig Qben Infra i början av en i"
+                ],
+                "strategiskt": [
+                  "r renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för plattform. att utveckla storsk"
+                ],
+                "tillväxt": [
+                  "nfrastruktur, med målet att driva högre tillväxt och ytterligare och täcker nu även kustlinjen från Oslo til"
+                ],
+                "tydlig": [
+                  "et Qben Infra har gått in i 2026 med en tydlig riktning. Under Vår verksamhet täcker i dag hela den östra"
+                ],
+                "växande": [
+                  "i norra Europa – ett område där vi ser växande behov och Efter ett händelserikt 2025 slutförde vi de strat"
+                ]
+              },
+              "scan_actual_chars": 5000,
+              "scan_window_chars": 5000,
+              "source_pdf": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf"
+            },
+            "query_url": null,
+            "raw_payload_ref": "/Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_explanatory_slippage/qben_infra/hyp_qben_q1_2026_revenue_pipeline_explanatory_slippage.json",
+            "tap_id": "derived_explanatory_slippage",
+            "tap_kind": "derived_analysis",
+            "verdict": "refutes"
+          }
+        },
+        "category_rule_notes": [
+          "R7 (revenue_pipeline_support): both derived dimensions refute (revenue_support=refutes, explanatory_slippage=refutes). Two independent axes failing in the same direction is treated as critical even without peer-tap confirms."
+        ]
+      },
+      "follow_up_questions": [],
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf",
+          "issuer_page": "https://mfn.se/a/qben-infra/interim-report-january-march-2026",
+          "language": "sv",
+          "label": "Q1 2026 interim report (Swedish)",
+          "period": "2026-Q1",
+          "sha256": "df8a94c604a7e48d63a31311139da3ad5733c5167220d38b17c0ddc284e94b11",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "excerpt_locator": {
+            "page": 2,
+            "bbox": {
+              "x0": 63.864,
+              "top": 77.13800000000003,
+              "x1": 340.3,
+              "bottom": 86.13800000000003,
+              "width": 276.43600000000004,
+              "height": 9.0
+            },
+            "sentence_context": {
+              "prev": "Delårsrapport Q1 2026 Click or tap here to enter text.",
+              "match": "2 (31) Första kvartalet 2026 (januari - mars) • Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK (195).",
+              "next": "• Kvartalets resultat, inklusive försäljningsintäkter från affärsområdet Rail, uppgick till 147 MSEK (-113)."
+            },
+            "normalised_search": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK"
+          },
+          "pdf_page_hit": 2,
+          "issuer_url_at_page": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf#page=2",
+          "issuer_url_at_phrase": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf#page=2&search=Nettooms%C3%A4ttningen%20i%20kvarvarande%20verksamhet%20uppgick%20till%20169%20MSEK",
+          "evidence_snippet": {
+            "path": "outputs/evidence/qben_infra/b95186e9e41b.png",
+            "width": 1095,
+            "height": 59,
+            "size_bytes": 19089,
+            "page": 2,
+            "bbox": {
+              "x0": 63.864,
+              "top": 77.13800000000003,
+              "x1": 340.3,
+              "bottom": 86.13800000000003,
+              "width": 276.43600000000004,
+              "height": 9.0
+            },
+            "key": "b95186e9e41b"
+          }
+        },
+        "prior": {
+          "local_path": "data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://storage.mfn.se/a331fe1a-d7b7-4ca9-9fa9-c3e59f4a7812/qben-infras-q2-report-2025.pdf",
+          "issuer_page": "https://www.qben.se/en/qben-infras-q2-report-2025/",
+          "language": "en",
+          "label": "Q2 2025 interim report (English)",
+          "period": "2025-Q2",
+          "sha256": "66d7912928171febb3307c91566f4067b0e84a74b19051c6384ac75353861dfa",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    }
+  ],
+  "severity_tally": {
+    "critical": 2,
+    "warning": 0,
+    "info": 0
+  },
+  "findings_count": 2
+}

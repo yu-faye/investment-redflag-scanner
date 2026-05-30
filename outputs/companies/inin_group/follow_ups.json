@@ -1,0 +1,97 @@
+{
+  "company": "inin_group",
+  "follow_ups": [
+    {
+      "rule_id": "narrative_dissonance",
+      "severity": "warning",
+      "summary": "dissonance_detected",
+      "questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'resilience' qualitatively, yet supporting metrics (interest_coverage_ratio=1.5, net_debt_to_ebitda=4.2) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ]
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "severity": "critical",
+      "summary": "reclassification_introduced",
+      "questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:continuing_operations' (previously emphasised in Q3 2024 Interim) not reported in FY 2025? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ]
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "severity": "critical",
+      "summary": "reclassification_introduced",
+      "questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:held_for_sale' (previously emphasised in Q3 2024 Interim) not reported in FY 2025? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ]
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "severity": "critical",
+      "summary": "reclassification_introduced",
+      "questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:discontinued_operations' (previously emphasised in Q3 2024 Interim) not reported in FY 2025? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ]
+    }
+  ]
+}

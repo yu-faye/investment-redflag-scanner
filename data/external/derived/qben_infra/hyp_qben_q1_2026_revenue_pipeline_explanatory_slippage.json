@@ -1,0 +1,58 @@
+{
+  "acknowledgement_match_count": 0,
+  "acknowledgement_matches": {},
+  "kpi_inputs": {
+    "kpis_deteriorated": true,
+    "reported_period_ebita_margin_pct": -26.0,
+    "reported_revenue_yoy_pct": -13.3
+  },
+  "method": "v10.explanatory_slippage_scanner",
+  "offending_sentences": [
+    "Delårsrapport Q1 2026 Click or tap here to enter text. 2 (31) Fokusering och lönsamhet Qben Infra har gått in i 2026 med en tydlig riktning.",
+    "Med B45 Anlegg ombord stärker vi vår närvaro infrastruktur, med målet att driva högre tillväxt och ytterligare och täcker nu även kustlinjen från Oslo till lönsamhet.",
+    "Under kvartalet ingick vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för plattform. att utveckla storskaliga energilagringsprojekt i norra Europa – ett område där vi ser växande behov och Efter ett händelserikt 2025 slutförde vi de strategiska attraktiva möjligheter. avyttringarna av Kvalitetsbygg och Rail under första kvartalet 2026.",
+    "Tillsammans med den pågående processen Marknadens drivkrafter är fortsatt starka. att avyttra Inspekt – där vi har tecknat en Energiomställning, elektrifiering och modernisering av avsiktsförklaring – blir Qben Infra både tydligare och mer åldrande infrastruktur skapar långsiktig, strukturell fokuserat.",
+    "Inom Qben Power har vi stärkt vår kapacitet genom förvärvet av B45 Anlegg AS – en snabbväxande specialist Sammanfattningsvis befinner sig Qben Infra i början av en inom betongarbeten för kritisk infrastruktur såsom ny fas."
+  ],
+  "positive_density_per_1000_words": 15.71,
+  "positive_framing_match_count": 12,
+  "positive_matches": {
+    "fokuserat": [
+      "struktur skapar långsiktig, strukturell fokuserat. Vi frigör kapital och ledningskapacitet för att efterfråga"
+    ],
+    "lönsamhet": [
+      "re to enter text. 2 (31) Fokusering och lönsamhet Qben Infra har gått in i 2026 med en tydlig riktning. Under",
+      "äcker nu även kustlinjen från Oslo till lönsamhet. Detta arbete har fortsatt under första kvartalet Kristians"
+    ],
+    "ny fas": [
+      "garbeten för kritisk infrastruktur såsom ny fas."
+    ],
+    "plattform": [
+      "trategiskt partnerskap med Byhmgard för plattform. att utveckla storskaliga energilagringsprojekt i norra Eur"
+    ],
+    "renodlad": [
+      "rtalet ingick vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med By"
+    ],
+    "slagkraftig": [
+      "vi 2026 och ger nu en mer renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för platt"
+    ],
+    "specialist": [
+      "rvet av B45 Anlegg AS – en snabbväxande specialist Sammanfattningsvis befinner sig Qben Infra i början av en i"
+    ],
+    "strategiskt": [
+      "r renodlad och slagkraftig dessutom ett strategiskt partnerskap med Byhmgard för plattform. att utveckla storsk"
+    ],
+    "tillväxt": [
+      "nfrastruktur, med målet att driva högre tillväxt och ytterligare och täcker nu även kustlinjen från Oslo til"
+    ],
+    "tydlig": [
+      "et Qben Infra har gått in i 2026 med en tydlig riktning. Under Vår verksamhet täcker i dag hela den östra"
+    ],
+    "växande": [
+      "i norra Europa – ett område där vi ser växande behov och Efter ett händelserikt 2025 slutförde vi de strat"
+    ]
+  },
+  "scan_actual_chars": 5000,
+  "scan_window_chars": 5000,
+  "source_pdf": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf"
+}

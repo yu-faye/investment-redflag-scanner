@@ -1,0 +1,118 @@
+{
+  "project": "qben_redflag_scanner",
+  "generated_at_utc": "2026-05-24T06:21:47+00:00",
+  "periods_compared": [
+    2024,
+    2025
+  ],
+  "questions": [
+    {
+      "id": "Q1",
+      "theme": "Revenue quality",
+      "question": "Is revenue growth supported by operating cash flow and stable receivables quality?",
+      "expected_inputs": [
+        "revenue",
+        "operating_cash_flow",
+        "cash_conversion_ratio"
+      ]
+    },
+    {
+      "id": "Q2",
+      "theme": "Margin credibility",
+      "question": "Do management claims about efficiency align with gross margin movement?",
+      "expected_inputs": [
+        "gross_margin_pct",
+        "management_commentary"
+      ]
+    },
+    {
+      "id": "Q3",
+      "theme": "Related-party risk",
+      "question": "Are related-party transactions sufficiently low, transparent, and justified?",
+      "expected_inputs": [
+        "related_party_revenue_share_pct",
+        "note_text"
+      ]
+    },
+    {
+      "id": "Q4",
+      "theme": "Balance-sheet pressure",
+      "question": "Is debt service capacity resilient under weaker earnings scenarios?",
+      "expected_inputs": [
+        "interest_coverage_ratio",
+        "short_term_debt_share_pct"
+      ]
+    }
+  ],
+  "financial_snapshot": {
+    "2024": {
+      "year": 2024,
+      "revenue_msek": 1820,
+      "operating_cash_flow_msek": 1650,
+      "cash_conversion_ratio": 0.91,
+      "gross_margin_yoy_change_pct": -0.4,
+      "working_capital_to_revenue_pct": 20.5,
+      "related_party_revenue_share_pct": 6.2,
+      "interest_coverage_ratio": 3.6,
+      "inventory_growth_minus_revenue_growth_pct": 4.5
+    },
+    "2025": {
+      "year": 2025,
+      "revenue_msek": 2015,
+      "operating_cash_flow_msek": 1490,
+      "cash_conversion_ratio": 0.74,
+      "gross_margin_yoy_change_pct": -2.4,
+      "working_capital_to_revenue_pct": 26.7,
+      "related_party_revenue_share_pct": 10.8,
+      "interest_coverage_ratio": 2.7,
+      "inventory_growth_minus_revenue_growth_pct": 11.9
+    }
+  },
+  "rule_results_2025": [
+    {
+      "rule_id": "cash_conversion_gap",
+      "value": 0.74,
+      "severity": "warning",
+      "message": "Cash conversion below expected quality band."
+    },
+    {
+      "rule_id": "margin_narrative_dissonance",
+      "value": -2.4,
+      "severity": "warning",
+      "message": "Margin deterioration conflicts with optimistic efficiency narrative."
+    },
+    {
+      "rule_id": "related_party_dependency",
+      "value": 10.8,
+      "severity": "warning",
+      "message": "Related-party concentration requires deeper transparency checks."
+    },
+    {
+      "rule_id": "debt_refinancing_pressure",
+      "value": 2.7,
+      "severity": "warning",
+      "message": "Debt service headroom is tightening."
+    },
+    {
+      "rule_id": "inventory_build_up_risk",
+      "value": 11.9,
+      "severity": "warning",
+      "message": "Inventory builds faster than demand signal."
+    }
+  ],
+  "related_party_extraction_2025": {
+    "entities": [
+      "Fjord Capital",
+      "NordBridge Holding",
+      "Partners AS"
+    ],
+    "keyword_hits": [
+      "ab",
+      "as",
+      "capital",
+      "holding",
+      "partners"
+    ],
+    "entity_count": 3
+  }
+}

@@ -1,0 +1,263 @@
+{
+  "company": "mowi",
+  "name": "Mowi ASA",
+  "ticker": "MOWI",
+  "exchange": "Oslo Bors",
+  "middelborg_link": "Not a Middelborg holding. Baseline transparent large-cap (world's largest salmon farmer).",
+  "generated_at_utc": "2026-05-30T06:35:56+00:00",
+  "current_period": "FY 2024",
+  "prior_period": null,
+  "source_used": {
+    "current_file": "data/raw/mowi/2024/mowi_annual_2024.txt",
+    "current_kind": "txt",
+    "prior": null
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/mowi/2024/mowi_annual_2024.txt",
+      "kind": "local_txt",
+      "issuer_url": "https://mowi.com/investors/financial-reports/",
+      "issuer_page": "https://mowi.com/investors/financial-reports/",
+      "language": "en",
+      "label": "Annual Report 2024 (text cache)",
+      "period": "2024-FY",
+      "sha256": "450fe1a19ba370793bc9283992292166fbe5a889735dc93487b193ee0a3df40d",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/mowi/2024/mowi_annual_2024.txt",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": null
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": 62.2,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": 1.0,
+    "interest_expense_msek_raw": -2.6,
+    "ebitda_for_leverage_msek_raw": 585.0,
+    "interest_coverage_ratio_auto": -225.0,
+    "net_debt_to_ebitda_auto": 0.0,
+    "net_debt_to_ebitda": 0.0,
+    "net_debt_to_ebitda_source": "auto_regex"
+  },
+  "auto_metrics_provenance": {
+    "ebitda_msek": {
+      "value": 62.2,
+      "regex_id": "ebitda",
+      "raw_match": "EBITDA of EUR 62.2",
+      "char_span": [
+        13131,
+        13149
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA of EUR 62.2"
+    },
+    "net_debt_msek_raw": {
+      "value": 1.0,
+      "regex_id": "net_debt_anchor",
+      "raw_match": "Net interest-bearing debt Long-term target 1 700 1 867.1",
+      "char_span": [
+        38526,
+        38582
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Net interest-bearing debt Long-term target 1 700 1 867.1"
+    },
+    "interest_expense_msek_raw": {
+      "value": -2.6,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "Interest paid -136.4 -110.0\nRealised currency effects -2.6",
+      "char_span": [
+        855061,
+        855119
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Interest paid -136.4 -110.0 Realised currency effects -2.6"
+    },
+    "ebitda_for_leverage_msek_raw": {
+      "value": 585.0,
+      "regex_id": "ebitda_for_leverage_anchor",
+      "raw_match": "EBITDA of EUR 62.2 million. Sold volumes reached a new record \nhigh of 585",
+      "char_span": [
+        13131,
+        13205
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA of EUR 62.2 million. Sold volumes reached a new record high of 585"
+    },
+    "interest_coverage_ratio_auto": {
+      "value": -225.0,
+      "regex_id": "interest_coverage_derived",
+      "raw_match": "(derived) EBITDA / Interest expense",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "ebitda_for_leverage_msek_raw",
+        "interest_expense_msek_raw"
+      ]
+    },
+    "net_debt_to_ebitda_auto": {
+      "value": 0.0,
+      "regex_id": "leverage_derived",
+      "raw_match": "(derived) Net debt / EBITDA",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "net_debt_msek_raw",
+        "ebitda_for_leverage_msek_raw"
+      ]
+    },
+    "net_debt_to_ebitda": {
+      "value": 0.0,
+      "regex_id": "leverage_derived",
+      "raw_match": "(derived) Net debt / EBITDA",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "net_debt_msek_raw",
+        "ebitda_for_leverage_msek_raw"
+      ]
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": 4.0,
+    "organic_growth_pct": 4.0,
+    "gross_margin_yoy_change_pct": 0.5,
+    "ebita_margin_pct": 14.7,
+    "ebitda_margin_pct": 18.0,
+    "interest_coverage_ratio": 7.0,
+    "net_debt_to_ebitda": 1.8,
+    "working_capital_to_revenue_pct": 12.0,
+    "capex_to_depreciation_ratio": 1.0,
+    "order_intake_yoy_pct": null
+  },
+  "manual_metrics_provenance": {},
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": 62.2,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": 14.7,
+    "ebitda_margin_pct": 18.0,
+    "net_debt_msek_raw": 1.0,
+    "interest_expense_msek_raw": -2.6,
+    "ebitda_for_leverage_msek_raw": 585.0,
+    "interest_coverage_ratio_auto": -225.0,
+    "net_debt_to_ebitda_auto": 0.0,
+    "net_debt_to_ebitda": 1.8,
+    "net_debt_to_ebitda_source": "auto_regex",
+    "revenue_yoy_pct": 4.0,
+    "organic_growth_pct": 4.0,
+    "gross_margin_yoy_change_pct": 0.5,
+    "interest_coverage_ratio": 7.0,
+    "working_capital_to_revenue_pct": 12.0,
+    "capex_to_depreciation_ratio": 1.0
+  },
+  "metrics_audit": {
+    "capex_to_depreciation_ratio": {
+      "auto": null,
+      "manual": 1.0,
+      "chosen": 1.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": 14.7,
+      "chosen": 14.7,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": 18.0,
+      "chosen": 18.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_msek": {
+      "auto": 62.2,
+      "manual": null,
+      "chosen": 62.2,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "gross_margin_yoy_change_pct": {
+      "auto": null,
+      "manual": 0.5,
+      "chosen": 0.5,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": null,
+      "manual": 7.0,
+      "chosen": 7.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio_auto": {
+      "auto": -225.0,
+      "manual": null,
+      "chosen": -225.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": 0.0,
+      "manual": 1.8,
+      "chosen": 1.8,
+      "source": "manual",
+      "agrees_within_10pct": false
+    },
+    "net_debt_to_ebitda_auto": {
+      "auto": 0.0,
+      "manual": null,
+      "chosen": 0.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": 4.0,
+      "chosen": 4.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": 4.0,
+      "chosen": 4.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "working_capital_to_revenue_pct": {
+      "auto": null,
+      "manual": 12.0,
+      "chosen": 12.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [],
+  "severity_tally": {
+    "critical": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "findings_count": 0
+}

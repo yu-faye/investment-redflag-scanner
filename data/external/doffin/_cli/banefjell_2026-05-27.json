@@ -1,0 +1,22 @@
+{
+  "aliases_used": [
+    "Banefjell"
+  ],
+  "confirmed_awards": [],
+  "details_fetched": 0,
+  "fetched_at_utc": "2026-05-27T03:25:48+00:00",
+  "query_body": {
+    "facets": {},
+    "hitsPerPage": 50,
+    "page": 1,
+    "searchString": "Banefjell",
+    "sortBy": "PUBLICATION_DATE"
+  },
+  "query_url": "https://api.doffin.no/webclient/api/v2/search-api/search",
+  "search_error": "Doffin HTTP 400 for https://api.doffin.no/webclient/api/v2/search-api/search\n  body sent: {\"searchString\": \"Banefjell\", \"facets\": {}, \"hitsPerPage\": 50, \"page\": 1, \"sortBy\": \"PUBLICATION_DATE\"}\n  response: \n  reproduce: curl -X POST 'https://api.doffin.no/webclient/api/v2/search-api/search' -H 'Content-Type: application/json' --data-raw '{\"searchString\": \"Banefjell\", \"facets\": {}, \"hitsPerPage\": 50, \"page\": 1, \"sortBy\": \"PUBLICATION_DATE\"}'",
+  "search_hits_post_filter": 0,
+  "search_hits_total": 0,
+  "search_ok": false,
+  "supplier_name": "Banefjell",
+  "unconfirmed_awards": []
+}

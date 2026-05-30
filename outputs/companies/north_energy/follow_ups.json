@@ -1,0 +1,28 @@
+{
+  "company": "north_energy",
+  "follow_ups": [
+    {
+      "rule_id": "narrative_dissonance",
+      "severity": "info",
+      "summary": "weak_support",
+      "questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'efficiency' qualitatively, yet supporting metrics (gross_margin_yoy_change_pct=-0.5, ebita_margin_pct=5.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ]
+    }
+  ]
+}

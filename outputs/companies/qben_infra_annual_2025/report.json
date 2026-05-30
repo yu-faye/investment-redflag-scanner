@@ -1,0 +1,611 @@
+{
+  "company": "qben_infra_annual_2025",
+  "name": "Qben Infra AB (FY2025 standalone attack)",
+  "ticker": "QBEN",
+  "exchange": "Nasdaq First North Premier",
+  "middelborg_link": "Same as qben_infra; isolates the FY2025 årsredovisning against FY2024 in Swedish.",
+  "generated_at_utc": "2026-05-30T06:35:38+00:00",
+  "current_period": "FY 2025 Årsredovisning",
+  "prior_period": "FY 2024 Årsredovisning",
+  "source_used": {
+    "current_file": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+    "current_kind": "pdf",
+    "prior": {
+      "label": "FY 2024 Årsredovisning",
+      "file": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+      "kind": "pdf"
+    }
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+      "issuer_page": "https://mfn.se/a/qben-infra/qben-infra-presents-annual-report-for-2025",
+      "language": "sv",
+      "label": "Full Annual Report 2025 (Swedish)",
+      "period": "2025-FY",
+      "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": {
+      "local_path": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://storage.mfn.se/4bd04418-dc79-464a-9ff0-bfde37b7fb50/qben-infra-arsredovisning-2024.pdf",
+      "issuer_page": "https://www.qben.se/en/qben-infra-publishes-annual-report-for-2024/",
+      "language": "sv",
+      "label": "Full Annual Report 2024 (Swedish)",
+      "period": "2024-FY",
+      "sha256": "d47ba049ef5b008cc9e700b948746ff081070c8eec1806913a9830ea0738eec0",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    }
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": -43.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": -111.0,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": -185970.0,
+    "ebitda_for_leverage_msek_raw": -111.0,
+    "interest_coverage_ratio_auto": 0.0
+  },
+  "auto_metrics_provenance": {
+    "ebitda_msek": {
+      "value": -43.0,
+      "regex_id": "ebitda",
+      "raw_match": "EBITDA -43",
+      "char_span": [
+        9962,
+        9972
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA -43"
+    },
+    "ebita_msek": {
+      "value": -111.0,
+      "regex_id": "ebita",
+      "raw_match": "EBITA -111",
+      "char_span": [
+        10005,
+        10015
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITA -111"
+    },
+    "interest_expense_msek_raw": {
+      "value": -185970.0,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "Finansiella kostnader 13 -189 263 -16 730\nFinansnetto -185 970",
+      "char_span": [
+        76931,
+        76993
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Finansiella kostnader 13 -189 263 -16 730 Finansnetto -185 970"
+    },
+    "ebitda_for_leverage_msek_raw": {
+      "value": -111.0,
+      "regex_id": "ebitda_for_leverage_anchor",
+      "raw_match": "EBITDA -43 -59 62\nJusterad EBITDA 22 38 88\nEBITA -111",
+      "char_span": [
+        9962,
+        10015
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA -43 -59 62 Justerad EBITDA 22 38 88 EBITA -111"
+    },
+    "interest_coverage_ratio_auto": {
+      "value": 0.0,
+      "regex_id": "interest_coverage_derived",
+      "raw_match": "(derived) EBITDA / Interest expense",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "ebitda_for_leverage_msek_raw",
+        "interest_expense_msek_raw"
+      ]
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": null,
+    "organic_growth_pct": null,
+    "gross_margin_yoy_change_pct": null,
+    "ebita_margin_pct": -10.6,
+    "ebitda_margin_pct": -4.2,
+    "interest_coverage_ratio": null,
+    "net_debt_to_ebitda": null,
+    "working_capital_to_revenue_pct": null,
+    "capex_to_depreciation_ratio": null,
+    "order_intake_yoy_pct": null,
+    "revenue_msek_current": 1032.0,
+    "ebitda_msek_current": -43.0,
+    "adjusted_ebitda_msek_current": 22.0,
+    "ebita_msek_current": -111.0,
+    "adjusted_ebita_msek_current": -45.0,
+    "period_result_msek": -338.0,
+    "operating_cashflow_msek": -242.0
+  },
+  "manual_metrics_provenance": {
+    "ebita_margin_pct": {
+      "anchor": "EBITA-marginal (%) ... -10,6%",
+      "note": "Full-year continuing-ops EBITA -111 MSEK / Net sales 1 032 MSEK."
+    },
+    "operating_cashflow_msek": {
+      "anchor": "Kassaflöde från den löpande verksamheten ... -242",
+      "note": "FY2025 operating cash outflow before financing."
+    }
+  },
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": -43.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": -111.0,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": -10.6,
+    "ebitda_margin_pct": -4.2,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": -185970.0,
+    "ebitda_for_leverage_msek_raw": -111.0,
+    "interest_coverage_ratio_auto": 0.0,
+    "revenue_msek_current": 1032.0,
+    "ebitda_msek_current": -43.0,
+    "adjusted_ebitda_msek_current": 22.0,
+    "ebita_msek_current": -111.0,
+    "adjusted_ebita_msek_current": -45.0,
+    "period_result_msek": -338.0,
+    "operating_cashflow_msek": -242.0
+  },
+  "metrics_audit": {
+    "adjusted_ebita_msek_current": {
+      "auto": null,
+      "manual": -45.0,
+      "chosen": -45.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "adjusted_ebitda_msek_current": {
+      "auto": null,
+      "manual": 22.0,
+      "chosen": 22.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": -10.6,
+      "chosen": -10.6,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_msek": {
+      "auto": -111.0,
+      "manual": null,
+      "chosen": -111.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebita_msek_current": {
+      "auto": null,
+      "manual": -111.0,
+      "chosen": -111.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": -4.2,
+      "chosen": -4.2,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_msek": {
+      "auto": -43.0,
+      "manual": null,
+      "chosen": -43.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebitda_msek_current": {
+      "auto": null,
+      "manual": -43.0,
+      "chosen": -43.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio_auto": {
+      "auto": 0.0,
+      "manual": null,
+      "chosen": 0.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "operating_cashflow_msek": {
+      "auto": null,
+      "manual": -242.0,
+      "chosen": -242.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "period_result_msek": {
+      "auto": null,
+      "manual": -338.0,
+      "chosen": -338.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_msek_current": {
+      "auto": null,
+      "manual": 1032.0,
+      "chosen": 1032.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "efficiency",
+      "mention_count": 5,
+      "mention_density_per_10k_chars": 0.22,
+      "term_hits": [
+        {
+          "term": "effektivitet",
+          "count": 5
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": null,
+          "expected_direction": "up",
+          "score": 0
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": -10.6,
+          "expected_direction": "up",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "nettonollutsläpp av koldioxid och EU -direktiv om energieffektivitet",
+      "claim_excerpt_matched_term": "effektivitet",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'efficiency' qualitatively, yet supporting metrics (ebita_margin_pct=-10.6) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 6.75,
+      "headline": "Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, but supporting metrics move the opposite way (ebita_margin_pct=-10.6).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+          "issuer_page": "https://mfn.se/a/qben-infra/qben-infra-presents-annual-report-for-2025",
+          "language": "sv",
+          "label": "Full Annual Report 2025 (Swedish)",
+          "period": "2025-FY",
+          "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "pdf_page_hit": 7,
+          "issuer_url_at_page": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf#page=7"
+        },
+        "prior": {
+          "local_path": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/4bd04418-dc79-464a-9ff0-bfde37b7fb50/qben-infra-arsredovisning-2024.pdf",
+          "issuer_page": "https://www.qben.se/en/qben-infra-publishes-annual-report-for-2024/",
+          "language": "sv",
+          "label": "Full Annual Report 2024 (Swedish)",
+          "period": "2024-FY",
+          "sha256": "d47ba049ef5b008cc9e700b948746ff081070c8eec1806913a9830ea0738eec0",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "ebita_margin_pct",
+          "value": -10.6,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 5,
+            "bbox": {
+              "x0": 362.4093017578125,
+              "top": 180.32577514648438,
+              "x1": 382.9121398925781,
+              "bottom": 190.33583068847656,
+              "width": 20.502838134765625,
+              "height": 10.010055541992188
+            },
+            "matched_str": "-10,6",
+            "strategy": "value",
+            "context_distance": 149.8203420639038,
+            "context_term": "EBITA-margin",
+            "confidence": "medium"
+          },
+          "snippet": {
+            "path": "outputs/evidence/qben_infra_annual_2025/metric_0c51810f0e87.png",
+            "width": 1095,
+            "height": 61,
+            "size_bytes": 14523,
+            "page": 5,
+            "bbox": {
+              "x0": 362.4093017578125,
+              "top": 180.32577514648438,
+              "x1": 382.9121398925781,
+              "bottom": 190.33583068847656,
+              "width": 20.502838134765625,
+              "height": 10.010055541992188
+            },
+            "matched_str": "-10,6",
+            "confidence": "medium",
+            "context_term": "EBITA-margin"
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ]
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "kpi_id": "reclassification:continuing_operations",
+      "previous_period": "FY 2024 Årsredovisning",
+      "current_period": "FY 2025 Årsredovisning",
+      "previous_hits": 0,
+      "current_hits": 3,
+      "weight": 1.0,
+      "status": "new_classification_introduced",
+      "comparability_warning": false,
+      "verdict": "reclassification_introduced",
+      "severity": "critical",
+      "follow_up_questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:continuing_operations' (previously emphasised in FY 2024 Årsredovisning) not reported in FY 2025 Årsredovisning? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ],
+      "priority_score": 10.5,
+      "headline": "Qben Infra AB (FY2025 standalone attack): new 'continuing_operations' framing introduced in FY 2025 Årsredovisning, absent in FY 2024 Årsredovisning.",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+          "issuer_page": "https://mfn.se/a/qben-infra/qben-infra-presents-annual-report-for-2025",
+          "language": "sv",
+          "label": "Full Annual Report 2025 (Swedish)",
+          "period": "2025-FY",
+          "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        },
+        "prior": {
+          "local_path": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/4bd04418-dc79-464a-9ff0-bfde37b7fb50/qben-infra-arsredovisning-2024.pdf",
+          "issuer_page": "https://www.qben.se/en/qben-infra-publishes-annual-report-for-2024/",
+          "language": "sv",
+          "label": "Full Annual Report 2024 (Swedish)",
+          "period": "2024-FY",
+          "sha256": "d47ba049ef5b008cc9e700b948746ff081070c8eec1806913a9830ea0738eec0",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "kpi_id": "reclassification:discontinued_operations",
+      "previous_period": "FY 2024 Årsredovisning",
+      "current_period": "FY 2025 Årsredovisning",
+      "previous_hits": 1,
+      "current_hits": 11,
+      "weight": 1.0,
+      "status": "new_classification_introduced",
+      "comparability_warning": false,
+      "verdict": "reclassification_introduced",
+      "severity": "critical",
+      "follow_up_questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:discontinued_operations' (previously emphasised in FY 2024 Årsredovisning) not reported in FY 2025 Årsredovisning? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ],
+      "priority_score": 10.5,
+      "headline": "Qben Infra AB (FY2025 standalone attack): new 'discontinued_operations' framing introduced in FY 2025 Årsredovisning, absent in FY 2024 Årsredovisning.",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+          "issuer_page": "https://mfn.se/a/qben-infra/qben-infra-presents-annual-report-for-2025",
+          "language": "sv",
+          "label": "Full Annual Report 2025 (Swedish)",
+          "period": "2025-FY",
+          "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        },
+        "prior": {
+          "local_path": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/4bd04418-dc79-464a-9ff0-bfde37b7fb50/qben-infra-arsredovisning-2024.pdf",
+          "issuer_page": "https://www.qben.se/en/qben-infra-publishes-annual-report-for-2024/",
+          "language": "sv",
+          "label": "Full Annual Report 2024 (Swedish)",
+          "period": "2024-FY",
+          "sha256": "d47ba049ef5b008cc9e700b948746ff081070c8eec1806913a9830ea0738eec0",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "kpi_id": "net_debt_to_ebitda",
+      "previous_period": "FY 2024 Årsredovisning",
+      "current_period": "FY 2025 Årsredovisning",
+      "previous_hits": 1,
+      "previous_emphasis_score": 0.045,
+      "weight": 0.9,
+      "status": "disclosed_then_missing",
+      "comparability_warning": false,
+      "verdict": "disclosure_drop",
+      "severity": "warning",
+      "follow_up_questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'net_debt_to_ebitda' (previously emphasised in FY 2024 Årsredovisning) not reported in FY 2025 Årsredovisning? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ],
+      "priority_score": 2.19,
+      "headline": "Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in FY 2024 Årsredovisning disappeared in FY 2025 Årsredovisning.",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+          "issuer_page": "https://mfn.se/a/qben-infra/qben-infra-presents-annual-report-for-2025",
+          "language": "sv",
+          "label": "Full Annual Report 2025 (Swedish)",
+          "period": "2025-FY",
+          "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        },
+        "prior": {
+          "local_path": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/4bd04418-dc79-464a-9ff0-bfde37b7fb50/qben-infra-arsredovisning-2024.pdf",
+          "issuer_page": "https://www.qben.se/en/qben-infra-publishes-annual-report-for-2024/",
+          "language": "sv",
+          "label": "Full Annual Report 2024 (Swedish)",
+          "period": "2024-FY",
+          "sha256": "d47ba049ef5b008cc9e700b948746ff081070c8eec1806913a9830ea0738eec0",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    }
+  ],
+  "severity_tally": {
+    "critical": 3,
+    "warning": 1,
+    "info": 0
+  },
+  "findings_count": 4
+}

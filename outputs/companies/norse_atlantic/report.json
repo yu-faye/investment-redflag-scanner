@@ -1,0 +1,399 @@
+{
+  "company": "norse_atlantic",
+  "name": "Norse Atlantic Airways ASA",
+  "ticker": "NORSE",
+  "exchange": "Euronext Expand Oslo",
+  "middelborg_link": "Not a Middelborg holding. Long-haul low-cost airline in build-up phase.",
+  "generated_at_utc": "2026-05-30T06:35:56+00:00",
+  "current_period": "FY 2024",
+  "prior_period": null,
+  "source_used": {
+    "current_file": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+    "current_kind": "txt",
+    "prior": null
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+      "kind": "local_txt",
+      "issuer_url": "https://norseatlantic.com/en/investor/reports-presentations/",
+      "issuer_page": "https://norseatlantic.com/en/investor/reports-presentations/",
+      "language": "en",
+      "label": "Annual Report 2024 (text cache)",
+      "period": "2024-FY",
+      "sha256": "8d7e2c4715b6e8ddc1b1b5eee2713f3dd7ff18178795513627235a171f3624cf",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": null
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": 1.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": 2.958,
+    "ebitda_for_leverage_msek_raw": null
+  },
+  "auto_metrics_provenance": {
+    "ebitda_msek": {
+      "value": 1.0,
+      "regex_id": "ebitda",
+      "raw_match": "EBITDAR1",
+      "char_span": [
+        9094,
+        9102
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDAR1"
+    },
+    "interest_expense_msek_raw": {
+      "value": 2.958,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "interest expense (36,061) (34,673) Other interest expense (2,958",
+      "char_span": [
+        292395,
+        292459
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "interest expense (36,061) (34,673) Other interest expense (2,958"
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": 34.0,
+    "organic_growth_pct": 33.0,
+    "gross_margin_yoy_change_pct": -1.0,
+    "ebita_margin_pct": -16.0,
+    "ebitda_margin_pct": -1.0,
+    "interest_coverage_ratio": 0.3,
+    "net_debt_to_ebitda": 99.0,
+    "working_capital_to_revenue_pct": 26.0,
+    "capex_to_depreciation_ratio": 0.4,
+    "order_intake_yoy_pct": 33.0,
+    "negative_equity_flag": true,
+    "equity_msek": -2300.0
+  },
+  "manual_metrics_provenance": {},
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": 1.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": null,
+    "ebita_margin_pct": -16.0,
+    "ebitda_margin_pct": -1.0,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": 2.958,
+    "ebitda_for_leverage_msek_raw": null,
+    "revenue_yoy_pct": 34.0,
+    "organic_growth_pct": 33.0,
+    "gross_margin_yoy_change_pct": -1.0,
+    "interest_coverage_ratio": 0.3,
+    "net_debt_to_ebitda": 99.0,
+    "working_capital_to_revenue_pct": 26.0,
+    "capex_to_depreciation_ratio": 0.4,
+    "order_intake_yoy_pct": 33.0,
+    "negative_equity_flag": true,
+    "equity_msek": -2300.0
+  },
+  "metrics_audit": {
+    "capex_to_depreciation_ratio": {
+      "auto": null,
+      "manual": 0.4,
+      "chosen": 0.4,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": -16.0,
+      "chosen": -16.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": -1.0,
+      "chosen": -1.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_msek": {
+      "auto": 1.0,
+      "manual": null,
+      "chosen": 1.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "equity_msek": {
+      "auto": null,
+      "manual": -2300.0,
+      "chosen": -2300.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "gross_margin_yoy_change_pct": {
+      "auto": null,
+      "manual": -1.0,
+      "chosen": -1.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": null,
+      "manual": 0.3,
+      "chosen": 0.3,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "negative_equity_flag": {
+      "auto": null,
+      "manual": true,
+      "chosen": true,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": null,
+      "manual": 99.0,
+      "chosen": 99.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "order_intake_yoy_pct": {
+      "auto": null,
+      "manual": 33.0,
+      "chosen": 33.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": 33.0,
+      "chosen": 33.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": 34.0,
+      "chosen": 34.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "working_capital_to_revenue_pct": {
+      "auto": null,
+      "manual": 26.0,
+      "chosen": 26.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "efficiency",
+      "mention_count": 8,
+      "mention_density_per_10k_chars": 0.21,
+      "term_hits": [
+        {
+          "term": "efficiency",
+          "count": 8
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -1.0,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": -16.0,
+          "expected_direction": "up",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "The affordability of tickets can largely be attributed to improved fleet efficiency, driven by advancements in technology, and more fuel-efficient aircraft.",
+      "claim_excerpt_matched_term": "efficiency",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'efficiency' qualitatively, yet supporting metrics (gross_margin_yoy_change_pct=-1.0, ebita_margin_pct=-16.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 8.1,
+      "headline": "Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-1.0, ebita_margin_pct=-16.0).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://norseatlantic.com/en/investor/reports-presentations/",
+          "issuer_page": "https://norseatlantic.com/en/investor/reports-presentations/",
+          "language": "en",
+          "label": "Annual Report 2024 (text cache)",
+          "period": "2024-FY",
+          "sha256": "8d7e2c4715b6e8ddc1b1b5eee2713f3dd7ff18178795513627235a171f3624cf",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -1.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": -16.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "resilience",
+      "mention_count": 3,
+      "mention_density_per_10k_chars": 0.08,
+      "term_hits": [
+        {
+          "term": "resilient",
+          "count": 2
+        },
+        {
+          "term": "robust",
+          "count": 1
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 0.3,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 99.0,
+          "expected_direction": "down",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "The Company’s robust operational performance was again demonstrated in 2024 as 99.6 per cent of all scheduled flights were completed as scheduled during another period of substantial growth.",
+      "claim_excerpt_matched_term": "robust",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'resilience' qualitatively, yet supporting metrics (interest_coverage_ratio=0.3, net_debt_to_ebitda=99.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 5.85,
+      "headline": "Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting metrics move the opposite way (interest_coverage_ratio=0.3, net_debt_to_ebitda=99.0).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://norseatlantic.com/en/investor/reports-presentations/",
+          "issuer_page": "https://norseatlantic.com/en/investor/reports-presentations/",
+          "language": "en",
+          "label": "Annual Report 2024 (text cache)",
+          "period": "2024-FY",
+          "sha256": "8d7e2c4715b6e8ddc1b1b5eee2713f3dd7ff18178795513627235a171f3624cf",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 0.3,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 99.0,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "severity_tally": {
+    "critical": 2,
+    "warning": 0,
+    "info": 0
+  },
+  "findings_count": 2
+}

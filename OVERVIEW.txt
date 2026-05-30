@@ -1,0 +1,776 @@
+Project: Qben Offensive Audit Red-Flag Scanner
+
+Purpose
+- Portfolio-grade personal project that demonstrates offensive audit thinking
+  against Middelborg Invest AS core holdings (Qben Infra AB, ININ Group AS).
+- Combines structured questions, deterministic detectors, and visualization-ready
+  output in one reproducible pipeline.
+- Demonstrates ability to move from hypothesis to machine-checkable red flags.
+
+Why this stands out for a candidate
+- Frames reporting risk as a testable system, not narrative commentary.
+- Demonstrates both accounting intuition and engineering execution.
+- Produces explainable outputs that can be reviewed by finance and non-finance stakeholders.
+- Targets a real company in Middelborg's portfolio with real public filings.
+
+4-step workflow
+1) define questions      -> convert audit hypotheses into structured, reusable checks.
+2) ingest numbers/text   -> load report text + curated metric snapshot.
+3) run attacks           -> execute deterministic narrative, disclosure, and lag detectors.
+4) render red flags      -> emit per-company JSON, follow-up prompts, and dashboard payload.
+
+Detectors implemented (v2)
+- lag_causality          : flags claims of action-to-impact with implausibly short lag.
+                            v2 adds an IFRS / consolidation guardrail (fully consolidated as of,
+                            consolidation of X from <month>, IFRS 3, PPA, business combination, etc.)
+                            so mechanical accounting inclusion is tagged as "info" rather than as a
+                            synergy promise. See src/detectors/lag_causality.py.
+- narrative_dissonance   : flags optimistic narrative families that contradict directional metrics.
+                            v2: per-metric expected_direction + neutral_band (leverage = high bad).
+- selective_disclosure   : flags KPI drops or new reclassification frames vs prior period.
+                            v2: prior periods wired in for Qben, ININ, Techstep, K33, North Energy.
+- stress_test_prompts    : attaches English follow-up questions to every red flag
+                            (bilingual EN+ZH schema retired in v7).
+
+Ingest (v2)
+- pdf_to_text + auto leverage extraction in src/ingest/metric_extractor.py.
+- PDF preferred when extracted text > 5k chars; curated TXT fallback.
+- Every report payload now carries source_used, auto_extracted_metrics, manual_metrics, and
+  metrics_audit (side-by-side auto vs manual).
+- data/sources.json is the canonical source registry (URL + local pdf/txt per report).
+
+Hypothesis-driven triangulation system (v9)
+- src/triangulation/__init__.py + types.py + ledger.py + engine.py +
+                                    runner.py : NEW. The engine is the
+                                    brain that combines verdicts across
+                                    taps; ledger is append-only jsonl
+                                    per hypothesis at
+                                    data/ledger/<hypothesis_id>.jsonl;
+                                    runner glues hypotheses -> taps ->
+                                    ledger -> engine.
+- src/ingest/external/base.py     : NEW EvidenceTap abstract base. Each
+                                    tap declares tap_id, tap_kind, and
+                                    addressable_question_ids; can_address
+                                    returns the falsification questions
+                                    it can answer on a given hypothesis;
+                                    gather() runs the upstream call and
+                                    emits one EvidenceEntry.
+- src/ingest/external/doffin_tap.py + brreg_tap.py + brreg_client.py : NEW.
+                                    Doffin tap wraps the v8 doffin_client
+                                    unchanged. BRREG tap hits
+                                    https://data.brreg.no/enhetsregisteret/
+                                    api/enheter (no API key needed) to
+                                    confirm/refute entity existence,
+                                    NAICS classification, employee
+                                    count, and identity disambiguation.
+- validation/hypotheses.json      : NEW. Registers the 4 Qben Norwegian
+                                    subsidiary claims as long-lived
+                                    audit hypotheses with explicit
+                                    falsification_questions[] +
+                                    peer_controls[] + claim_metadata
+                                    (acquired_year, expected NAICS
+                                    prefix). Adding a new hypothesis is
+                                    a JSON edit, not a code change.
+- validation/run_real_report.py   : added _run_triangulation() that runs
+                                    once per scan, drives all taps,
+                                    derives all states (two-pass for
+                                    peer controls), translates each
+                                    state into a finding via
+                                    state_to_finding(), and emits two
+                                    new JSON artefacts:
+                                    outputs/triangulation_matrix.json
+                                    and outputs/audit_roadmap.json.
+                                    New --skip-external-taps flag
+                                    bypasses live API calls and reuses
+                                    the existing ledger (fast iteration
+                                    on dashboards). v8
+                                    detect_external_collision is no
+                                    longer invoked in the standard
+                                    pipeline but is preserved as an
+                                    importable CLI utility.
+- src/detectors/priority_scorer.py : added _score_triangulated. Severity
+                                    bands (info=1.5, warning=5.0,
+                                    critical=12.0) modulated by tap
+                                    count + peer control + outstanding
+                                    blockers. Triangulated criticals
+                                    compete fairly with
+                                    narrative_dissonance for top-of-
+                                    leaderboard.
+- dashboard/index.html + dashboard.js + dashboard.css : NEW v9 panels
+                                    above the leaderboard. Triangulation
+                                    matrix is a row=hypothesis x
+                                    col=tap_kind grid with verdict
+                                    glyphs (vd-confirms, vd-partial,
+                                    vd-refutes, vd-not_found, vd-neutral,
+                                    vd-error) and per-row
+                                    blockers_for_critical drill-down.
+                                    Audit roadmap is a numbered list of
+                                    next-tap recommendations with info-
+                                    gain badges and would_unblock_critical
+                                    annotations. Both panels tolerate
+                                    missing v9 artefacts (older runs)
+                                    by hiding cleanly.
+- app/streamlit_app.py            : added _render_v9_system_panels()
+                                    that loads triangulation_matrix.json
+                                    + audit_roadmap.json and renders a
+                                    st.dataframe matrix + an itemised
+                                    roadmap in an expanded st.expander
+                                    at the top of the page, before the
+                                    findings leaderboard. Per-finding
+                                    drill-downs unchanged.
+
+Engine invariants (the structural protections):
+  1. Single-source absence cannot drive critical. A hypothesis with
+     evidence from <=1 distinct tap caps at warning. This is the
+     structural fix to the "what if the database just didn't collect it"
+     critique that v8 was vulnerable to.
+  2. Peer-control rule. Refuting evidence is only treated at full weight
+     when at least one peer hypothesis confirmed via the same tap_id
+     (proving the tap reaches this entity class). Without a passing peer,
+     refuting evidence is downgraded one severity band.
+  3. Falsification coverage. Critical additionally requires that every
+     falsification_question marked blocking_for_critical=true has at
+     least one EvidenceEntry addressing it.
+  4. Engine is the only writer of derived_severity. Taps emit verdicts
+     only (confirms / partial / refutes / not_found / neutral / error);
+     never severity.
+
+Worked example (Qben Infra FY2024, Doffin + BRREG, run 2026-05-27)
+- SLAM Jernbaneteknikk AS  : doffin=not_found + brreg=confirms (real,
+                              36 employees, NAICS 42.12, founded 2021)
+                              -> warning 6.75 (v8 was critical 15.0;
+                              engine correctly downgraded because a
+                              single refuting tap cannot drive critical)
+- Banefjell AS             : doffin=confirms (4 awards from Bane NOR SF)
+                              + brreg=confirms (60 employees, NAICS
+                              42.12, founded 2014) -> info 1.50 (peer
+                              control for the other three)
+- Team Bygg AS             : doffin=refutes (0 awards) + brreg=refutes
+                              (NAICS 68.12 = real estate trading, not
+                              41.* housing construction) -> critical
+                              19.2 (v8 was warning 4.5; engine
+                              correctly re-discovered this as the
+                              highest-conviction external_collision
+                              finding via dual-tap agreement)
+- Nordnes Narvik AS        : doffin=partial (1 pre-acquisition award) +
+                              brreg=refutes (top name match is NAICS
+                              47.52 retail hardware -- identity
+                              ambiguous, may not be the right entity)
+                              -> warning 6.75
+Audit roadmap suggests subcontractor_directory tap next (info gain
++0.30, would address SLAM's still-open fq_subcontractor_chain
+question).
+
+External collision: PDF narrative vs Doffin public record (v8)
+- src/detectors/external_collision.py : NEW. First subtype is
+                                    norwegian_subsidiary_organic_vs_awarded.
+                                    Pure function over (company_id,
+                                    current_text, external_sources_config,
+                                    cache_dir, fetcher). Fetcher is injected
+                                    so unit tests run without network.
+                                    Severity: 0 confirmed awards for a
+                                    claimed "specialist / established player /
+                                    key player / leader" -> critical;
+                                    1-2 awards mostly pre-acquisition ->
+                                    warning; >=3 post-acquisition -> info.
+- src/ingest/external/doffin_client.py : NEW. Wraps the Doffin SPA endpoints
+                                    https://api.doffin.no/webclient/api/v2/
+                                    search-api/search (POST) and
+                                    notices-api/notices/<id> (GET). No
+                                    subscription key required when the
+                                    request mimics the browser headers
+                                    (User-Agent, Origin, Referer). Search
+                                    body uses sortBy="PUBLICATION_DATE_DESC"
+                                    (the un-suffixed "PUBLICATION_DATE" is
+                                    invalid per API and was the source of a
+                                    HTTP 400 during the spike). 
+                                    collect_awards_for_supplier writes every
+                                    raw JSON response to
+                                    data/external/doffin/<company_id>/
+                                    <supplier-slug>_<date>.json with sha256,
+                                    fetched_at_utc, query_url, and the exact
+                                    request body so a reviewer can re-verify
+                                    without re-hitting Doffin.
+- src/detectors/priority_scorer.py  : added _score_external_collision()
+                                    (severity * (1 + gap_boost) with
+                                    gap_boost=4.0 when a claimed specialist
+                                    has 0 confirmed awards). make_headline()
+                                    now prefers a finding's own headline if
+                                    one is set (so the rich detector
+                                    headline -- "claims X is a specialist
+                                    but Doffin shows 0 confirmed awards" --
+                                    survives enrich_with_priority).
+- validation/companies.json         : added external_sources.doffin block to
+                                    qben_infra_2024. Lists the four named
+                                    Norwegian subsidiaries (SLAM
+                                    Jernbaneteknikk AS, Banefjell AS, Team
+                                    Bygg AS, Nordnes Narvik AS) with
+                                    aliases, acquired_year, claimed_role
+                                    (verbatim quote), and narrative_anchor
+                                    for snippet generation.
+- validation/run_real_report.py     : registered detect_external_collision
+                                    in _run_single. Each call caches under
+                                    data/external/doffin/<company_id>/.
+                                    headlines_pool whitelist extended with
+                                    external_evidence + subsidiary +
+                                    subsidiary_claimed_role +
+                                    subsidiary_acquired_year + verdict +
+                                    subtype so the dashboard payloads carry
+                                    the v8 fields through.
+- dashboard/dashboard.js + .css     : new renderExternalCollision() drawer
+                                    card. Header has source label + supplier
+                                    + variance count; table has one row per
+                                    confirmed award (date, buyer,
+                                    heading-as-Doffin-notice-link, awarded
+                                    suppliers); empty-state warning when
+                                    zero awards confirmed; tiny provenance
+                                    footer with cache_path + sha256 +
+                                    fetched_at_utc. Severity-tinted left
+                                    border mirrors the row badge.
+- app/streamlit_app.py              : new _render_external_collision() as
+                                    the fourth top-level subheader section
+                                    (Narrative evidence / Per-number /
+                                    External collision / Provenance, then
+                                    Embedded PDF). Each card uses
+                                    st.dataframe with a LinkColumn so every
+                                    Doffin notice heading is a one-click
+                                    open link.
+
+Worked example (Qben Infra FY2024, run on 2026-05-27 against live Doffin)
+- SLAM Jernbaneteknikk AS  : 0 confirmed awards    -> critical, priority 15.0
+- Team Bygg AS             : 0 confirmed (5 false-positive hits) -> warning 4.5
+- Nordnes Narvik AS        : 1 confirmed but pre-acquisition (2021) -> warning 3.0
+- Banefjell AS             : 4 confirmed (2023-2026, Bane NOR SF)  -> info 0.5
+The SLAM finding ranks #3 critical in the full leaderboard (#3 in Middelborg-only).
+Raw responses cached under data/external/doffin/qben_infra_2024/*.json
+(569-449 KB per supplier, sha256 + ts + query_url embedded).
+
+English-only + click-anything-to-PDF (v7)
+- src/detectors/priority_scorer.py  : make_headline() returns plain str (was
+                                    {en, zh}).
+- src/detectors/stress_test_prompts.py : _TEMPLATES now use {axis, text} per
+                                    rule (was {axis, en, zh}).
+- validation/run_real_report.py     : print loop coerces legacy {en, zh}
+                                    payloads with a _hl() helper for back-
+                                    compat; new runs emit str headlines.
+- dashboard/index.html + .js + .css : language toggle deleted. Every snippet
+                                    image now wrapped in <a target="_blank">
+                                    to issuer_url#page=N&search=... (falls
+                                    back to GitHub raw -> GitHub blob ->
+                                    local file). Hover outline + caption
+                                    arrow signal clickability.
+- app/streamlit_app.py              : language radio deleted. Drill-down
+                                    switches to side-by-side layout
+                                    (evidence cards left, embedded
+                                    streamlit-pdf-viewer right, no expander).
+                                    Each card has a "Show in PDF below"
+                                    button that sets a session_state target,
+                                    triggers st.rerun(), and the PDF viewer
+                                    re-mounts with scroll_to_annotation =
+                                    that index. Annotation list combines the
+                                    narrative bbox (amber) with every metric
+                                    bbox (blue); all visible at once.
+
+Per-number provenance + label cleanup (v6)
+- src/ingest/metric_extractor.py : now returns (metrics, metrics_provenance)
+                                   pairs; each provenance record carries
+                                   {regex_id, raw_match, char_span,
+                                    snippet_anchor, source}.
+- src/ingest/metric_locator.py   : PyMuPDF-backed locator.
+                                   locate_by_anchor(pdf, anchor) for auto
+                                   extractor hits; locate_by_value(pdf, value,
+                                   context_keywords) for manual overrides.
+                                   Generates 10+ rendering candidates (Nordic
+                                   comma, parens-negative, narrative rounding
+                                   such as "decrease of 7%"); ranks hits by
+                                   distance to nearest context keyword with a
+                                   same-row bonus.
+- validation/companies.json      : new optional manual_metrics_provenance
+                                   block per company_report. Curating an
+                                   anchor promotes a manual value from
+                                   "manual_unverified" to "manual_curation"
+                                   (highest-confidence badge). Techstep FY2025
+                                   and Qben FY2024 ship with curated anchors.
+- validation/run_real_report.py  : _build_metric_evidence() attaches one
+                                   per-number record to each finding's
+                                   metric_evidence[]. PNG snippet pre-cropped
+                                   to outputs/evidence/<co>/metric_<key>.png.
+- src/detectors/priority_scorer.py : renamed from drama_scorer.py. Function
+                                   drama_score()  -> priority_score(),
+                                   enrich_with_drama -> enrich_with_priority,
+                                   field drama_score -> priority_score.
+                                   Dashboard column header now reads "Priority".
+- dashboard/dashboard.js + .css  : new "Per-number provenance" block inside
+                                   the evidence drawer. One row per metric,
+                                   with colour-coded source badge
+                                   (auto_regex green, manual_curation blue,
+                                    manual_unverified amber, unverified grey)
+                                   and inline <img> of the cropped row.
+- app/streamlit_app.py           : new _render_metric_evidence() shows one
+                                   bordered card per metric (st.image +
+                                   provenance caption + note).
+
+Evidence-snippet grounding (v5)
+- src/ingest/evidence_snippet.py : PyMuPDF (fitz) crop helper. Given a PDF +
+                                   page + bbox, returns PNG bytes (or writes
+                                   to disk). Horizontally expands the bbox to
+                                   the full text column. Deterministic 12-char
+                                   SHA256 filenames so re-runs are idempotent.
+- validation/run_real_report.py  : every finding with bbox+PDF gets one PNG
+                                   pre-cropped under outputs/evidence/<co>/.
+                                   provenance.current.evidence_snippet =
+                                   {path, width, height, size_bytes, page,
+                                   bbox, key}.
+- src/detectors/narrative_dissonance.py : now also records the first sentence
+                                   that contains any family keyword as
+                                   claim_excerpt; pipeline crops it.
+- dashboard/dashboard.js + .css  : Read-in-context drawer shows the PNG above
+                                   the sentence-context text; button toggles
+                                   "Show evidence" / "Hide evidence".
+- app/streamlit_app.py           : drill-down opens with st.image(snippet) as
+                                   first-screen evidence; full PDF + bbox
+                                   highlight kept under a collapsed expander.
+
+Sentence-level locator + highlight (v4)
+- src/ingest/excerpt_locator.py : pdfplumber word-level extraction. For each
+                                  claim_excerpt returns page + bbox (x0/top/x1/bottom/
+                                  width/height) + sentence_context (prev/match/next)
+                                  + normalised_search (8-word phrase for #search= hash).
+- validation/run_real_report.py : every finding's provenance.current now carries
+                                  excerpt_locator and *_at_phrase URLs that hash both
+                                  page and search phrase. Chrome / Firefox built-in PDF
+                                  viewers honour #search= and highlight the phrase.
+- dashboard/dashboard.js        : new "Read in context" drawer with prev / MATCHED / next
+                                  sentence, mark tags around the matched sentence; the
+                                  issuer button uses the *_at_phrase URL when available.
+- app/streamlit_app.py          : streamlit-pdf-viewer receives annotations built from
+                                  the bbox; scroll_to_annotation=1 jumps to the highlight;
+                                  drill-down card renders the sentence-context window
+                                  with mark highlighting.
+
+Provenance + visualization (v3)
+- scripts/refresh_provenance.py : enriches data/sources.json with sha256, git_sha, and
+                                  github_blob_url / github_raw_url / github_head_url for
+                                  every local PDF/TXT. Idempotent; safe to re-run after
+                                  every change.
+- scripts/init_repo.sh         : one-time bootstrap: git init, git-lfs install + track *.pdf,
+                                  first commit, optional gh repo create for the public mirror.
+- config/provenance.json       : github_owner / github_repo / branch + URL templates.
+- validation/run_real_report.py: every finding (and every leaderboard/dashboard row) now ships
+                                  a provenance block with issuer_url, github_blob_url,
+                                  github_head_url, local_path, sha256, git_sha, and best-effort
+                                  pdf_page_hit. For findings that quote a sentence the
+                                  orchestrator stamps the page where the excerpt was located,
+                                  and rewrites issuer_url as <url>#page=N.
+- dashboard/index.html         : zero-dependency static SPA. Loads middelborg + all
+                                  leaderboards via fetch(). Per row: severity badge,
+                                  priority score, English headline (EN/CN toggle removed
+                                  in v7), expandable evidence drawer (narrative snippet +
+                                  per-number snippets, each snippet is itself a link to
+                                  the source PDF at the right page+phrase), and three
+                                  jump buttons (issuer PDF / github permalink /
+                                  local file).
+- app/streamlit_app.py         : interactive local dashboard. Same payload as the static SPA.
+                                  Adds inline PDF preview via streamlit-pdf-viewer that opens
+                                  the local PDF at pdf_page_hit.
+- .github/workflows/pages.yml  : on push to main, assembles dashboard + outputs + sources.json
+                                  into a Pages artifact and deploys via actions/deploy-pages@v4.
+                                  Public URL: https://<owner>.github.io/investment-redflag-scanner/
+
+Project layout
+  configs/
+    attack_metrics.json
+    claim_metric_map.json
+    kpi_registry.json
+    lag_rules.json
+  config/
+    provenance.json                                       (github_owner / repo / templates)
+  src/
+    detectors/{lag_causality,narrative_dissonance,selective_disclosure,
+               stress_test_prompts,priority_scorer}.py
+    ingest/{pdf_to_text,report_loader,metric_extractor,
+            excerpt_locator,evidence_snippet,metric_locator}.py
+    rule_engine.py
+    question_framework.py
+    related_party_parser.py
+    semantic_attack_prompts.txt
+    dashboard_spec.txt
+  scripts/
+    init_repo.sh                                          (one-time git+gh bootstrap)
+    refresh_provenance.py                                 (sha256 + git_sha + URL refresh)
+  validation/
+    companies.json
+    run_real_report.py
+    report_card.py
+  data/raw/<company>/<year>/<report>.{txt|pdf}
+  data/sources.json                                       (source registry; URLs + provenance)
+  dashboard/
+    index.html                                            (static SPA shell)
+    dashboard.js                                          (renderer + filters)
+    dashboard.css
+  app/
+    streamlit_app.py                                      (local interactive dashboard)
+  .github/workflows/pages.yml                             (auto-deploy to GitHub Pages)
+  outputs/
+    companies/<company>/report.json
+    companies/<company>/follow_ups.json
+    evidence/<company>/<sha256[:12]>.png  (auto-cropped sentence PNGs)
+    validation_summary.json
+    dashboard_payload.json
+    leaderboard.json
+    middelborg_validation_summary.json
+    middelborg_dashboard_payload.json
+    middelborg_leaderboard.json
+    mock/...                 (mock-demo only)
+  run_demo.py
+  .gitignore
+  .gitattributes                                          (LFS rules for *.pdf)
+  requirements.txt            (pypdf, cryptography, pdfplumber, pymupdf,
+                               streamlit, streamlit-pdf-viewer, pandas)
+
+How to run
+  pip install -r requirements.txt
+  python3 run_demo.py                                 # mock data demo
+  python3 validation/run_real_report.py               # real Middelborg + benchmarks run
+  python3 validation/run_real_report.py --company qben_infra
+
+  # v3 click-through provenance dashboard
+  bash scripts/init_repo.sh                           # one-time (set github_owner first)
+  python3 scripts/refresh_provenance.py               # refresh sha256 / git_sha
+  python3 -m http.server 8765                         # then open http://localhost:8765/dashboard/
+  streamlit run app/streamlit_app.py                  # interactive local dashboard
+
+v10 revenue-flow logic-chain (this iteration)
+- Goal of this iteration is twofold:
+    (a) prove the system can attack a *current* report (Q1 2026), not just
+        the historical FY2024 deck, by ingesting Qben Infra's Q1 2026
+        interim report and FY2025 annual report and re-running the
+        triangulation pipeline against them.
+    (b) prove the system can synthesize evidence across taps and across
+        narrative-vs-numerical surfaces -- not just collide one PDF
+        claim with one external register.
+
+New report ingestion (Phase A.1 / A.2)
+- data/raw/qben_infra/2026_q1/qben_infra_q1_2026.{pdf,txt}      (Q1 2026
+                                    interim report, Swedish, 69k chars)
+- data/raw/qben_infra/2025_annual/qben_infra_2025_annual.{pdf,txt}
+                                    (FY2025 annual report, Swedish,
+                                    232k chars)
+- data/sources.json now carries both reports with sha256 + provenance,
+  re-derived via scripts/refresh_provenance.py.
+- validation/companies.json: qben_infra.current_report rolled forward
+  from Q2 2025 to Q1 2026 (manual_metrics: revenue 169 MSEK vs 195
+  prior = -13.3% YoY; ebita_margin -26.0%; headline profit 147 MSEK
+  driven by Rail-divestment gain, continuing-ops result -53 MSEK).
+  New companies.json entry qben_infra_annual_2025 anchors the FY2025
+  vs FY2024 selective-disclosure comparison (both 230k+ chars so the
+  RELATIVE_LENGTH_MIN_RATIO guardrail passes).
+
+New EvidenceTap: TED (EU public procurement)
+- src/ingest/external/ted_client.py : NEW. Wraps
+                                    https://api.ted.europa.eu/v3/notices/search
+                                    (POST, no API key). Multi-lingual
+                                    response normalised via _flatten_eng /
+                                    _pick_eng_title helpers. Cached raw
+                                    JSON to data/external/ted/<supplier>/.
+- src/ingest/external/ted_tap.py    : NEW EvidenceTap. tap_id=ted,
+                                    tap_kind=public_procurement. Carries
+                                    the calibrated note that TED only
+                                    publishes above-EU-threshold awards
+                                    (~NOK 45M for works), so a not_found
+                                    verdict is emitted at confidence 0.45
+                                    rather than 0.85+ -- absence in TED is
+                                    weaker evidence than absence in Doffin.
+
+New derived taps (cross-tap synthesizers)
+- src/triangulation/types.py        : added tap_kind="derived_analysis".
+                                    Derived taps run in a second pass
+                                    after primary taps; they never hit
+                                    external APIs and instead read other
+                                    EvidenceEntry rows from the ledger
+                                    (and source PDFs) to synthesize new
+                                    evidence.
+- src/ingest/external/derived_taps.py : NEW.
+  * RevenueSupportCalculatorTap (tap_id=derived_revenue_support) -- walks
+    the peer_controls list, reads each peer hypothesis's most recent
+    Doffin + TED entries, computes how many operating subsidiaries have
+    a post-acquisition prime-contract footprint, and emits a verdict on
+    fq_revenue_backed_by_external_awards. external_support_pct below the
+    hypothesis's threshold (default 50%) -> refutes. The cache file
+    explicitly enumerates per-peer post-acquisition awards so the
+    derivation is reproducible by hand.
+  * ExplanatorySlippageScannerTap (tap_id=derived_explanatory_slippage)
+    -- scans the CEO-comment region (first 5000 chars after a "CEO" /
+    "VD-ord" / "Comments by the CEO" anchor) for positive-framing tokens
+    (Swedish + English) and acknowledgement tokens, then classifies
+    against the directional move in revenue and EBITA margin. Pure
+    positive framing while KPIs deteriorate -> refutes
+    fq_explanatory_narrative_consistent.
+- src/triangulation/runner.py       : run_taps_for_hypotheses() now
+                                    executes a two-pass tap orchestration:
+                                    primary taps first (Doffin, BRREG,
+                                    TED), then derived taps once the
+                                    ledger is populated. build_triangulation
+                                    _matrix() also gained cells_by_kind_all
+                                    + cells_by_tap so two taps sharing a
+                                    kind (Doffin + TED both
+                                    public_procurement) don't overwrite
+                                    each other in the matrix.
+
+New hypothesis category: revenue_pipeline_support
+- validation/hypotheses.json schema_version bumped to 2; new
+  claim_categories block documents subsidiary_specialist (legacy) and
+  revenue_pipeline_support (new). hyp_qben_q1_2026_revenue_pipeline
+  registered with claim_metadata.reported_revenue_msek = 169.0,
+  reported_revenue_yoy_pct = -13.3, operating_subsidiaries =
+  [SLAM, Banefjell, Team Bygg, Nordnes Narvik, B45 Anlegg],
+  external_support_threshold_pct = 50.0, peer_controls pointing back to
+  the four subsidiary hypotheses.
+
+New engine rule (R7)
+- src/triangulation/engine.py       : added _apply_revenue_pipeline_rule.
+                                    For revenue_pipeline_support
+                                    hypotheses, if both derived taps
+                                    (derived_revenue_support +
+                                    derived_explanatory_slippage) return
+                                    refutes, severity is elevated to
+                                    critical even though the single-source
+                                    rule (R1) would normally cap at
+                                    warning. Justification: two
+                                    *independent* analytical axes (number
+                                    vs narrative; external vs internal)
+                                    failing in the same direction is
+                                    qualitatively different from one tap
+                                    contradicting an absence. R7 also
+                                    skips the peer-control rule for this
+                                    category since peer hypotheses are
+                                    subsidiary_specialist claims, not
+                                    revenue_pipeline_support claims.
+
+Three-layered logic-chain visualization (Phase B)
+- src/visualization/__init__.py     : NEW package. All payloads are
+                                    deterministic and LLM-free; this is
+                                    important for auditability.
+- src/visualization/argument_tree.py : per-finding hierarchical tree
+                                    (claim -> engine_rule -> question ->
+                                    evidence -> source). Dispatches to
+                                    rule-specific builders for
+                                    triangulated_hypothesis,
+                                    narrative_dissonance,
+                                    selective_disclosure, lag_causality,
+                                    and a generic fallback. Output:
+                                    outputs/argument_trees.json keyed by
+                                    composite_key.
+- src/visualization/narrative_writer.py : pure-template per-finding
+                                    auditor paragraph with inline [N]
+                                    citations. Templates per claim_category
+                                    (revenue_pipeline_support has its own
+                                    R7-aware narrative). Output:
+                                    outputs/narrative_paragraphs.json.
+- src/visualization/sankey_builder.py : global Sankey of the reasoning
+                                    landscape. Layers: issuer -> claim/
+                                    rule -> falsification question ->
+                                    tap evidence (verdict) -> derived
+                                    severity. Output:
+                                    outputs/sankey_data.json with nodes,
+                                    links, layer_labels, verdict/severity
+                                    palettes.
+- dashboard/index.html              : re-ordered. New v10-sankey section
+                                    at the top (D3 + d3-sankey from CDN);
+                                    v9 triangulation matrix + audit
+                                    roadmap in the middle; findings
+                                    leaderboard at the bottom. Each
+                                    leaderboard row's "Read reasoning"
+                                    drawer now shows the narrative
+                                    paragraph (with clickable [N]
+                                    citations) above the argument tree
+                                    (nested <details> elements with
+                                    verdict / severity colour-coding).
+- dashboard/dashboard.js            : added v10 loaders (sankey_data,
+                                    argument_trees, narrative_paragraphs)
+                                    behind tolerant try/catch, renderSankey
+                                    helper with click-to-filter
+                                    (sankeyFilterKeys threads through
+                                    matchesFilters so clicking any
+                                    Sankey node filters the leaderboard
+                                    to only findings flowing through
+                                    that node), renderArgumentTreeNode,
+                                    renderNarrativeParagraph.
+- app/streamlit_app.py              : added _render_v10_sankey_panel
+                                    (plotly.go.Sankey, top-of-app
+                                    expander) + _render_v10_finding_block
+                                    (narrative paragraph + nested
+                                    st.expander argument tree) inside
+                                    the per-finding drawer. Both panels
+                                    tolerate missing v10 artefacts.
+
+v10 worked example (Qben Infra Q1 2026, run 2026-05-30)
+- hyp_qben_q1_2026_revenue_pipeline severity = critical.
+  * derived_revenue_support  -> refutes (25% of 4 subsidiaries have a
+    post-acquisition prime-contract footprint in Doffin+TED; threshold
+    50%. 4 confirmed awards aggregate.)
+  * derived_explanatory_slippage -> refutes (12 positive-framing tokens
+    vs 0 acknowledgement tokens in the CEO-comment region, while
+    revenue is -13.3% YoY and EBITA margin is -26.0%.)
+  * Engine R7 fires: two independent axes refuting in the same
+    direction -> critical, even though no primary tap reaches confirms.
+- Selective-disclosure detector also fires on FY2025 vs FY2024 (both
+  234k+ chars; length-ratio guardrail passes; new KPI dimensions
+  appear, old ones reframe).
+
+v11 sprint kickoff (planning only -- not implemented in this iteration)
+====================================================================
+Goal of v11 is to demonstrate that the v9/v10 architecture scales from
+"one issuer, four subsidiary claims, three primary taps + two derived
+taps" to "a portfolio of 100 Nordic issuers, multi-country tap coverage,
+5 AI-suggested pattern hypotheses, cross-issuer clustering." Nothing in
+v11 changes the engine contract or the dashboard contract -- only the
+breadth of hypotheses, the breadth of taps, and the new cross-issuer
+analytics layer.
+
+Below is the kickoff scope so a future sprint can pick this up cleanly.
+
+C.1  100-Nordic-company universe (data source)
+- Primary: OMX Nordic Small Cap + First North Stockholm + Oslo Bors
+  Euronext Growth + Helsinki First North = ~700 listings. Filter to the
+  ~100 with public-procurement-exposed segments (NACE/SNI codes 41-43
+  construction, 35 power, 38-39 environmental, 49-52 transport, 86
+  healthcare, 80 security).
+- Filter to issuers that publish English or Nordic-language interim
+  reports as PDF on issuer-controlled URLs (not paywalled databases).
+- Output: validation/universe_v11.json with company_id, exchange,
+  ticker, NACE_segment, primary_geography, ir_pdf_landing_url,
+  ir_archive_root. Same schema discipline as data/sources.json so the
+  existing ingest pipeline picks it up unchanged.
+- This file is a JSON edit, not a code change -- the same property as
+  validation/hypotheses.json in v9/v10.
+
+C.2  Multi-country tap matrix (extending the v9/v10 EvidenceTap pattern)
+- New primary taps, each ~80 lines like ted_tap.py, no engine changes:
+  * uk_procurement     : Contracts Finder + Find a Tender (UK)
+  * de_procurement     : evergabe-online + bund.de TED-DE feed
+  * dk_procurement     : Udbud.dk (Denmark)
+  * fi_procurement     : Hilma (Finland)
+  * se_procurement     : tendsign / Mercell Sweden public feed
+  * uk_company_registry: Companies House API (free; analogous to BRREG)
+  * de_company_registry: Unternehmensregister.de (limited free tier)
+  * insider_trading    : Finanstilsynet NewsWeb (NO); Finansinspektionen
+                         insynshandel (SE); BaFin DEA notifications (DE)
+  * media              : MFN (SE), CISION wires (NO/SE/FI), GlobeNewswire
+                         Nordic, EQS Group filings
+- New derived taps (cross-issuer, second pass like v10 derived_*):
+  * cross_issuer_supplier_overlap : detects when issuer A and issuer B
+    both claim the same subcontractor as a "specialist"; if Doffin shows
+    that supplier mostly working for B, A's claim is weakened.
+  * insider_vs_kpi_window         : compares insider sell volume in a
+    +/-30d window around the report publication date against the
+    direction of the KPI move. Net selling into a KPI deterioration ->
+    refutes "long-term confidence" narrative.
+  * peer_segment_calibration      : for issuers in the same NACE segment
+    and overlapping geography, computes the segment-level external-
+    support-pct distribution; any single issuer falling >2sigma below
+    the peer median refutes its own revenue_pipeline_support claim
+    independently of its absolute threshold.
+
+C.3  Five AI-pattern hypotheses (the "AI Product Engineer" demo deliverable)
+The system already has 1 AI-shaped hypothesis category in v10
+(revenue_pipeline_support). v11 adds 5 more, each registered in
+validation/hypotheses.json with the same schema discipline (claim,
+claim_metadata, falsification_questions, peer_controls) so the engine
+treats them identically. Each of these is a *pattern* an LLM was used
+to surface offline (one-shot, not in the live pipeline) and then
+hard-coded back into the deterministic system.
+
+  P1  segment_reframe_under_pressure
+      An issuer that previously reported segment X drops it from the
+      KPI table after segment X deteriorates. Falsifiable by: presence
+      of segment X dimension in prior periods, absence in current,
+      simultaneous narrative reference to "simplified reporting" or
+      "focus on core segments". Derived tap reads sources.json
+      historical entries and compares per-segment line presence.
+
+  P2  one_off_dressed_as_recurring
+      A headline profit driven by a one-off gain (divestment, fair-
+      value remeasurement, settlement) is presented in the headline
+      without parenthetical adjustment, while the discontinued-ops
+      breakdown is buried. v10 already saw this on Qben Q1 2026
+      (147 MSEK headline driven by Rail divestment; continuing-ops
+      result -53 MSEK). Falsifiable by: ratio of headline-profit to
+      continuing-ops-profit, presence of the word "divestment" /
+      "avyttring" / "frasalg" in the same paragraph as the headline
+      number, absence of an adjusted-EBITA breakdown.
+
+  P3  acquisition_lag_revenue_attribution
+      A revenue increase is attributed to "organic growth" while the
+      time window includes an acquisition consolidation date.
+      Falsifiable by: M&A press release date < period end, presence
+      of "consolidated as of" / "from <month>" / "PPA" in the same
+      paragraph, magnitude of acquired-entity revenue >= delta vs
+      prior period.
+
+  P4  capex_amortisation_mismatch
+      Capex << depreciation for >=4 consecutive periods, while the
+      narrative emphasises "continued investment" / "growth capex".
+      Falsifiable by: capex_to_depreciation_ratio time series, presence
+      of growth-capex tokens in CEO comments, peer-segment capex ratio.
+
+  P5  insider_sells_into_optimism
+      Net insider selling in the +/-30d window around publication
+      coincides with above-median positive-framing density in the
+      CEO comment. Cross-tap derived: needs insider_trading tap
+      (NewsWeb/insynshandel) + ExplanatorySlippageScanner reused with
+      an aggregate-density input.
+
+Each of P1-P5 is one new hypothesis category + one new derived tap.
+No engine change is required beyond a single _apply_<category>_rule
+helper if the category needs an R7-style override (e.g. P5 might).
+
+C.4  Cross-issuer clustering layer
+- New module src/analytics/cross_issuer.py (planned, not implemented):
+  loads outputs/argument_trees.json for every issuer in universe_v11,
+  extracts (issuer, claim_category, refuted_falsification_question)
+  triples, builds a similarity graph (issuers as nodes, shared
+  refuted question as edges weighted by Jaccard), and emits
+  outputs/issuer_clusters.json.
+- New dashboard panel (planned): "Pattern landscape" -- a UMAP /
+  force-directed layout of issuers coloured by dominant refuted
+  pattern. Click an issuer -> drills into that issuer's leaderboard;
+  click a cluster -> Sankey filters to that cluster's findings.
+- New Streamlit panel (planned): peer-percentile cards showing
+  external_support_pct, positive_framing_density, capex_amort_ratio,
+  net_insider_flow versus the issuer's NACE-segment peer distribution.
+
+C.5  v11 success criteria (acceptance, not implemented now)
+- pipeline runs against >= 100 issuers without per-issuer code changes
+- >= 5 of the 6 hypothesis categories (revenue_pipeline_support + P1-P5)
+  produce at least one critical finding across the universe
+- the global Sankey at the top of the dashboard shows >= 4 distinct
+  derived_analysis lanes
+- cross_issuer_supplier_overlap surfaces >= 1 pair of issuers sharing
+  a contested subcontractor
+- the docs deck (RESULTS.md + OVERVIEW.txt) gains a v11 section
+  with a worked example for one P1-P5 pattern (analogous to the
+  v10 worked example for revenue_pipeline_support)
+
+C.6  v11 explicit non-goals
+- NO LLM in the live pipeline. LLMs may be used offline to surface
+  pattern candidates (P1-P5) but each pattern is then hard-coded into
+  a deterministic detector before it goes into the run.
+- NO change to the engine verdict vocabulary or the severity bands.
+- NO change to the dashboard contract; the new "Pattern landscape"
+  panel is additive.
+- NO web scraping where a documented public API exists. Every new
+  tap must follow the v9/v10 EvidenceTap contract (cache raw response
+  with sha256 + fetched_at_utc + query_url; emit a single
+  EvidenceEntry verdict).
+
+Scope notes
+- v2 expands prior-period coverage (Qben, ININ, Techstep, K33, North Energy) and
+  switches the ingest to PDF-preferred with TXT fallback. Provenance lives in data/sources.json.
+- Priority score is a deterministic ranking heuristic, not a p-value. The inputs are saved
+  per finding so anyone can re-derive or replace the ordering. (Renamed from drama_score
+  in v6 for analyst-neutral terminology.)
+- LLM integration is intentionally deferred; prompts in semantic_attack_prompts.txt are ready
+  for a Claude API hookup in a future iteration.
+- Manual_metrics in companies.json remain authoritative when the auto-extractor lands outside
+  the sanity band; every report.json now exposes a metrics_audit block.

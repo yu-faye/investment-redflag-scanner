@@ -1,0 +1,28 @@
+{
+  "aliases_used": [
+    "SLAM Jernbaneteknikk AS",
+    "SLAM Jernbaneteknikk",
+    "SLAM JERNBANETEKNIKK AS"
+  ],
+  "confirmed_awards": [],
+  "fetched_at_utc": "2026-05-30T06:23:52+00:00",
+  "query_body": {
+    "fields": [
+      "publication-number",
+      "publication-date",
+      "notice-title",
+      "buyer-name",
+      "winner-name",
+      "notice-type",
+      "place-of-performance"
+    ],
+    "limit": 50,
+    "query": "winner-name=\"SLAM Jernbaneteknikk AS\" (AND publication-date>=20220101)"
+  },
+  "query_url": "https://api.ted.europa.eu/v3/notices/search",
+  "search_hits": [],
+  "search_hits_post_filter": 0,
+  "search_hits_total": 0,
+  "search_ok": true,
+  "supplier_name": "SLAM Jernbaneteknikk AS"
+}

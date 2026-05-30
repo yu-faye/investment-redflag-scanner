@@ -1,0 +1,28 @@
+Dashboard Spec: Qben Red-Flag Scanner
+
+Objective
+- Provide a one-screen risk narrative for portfolio/interview demonstration.
+
+Layout
+1) Header strip
+- Company/segment label, period comparison (2024 vs 2025), run timestamp.
+- KPI chips: total red flags, critical count, warning count.
+
+2) Left panel (charts)
+- Bar chart: severity count by attack category.
+- Slope chart: selected ratio movement from 2024 to 2025
+  (cash conversion, gross margin delta, related-party share, interest coverage).
+
+3) Right panel (tables)
+- Red-flag table:
+  columns = rule_id, severity, value, message, suggested follow-up.
+- Related-party extraction table:
+  columns = entity, detection_source, confidence_placeholder.
+
+4) Bottom alerts
+- Alert cards (max 5): prioritize critical, then warning by estimated impact.
+- Include "next test" text for each alert to show audit-action mindset.
+
+Export placeholders
+- outputs/report.json: machine-readable run result.
+- outputs/dashboard_payload.json: pre-shaped data for any BI layer.

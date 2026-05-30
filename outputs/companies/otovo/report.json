@@ -1,0 +1,629 @@
+{
+  "company": "otovo",
+  "name": "Otovo ASA",
+  "ticker": "OTOVO",
+  "exchange": "Euronext Oslo Bors",
+  "middelborg_link": "Not a Middelborg holding. Used as transparent Nordic listed test target.",
+  "generated_at_utc": "2026-05-30T06:35:55+00:00",
+  "current_period": "FY 2024",
+  "prior_period": null,
+  "source_used": {
+    "current_file": "data/raw/otovo/2024/otovo_annual_2024.txt",
+    "current_kind": "txt",
+    "prior": null
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+      "kind": "local_txt",
+      "issuer_url": "https://www.otovo.com/investor-relations/",
+      "issuer_page": "https://www.otovo.com/investor-relations/",
+      "language": "en",
+      "label": "Annual Report 2024 (text cache)",
+      "period": "2024-FY",
+      "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": null
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": 300.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": -400.0,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": 82.0,
+    "ebitda_for_leverage_msek_raw": null,
+    "interest_coverage_ratio_auto": 1.4,
+    "interest_coverage_ratio": 1.4,
+    "interest_coverage_ratio_source": "auto_regex"
+  },
+  "auto_metrics_provenance": {
+    "ebitda_msek": {
+      "value": 300.0,
+      "regex_id": "ebitda",
+      "raw_match": "EBITDA EBITDA of ~NOK 300",
+      "char_span": [
+        16276,
+        16301
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA EBITDA of ~NOK 300"
+    },
+    "cash_flow_operating_msek": {
+      "value": -400.0,
+      "regex_id": "ocf",
+      "raw_match": "cash flow from operating activities -400",
+      "char_span": [
+        140413,
+        140453
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "cash flow from operating activities -400"
+    },
+    "interest_expense_msek_raw": {
+      "value": 82.0,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "interest expense is \nincluded in Financial expenses. \nPage 82",
+      "char_span": [
+        166197,
+        166258
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "interest expense is included in Financial expenses. Page 82"
+    },
+    "interest_coverage_ratio_auto": {
+      "value": 1.4,
+      "regex_id": "interest_coverage_explicit",
+      "raw_match": "interest coverage ratio of at least 1.4",
+      "char_span": [
+        218492,
+        218531
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "interest coverage ratio of at least 1.4"
+    },
+    "interest_coverage_ratio": {
+      "value": 1.4,
+      "regex_id": "interest_coverage_explicit",
+      "raw_match": "interest coverage ratio of at least 1.4",
+      "char_span": [
+        218492,
+        218531
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "interest coverage ratio of at least 1.4"
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": -42.0,
+    "organic_growth_pct": -42.0,
+    "gross_margin_yoy_change_pct": -8.0,
+    "ebita_margin_pct": -51.0,
+    "ebitda_margin_pct": -51.0,
+    "interest_coverage_ratio": 0.5,
+    "net_debt_to_ebitda": 9.9,
+    "working_capital_to_revenue_pct": 28.0,
+    "capex_to_depreciation_ratio": 0.4,
+    "order_intake_yoy_pct": -30.0
+  },
+  "manual_metrics_provenance": {},
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": 300.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": -400.0,
+    "ebita_margin_pct": -51.0,
+    "ebitda_margin_pct": -51.0,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": 82.0,
+    "ebitda_for_leverage_msek_raw": null,
+    "interest_coverage_ratio_auto": 1.4,
+    "interest_coverage_ratio": 0.5,
+    "interest_coverage_ratio_source": "auto_regex",
+    "revenue_yoy_pct": -42.0,
+    "organic_growth_pct": -42.0,
+    "gross_margin_yoy_change_pct": -8.0,
+    "net_debt_to_ebitda": 9.9,
+    "working_capital_to_revenue_pct": 28.0,
+    "capex_to_depreciation_ratio": 0.4,
+    "order_intake_yoy_pct": -30.0
+  },
+  "metrics_audit": {
+    "capex_to_depreciation_ratio": {
+      "auto": null,
+      "manual": 0.4,
+      "chosen": 0.4,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "cash_flow_operating_msek": {
+      "auto": -400.0,
+      "manual": null,
+      "chosen": -400.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": -51.0,
+      "chosen": -51.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": -51.0,
+      "chosen": -51.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_msek": {
+      "auto": 300.0,
+      "manual": null,
+      "chosen": 300.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "gross_margin_yoy_change_pct": {
+      "auto": null,
+      "manual": -8.0,
+      "chosen": -8.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": 1.4,
+      "manual": 0.5,
+      "chosen": 0.5,
+      "source": "manual",
+      "agrees_within_10pct": false
+    },
+    "interest_coverage_ratio_auto": {
+      "auto": 1.4,
+      "manual": null,
+      "chosen": 1.4,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": null,
+      "manual": 9.9,
+      "chosen": 9.9,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "order_intake_yoy_pct": {
+      "auto": null,
+      "manual": -30.0,
+      "chosen": -30.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": -42.0,
+      "chosen": -42.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": -42.0,
+      "chosen": -42.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "working_capital_to_revenue_pct": {
+      "auto": null,
+      "manual": 28.0,
+      "chosen": 28.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "growth",
+      "mention_count": 46,
+      "mention_density_per_10k_chars": 1.45,
+      "term_hits": [
+        {
+          "term": "growth",
+          "count": 37
+        },
+        {
+          "term": "expansion",
+          "count": 6
+        },
+        {
+          "term": "scaling",
+          "count": 3
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -42.0,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "organic_growth_pct",
+          "value": -42.0,
+          "expected_direction": "up",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "Cost cut, portfolio sold, now re-growth",
+      "claim_excerpt_matched_term": "growth",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'growth' qualitatively, yet supporting metrics (revenue_yoy_pct=-42.0, organic_growth_pct=-42.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 25.2,
+      "headline": "Otovo ASA: 'growth' narrative cited 46 times, but supporting metrics move the opposite way (revenue_yoy_pct=-42.0, organic_growth_pct=-42.0).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://www.otovo.com/investor-relations/",
+          "issuer_page": "https://www.otovo.com/investor-relations/",
+          "language": "en",
+          "label": "Annual Report 2024 (text cache)",
+          "period": "2024-FY",
+          "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -42.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "organic_growth_pct",
+          "value": -42.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "efficiency",
+      "mention_count": 9,
+      "mention_density_per_10k_chars": 0.28,
+      "term_hits": [
+        {
+          "term": "efficiency",
+          "count": 9
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -8.0,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": -51.0,
+          "expected_direction": "up",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "efficiency program (completed",
+      "claim_excerpt_matched_term": "efficiency",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'efficiency' qualitatively, yet supporting metrics (gross_margin_yoy_change_pct=-8.0, ebita_margin_pct=-51.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 8.55,
+      "headline": "Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-8.0, ebita_margin_pct=-51.0).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://www.otovo.com/investor-relations/",
+          "issuer_page": "https://www.otovo.com/investor-relations/",
+          "language": "en",
+          "label": "Annual Report 2024 (text cache)",
+          "period": "2024-FY",
+          "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -8.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": -51.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "resilience",
+      "mention_count": 6,
+      "mention_density_per_10k_chars": 0.19,
+      "term_hits": [
+        {
+          "term": "resilient",
+          "count": 1
+        },
+        {
+          "term": "robust balance",
+          "count": 1
+        },
+        {
+          "term": "robust",
+          "count": 4
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 0.5,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 9.9,
+          "expected_direction": "down",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "critical",
+      "claim_excerpt": "greener and more robust by providing",
+      "claim_excerpt_matched_term": "robust",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'resilience' qualitatively, yet supporting metrics (interest_coverage_ratio=0.5, net_debt_to_ebitda=9.9) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 7.2,
+      "headline": "Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the opposite way (interest_coverage_ratio=0.5, net_debt_to_ebitda=9.9).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://www.otovo.com/investor-relations/",
+          "issuer_page": "https://www.otovo.com/investor-relations/",
+          "language": "en",
+          "label": "Annual Report 2024 (text cache)",
+          "period": "2024-FY",
+          "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 0.5,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 9.9,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "demand",
+      "mention_count": 1,
+      "mention_density_per_10k_chars": 0.03,
+      "term_hits": [
+        {
+          "term": "favourable conditions",
+          "count": 1
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -42.0,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "order_intake_yoy_pct",
+          "value": -30.0,
+          "expected_direction": "up",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "warning",
+      "claim_excerpt": "● Creating favourable conditions and",
+      "claim_excerpt_matched_term": "favourable conditions",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'demand' qualitatively, yet supporting metrics (revenue_yoy_pct=-42.0, order_intake_yoy_pct=-30.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 2.48,
+      "headline": "Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opposite way (revenue_yoy_pct=-42.0, order_intake_yoy_pct=-30.0).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+          "kind": "local_txt",
+          "issuer_url": "https://www.otovo.com/investor-relations/",
+          "issuer_page": "https://www.otovo.com/investor-relations/",
+          "language": "en",
+          "label": "Annual Report 2024 (text cache)",
+          "period": "2024-FY",
+          "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -42.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "order_intake_yoy_pct",
+          "value": -30.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ]
+    }
+  ],
+  "severity_tally": {
+    "critical": 3,
+    "warning": 1,
+    "info": 0
+  },
+  "findings_count": 4
+}

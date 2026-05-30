@@ -1,0 +1,490 @@
+{
+  "version": "0.5",
+  "description": "Validation targets. Each entry pairs a current report with an optional prior report for YoY disclosure comparison. primary_pdf is preferred when extracted text exceeds 5k chars; otherwise primary_file (curated .txt) is used. v0.5 (v10): qben_infra advanced to Q1 2026; added qben_infra_annual_2025 standalone entry.",
+  "companies": [
+    {
+      "id": "qben_infra",
+      "name": "Qben Infra AB",
+      "ticker": "QBEN",
+      "exchange": "Nasdaq First North Premier",
+      "middelborg_link": "Middelborg Invest AS acquired stake October 22, 2025 (RSG/HKL block transfer).",
+      "sector": "Nordic infrastructure services",
+      "current_report": {
+        "period": "2026-Q1",
+        "label": "Q1 2026",
+        "primary_file": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.txt",
+        "primary_pdf": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+        "source_url": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf",
+        "manual_metrics": {
+          "revenue_yoy_pct": -13.3,
+          "organic_growth_pct": -13.3,
+          "gross_margin_yoy_change_pct": null,
+          "ebita_margin_pct": -26.0,
+          "ebitda_margin_pct": -20.1,
+          "interest_coverage_ratio": null,
+          "net_debt_to_ebitda": null,
+          "working_capital_to_revenue_pct": null,
+          "capex_to_depreciation_ratio": null,
+          "order_intake_yoy_pct": null,
+          "revenue_msek_current": 169.0,
+          "revenue_msek_prior": 195.0,
+          "ebita_msek_current": -44.0,
+          "adjusted_ebita_msek_current": -29.0,
+          "net_debt_msek": 404.0,
+          "equity_msek": 425.0,
+          "cash_msek_current": 60.0,
+          "cash_msek_prior": 183.0,
+          "period_result_continuing_msek": -53.0,
+          "period_result_reported_msek": 147.0,
+          "operating_cashflow_msek": 51.0
+        },
+        "manual_metrics_provenance": {
+          "revenue_yoy_pct": {
+            "anchor": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK (195)",
+            "note": "Continuing operations only. Reported figures: 169 / 195 MSEK -> -13.3% YoY decline."
+          },
+          "ebita_margin_pct": {
+            "anchor": "EBITA-marginal (%) -26,0% -11,1%",
+            "note": "Q1 2026 EBITA -44 MSEK on 169 MSEK = -26.0% (kvarvarande verksamhet)."
+          },
+          "period_result_reported_msek": {
+            "anchor": "Kvartalets resultat, inklusive försäljningsintäkter från affärsområdet Rail, uppgick till 147 MSEK (-113)",
+            "note": "Headline 'profit' of 147 MSEK is driven by the Rail divestment gain; continuing-ops result is -53 MSEK."
+          }
+        },
+        "external_sources": {
+          "doffin": {
+            "comment": "v8 external_collision input, re-anchored to Q1 2026. Same subsidiary universe as FY2024 plus the April 2026 acquisition target B45 Anlegg AS.",
+            "supplier_subsidiaries": [
+              {
+                "name": "SLAM Jernbaneteknikk AS",
+                "aliases": ["SLAM Jernbaneteknikk"],
+                "acquired_year": 2024,
+                "claimed_role": "specialist in rail signalling and electrification in Norway",
+                "narrative_anchor": "SLAM Jernbaneteknikk AS"
+              },
+              {
+                "name": "Banefjell AS",
+                "aliases": ["Banefjell"],
+                "acquired_year": 2024,
+                "claimed_role": "established player in track maintenance, concrete renovation and signal",
+                "narrative_anchor": "Banefjell AS"
+              },
+              {
+                "name": "Team Bygg AS",
+                "aliases": ["Team Bygg Gruppen", "Team Bygg AS"],
+                "acquired_year": 2024,
+                "claimed_role": "comprehensive resources for executing real estate projects in the Norwegian housing market",
+                "narrative_anchor": "Team Bygg"
+              },
+              {
+                "name": "Nordnes Narvik AS",
+                "aliases": ["Nordnes Narvik"],
+                "acquired_year": 2025,
+                "claimed_role": "key player in railway construction in North Norway",
+                "narrative_anchor": "Nordnes Narvik AS"
+              },
+              {
+                "name": "B45 Anlegg AS",
+                "aliases": ["B45 Anlegg"],
+                "acquired_year": 2026,
+                "claimed_role": "fast-growing specialist in concrete work for critical infrastructure such as power plants, dams, transmission lines; signed 215 MNOK contract with Vestland Fylkeskommune in April 2026",
+                "narrative_anchor": "B45 Anlegg"
+              }
+            ]
+          }
+        }
+      },
+      "prior_report": {
+        "period": "2025-Q2",
+        "label": "Q2 2025",
+        "primary_file": "data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+        "primary_pdf": "data/raw/qben_infra/2025/qben_infra_q2_2025.pdf",
+        "source_url": "https://storage.mfn.se/a331fe1a-d7b7-4ca9-9fa9-c3e59f4a7812/qben-infras-q2-report-2025.pdf",
+        "notes": "Prior quarter used by selective_disclosure for cross-period KPI menu changes."
+      }
+    },
+    {
+      "id": "qben_infra_annual_2025",
+      "name": "Qben Infra AB (FY2025 standalone attack)",
+      "ticker": "QBEN",
+      "exchange": "Nasdaq First North Premier",
+      "middelborg_link": "Same as qben_infra; isolates the FY2025 årsredovisning against FY2024 in Swedish.",
+      "sector": "Nordic infrastructure services",
+      "current_report": {
+        "period": "2025-FY",
+        "label": "FY 2025 Årsredovisning",
+        "primary_file": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.txt",
+        "primary_pdf": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "source_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+        "manual_metrics": {
+          "revenue_yoy_pct": null,
+          "organic_growth_pct": null,
+          "gross_margin_yoy_change_pct": null,
+          "ebita_margin_pct": -10.6,
+          "ebitda_margin_pct": -4.2,
+          "interest_coverage_ratio": null,
+          "net_debt_to_ebitda": null,
+          "working_capital_to_revenue_pct": null,
+          "capex_to_depreciation_ratio": null,
+          "order_intake_yoy_pct": null,
+          "revenue_msek_current": 1032.0,
+          "ebitda_msek_current": -43.0,
+          "adjusted_ebitda_msek_current": 22.0,
+          "ebita_msek_current": -111.0,
+          "adjusted_ebita_msek_current": -45.0,
+          "period_result_msek": -338.0,
+          "operating_cashflow_msek": -242.0
+        },
+        "manual_metrics_provenance": {
+          "ebita_margin_pct": {
+            "anchor": "EBITA-marginal (%) ... -10,6%",
+            "note": "Full-year continuing-ops EBITA -111 MSEK / Net sales 1 032 MSEK."
+          },
+          "operating_cashflow_msek": {
+            "anchor": "Kassaflöde från den löpande verksamheten ... -242",
+            "note": "FY2025 operating cash outflow before financing."
+          }
+        }
+      },
+      "prior_report": {
+        "period": "2024-FY",
+        "label": "FY 2024 Årsredovisning",
+        "primary_file": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.txt",
+        "primary_pdf": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+        "source_url": "https://storage.mfn.se/4bd04418-dc79-464a-9ff0-bfde37b7fb50/qben-infra-arsredovisning-2024.pdf",
+        "notes": "FY2024 årsredovisning used as the cross-period anchor for selective_disclosure on the FY2025 entry."
+      }
+    },
+    {
+      "id": "qben_infra_2024",
+      "name": "Qben Infra AB (FY2024 standalone attack)",
+      "ticker": "QBEN",
+      "exchange": "Nasdaq First North Premier",
+      "middelborg_link": "Same as qben_infra; isolates the 2024 year-end narrative against 2024 actuals (no prior comparison).",
+      "sector": "Nordic infrastructure services",
+      "current_report": {
+        "period": "2024",
+        "label": "Q4 2024",
+        "primary_file": "data/raw/qben_infra/2024/qben_infra_year_end_2024.txt",
+        "primary_pdf": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "source_url": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf",
+        "manual_metrics": {
+          "revenue_yoy_pct": -2.0,
+          "organic_growth_pct": null,
+          "gross_margin_yoy_change_pct": -21.0,
+          "ebita_margin_pct": -14.0,
+          "ebitda_margin_pct": -12.0,
+          "interest_coverage_ratio": 1.2,
+          "net_debt_to_ebitda": 8.5,
+          "working_capital_to_revenue_pct": 25.0,
+          "capex_to_depreciation_ratio": 1.0,
+          "order_intake_yoy_pct": null
+        },
+        "manual_metrics_provenance": {
+          "revenue_yoy_pct": {
+            "anchor": "Net sales",
+            "note": "Approximation derived from FY2024 income statement Net sales row vs FY2023 comparator."
+          },
+          "ebitda_margin_pct": {
+            "anchor": "EBITDA margin",
+            "note": "EBITDA margin line in the highlights / key figures table."
+          }
+        },
+        "external_sources": {
+          "doffin": {
+            "comment": "v8 external_collision input. Qben's FY2024 report frames its Norwegian expansion via four named subsidiary acquisitions. The detector cross-references each against Doffin (Norwegian public procurement registry) and flags where the claimed role is unsupported by public-record award activity.",
+            "supplier_subsidiaries": [
+              {
+                "name": "SLAM Jernbaneteknikk AS",
+                "aliases": ["SLAM Jernbaneteknikk"],
+                "acquired_year": 2024,
+                "claimed_role": "specialist in rail signalling and electrification in Norway",
+                "narrative_anchor": "SLAM Jernbaneteknikk AS"
+              },
+              {
+                "name": "Banefjell AS",
+                "aliases": ["Banefjell"],
+                "acquired_year": 2024,
+                "claimed_role": "established player in track maintenance, concrete renovation and signal",
+                "narrative_anchor": "Banefjell AS"
+              },
+              {
+                "name": "Team Bygg AS",
+                "aliases": ["Team Bygg Gruppen", "Team Bygg AS"],
+                "acquired_year": 2024,
+                "claimed_role": "comprehensive resources for executing real estate projects in the Norwegian housing market",
+                "narrative_anchor": "Team Bygg"
+              },
+              {
+                "name": "Nordnes Narvik AS",
+                "aliases": ["Nordnes Narvik"],
+                "acquired_year": 2025,
+                "claimed_role": "key player in railway construction in North Norway",
+                "narrative_anchor": "Nordnes Narvik AS"
+              }
+            ]
+          }
+        }
+      },
+      "prior_report": null
+    },
+    {
+      "id": "inin_group",
+      "name": "ININ Group AS",
+      "ticker": "ININ",
+      "exchange": "Euronext Growth Oslo",
+      "middelborg_link": "Indirectly owned via Qben Infra (Qben holds 94.9% of ININ as of YE2025).",
+      "sector": "Nordic infrastructure services",
+      "current_report": {
+        "period": "2025",
+        "label": "FY 2025",
+        "primary_file": "data/raw/inin_group/2025/inin_group_annual_2025.txt",
+        "primary_pdf": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "source_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+        "manual_metrics": {
+          "revenue_yoy_pct": 6.6,
+          "organic_growth_pct": 2.0,
+          "gross_margin_yoy_change_pct": -2.0,
+          "ebita_margin_pct": 4.5,
+          "ebitda_margin_pct": 6.0,
+          "interest_coverage_ratio": 1.5,
+          "net_debt_to_ebitda": 4.2,
+          "working_capital_to_revenue_pct": 18.0,
+          "capex_to_depreciation_ratio": 0.9
+        }
+      },
+      "prior_report": {
+        "period": "2024",
+        "label": "Q3 2024 Interim",
+        "primary_pdf": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+        "source_url": "https://inin.no/wp-content/uploads/2024/10/Inin-Group-Q3.2024-Interim-Financial-Report_27.10.24_1-signert.pdf",
+        "notes": "Public ININ FY2024 full annual report not directly linkable; Q3 2024 Interim is the best surrogate prior reference."
+      }
+    },
+    {
+      "id": "techstep",
+      "name": "Techstep ASA",
+      "ticker": "TECH",
+      "exchange": "Oslo Bors",
+      "middelborg_link": "Middelborg Invest AS listed as major shareholder in Techstep prospectus (11.2% direct as of 2021-07-09; plus forward exposure).",
+      "sector": "Enterprise mobility software and services",
+      "current_report": {
+        "period": "2025",
+        "label": "FY 2025",
+        "primary_file": "data/raw/techstep/2025/techstep_annual_2025.txt",
+        "primary_pdf": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "source_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+        "manual_metrics": {
+          "revenue_yoy_pct": -6.7,
+          "organic_growth_pct": -6.7,
+          "gross_margin_yoy_change_pct": -1.0,
+          "ebita_margin_pct": 1.2,
+          "ebitda_margin_pct": 12.3,
+          "interest_coverage_ratio": 1.1,
+          "net_debt_to_ebitda": 3.9,
+          "working_capital_to_revenue_pct": 15.0,
+          "capex_to_depreciation_ratio": 1.5,
+          "order_intake_yoy_pct": null
+        },
+        "manual_metrics_provenance": {
+          "revenue_yoy_pct": {
+            "anchor": "Techstep had total revenue of NOK 1 001 million in 2025, a decrease of 7%",
+            "note": "Narrative on page 16 reports the rounded -7%. Precise -6.7% derived from NOK 1,001m (2025) vs NOK 1,073m (2024)."
+          },
+          "organic_growth_pct": {
+            "anchor": "Techstep had total revenue of NOK 1 001 million in 2025, a decrease of 7%",
+            "note": "Same group revenue decline used as organic proxy (no separate organic disclosure)."
+          },
+          "ebita_margin_pct": {
+            "anchor": "EBITA margin",
+            "note": "EBITA margin row in the multi-year highlights table."
+          }
+        }
+      },
+      "prior_report": {
+        "period": "2024",
+        "label": "FY 2024",
+        "primary_pdf": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+        "source_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf"
+      }
+    },
+    {
+      "id": "otovo",
+      "name": "Otovo ASA",
+      "ticker": "OTOVO",
+      "exchange": "Euronext Oslo Bors",
+      "middelborg_link": "Not a Middelborg holding. Used as transparent Nordic listed test target.",
+      "sector": "Solar / clean-energy marketplace",
+      "current_report": {
+        "period": "2024",
+        "label": "FY 2024",
+        "primary_file": "data/raw/otovo/2024/otovo_annual_2024.txt",
+        "source_url": "https://www.otovo.com/investor-relations/",
+        "manual_metrics": {
+          "revenue_yoy_pct": -42.0,
+          "organic_growth_pct": -42.0,
+          "gross_margin_yoy_change_pct": -8.0,
+          "ebita_margin_pct": -51.0,
+          "ebitda_margin_pct": -51.0,
+          "interest_coverage_ratio": 0.5,
+          "net_debt_to_ebitda": 9.9,
+          "working_capital_to_revenue_pct": 28.0,
+          "capex_to_depreciation_ratio": 0.4,
+          "order_intake_yoy_pct": -30.0
+        }
+      },
+      "prior_report": null
+    },
+    {
+      "id": "norwegian_air",
+      "name": "Norwegian Air Shuttle ASA",
+      "ticker": "NAS",
+      "exchange": "Oslo Bors",
+      "middelborg_link": "Not a Middelborg holding. Used as large-cap Nordic listed test target.",
+      "sector": "Airline (low-cost)",
+      "current_report": {
+        "period": "2024",
+        "label": "FY 2024",
+        "primary_file": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "source_url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+        "manual_metrics": {
+          "revenue_yoy_pct": 17.0,
+          "organic_growth_pct": 5.0,
+          "gross_margin_yoy_change_pct": -3.4,
+          "ebita_margin_pct": 5.3,
+          "ebitda_margin_pct": 10.0,
+          "interest_coverage_ratio": 2.4,
+          "net_debt_to_ebitda": 4.8,
+          "working_capital_to_revenue_pct": -2.0,
+          "capex_to_depreciation_ratio": 1.1,
+          "order_intake_yoy_pct": null
+        }
+      },
+      "prior_report": null
+    },
+    {
+      "id": "norse_atlantic",
+      "name": "Norse Atlantic Airways ASA",
+      "ticker": "NORSE",
+      "exchange": "Euronext Expand Oslo",
+      "middelborg_link": "Not a Middelborg holding. Long-haul low-cost airline in build-up phase.",
+      "sector": "Airline (long-haul low-cost)",
+      "current_report": {
+        "period": "2024",
+        "label": "FY 2024",
+        "primary_file": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "source_url": "https://norseatlantic.com/en/investor/reports-presentations/",
+        "manual_metrics": {
+          "revenue_yoy_pct": 34.0,
+          "organic_growth_pct": 33.0,
+          "gross_margin_yoy_change_pct": -1.0,
+          "ebita_margin_pct": -16.0,
+          "ebitda_margin_pct": -1.0,
+          "interest_coverage_ratio": 0.3,
+          "net_debt_to_ebitda": 99.0,
+          "working_capital_to_revenue_pct": 26.0,
+          "capex_to_depreciation_ratio": 0.4,
+          "order_intake_yoy_pct": 33.0,
+          "negative_equity_flag": true,
+          "equity_msek": -2300.0
+        }
+      },
+      "prior_report": null
+    },
+    {
+      "id": "mowi",
+      "name": "Mowi ASA",
+      "ticker": "MOWI",
+      "exchange": "Oslo Bors",
+      "middelborg_link": "Not a Middelborg holding. Baseline transparent large-cap (world's largest salmon farmer).",
+      "sector": "Aquaculture",
+      "current_report": {
+        "period": "2024",
+        "label": "FY 2024",
+        "primary_file": "data/raw/mowi/2024/mowi_annual_2024.txt",
+        "source_url": "https://mowi.com/investors/financial-reports/",
+        "manual_metrics": {
+          "revenue_yoy_pct": 4.0,
+          "organic_growth_pct": 4.0,
+          "gross_margin_yoy_change_pct": 0.5,
+          "ebita_margin_pct": 14.7,
+          "ebitda_margin_pct": 18.0,
+          "interest_coverage_ratio": 7.0,
+          "net_debt_to_ebitda": 1.8,
+          "working_capital_to_revenue_pct": 12.0,
+          "capex_to_depreciation_ratio": 1.0,
+          "order_intake_yoy_pct": null
+        }
+      },
+      "prior_report": null
+    },
+    {
+      "id": "k33",
+      "name": "K33 AB (publ)",
+      "ticker": "K33",
+      "exchange": "Nasdaq First North Growth Market",
+      "middelborg_link": "Middelborg Invest AS appears in K33 financing/ownership notices and insider-share disclosures (2025).",
+      "sector": "Digital-asset brokerage and infrastructure",
+      "current_report": {
+        "period": "2024",
+        "label": "FY 2024 (Q4 year-end report)",
+        "primary_file": "data/raw/k33/2024/k33_q4_year_end_2024.txt",
+        "primary_pdf": "data/raw/k33/2024/k33_annual_2024_en.pdf",
+        "source_url": "https://cdn.prod.website-files.com/645396e8d92c58b99155faf3/685eb3bd8b923b5906bc7701_ENG%20Annual%20Report%20K33%20AB%20(publ).pdf",
+        "manual_metrics": {
+          "revenue_yoy_pct": 528.0,
+          "organic_growth_pct": 528.0,
+          "gross_margin_yoy_change_pct": -1.0,
+          "ebita_margin_pct": -0.2,
+          "ebitda_margin_pct": 0.7,
+          "interest_coverage_ratio": 0.8,
+          "net_debt_to_ebitda": 6.0,
+          "working_capital_to_revenue_pct": 24.0,
+          "capex_to_depreciation_ratio": 1.4,
+          "order_intake_yoy_pct": null
+        }
+      },
+      "prior_report": {
+        "period": "2023",
+        "label": "FY 2023 (Arcario pre-rebrand)",
+        "primary_pdf": "data/raw/k33/2023/k33_arcario_annual_2023.pdf",
+        "source_url": "https://storage.mfn.se/ae46f711-8d09-48d2-8452-2337ee50ff40/arcario-ab-arsredovisning-2023-12-31.pdf",
+        "notes": "Pre-rebrand annual report (Arcario AB). Used for selective_disclosure cross-period comparison. Language: Swedish."
+      }
+    },
+    {
+      "id": "north_energy",
+      "name": "North Energy ASA",
+      "ticker": "NORTH",
+      "exchange": "Euronext Expand Oslo",
+      "middelborg_link": "Middelborg/Middelboe appears in North Energy top-shareholder disclosures (~1.29% as of 2026-04-07).",
+      "sector": "Industrial investment company (energy-focused)",
+      "current_report": {
+        "period": "2025",
+        "label": "FY 2025",
+        "primary_file": "data/raw/north_energy/2025/north_energy_annual_2025.txt",
+        "primary_pdf": "data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+        "source_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf",
+        "manual_metrics": {
+          "revenue_yoy_pct": 0.8,
+          "organic_growth_pct": 0.8,
+          "gross_margin_yoy_change_pct": -0.5,
+          "ebita_margin_pct": 5.0,
+          "ebitda_margin_pct": 8.0,
+          "interest_coverage_ratio": 2.2,
+          "net_debt_to_ebitda": 3.8,
+          "working_capital_to_revenue_pct": 14.0,
+          "capex_to_depreciation_ratio": 0.9,
+          "order_intake_yoy_pct": null
+        }
+      },
+      "prior_report": {
+        "period": "2024",
+        "label": "FY 2024",
+        "primary_pdf": "data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+        "source_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2025/03/19/641596_North%20Energy%20annual%20report%202024.pdf"
+      }
+    }
+  ]
+}

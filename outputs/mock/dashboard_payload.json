@@ -1,0 +1,39 @@
+{
+  "severity_count": {
+    "critical": 0,
+    "warning": 5,
+    "ok": 0
+  },
+  "top_alerts": [
+    {
+      "rule_id": "cash_conversion_gap",
+      "value": 0.74,
+      "severity": "warning",
+      "message": "Cash conversion below expected quality band."
+    },
+    {
+      "rule_id": "margin_narrative_dissonance",
+      "value": -2.4,
+      "severity": "warning",
+      "message": "Margin deterioration conflicts with optimistic efficiency narrative."
+    },
+    {
+      "rule_id": "related_party_dependency",
+      "value": 10.8,
+      "severity": "warning",
+      "message": "Related-party concentration requires deeper transparency checks."
+    },
+    {
+      "rule_id": "debt_refinancing_pressure",
+      "value": 2.7,
+      "severity": "warning",
+      "message": "Debt service headroom is tightening."
+    },
+    {
+      "rule_id": "inventory_build_up_risk",
+      "value": 11.9,
+      "severity": "warning",
+      "message": "Inventory builds faster than demand signal."
+    }
+  ]
+}

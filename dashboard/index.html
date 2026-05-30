@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investment Red-Flag Scanner</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- Left sticky table of contents -->
+      <aside class="toc-sidebar">
+        <div class="toc-brand">
+          <div class="toc-title">Red-Flag Scanner</div>
+          <div class="toc-sub">deterministic offensive audit</div>
+        </div>
+        <nav class="toc-nav">
+          <a href="#pipeline" class="toc-link" data-target="pipeline">Pipeline</a>
+          <a href="#leaderboard-section" class="toc-link" data-target="leaderboard-section">Findings leaderboard</a>
+          <a href="#landscape-section" class="toc-link" data-target="landscape-section">Logic chain landscape</a>
+          <a href="#matrix-section" class="toc-link" data-target="matrix-section">Triangulation matrix</a>
+          <a href="#drill-section" class="toc-link" data-target="drill-section">Drill into a finding</a>
+          <a href="#pdf-section" class="toc-link" data-target="pdf-section">Embedded source PDF</a>
+        </nav>
+        <div class="toc-meta">
+          <div class="toc-meta-row">
+            <span class="toc-meta-key">Generated</span>
+            <span class="toc-meta-val" id="meta-generated">&mdash;</span>
+          </div>
+          <div class="toc-meta-row">
+            <span class="toc-meta-key">Repo</span>
+            <span class="toc-meta-val" id="meta-repo">&mdash;</span>
+          </div>
+          <div class="toc-meta-row">
+            <span class="toc-meta-key">Pages</span>
+            <span class="toc-meta-val" id="meta-pages">&mdash;</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main content column -->
+      <main class="main-col">
+        <header class="page-head">
+          <h1>Investment Red-Flag Scanner</h1>
+          <p class="page-sub">
+            Deterministic offensive-audit detectors against Middelborg-linked
+            Nordic issuers, with click-through provenance to the originating
+            PDF page.
+          </p>
+        </header>
+
+        <!-- 1. Pipeline overview ============================================= -->
+        <section class="section" id="pipeline">
+          <h2 class="section-title">Pipeline</h2>
+          <p class="section-sub">
+            Five deterministic steps from issuer PDF to traceable finding.
+            Every step's output is auditable on disk.
+          </p>
+          <div class="pipeline-strip">
+            <div class="pipeline-card" style="--card-accent:#3498db;">
+              <div class="pipeline-step">Step 1</div>
+              <div class="pipeline-title">Ingest</div>
+              <div class="pipeline-body">
+                Pull issuer PDFs, extract text + curated metrics,
+                hash + version-pin every byte in
+                <code>sources.json</code>.
+              </div>
+            </div>
+            <div class="pipeline-card" style="--card-accent:#9b59b6;">
+              <div class="pipeline-step">Step 2</div>
+              <div class="pipeline-title">Hypothesise</div>
+              <div class="pipeline-body">
+                Each audit claim is a falsifiable JSON object in
+                <code>hypotheses.json</code> with explicit questions
+                and peer controls.
+              </div>
+            </div>
+            <div class="pipeline-card" style="--card-accent:#1abc9c;">
+              <div class="pipeline-step">Step 3</div>
+              <div class="pipeline-title">Gather evidence</div>
+              <div class="pipeline-body">
+                Independent <em>taps</em> (public-procurement registries,
+                company registry, derived cross-tap analyzers) emit
+                standardised verdicts. Every raw response is cached
+                with sha256.
+              </div>
+            </div>
+            <div class="pipeline-card" style="--card-accent:#e67e22;">
+              <div class="pipeline-step">Step 4</div>
+              <div class="pipeline-title">Triangulate</div>
+              <div class="pipeline-body">
+                A single rule-bound engine combines verdicts. Severity
+                is <strong>derived</strong>, never set by any one tap.
+                Single-source absence cannot drive critical.
+              </div>
+            </div>
+            <div class="pipeline-card" style="--card-accent:#7f8c8d;">
+              <div class="pipeline-step">Step 5</div>
+              <div class="pipeline-title">Trace</div>
+              <div class="pipeline-body">
+                Every finding has a Sankey lane, an auditor narrative
+                paragraph, and a nested argument tree with citations
+                linking back to the cache JSON or the PDF page.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. Findings leaderboard ========================================== -->
+        <section class="section" id="leaderboard-section">
+          <h2 class="section-title">Findings leaderboard</h2>
+          <p class="section-sub">
+            Click the &darr; arrow in front of any company name to drill into
+            that finding's full reasoning chain in the
+            <a href="#drill-section">Drill into a finding</a> section below.
+          </p>
+          <div class="controls">
+            <div class="scope-tabs" role="tablist">
+              <button class="tab active" data-scope="middelborg">Middelborg only</button>
+              <button class="tab" data-scope="all">All companies</button>
+            </div>
+            <div class="filter-block">
+              <label>
+                Severity
+                <select id="filter-severity">
+                  <option value="">all</option>
+                  <option value="critical">critical</option>
+                  <option value="warning">warning</option>
+                  <option value="info">info</option>
+                </select>
+              </label>
+              <label>
+                Rule
+                <select id="filter-rule">
+                  <option value="">all</option>
+                  <option value="narrative_dissonance">narrative_dissonance</option>
+                  <option value="selective_disclosure">selective_disclosure</option>
+                  <option value="lag_causality">lag_causality</option>
+                  <option value="triangulated_hypothesis">triangulated_hypothesis</option>
+                </select>
+              </label>
+              <label>
+                Company
+                <select id="filter-company">
+                  <option value="">all</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="kpis">
+            <div class="kpi kpi-total">
+              <span class="kpi-num" id="kpi-total">0</span>
+              <span class="kpi-label">Total findings</span>
+            </div>
+            <div class="kpi kpi-critical">
+              <span class="kpi-num" id="kpi-critical">0</span>
+              <span class="kpi-label">Critical</span>
+            </div>
+            <div class="kpi kpi-warning">
+              <span class="kpi-num" id="kpi-warning">0</span>
+              <span class="kpi-label">Warning</span>
+            </div>
+            <div class="kpi kpi-info">
+              <span class="kpi-num" id="kpi-info">0</span>
+              <span class="kpi-label">Info</span>
+            </div>
+          </div>
+          <table id="leaderboard">
+            <thead>
+              <tr>
+                <th class="col-drill">&nbsp;</th>
+                <th class="col-rank">#</th>
+                <th class="col-company">Company</th>
+                <th class="col-rule">Rule</th>
+                <th class="col-sev">Severity</th>
+                <th class="col-priority" title="Deterministic ranking heuristic (severity x evidence magnitude x novelty). Not a statistical significance test.">Priority</th>
+                <th class="col-headline">Headline</th>
+                <th class="col-jump">Source</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+          </table>
+          <p class="empty-note" id="empty-note" hidden>
+            No findings match the current filters.
+          </p>
+        </section>
+
+        <!-- 3. Logic chain landscape ========================================= -->
+        <section class="section" id="landscape-section">
+          <h2 class="section-title">Logic chain landscape</h2>
+          <p class="section-sub">
+            Every finding flows left-to-right: <em>issuer &rarr; claim/rule
+            &rarr; falsification question &rarr; tap evidence (verdict)
+            &rarr; derived severity</em>. Click any node to filter the
+            leaderboard above to only those findings whose reasoning passes
+            through that node. Lane width = number of distinct findings
+            using that path.
+          </p>
+          <div id="sankey-host" class="sankey-host">
+            <svg id="sankey-svg"></svg>
+          </div>
+          <p class="sankey-active" id="sankey-active" hidden></p>
+        </section>
+
+        <!-- 4. Triangulation matrix + audit roadmap ========================== -->
+        <section class="section" id="matrix-section">
+          <h2 class="section-title">Triangulation matrix</h2>
+          <p class="section-sub">
+            Every audit hypothesis (rows) cross-checked against every
+            available external data source family (columns). Cell verdicts:
+            &check; confirms, &#9680; partial, &#10007; refutes, &oslash;
+            not_found, &#9702; neutral, ! error, &mdash; not yet queried.
+            A claim is only allowed to graduate to <em>critical</em> when at
+            least two independent taps agree AND every
+            <em>blocking_for_critical</em> falsification question has been
+            addressed.
+          </p>
+          <div class="matrix-wrap">
+            <table id="triangulation-matrix"></table>
+          </div>
+
+          <h3 class="subsection-title">Audit roadmap</h3>
+          <p class="section-sub">
+            Which external data source would maximally raise triangulation
+            coverage across all open hypotheses next. Ranked by total
+            expected information gain. Implementing one of these adds a
+            new column to the matrix above.
+          </p>
+          <ol id="audit-roadmap" class="roadmap-list"></ol>
+        </section>
+
+        <!-- 5. Drill into a finding ========================================== -->
+        <section class="section" id="drill-section">
+          <h2 class="section-title">Drill into a finding</h2>
+          <p class="section-sub">
+            Selected finding from the leaderboard above. Shows the
+            auditor narrative paragraph and full argument tree with
+            clickable citations.
+          </p>
+          <div id="drill-host" class="drill-host">
+            <p class="drill-empty">
+              Click the &darr; arrow in front of any company name in
+              the Findings leaderboard to drill in here.
+            </p>
+          </div>
+        </section>
+
+        <!-- 6. Embedded source PDF =========================================== -->
+        <section class="section" id="pdf-section">
+          <h2 class="section-title">Embedded source PDF</h2>
+          <p class="section-sub">
+            The publisher-hosted PDF for the currently-drilled finding,
+            opened at the matched page when the locator produced one.
+            If your browser blocks cross-origin PDF embedding, use the
+            jump links instead.
+          </p>
+          <div id="pdf-host" class="pdf-host">
+            <p class="drill-empty">Select a finding above to embed its source PDF here.</p>
+          </div>
+        </section>
+
+        <footer>
+          <p>
+            Priority score is a deterministic <strong>ranking heuristic</strong>,
+            not a p-value. Every finding stores its inputs so the ordering
+            can be re-derived or replaced. Source files (and every
+            individual metric value) are anchored to PDF page + bbox and
+            pre-cropped as evidence snippets, with immutable git-commit
+            permalinks when available.
+          </p>
+          <p>
+            Machine-readable:
+            <a href="../outputs/middelborg_leaderboard.json">middelborg_leaderboard.json</a> &middot;
+            <a href="../outputs/leaderboard.json">leaderboard.json</a> &middot;
+            <a href="../outputs/triangulation_matrix.json">triangulation_matrix.json</a> &middot;
+            <a href="../outputs/audit_roadmap.json">audit_roadmap.json</a> &middot;
+            <a href="../outputs/sankey_data.json">sankey_data.json</a> &middot;
+            <a href="../outputs/argument_trees.json">argument_trees.json</a> &middot;
+            <a href="../outputs/narrative_paragraphs.json">narrative_paragraphs.json</a> &middot;
+            <a href="../data/sources.json">sources.json</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

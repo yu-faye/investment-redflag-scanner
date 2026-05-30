@@ -1,0 +1,20 @@
+{
+  "generated_at_utc": "2026-05-30T06:36:03+00:00",
+  "schema_version": 1,
+  "recommended_taps": [
+    {
+      "tap_kind": "subcontractor_directory",
+      "covers_hypotheses": [
+        {
+          "hypothesis_id": "hyp_qben_slam_specialist",
+          "entity": "SLAM Jernbaneteknikk AS",
+          "question_id": "fq_subcontractor_chain",
+          "blocking_for_critical": false
+        }
+      ],
+      "total_information_gain": 0.3,
+      "would_unblock_critical_for": []
+    }
+  ],
+  "hypothesis_count": 5
+}

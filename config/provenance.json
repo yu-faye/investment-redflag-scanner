@@ -1,0 +1,11 @@
+{
+  "version": "0.1",
+  "description": "Provenance config: drives github_blob_url / github_raw_url / GitHub Pages URL construction. Fill github_owner once before running scripts/refresh_provenance.py.",
+  "github_owner": "yu-faye",
+  "github_repo": "investment-redflag-scanner",
+  "branch": "main",
+  "pages_url_template": "https://{owner}.github.io/{repo}/",
+  "blob_url_template": "https://github.com/{owner}/{repo}/blob/{sha}/{path}",
+  "raw_url_template": "https://raw.githubusercontent.com/{owner}/{repo}/{sha}/{path}",
+  "head_blob_url_template": "https://github.com/{owner}/{repo}/blob/{branch}/{path}"
+}

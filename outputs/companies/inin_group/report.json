@@ -1,0 +1,688 @@
+{
+  "company": "inin_group",
+  "name": "ININ Group AS",
+  "ticker": "ININ",
+  "exchange": "Euronext Growth Oslo",
+  "middelborg_link": "Indirectly owned via Qben Infra (Qben holds 94.9% of ININ as of YE2025).",
+  "generated_at_utc": "2026-05-30T06:35:47+00:00",
+  "current_period": "FY 2025",
+  "prior_period": "Q3 2024 Interim",
+  "source_used": {
+    "current_file": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+    "current_kind": "pdf",
+    "prior": {
+      "label": "Q3 2024 Interim",
+      "file": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+      "kind": "pdf"
+    }
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+      "issuer_page": "https://inin.no/reports-and-presentations/",
+      "language": "en",
+      "label": "Annual Report 2025",
+      "period": "2025-FY",
+      "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": {
+      "local_path": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://inin.no/wp-content/uploads/2024/10/Inin-Group-Q3.2024-Interim-Financial-Report_27.10.24_1-signert.pdf",
+      "issuer_page": "https://inin.no/reports-and-presentations/",
+      "language": "en",
+      "label": "Q3 2024 Interim Financial Report",
+      "period": "2024-Q3",
+      "sha256": "09fa1ffc2bee241decfc5381e5f2701b2b7f14fb343cea1b46553e169a34a27a",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    }
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": null,
+    "ebitda_msek": 53.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": 33.8,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": 2025.0,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": 35.0,
+    "ebitda_for_leverage_msek_raw": 63845.0,
+    "interest_coverage_ratio_auto": 1824.14
+  },
+  "auto_metrics_provenance": {
+    "ebitda_msek": {
+      "value": 53.0,
+      "regex_id": "ebitda",
+      "raw_match": "EBITDA  53",
+      "char_span": [
+        30960,
+        30970
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA 53"
+    },
+    "ebita_msek": {
+      "value": 33.8,
+      "regex_id": "ebita",
+      "raw_match": "EBITA: NOK 33.8",
+      "char_span": [
+        5296,
+        5311
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITA: NOK 33.8"
+    },
+    "cash_flow_operating_msek": {
+      "value": 2025.0,
+      "regex_id": "ocf",
+      "raw_match": "Cash flow from operating activities in 2025",
+      "char_span": [
+        10333,
+        10376
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Cash flow from operating activities in 2025"
+    },
+    "interest_expense_msek_raw": {
+      "value": 35.0,
+      "regex_id": "interest_expense_anchor",
+      "raw_match": "Interest expense  7 224  8 524 \n<<<PAGE 35",
+      "char_span": [
+        81134,
+        81176
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Interest expense 7 224 8 524 <<<PAGE 35"
+    },
+    "ebitda_for_leverage_msek_raw": {
+      "value": 63845.0,
+      "regex_id": "ebitda_for_leverage_anchor",
+      "raw_match": "EBITDA  53 124  (6 281)\nDepreciation & Write-off 10,12,13  63 845",
+      "char_span": [
+        30960,
+        31025
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "EBITDA 53 124 (6 281) Depreciation & Write-off 10,12,13 63 845"
+    },
+    "interest_coverage_ratio_auto": {
+      "value": 1824.14,
+      "regex_id": "interest_coverage_derived",
+      "raw_match": "(derived) EBITDA / Interest expense",
+      "char_span": null,
+      "source": "auto_derived",
+      "snippet_anchor": null,
+      "derived_from": [
+        "ebitda_for_leverage_msek_raw",
+        "interest_expense_msek_raw"
+      ]
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": 6.6,
+    "organic_growth_pct": 2.0,
+    "gross_margin_yoy_change_pct": -2.0,
+    "ebita_margin_pct": 4.5,
+    "ebitda_margin_pct": 6.0,
+    "interest_coverage_ratio": 1.5,
+    "net_debt_to_ebitda": 4.2,
+    "working_capital_to_revenue_pct": 18.0,
+    "capex_to_depreciation_ratio": 0.9
+  },
+  "manual_metrics_provenance": {},
+  "merged_metrics_used": {
+    "net_sales_msek": null,
+    "ebitda_msek": 53.0,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": 33.8,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": 2025.0,
+    "ebita_margin_pct": 4.5,
+    "ebitda_margin_pct": 6.0,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": 35.0,
+    "ebitda_for_leverage_msek_raw": 63845.0,
+    "interest_coverage_ratio_auto": 1824.14,
+    "revenue_yoy_pct": 6.6,
+    "organic_growth_pct": 2.0,
+    "gross_margin_yoy_change_pct": -2.0,
+    "interest_coverage_ratio": 1.5,
+    "net_debt_to_ebitda": 4.2,
+    "working_capital_to_revenue_pct": 18.0,
+    "capex_to_depreciation_ratio": 0.9
+  },
+  "metrics_audit": {
+    "capex_to_depreciation_ratio": {
+      "auto": null,
+      "manual": 0.9,
+      "chosen": 0.9,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "cash_flow_operating_msek": {
+      "auto": 2025.0,
+      "manual": null,
+      "chosen": 2025.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": 4.5,
+      "chosen": 4.5,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebita_msek": {
+      "auto": 33.8,
+      "manual": null,
+      "chosen": 33.8,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": 6.0,
+      "chosen": 6.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_msek": {
+      "auto": 53.0,
+      "manual": null,
+      "chosen": 53.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "gross_margin_yoy_change_pct": {
+      "auto": null,
+      "manual": -2.0,
+      "chosen": -2.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": null,
+      "manual": 1.5,
+      "chosen": 1.5,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio_auto": {
+      "auto": 1824.14,
+      "manual": null,
+      "chosen": 1824.14,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": null,
+      "manual": 4.2,
+      "chosen": 4.2,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": 2.0,
+      "chosen": 2.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": 6.6,
+      "chosen": 6.6,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "working_capital_to_revenue_pct": {
+      "auto": null,
+      "manual": 18.0,
+      "chosen": 18.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [
+    {
+      "rule_id": "narrative_dissonance",
+      "family": "resilience",
+      "mention_count": 1,
+      "mention_density_per_10k_chars": 0.08,
+      "term_hits": [
+        {
+          "term": "robust",
+          "count": 1
+        }
+      ],
+      "metric_alignment": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 1.5,
+          "expected_direction": "up",
+          "score": -1
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 4.2,
+          "expected_direction": "down",
+          "score": -1
+        }
+      ],
+      "alignment_score": -1.0,
+      "verdict": "dissonance_detected",
+      "severity": "warning",
+      "claim_excerpt": "robust megatrends.",
+      "claim_excerpt_matched_term": "robust",
+      "follow_up_questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'resilience' qualitatively, yet supporting metrics (interest_coverage_ratio=1.5, net_debt_to_ebitda=4.2) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ],
+      "priority_score": 2.48,
+      "headline": "ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move the opposite way (interest_coverage_ratio=1.5, net_debt_to_ebitda=4.2).",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+          "issuer_page": "https://inin.no/reports-and-presentations/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner",
+          "excerpt_locator": {
+            "page": 4,
+            "bbox": {
+              "x0": 30.0,
+              "top": 328.06039999999996,
+              "x1": 115.09500000000003,
+              "bottom": 338.06039999999996,
+              "width": 85.09500000000003,
+              "height": 10.0
+            },
+            "sentence_context": {
+              "prev": "Inin Group combines private equity ownership and value creation mindset with an industrial approach and long-term ownership perspective.",
+              "match": "The group has chosen a diversified approach with several platforms, all with niche markets that are driven by robust megatrends.",
+              "next": "As of 31 December 2025, Inin Group consisted of three investment platforms: Qben Infra AB Qben Infra is Inin Group’s largest shareholders, owning 94.90% of all outstanding shares at year-end 2025."
+            },
+            "normalised_search": "robust megatrends."
+          },
+          "pdf_page_hit": 4,
+          "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf#page=4",
+          "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf#page=4&search=robust%20megatrends.",
+          "evidence_snippet": {
+            "path": "outputs/evidence/inin_group/e61286d4d063.png",
+            "width": 1588,
+            "height": 61,
+            "size_bytes": 24698,
+            "page": 4,
+            "bbox": {
+              "x0": 30.0,
+              "top": 328.06039999999996,
+              "x1": 115.09500000000003,
+              "bottom": 338.06039999999996,
+              "width": 85.09500000000003,
+              "height": 10.0
+            },
+            "key": "e61286d4d063"
+          }
+        },
+        "prior": {
+          "local_path": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://inin.no/wp-content/uploads/2024/10/Inin-Group-Q3.2024-Interim-Financial-Report_27.10.24_1-signert.pdf",
+          "issuer_page": "https://inin.no/reports-and-presentations/",
+          "language": "en",
+          "label": "Q3 2024 Interim Financial Report",
+          "period": "2024-Q3",
+          "sha256": "09fa1ffc2bee241decfc5381e5f2701b2b7f14fb343cea1b46553e169a34a27a",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      },
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 1.5,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 42,
+            "bbox": {
+              "x0": 152.67140197753906,
+              "top": 151.0118865966797,
+              "x1": 160.05235290527344,
+              "bottom": 156.79408264160156,
+              "width": 7.380950927734375,
+              "height": 5.782196044921875
+            },
+            "matched_str": "1,5",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/inin_group/metric_b587529df2b6.png",
+            "width": 1588,
+            "height": 52,
+            "size_bytes": 13455,
+            "page": 42,
+            "bbox": {
+              "x0": 152.67140197753906,
+              "top": 151.0118865966797,
+              "x1": 160.05235290527344,
+              "bottom": 156.79408264160156,
+              "width": 7.380950927734375,
+              "height": 5.782196044921875
+            },
+            "matched_str": "1,5",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 4.2,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 4,
+            "bbox": {
+              "x0": 431.5425720214844,
+              "top": 443.43890380859375,
+              "x1": 449.568115234375,
+              "bottom": 452.2549133300781,
+              "width": 18.025543212890625,
+              "height": 8.816009521484375
+            },
+            "matched_str": "4.2%",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/inin_group/metric_746c24e44a2b.png",
+            "width": 1588,
+            "height": 59,
+            "size_bytes": 3851,
+            "page": 4,
+            "bbox": {
+              "x0": 431.5425720214844,
+              "top": 443.43890380859375,
+              "x1": 449.568115234375,
+              "bottom": 452.2549133300781,
+              "width": 18.025543212890625,
+              "height": 8.816009521484375
+            },
+            "matched_str": "4.2%",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ]
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "kpi_id": "reclassification:continuing_operations",
+      "previous_period": "Q3 2024 Interim",
+      "current_period": "FY 2025",
+      "previous_hits": 0,
+      "current_hits": 5,
+      "weight": 1.0,
+      "status": "new_classification_introduced",
+      "comparability_warning": false,
+      "verdict": "reclassification_introduced",
+      "severity": "critical",
+      "follow_up_questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:continuing_operations' (previously emphasised in Q3 2024 Interim) not reported in FY 2025? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ],
+      "priority_score": 10.5,
+      "headline": "ININ Group AS: new 'continuing_operations' framing introduced in FY 2025, absent in Q3 2024 Interim.",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+          "issuer_page": "https://inin.no/reports-and-presentations/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        },
+        "prior": {
+          "local_path": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://inin.no/wp-content/uploads/2024/10/Inin-Group-Q3.2024-Interim-Financial-Report_27.10.24_1-signert.pdf",
+          "issuer_page": "https://inin.no/reports-and-presentations/",
+          "language": "en",
+          "label": "Q3 2024 Interim Financial Report",
+          "period": "2024-Q3",
+          "sha256": "09fa1ffc2bee241decfc5381e5f2701b2b7f14fb343cea1b46553e169a34a27a",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "kpi_id": "reclassification:held_for_sale",
+      "previous_period": "Q3 2024 Interim",
+      "current_period": "FY 2025",
+      "previous_hits": 0,
+      "current_hits": 20,
+      "weight": 1.0,
+      "status": "new_classification_introduced",
+      "comparability_warning": false,
+      "verdict": "reclassification_introduced",
+      "severity": "critical",
+      "follow_up_questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:held_for_sale' (previously emphasised in Q3 2024 Interim) not reported in FY 2025? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ],
+      "priority_score": 10.5,
+      "headline": "ININ Group AS: new 'held_for_sale' framing introduced in FY 2025, absent in Q3 2024 Interim.",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+          "issuer_page": "https://inin.no/reports-and-presentations/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        },
+        "prior": {
+          "local_path": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://inin.no/wp-content/uploads/2024/10/Inin-Group-Q3.2024-Interim-Financial-Report_27.10.24_1-signert.pdf",
+          "issuer_page": "https://inin.no/reports-and-presentations/",
+          "language": "en",
+          "label": "Q3 2024 Interim Financial Report",
+          "period": "2024-Q3",
+          "sha256": "09fa1ffc2bee241decfc5381e5f2701b2b7f14fb343cea1b46553e169a34a27a",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    },
+    {
+      "rule_id": "selective_disclosure",
+      "kpi_id": "reclassification:discontinued_operations",
+      "previous_period": "Q3 2024 Interim",
+      "current_period": "FY 2025",
+      "previous_hits": 0,
+      "current_hits": 10,
+      "weight": 1.0,
+      "status": "new_classification_introduced",
+      "comparability_warning": false,
+      "verdict": "reclassification_introduced",
+      "severity": "critical",
+      "follow_up_questions": [
+        {
+          "axis": "disclosure_completeness",
+          "text": "Why was 'reclassification:discontinued_operations' (previously emphasised in Q3 2024 Interim) not reported in FY 2025? Please disclose the current value or the cessation rationale."
+        },
+        {
+          "axis": "cause_probing",
+          "text": "Did the KPI deteriorate materially? Provide the current value and the YoY change you would have reported."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How do peers handle this KPI in their latest filings? Is omission consistent with industry practice?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "Will this KPI be restored in the next filing under a standardised definition? Please commit a timeline."
+        }
+      ],
+      "priority_score": 10.5,
+      "headline": "ININ Group AS: new 'discontinued_operations' framing introduced in FY 2025, absent in Q3 2024 Interim.",
+      "provenance": {
+        "current": {
+          "local_path": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+          "issuer_page": "https://inin.no/reports-and-presentations/",
+          "language": "en",
+          "label": "Annual Report 2025",
+          "period": "2025-FY",
+          "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        },
+        "prior": {
+          "local_path": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "kind": "local_pdf",
+          "issuer_url": "https://inin.no/wp-content/uploads/2024/10/Inin-Group-Q3.2024-Interim-Financial-Report_27.10.24_1-signert.pdf",
+          "issuer_page": "https://inin.no/reports-and-presentations/",
+          "language": "en",
+          "label": "Q3 2024 Interim Financial Report",
+          "period": "2024-Q3",
+          "sha256": "09fa1ffc2bee241decfc5381e5f2701b2b7f14fb343cea1b46553e169a34a27a",
+          "git_sha": null,
+          "github_blob_url": null,
+          "github_raw_url": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "repo_head_sha": null,
+          "owner": "REPLACE_ME",
+          "repo": "investment-redflag-scanner"
+        }
+      }
+    }
+  ],
+  "severity_tally": {
+    "critical": 3,
+    "warning": 1,
+    "info": 0
+  },
+  "findings_count": 4
+}

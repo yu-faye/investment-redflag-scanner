@@ -1,0 +1,61 @@
+{
+  "version": "0.2",
+  "description": "Map narrative keyword families to financial metrics, with per-metric expected direction so high-bad metrics like leverage can be tested correctly. Bilingual EN+NO+SV terms.",
+  "families": {
+    "growth": {
+      "claim_terms": [
+        "strong growth", "growth", "expansion", "scaling",
+        "vekst", "sterk vekst", "tillvxt", "stark tillvxt", "okning", "okte"
+      ],
+      "supporting_metrics": [
+        {"metric": "revenue_yoy_pct", "expected_direction": "up"},
+        {"metric": "organic_growth_pct", "expected_direction": "up"}
+      ]
+    },
+    "efficiency": {
+      "claim_terms": [
+        "efficiency", "operational discipline", "cost control",
+        "margin improvement", "operating leverage",
+        "effektivitet", "kostnadskontroll", "marginforbedring",
+        "effektivisering", "marginforbattring"
+      ],
+      "supporting_metrics": [
+        {"metric": "gross_margin_yoy_change_pct", "expected_direction": "up"},
+        {"metric": "ebita_margin_pct", "expected_direction": "up"}
+      ]
+    },
+    "resilience": {
+      "claim_terms": [
+        "resilient", "robust balance", "strong balance sheet",
+        "well capitalised", "well capitalized", "robust",
+        "solid finansiell stilling", "stark balansrakning"
+      ],
+      "supporting_metrics": [
+        {"metric": "interest_coverage_ratio", "expected_direction": "up", "neutral_band": [2.5, 99]},
+        {"metric": "net_debt_to_ebitda", "expected_direction": "down", "neutral_band": [0, 3.5]}
+      ]
+    },
+    "discipline": {
+      "claim_terms": [
+        "capital discipline", "selective acquisitions",
+        "disciplined capital allocation", "prudent investment",
+        "selektive oppkjop", "selektiva forvarv", "disiplinert kapitalbruk"
+      ],
+      "supporting_metrics": [
+        {"metric": "working_capital_to_revenue_pct", "expected_direction": "down", "neutral_band": [0, 22]},
+        {"metric": "capex_to_depreciation_ratio", "expected_direction": "neutral", "neutral_band": [0.7, 1.3]}
+      ]
+    },
+    "demand": {
+      "claim_terms": [
+        "resilient demand", "strong demand", "robust demand",
+        "favourable conditions", "favorable conditions",
+        "sterk etterspørsel", "stark efterfragan", "gunstig marked"
+      ],
+      "supporting_metrics": [
+        {"metric": "revenue_yoy_pct", "expected_direction": "up"},
+        {"metric": "order_intake_yoy_pct", "expected_direction": "up"}
+      ]
+    }
+  }
+}

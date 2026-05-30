@@ -1,0 +1,40 @@
+{
+  "version": "0.1",
+  "description": "Minimum business-lag windows between a stated management action and an observable metric impact. Lags in quarters.",
+  "default_min_lag_quarters": 1,
+  "default_max_lag_quarters": 6,
+  "claim_types": {
+    "acquisition_completed": {
+      "min_lag_quarters": 1,
+      "max_lag_quarters": 4,
+      "expected_metrics": ["revenue_yoy_pct", "ebita_margin_pct"]
+    },
+    "listing_completed": {
+      "min_lag_quarters": 0,
+      "max_lag_quarters": 2,
+      "expected_metrics": ["interest_coverage_ratio", "cash_flow_operating"]
+    },
+    "cost_program_launched": {
+      "min_lag_quarters": 1,
+      "max_lag_quarters": 4,
+      "expected_metrics": ["ebita_margin_pct", "gross_margin_yoy_change_pct"]
+    },
+    "divestment_initiated": {
+      "min_lag_quarters": 1,
+      "max_lag_quarters": 4,
+      "expected_metrics": ["net_debt_to_ebitda", "cash_flow_operating"]
+    },
+    "product_launched": {
+      "min_lag_quarters": 2,
+      "max_lag_quarters": 6,
+      "expected_metrics": ["revenue_yoy_pct", "order_intake_yoy_pct"]
+    },
+    "bond_issued": {
+      "min_lag_quarters": 0,
+      "max_lag_quarters": 1,
+      "expected_metrics": ["interest_coverage_ratio", "cash_flow_operating"]
+    }
+  },
+  "action_verbs_regex": "(?i)\\b(acquir(?:ed|es|ing)|completed|launched|listed|issued|signed|initiated|divest(?:ed|ing)|merged|consolidat(?:ed|ing))\\b",
+  "period_anchor_regex": "(?i)\\b(Q[1-4]\\s*20\\d{2}|(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+20\\d{2}|first quarter|second quarter|third quarter|fourth quarter|January|February|March|April|May|June|July|August|September|October|November|December)\\b"
+}

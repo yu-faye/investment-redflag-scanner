@@ -1,0 +1,25 @@
+Semantic-Numerical Dissonance Prompt Set (Qben Offensive Audit)
+
+1) Narrative-vs-margin check
+"Management states operating discipline and pricing power improved. Compare this claim against gross_margin_yoy_change_pct and explain any contradiction."
+
+2) Growth quality check
+"If revenue growth is highlighted as broad-based, test consistency with cash_conversion_ratio and receivables pressure indicators."
+
+3) Working capital story check
+"When annual report describes healthy demand, evaluate whether working_capital_to_revenue_pct suggests channel stuffing or payment stretch."
+
+4) Debt confidence check
+"If text claims resilient balance sheet, verify against interest_coverage_ratio and short_term_debt_share_pct trends."
+
+5) Tax explanation credibility
+"Evaluate whether effective tax rate movement appears structural or opportunistic based on jurisdiction explanation in note text."
+
+6) Related-party opacity check
+"Detect language patterns that downplay related-party transactions despite elevated related_party_revenue_share_pct."
+
+7) Capex sustainability check
+"If management communicates expansion ambitions, test whether capex_to_depreciation_ratio supports that narrative."
+
+8) Inventory realism check
+"Cross-check demand confidence statements with inventory_growth_minus_revenue_growth_pct and discuss potential sell-through risk."

@@ -1,0 +1,120 @@
+{
+  "company": "qben_infra_2024",
+  "follow_ups": [
+    {
+      "rule_id": "lag_causality",
+      "severity": "info",
+      "summary": "mechanical_consolidation_effect",
+      "questions": [
+        {
+          "axis": "cause_probing",
+          "text": "If 'acquisition_completed' was completed at November, what specific operational mechanism produced the metric impact already by Q4 2024? Provide the transmission steps."
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Quantify the integration, restructuring, or transition costs absorbed during the same period; reconcile them against the asserted positive impact."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "How long did comparable Nordic peers take to realise similar impact from the same action type? Please cite at least one precedent."
+        },
+        {
+          "axis": "cash_cross_check",
+          "text": "Show the cash flow path supporting this impact: working capital change, receivables, and operating cash flow for the same period."
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "severity": "critical",
+      "summary": "dissonance_detected",
+      "questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'growth' qualitatively, yet supporting metrics (revenue_yoy_pct=-2.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "severity": "warning",
+      "summary": "dissonance_detected",
+      "questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'resilience' qualitatively, yet supporting metrics (interest_coverage_ratio=1.2, net_debt_to_ebitda=8.5) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "severity": "info",
+      "summary": "weak_support",
+      "questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'discipline' qualitatively, yet supporting metrics (working_capital_to_revenue_pct=25.0, capex_to_depreciation_ratio=1.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ]
+    },
+    {
+      "rule_id": "narrative_dissonance",
+      "severity": "warning",
+      "summary": "dissonance_detected",
+      "questions": [
+        {
+          "axis": "cause_probing",
+          "text": "Management describes 'demand' qualitatively, yet supporting metrics (revenue_yoy_pct=-2.0) move against it. Which specific events explain the gap?"
+        },
+        {
+          "axis": "cost_probing",
+          "text": "Was the narrative engineered by reclassification or by adjustments (e.g., 'continuing operations', 'adjusted EBITDA')? Provide the reconciliation."
+        },
+        {
+          "axis": "peer_benchmarking",
+          "text": "Compare the same metric YoY change against at least two closest listed peers. Is the gap company-specific or industry-wide?"
+        },
+        {
+          "axis": "disclosure_completeness",
+          "text": "List the underlying segment metrics that would prove the narrative. Were they disclosed at the same granularity as last year?"
+        }
+      ]
+    }
+  ]
+}

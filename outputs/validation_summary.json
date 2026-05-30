@@ -1,0 +1,126 @@
+{
+  "runs": [
+    {
+      "company": "qben_infra",
+      "findings_count": 2,
+      "severity_tally": {
+        "critical": 2,
+        "warning": 0,
+        "info": 0
+      },
+      "report_path": "outputs/companies/qben_infra/report.json",
+      "follow_ups_path": "outputs/companies/qben_infra/follow_ups.json"
+    },
+    {
+      "company": "qben_infra_annual_2025",
+      "findings_count": 4,
+      "severity_tally": {
+        "critical": 3,
+        "warning": 1,
+        "info": 0
+      },
+      "report_path": "outputs/companies/qben_infra_annual_2025/report.json",
+      "follow_ups_path": "outputs/companies/qben_infra_annual_2025/follow_ups.json"
+    },
+    {
+      "company": "qben_infra_2024",
+      "findings_count": 9,
+      "severity_tally": {
+        "critical": 4,
+        "warning": 2,
+        "info": 3
+      },
+      "report_path": "outputs/companies/qben_infra_2024/report.json",
+      "follow_ups_path": "outputs/companies/qben_infra_2024/follow_ups.json"
+    },
+    {
+      "company": "inin_group",
+      "findings_count": 4,
+      "severity_tally": {
+        "critical": 3,
+        "warning": 1,
+        "info": 0
+      },
+      "report_path": "outputs/companies/inin_group/report.json",
+      "follow_ups_path": "outputs/companies/inin_group/follow_ups.json"
+    },
+    {
+      "company": "techstep",
+      "findings_count": 6,
+      "severity_tally": {
+        "critical": 4,
+        "warning": 1,
+        "info": 1
+      },
+      "report_path": "outputs/companies/techstep/report.json",
+      "follow_ups_path": "outputs/companies/techstep/follow_ups.json"
+    },
+    {
+      "company": "otovo",
+      "findings_count": 4,
+      "severity_tally": {
+        "critical": 3,
+        "warning": 1,
+        "info": 0
+      },
+      "report_path": "outputs/companies/otovo/report.json",
+      "follow_ups_path": "outputs/companies/otovo/follow_ups.json"
+    },
+    {
+      "company": "norwegian_air",
+      "findings_count": 2,
+      "severity_tally": {
+        "critical": 1,
+        "warning": 1,
+        "info": 0
+      },
+      "report_path": "outputs/companies/norwegian_air/report.json",
+      "follow_ups_path": "outputs/companies/norwegian_air/follow_ups.json"
+    },
+    {
+      "company": "norse_atlantic",
+      "findings_count": 2,
+      "severity_tally": {
+        "critical": 2,
+        "warning": 0,
+        "info": 0
+      },
+      "report_path": "outputs/companies/norse_atlantic/report.json",
+      "follow_ups_path": "outputs/companies/norse_atlantic/follow_ups.json"
+    },
+    {
+      "company": "mowi",
+      "findings_count": 0,
+      "severity_tally": {
+        "critical": 0,
+        "warning": 0,
+        "info": 0
+      },
+      "report_path": "outputs/companies/mowi/report.json",
+      "follow_ups_path": "outputs/companies/mowi/follow_ups.json"
+    },
+    {
+      "company": "k33",
+      "findings_count": 0,
+      "severity_tally": {
+        "critical": 0,
+        "warning": 0,
+        "info": 0
+      },
+      "report_path": "outputs/companies/k33/report.json",
+      "follow_ups_path": "outputs/companies/k33/follow_ups.json"
+    },
+    {
+      "company": "north_energy",
+      "findings_count": 1,
+      "severity_tally": {
+        "critical": 0,
+        "warning": 0,
+        "info": 1
+      },
+      "report_path": "outputs/companies/north_energy/report.json",
+      "follow_ups_path": "outputs/companies/north_energy/follow_ups.json"
+    }
+  ],
+  "generated_at_utc": "2026-05-30T06:35:23+00:00"
+}

@@ -1,0 +1,1189 @@
+{
+  "generated_at_utc": "2026-05-30T06:36:03+00:00",
+  "schema_version": 1,
+  "finding_count": 34,
+  "nodes": [
+    {
+      "id": "issuer:ININ Group AS",
+      "name": "ININ Group AS",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "issuer:Norse Atlantic Airways ASA",
+      "name": "Norse Atlantic Airways ASA",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "issuer:North Energy ASA",
+      "name": "North Energy ASA",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "issuer:Norwegian Air Shuttle ASA",
+      "name": "Norwegian Air Shuttle ASA",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "issuer:Otovo ASA",
+      "name": "Otovo ASA",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "issuer:Qben Infra AB",
+      "name": "Qben Infra AB",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "issuer:Qben Infra AB (FY2024 standalone attack)",
+      "name": "Qben Infra AB (FY2024 standalone attack)",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "issuer:Qben Infra AB (FY2025 standalone attack)",
+      "name": "Qben Infra AB (FY2025 standalone attack)",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "issuer:Techstep ASA",
+      "name": "Techstep ASA",
+      "layer": 0,
+      "category": "issuer",
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "claim:hyp_qben_banefjell_established",
+      "name": "Banefjell AS | hyp_qben_banefjell_established",
+      "layer": 1,
+      "category": "claim",
+      "color": "#3498db"
+    },
+    {
+      "id": "claim:hyp_qben_nordnes_narvik_player",
+      "name": "Nordnes Narvik AS | hyp_qben_nordnes_narvik_player",
+      "layer": 1,
+      "category": "claim",
+      "color": "#3498db"
+    },
+    {
+      "id": "claim:hyp_qben_q1_2026_revenue_pipeline",
+      "name": "Qben Infra AB | hyp_qben_q1_2026_revenue_pipeline",
+      "layer": 1,
+      "category": "claim",
+      "color": "#3498db"
+    },
+    {
+      "id": "claim:hyp_qben_slam_specialist",
+      "name": "SLAM Jernbaneteknikk AS | hyp_qben_slam_specialist",
+      "layer": 1,
+      "category": "claim",
+      "color": "#3498db"
+    },
+    {
+      "id": "claim:hyp_qben_team_bygg_player",
+      "name": "Team Bygg AS | hyp_qben_team_bygg_player",
+      "layer": 1,
+      "category": "claim",
+      "color": "#3498db"
+    },
+    {
+      "id": "claim:rule|lag_causality",
+      "name": "lag_causality",
+      "layer": 1,
+      "category": "claim",
+      "color": "#3498db"
+    },
+    {
+      "id": "claim:rule|narrative_dissonance",
+      "name": "narrative_dissonance",
+      "layer": 1,
+      "category": "claim",
+      "color": "#3498db"
+    },
+    {
+      "id": "claim:rule|selective_disclosure",
+      "name": "selective_disclosure",
+      "layer": 1,
+      "category": "claim",
+      "color": "#3498db"
+    },
+    {
+      "id": "question:fq_direct_prime_contracts",
+      "name": "fq_direct_prime_contracts",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:fq_entity_age_and_existence",
+      "name": "fq_entity_age_and_existence",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:fq_entity_identity_unambiguous",
+      "name": "fq_entity_identity_unambiguous",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:fq_eu_threshold_contracts",
+      "name": "fq_eu_threshold_contracts",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:fq_explanatory_narrative_consistent",
+      "name": "fq_explanatory_narrative_consistent",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:fq_industry_classification_match",
+      "name": "fq_industry_classification_match",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:fq_revenue_backed_by_external_awards",
+      "name": "fq_revenue_backed_by_external_awards",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:lag_causality_signal",
+      "name": "lag_causality signal",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:narrative_dissonance_signal",
+      "name": "narrative_dissonance signal",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "question:selective_disclosure_signal",
+      "name": "selective_disclosure signal",
+      "layer": 2,
+      "category": "question",
+      "color": "#9b59b6"
+    },
+    {
+      "id": "evidence:brreg|confirms",
+      "name": "brreg = confirms",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "evidence:brreg|refutes",
+      "name": "brreg = refutes",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "evidence:derived_explanatory_slippage|refutes",
+      "name": "derived_explanatory_slippage = refutes",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "evidence:derived_revenue_support|refutes",
+      "name": "derived_revenue_support = refutes",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "evidence:doffin|confirms",
+      "name": "doffin = confirms",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "evidence:doffin|not_found",
+      "name": "doffin = not_found",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#e67e22"
+    },
+    {
+      "id": "evidence:doffin|partial",
+      "name": "doffin = partial",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#f1c40f"
+    },
+    {
+      "id": "evidence:doffin|refutes",
+      "name": "doffin = refutes",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#e74c3c"
+    },
+    {
+      "id": "evidence:lag_causality|mechanical_consolidation_effect",
+      "name": "lag_causality = mechanical_consolidation_effect",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "evidence:narrative_dissonance|dissonance_detected",
+      "name": "narrative_dissonance = dissonance_detected",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "evidence:narrative_dissonance|weak_support",
+      "name": "narrative_dissonance = weak_support",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "evidence:selective_disclosure|disclosure_drop",
+      "name": "selective_disclosure = disclosure_drop",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "evidence:selective_disclosure|reclassification_introduced",
+      "name": "selective_disclosure = reclassification_introduced",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#1abc9c"
+    },
+    {
+      "id": "evidence:ted|confirms",
+      "name": "ted = confirms",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#2ecc71"
+    },
+    {
+      "id": "evidence:ted|not_found",
+      "name": "ted = not_found",
+      "layer": 3,
+      "category": "evidence",
+      "color": "#e67e22"
+    },
+    {
+      "id": "severity:critical",
+      "name": "CRITICAL",
+      "layer": 4,
+      "category": "severity",
+      "color": "#c0392b"
+    },
+    {
+      "id": "severity:info",
+      "name": "INFO",
+      "layer": 4,
+      "category": "severity",
+      "color": "#3498db"
+    },
+    {
+      "id": "severity:warning",
+      "name": "WARNING",
+      "layer": 4,
+      "category": "severity",
+      "color": "#f39c12"
+    }
+  ],
+  "links": [
+    {
+      "source": "issuer:Qben Infra AB",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra|narrative_dissonance|Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the"
+      ]
+    },
+    {
+      "source": "claim:rule|narrative_dissonance",
+      "target": "question:narrative_dissonance_signal",
+      "value": 20.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "inin_group|narrative_dissonance|ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move",
+        "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting",
+        "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting",
+        "north_energy|narrative_dissonance|North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics m",
+        "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting",
+        "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting ",
+        "otovo|narrative_dissonance|Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opp",
+        "otovo|narrative_dissonance|Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the",
+        "otovo|narrative_dissonance|Otovo ASA: 'growth' narrative cited 46 times, but supporting metrics move the op",
+        "otovo|narrative_dissonance|Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but ",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, ",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'growth' narrative cited 34 times, but",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, ",
+        "qben_infra_annual_2025|narrative_dissonance|Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, ",
+        "qben_infra|narrative_dissonance|Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the",
+        "techstep|narrative_dissonance|Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move ",
+        "techstep|narrative_dissonance|Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move",
+        "techstep|narrative_dissonance|Techstep ASA: 'growth' narrative cited 57 times, but supporting metrics move the",
+        "techstep|narrative_dissonance|Techstep ASA: 'resilience' narrative cited 10 times, but supporting metrics move"
+      ]
+    },
+    {
+      "source": "question:narrative_dissonance_signal",
+      "target": "evidence:narrative_dissonance|dissonance_detected",
+      "value": 15.0,
+      "verdict": "dissonance_detected",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "inin_group|narrative_dissonance|ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move",
+        "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting",
+        "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting",
+        "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting ",
+        "otovo|narrative_dissonance|Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opp",
+        "otovo|narrative_dissonance|Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the",
+        "otovo|narrative_dissonance|Otovo ASA: 'growth' narrative cited 46 times, but supporting metrics move the op",
+        "otovo|narrative_dissonance|Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but ",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'growth' narrative cited 34 times, but",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, ",
+        "qben_infra_annual_2025|narrative_dissonance|Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, ",
+        "qben_infra|narrative_dissonance|Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the",
+        "techstep|narrative_dissonance|Techstep ASA: 'growth' narrative cited 57 times, but supporting metrics move the",
+        "techstep|narrative_dissonance|Techstep ASA: 'resilience' narrative cited 10 times, but supporting metrics move"
+      ]
+    },
+    {
+      "source": "evidence:narrative_dissonance|dissonance_detected",
+      "target": "severity:critical",
+      "value": 11.0,
+      "verdict": "dissonance_detected",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting",
+        "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting",
+        "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting ",
+        "otovo|narrative_dissonance|Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the",
+        "otovo|narrative_dissonance|Otovo ASA: 'growth' narrative cited 46 times, but supporting metrics move the op",
+        "otovo|narrative_dissonance|Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'growth' narrative cited 34 times, but",
+        "qben_infra_annual_2025|narrative_dissonance|Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, ",
+        "qben_infra|narrative_dissonance|Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the",
+        "techstep|narrative_dissonance|Techstep ASA: 'growth' narrative cited 57 times, but supporting metrics move the",
+        "techstep|narrative_dissonance|Techstep ASA: 'resilience' narrative cited 10 times, but supporting metrics move"
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB",
+      "target": "claim:hyp_qben_q1_2026_revenue_pipeline",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_q1_2026_revenue_pipeline",
+      "target": "question:fq_revenue_backed_by_external_awards",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "question:fq_revenue_backed_by_external_awards",
+      "target": "evidence:derived_revenue_support|refutes",
+      "value": 0.333,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "evidence:derived_revenue_support|refutes",
+      "target": "severity:critical",
+      "value": 0.333,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_q1_2026_revenue_pipeline",
+      "target": "question:fq_explanatory_narrative_consistent",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "question:fq_explanatory_narrative_consistent",
+      "target": "evidence:derived_explanatory_slippage|refutes",
+      "value": 0.333,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "evidence:derived_explanatory_slippage|refutes",
+      "target": "severity:critical",
+      "value": 0.333,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_q1_2026_revenue_pipeline",
+      "target": "question:fq_eu_threshold_contracts",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "question:fq_eu_threshold_contracts",
+      "target": "evidence:ted|not_found",
+      "value": 0.333,
+      "verdict": "not_found",
+      "color": "#e67e22",
+      "finding_keys": [
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "evidence:ted|not_found",
+      "target": "severity:critical",
+      "value": 0.792,
+      "verdict": "not_found",
+      "color": "#e67e22",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player",
+        "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline"
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB (FY2025 standalone attack)",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_annual_2025|narrative_dissonance|Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, "
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB (FY2025 standalone attack)",
+      "target": "claim:rule|selective_disclosure",
+      "value": 3.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in ",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'continuing_operations' framing in",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'discontinued_operations' framing "
+      ]
+    },
+    {
+      "source": "claim:rule|selective_disclosure",
+      "target": "question:selective_disclosure_signal",
+      "value": 8.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "inin_group|selective_disclosure|ININ Group AS: new 'continuing_operations' framing introduced in FY 2025, absent",
+        "inin_group|selective_disclosure|ININ Group AS: new 'discontinued_operations' framing introduced in FY 2025, abse",
+        "inin_group|selective_disclosure|ININ Group AS: new 'held_for_sale' framing introduced in FY 2025, absent in Q3 2",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in ",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'continuing_operations' framing in",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'discontinued_operations' framing ",
+        "techstep|selective_disclosure|Techstep ASA: new 'discontinued_operations' framing introduced in FY 2025, absen",
+        "techstep|selective_disclosure|Techstep ASA: new 'held_for_sale' framing introduced in FY 2025, absent in FY 20"
+      ]
+    },
+    {
+      "source": "question:selective_disclosure_signal",
+      "target": "evidence:selective_disclosure|reclassification_introduced",
+      "value": 7.0,
+      "verdict": "reclassification_introduced",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "inin_group|selective_disclosure|ININ Group AS: new 'continuing_operations' framing introduced in FY 2025, absent",
+        "inin_group|selective_disclosure|ININ Group AS: new 'discontinued_operations' framing introduced in FY 2025, abse",
+        "inin_group|selective_disclosure|ININ Group AS: new 'held_for_sale' framing introduced in FY 2025, absent in Q3 2",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'continuing_operations' framing in",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'discontinued_operations' framing ",
+        "techstep|selective_disclosure|Techstep ASA: new 'discontinued_operations' framing introduced in FY 2025, absen",
+        "techstep|selective_disclosure|Techstep ASA: new 'held_for_sale' framing introduced in FY 2025, absent in FY 20"
+      ]
+    },
+    {
+      "source": "evidence:selective_disclosure|reclassification_introduced",
+      "target": "severity:critical",
+      "value": 7.0,
+      "verdict": "reclassification_introduced",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "inin_group|selective_disclosure|ININ Group AS: new 'continuing_operations' framing introduced in FY 2025, absent",
+        "inin_group|selective_disclosure|ININ Group AS: new 'discontinued_operations' framing introduced in FY 2025, abse",
+        "inin_group|selective_disclosure|ININ Group AS: new 'held_for_sale' framing introduced in FY 2025, absent in Q3 2",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'continuing_operations' framing in",
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'discontinued_operations' framing ",
+        "techstep|selective_disclosure|Techstep ASA: new 'discontinued_operations' framing introduced in FY 2025, absen",
+        "techstep|selective_disclosure|Techstep ASA: new 'held_for_sale' framing introduced in FY 2025, absent in FY 20"
+      ]
+    },
+    {
+      "source": "question:selective_disclosure_signal",
+      "target": "evidence:selective_disclosure|disclosure_drop",
+      "value": 1.0,
+      "verdict": "disclosure_drop",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in "
+      ]
+    },
+    {
+      "source": "evidence:selective_disclosure|disclosure_drop",
+      "target": "severity:warning",
+      "value": 1.0,
+      "verdict": "disclosure_drop",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in "
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB (FY2024 standalone attack)",
+      "target": "claim:rule|lag_causality",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|lag_causality|Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attribu"
+      ]
+    },
+    {
+      "source": "claim:rule|lag_causality",
+      "target": "question:lag_causality_signal",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|lag_causality|Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attribu"
+      ]
+    },
+    {
+      "source": "question:lag_causality_signal",
+      "target": "evidence:lag_causality|mechanical_consolidation_effect",
+      "value": 1.0,
+      "verdict": "mechanical_consolidation_effect",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|lag_causality|Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attribu"
+      ]
+    },
+    {
+      "source": "evidence:lag_causality|mechanical_consolidation_effect",
+      "target": "severity:info",
+      "value": 1.0,
+      "verdict": "mechanical_consolidation_effect",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|lag_causality|Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attribu"
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB (FY2024 standalone attack)",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 4.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but ",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, ",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'growth' narrative cited 34 times, but",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, "
+      ]
+    },
+    {
+      "source": "evidence:narrative_dissonance|dissonance_detected",
+      "target": "severity:warning",
+      "value": 4.0,
+      "verdict": "dissonance_detected",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "inin_group|narrative_dissonance|ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move",
+        "otovo|narrative_dissonance|Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opp",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but ",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, "
+      ]
+    },
+    {
+      "source": "question:narrative_dissonance_signal",
+      "target": "evidence:narrative_dissonance|weak_support",
+      "value": 5.0,
+      "verdict": "weak_support",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "north_energy|narrative_dissonance|North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics m",
+        "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, ",
+        "techstep|narrative_dissonance|Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move ",
+        "techstep|narrative_dissonance|Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move"
+      ]
+    },
+    {
+      "source": "evidence:narrative_dissonance|weak_support",
+      "target": "severity:info",
+      "value": 3.0,
+      "verdict": "weak_support",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "north_energy|narrative_dissonance|North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics m",
+        "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, ",
+        "techstep|narrative_dissonance|Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move "
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB (FY2024 standalone attack)",
+      "target": "claim:hyp_qben_slam_specialist",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_slam_specialist",
+      "target": "question:fq_direct_prime_contracts",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "question:fq_direct_prime_contracts",
+      "target": "evidence:doffin|not_found",
+      "value": 0.167,
+      "verdict": "not_found",
+      "color": "#e67e22",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "evidence:doffin|not_found",
+      "target": "severity:critical",
+      "value": 0.167,
+      "verdict": "not_found",
+      "color": "#e67e22",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "question:fq_direct_prime_contracts",
+      "target": "evidence:ted|not_found",
+      "value": 0.458,
+      "verdict": "not_found",
+      "color": "#e67e22",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_slam_specialist",
+      "target": "question:fq_entity_age_and_existence",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "question:fq_entity_age_and_existence",
+      "target": "evidence:brreg|confirms",
+      "value": 0.667,
+      "verdict": "confirms",
+      "color": "#2ecc71",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "evidence:brreg|confirms",
+      "target": "severity:critical",
+      "value": 0.667,
+      "verdict": "confirms",
+      "color": "#2ecc71",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_slam_specialist",
+      "target": "question:fq_industry_classification_match",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "question:fq_industry_classification_match",
+      "target": "evidence:brreg|confirms",
+      "value": 0.667,
+      "verdict": "confirms",
+      "color": "#2ecc71",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist"
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB (FY2024 standalone attack)",
+      "target": "claim:hyp_qben_banefjell_established",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_banefjell_established",
+      "target": "question:fq_direct_prime_contracts",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "question:fq_direct_prime_contracts",
+      "target": "evidence:doffin|confirms",
+      "value": 0.167,
+      "verdict": "confirms",
+      "color": "#2ecc71",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "evidence:doffin|confirms",
+      "target": "severity:info",
+      "value": 0.167,
+      "verdict": "confirms",
+      "color": "#2ecc71",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "question:fq_direct_prime_contracts",
+      "target": "evidence:ted|confirms",
+      "value": 0.167,
+      "verdict": "confirms",
+      "color": "#2ecc71",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "evidence:ted|confirms",
+      "target": "severity:info",
+      "value": 0.167,
+      "verdict": "confirms",
+      "color": "#2ecc71",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_banefjell_established",
+      "target": "question:fq_entity_age_and_existence",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "evidence:brreg|confirms",
+      "target": "severity:info",
+      "value": 0.667,
+      "verdict": "confirms",
+      "color": "#2ecc71",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_banefjell_established",
+      "target": "question:fq_industry_classification_match",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established"
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB (FY2024 standalone attack)",
+      "target": "claim:hyp_qben_team_bygg_player",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_team_bygg_player",
+      "target": "question:fq_direct_prime_contracts",
+      "value": 0.25,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "question:fq_direct_prime_contracts",
+      "target": "evidence:doffin|refutes",
+      "value": 0.125,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "evidence:doffin|refutes",
+      "target": "severity:critical",
+      "value": 0.125,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_team_bygg_player",
+      "target": "question:fq_entity_age_and_existence",
+      "value": 0.25,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "question:fq_entity_age_and_existence",
+      "target": "evidence:brreg|refutes",
+      "value": 0.583,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "evidence:brreg|refutes",
+      "target": "severity:critical",
+      "value": 1.417,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_team_bygg_player",
+      "target": "question:fq_industry_classification_match",
+      "value": 0.25,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "question:fq_industry_classification_match",
+      "target": "evidence:brreg|refutes",
+      "value": 0.583,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player",
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_team_bygg_player",
+      "target": "question:fq_entity_identity_unambiguous",
+      "value": 0.25,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "question:fq_entity_identity_unambiguous",
+      "target": "evidence:brreg|refutes",
+      "value": 0.25,
+      "verdict": "refutes",
+      "color": "#e74c3c",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player"
+      ]
+    },
+    {
+      "source": "issuer:Qben Infra AB (FY2024 standalone attack)",
+      "target": "claim:hyp_qben_nordnes_narvik_player",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_nordnes_narvik_player",
+      "target": "question:fq_direct_prime_contracts",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player"
+      ]
+    },
+    {
+      "source": "question:fq_direct_prime_contracts",
+      "target": "evidence:doffin|partial",
+      "value": 0.167,
+      "verdict": "partial",
+      "color": "#f1c40f",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player"
+      ]
+    },
+    {
+      "source": "evidence:doffin|partial",
+      "target": "severity:critical",
+      "value": 0.167,
+      "verdict": "partial",
+      "color": "#f1c40f",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_nordnes_narvik_player",
+      "target": "question:fq_entity_age_and_existence",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player"
+      ]
+    },
+    {
+      "source": "claim:hyp_qben_nordnes_narvik_player",
+      "target": "question:fq_industry_classification_match",
+      "value": 0.333,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player"
+      ]
+    },
+    {
+      "source": "issuer:ININ Group AS",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "inin_group|narrative_dissonance|ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move"
+      ]
+    },
+    {
+      "source": "issuer:ININ Group AS",
+      "target": "claim:rule|selective_disclosure",
+      "value": 3.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "inin_group|selective_disclosure|ININ Group AS: new 'continuing_operations' framing introduced in FY 2025, absent",
+        "inin_group|selective_disclosure|ININ Group AS: new 'discontinued_operations' framing introduced in FY 2025, abse",
+        "inin_group|selective_disclosure|ININ Group AS: new 'held_for_sale' framing introduced in FY 2025, absent in Q3 2"
+      ]
+    },
+    {
+      "source": "issuer:Techstep ASA",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 4.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "techstep|narrative_dissonance|Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move ",
+        "techstep|narrative_dissonance|Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move",
+        "techstep|narrative_dissonance|Techstep ASA: 'growth' narrative cited 57 times, but supporting metrics move the",
+        "techstep|narrative_dissonance|Techstep ASA: 'resilience' narrative cited 10 times, but supporting metrics move"
+      ]
+    },
+    {
+      "source": "evidence:narrative_dissonance|weak_support",
+      "target": "severity:warning",
+      "value": 2.0,
+      "verdict": "weak_support",
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting",
+        "techstep|narrative_dissonance|Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move"
+      ]
+    },
+    {
+      "source": "issuer:Techstep ASA",
+      "target": "claim:rule|selective_disclosure",
+      "value": 2.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "techstep|selective_disclosure|Techstep ASA: new 'discontinued_operations' framing introduced in FY 2025, absen",
+        "techstep|selective_disclosure|Techstep ASA: new 'held_for_sale' framing introduced in FY 2025, absent in FY 20"
+      ]
+    },
+    {
+      "source": "issuer:Otovo ASA",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 4.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "otovo|narrative_dissonance|Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opp",
+        "otovo|narrative_dissonance|Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the",
+        "otovo|narrative_dissonance|Otovo ASA: 'growth' narrative cited 46 times, but supporting metrics move the op",
+        "otovo|narrative_dissonance|Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the"
+      ]
+    },
+    {
+      "source": "issuer:Norwegian Air Shuttle ASA",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 2.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting",
+        "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting "
+      ]
+    },
+    {
+      "source": "issuer:Norse Atlantic Airways ASA",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 2.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting",
+        "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting"
+      ]
+    },
+    {
+      "source": "issuer:North Energy ASA",
+      "target": "claim:rule|narrative_dissonance",
+      "value": 1.0,
+      "verdict": null,
+      "color": "#bdc3c7",
+      "finding_keys": [
+        "north_energy|narrative_dissonance|North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics m"
+      ]
+    }
+  ],
+  "layer_labels": [
+    "Issuer",
+    "Claim / Rule",
+    "Falsification question",
+    "Tap evidence (verdict)",
+    "Derived severity"
+  ],
+  "verdict_palette": {
+    "confirms": "#2ecc71",
+    "partial": "#f1c40f",
+    "refutes": "#e74c3c",
+    "not_found": "#e67e22",
+    "neutral": "#95a5a6",
+    "error": "#7f0000"
+  },
+  "severity_palette": {
+    "info": "#3498db",
+    "warning": "#f39c12",
+    "critical": "#c0392b"
+  },
+  "category_palette": {
+    "issuer": "#7f8c8d",
+    "claim": "#3498db",
+    "question": "#9b59b6",
+    "evidence": "#1abc9c",
+    "severity": "#34495e"
+  }
+}

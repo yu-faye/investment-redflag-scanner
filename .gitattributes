@@ -1,0 +1,4 @@
+# PDFs are committed as regular binary files. All financial reports we
+# ingest are well under 10MB so git-lfs is not needed; this keeps the
+# `git clone` flow on GitHub Pages CI a one-step operation.
+*.pdf binary

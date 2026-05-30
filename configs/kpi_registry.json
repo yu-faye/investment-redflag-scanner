@@ -1,0 +1,96 @@
+{
+  "version": "0.1",
+  "description": "Canonical KPI list with aliases. Used by selective_disclosure to detect KPIs disclosed last year but missing this year.",
+  "kpis": [
+    {
+      "id": "net_sales",
+      "weight": 1.0,
+      "aliases": ["net sales", "revenue", "omsattning", "nettoomsetning", "driftsinntekter"]
+    },
+    {
+      "id": "ebitda",
+      "weight": 1.0,
+      "aliases": ["ebitda"]
+    },
+    {
+      "id": "adjusted_ebitda",
+      "weight": 0.9,
+      "aliases": ["adjusted ebitda", "adj. ebitda", "adj ebitda", "justerad ebitda", "justert ebitda"]
+    },
+    {
+      "id": "ebita",
+      "weight": 0.9,
+      "aliases": ["ebita"]
+    },
+    {
+      "id": "adjusted_ebita",
+      "weight": 0.9,
+      "aliases": ["adjusted ebita", "adj. ebita", "justerad ebita", "justert ebita"]
+    },
+    {
+      "id": "ebit",
+      "weight": 0.7,
+      "aliases": ["ebit", "operating profit", "driftsresultat", "rorelseresultat"]
+    },
+    {
+      "id": "ebitda_margin",
+      "weight": 0.8,
+      "aliases": ["ebitda margin", "ebitda-marginal"]
+    },
+    {
+      "id": "ebita_margin",
+      "weight": 0.8,
+      "aliases": ["ebita margin", "ebita-marginal"]
+    },
+    {
+      "id": "cash_flow_operating",
+      "weight": 1.0,
+      "aliases": ["cash flow from operating activities", "operating cash flow", "kassaflode fran den lopande verksamheten", "kontantstrom fra drift"]
+    },
+    {
+      "id": "eps",
+      "weight": 0.7,
+      "aliases": ["earnings per share", "eps", "resultat per aktie", "resultat per aksje"]
+    },
+    {
+      "id": "net_debt_to_ebitda",
+      "weight": 0.9,
+      "aliases": ["net debt to ebitda", "nettoskuld/ebitda", "nettogaeld/ebitda", "leverage ratio"]
+    },
+    {
+      "id": "interest_coverage",
+      "weight": 0.8,
+      "aliases": ["interest coverage", "rantetackningsgrad", "rentedekningsgrad"]
+    },
+    {
+      "id": "order_backlog",
+      "weight": 0.9,
+      "aliases": ["order backlog", "orderbook", "orderstock", "orderingang"]
+    },
+    {
+      "id": "order_intake",
+      "weight": 0.8,
+      "aliases": ["order intake", "orderingang", "new orders"]
+    },
+    {
+      "id": "same_store_sales",
+      "weight": 0.7,
+      "aliases": ["like-for-like", "like for like", "lfl", "comparable store sales", "same-store sales", "jamforbara butiker"]
+    },
+    {
+      "id": "organic_growth",
+      "weight": 0.8,
+      "aliases": ["organic growth", "organisk tillvxt", "organisk vekst"]
+    },
+    {
+      "id": "headcount",
+      "weight": 0.5,
+      "aliases": ["number of employees", "headcount", "antal anstallda", "antall ansatte", "fte"]
+    },
+    {
+      "id": "segment_breakdown",
+      "weight": 0.7,
+      "aliases": ["segment", "business area", "affarsomrade", "forretningsomrade", "segment information"]
+    }
+  ]
+}

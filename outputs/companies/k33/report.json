@@ -1,0 +1,211 @@
+{
+  "company": "k33",
+  "name": "K33 AB (publ)",
+  "ticker": "K33",
+  "exchange": "Nasdaq First North Growth Market",
+  "middelborg_link": "Middelborg Invest AS appears in K33 financing/ownership notices and insider-share disclosures (2025).",
+  "generated_at_utc": "2026-05-30T06:35:58+00:00",
+  "current_period": "FY 2024 (Q4 year-end report)",
+  "prior_period": "FY 2023 (Arcario pre-rebrand)",
+  "source_used": {
+    "current_file": "data/raw/k33/2024/k33_annual_2024_en.pdf",
+    "current_kind": "pdf",
+    "prior": {
+      "label": "FY 2023 (Arcario pre-rebrand)",
+      "file": "data/raw/k33/2023/k33_arcario_annual_2023.pdf",
+      "kind": "pdf"
+    }
+  },
+  "provenance": {
+    "current": {
+      "local_path": "data/raw/k33/2024/k33_annual_2024_en.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://cdn.prod.website-files.com/645396e8d92c58b99155faf3/685eb3bd8b923b5906bc7701_ENG%20Annual%20Report%20K33%20AB%20(publ).pdf",
+      "issuer_page": "https://k33.com/ir/reports",
+      "language": "en",
+      "label": "Annual Report 2024 (English translation)",
+      "period": "2024-FY",
+      "sha256": "36a92fbe805883638064f6e62f796e136d6912af3f0117f2cde17dc598bd8d4e",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/k33/2024/k33_annual_2024_en.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    },
+    "prior": {
+      "local_path": "data/raw/k33/2023/k33_arcario_annual_2023.pdf",
+      "kind": "local_pdf",
+      "issuer_url": "https://storage.mfn.se/ae46f711-8d09-48d2-8452-2337ee50ff40/arcario-ab-arsredovisning-2023-12-31.pdf",
+      "issuer_page": "https://www.inderes.dk/en/releases/arcario-publishes-annual-report-2023",
+      "language": "sv",
+      "label": "Annual Report 2023 (Arcario AB, pre-rebrand)",
+      "period": "2023-FY",
+      "sha256": "bc8f9d59a662436f647f4eb27e07967bb321ad5b698c777eb91588d89d27c051",
+      "git_sha": null,
+      "github_blob_url": null,
+      "github_raw_url": null,
+      "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/k33/2023/k33_arcario_annual_2023.pdf",
+      "repo_head_sha": null,
+      "owner": "REPLACE_ME",
+      "repo": "investment-redflag-scanner"
+    }
+  },
+  "auto_extracted_metrics": {
+    "net_sales_msek": 969.0,
+    "ebitda_msek": null,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": 11.0,
+    "ebita_margin_pct": null,
+    "ebitda_margin_pct": null,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": null,
+    "ebitda_for_leverage_msek_raw": null
+  },
+  "auto_metrics_provenance": {
+    "net_sales_msek": {
+      "value": 969.0,
+      "regex_id": "net_sales",
+      "raw_match": "Net sales 969",
+      "char_span": [
+        2879,
+        2892
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Net sales 969"
+    },
+    "cash_flow_operating_msek": {
+      "value": 11.0,
+      "regex_id": "ocf",
+      "raw_match": "Cash flow from operating activities before changes in working capital   11",
+      "char_span": [
+        10232,
+        10306
+      ],
+      "source": "auto_regex",
+      "snippet_anchor": "Cash flow from operating activities before changes in working capital 11"
+    }
+  },
+  "manual_metrics": {
+    "revenue_yoy_pct": 528.0,
+    "organic_growth_pct": 528.0,
+    "gross_margin_yoy_change_pct": -1.0,
+    "ebita_margin_pct": -0.2,
+    "ebitda_margin_pct": 0.7,
+    "interest_coverage_ratio": 0.8,
+    "net_debt_to_ebitda": 6.0,
+    "working_capital_to_revenue_pct": 24.0,
+    "capex_to_depreciation_ratio": 1.4,
+    "order_intake_yoy_pct": null
+  },
+  "manual_metrics_provenance": {},
+  "merged_metrics_used": {
+    "net_sales_msek": 969.0,
+    "ebitda_msek": null,
+    "adjusted_ebitda_msek": null,
+    "ebita_msek": null,
+    "adjusted_ebita_msek": null,
+    "cash_flow_operating_msek": 11.0,
+    "ebita_margin_pct": -0.2,
+    "ebitda_margin_pct": 0.7,
+    "net_debt_msek_raw": null,
+    "interest_expense_msek_raw": null,
+    "ebitda_for_leverage_msek_raw": null,
+    "revenue_yoy_pct": 528.0,
+    "organic_growth_pct": 528.0,
+    "gross_margin_yoy_change_pct": -1.0,
+    "interest_coverage_ratio": 0.8,
+    "net_debt_to_ebitda": 6.0,
+    "working_capital_to_revenue_pct": 24.0,
+    "capex_to_depreciation_ratio": 1.4
+  },
+  "metrics_audit": {
+    "capex_to_depreciation_ratio": {
+      "auto": null,
+      "manual": 1.4,
+      "chosen": 1.4,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "cash_flow_operating_msek": {
+      "auto": 11.0,
+      "manual": null,
+      "chosen": 11.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "ebita_margin_pct": {
+      "auto": null,
+      "manual": -0.2,
+      "chosen": -0.2,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "ebitda_margin_pct": {
+      "auto": null,
+      "manual": 0.7,
+      "chosen": 0.7,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "gross_margin_yoy_change_pct": {
+      "auto": null,
+      "manual": -1.0,
+      "chosen": -1.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "interest_coverage_ratio": {
+      "auto": null,
+      "manual": 0.8,
+      "chosen": 0.8,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "net_debt_to_ebitda": {
+      "auto": null,
+      "manual": 6.0,
+      "chosen": 6.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "net_sales_msek": {
+      "auto": 969.0,
+      "manual": null,
+      "chosen": 969.0,
+      "source": "auto",
+      "agrees_within_10pct": null
+    },
+    "organic_growth_pct": {
+      "auto": null,
+      "manual": 528.0,
+      "chosen": 528.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "revenue_yoy_pct": {
+      "auto": null,
+      "manual": 528.0,
+      "chosen": 528.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    },
+    "working_capital_to_revenue_pct": {
+      "auto": null,
+      "manual": 24.0,
+      "chosen": 24.0,
+      "source": "manual",
+      "agrees_within_10pct": null
+    }
+  },
+  "findings": [],
+  "severity_tally": {
+    "critical": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "findings_count": 0
+}

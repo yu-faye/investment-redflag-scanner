@@ -1,0 +1,329 @@
+{
+  "aliases_used": [
+    "Banefjell AS",
+    "Banefjell"
+  ],
+  "confirmed_awards": [
+    {
+      "buyer_names": [
+        "Bane NOR SF"
+      ],
+      "heading": "Norway – Construction work – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+      "matched_alias": "Banefjell AS",
+      "notice_id": "549796-2024",
+      "place_of_performance": [
+        "anyw",
+        "anyw"
+      ],
+      "public_url": "https://ted.europa.eu/en/notice/-/detail/549796-2024",
+      "publication_date": "2024-09-13",
+      "winner_names": [
+        "Veidekke Entreprenør AS",
+        "Banefjell AS"
+      ]
+    },
+    {
+      "buyer_names": [
+        "Bane NOR SF"
+      ],
+      "heading": "Norway – Construction work for railways and cable transport systems – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+      "matched_alias": "Banefjell AS",
+      "notice_id": "250458-2026",
+      "place_of_performance": [
+        "NOR",
+        "NOR"
+      ],
+      "public_url": "https://ted.europa.eu/en/notice/-/detail/250458-2026",
+      "publication_date": "2026-04-13",
+      "winner_names": [
+        "ØYNEBRÅTEN ANLEGGSTEKNIKK AS",
+        "Banefjell AS"
+      ]
+    }
+  ],
+  "fetched_at_utc": "2026-05-30T06:16:43+00:00",
+  "query_body": {
+    "fields": [
+      "publication-number",
+      "publication-date",
+      "notice-title",
+      "buyer-name",
+      "winner-name",
+      "notice-type",
+      "place-of-performance"
+    ],
+    "limit": 50,
+    "query": "winner-name=\"Banefjell AS\""
+  },
+  "query_url": "https://api.ted.europa.eu/v3/notices/search",
+  "search_hits": [
+    {
+      "buyer-name": {
+        "eng": [
+          "Bane NOR SF"
+        ]
+      },
+      "links": {
+        "html": {
+          "BUL": "https://ted.europa.eu/bg/notice/-/detail/549796-2024",
+          "CES": "https://ted.europa.eu/cs/notice/-/detail/549796-2024",
+          "DAN": "https://ted.europa.eu/da/notice/-/detail/549796-2024",
+          "DEU": "https://ted.europa.eu/de/notice/-/detail/549796-2024",
+          "ELL": "https://ted.europa.eu/el/notice/-/detail/549796-2024",
+          "ENG": "https://ted.europa.eu/en/notice/-/detail/549796-2024",
+          "EST": "https://ted.europa.eu/et/notice/-/detail/549796-2024",
+          "FIN": "https://ted.europa.eu/fi/notice/-/detail/549796-2024",
+          "FRA": "https://ted.europa.eu/fr/notice/-/detail/549796-2024",
+          "GLE": "https://ted.europa.eu/ga/notice/-/detail/549796-2024",
+          "HRV": "https://ted.europa.eu/hr/notice/-/detail/549796-2024",
+          "HUN": "https://ted.europa.eu/hu/notice/-/detail/549796-2024",
+          "ITA": "https://ted.europa.eu/it/notice/-/detail/549796-2024",
+          "LAV": "https://ted.europa.eu/lv/notice/-/detail/549796-2024",
+          "LIT": "https://ted.europa.eu/lt/notice/-/detail/549796-2024",
+          "MLT": "https://ted.europa.eu/mt/notice/-/detail/549796-2024",
+          "NLD": "https://ted.europa.eu/nl/notice/-/detail/549796-2024",
+          "POL": "https://ted.europa.eu/pl/notice/-/detail/549796-2024",
+          "POR": "https://ted.europa.eu/pt/notice/-/detail/549796-2024",
+          "RON": "https://ted.europa.eu/ro/notice/-/detail/549796-2024",
+          "SLK": "https://ted.europa.eu/sk/notice/-/detail/549796-2024",
+          "SLV": "https://ted.europa.eu/sl/notice/-/detail/549796-2024",
+          "SPA": "https://ted.europa.eu/es/notice/-/detail/549796-2024",
+          "SWE": "https://ted.europa.eu/sv/notice/-/detail/549796-2024"
+        },
+        "htmlDirect": {
+          "BUL": "https://ted.europa.eu/bg/notice/549796-2024/html",
+          "CES": "https://ted.europa.eu/cs/notice/549796-2024/html",
+          "DAN": "https://ted.europa.eu/da/notice/549796-2024/html",
+          "DEU": "https://ted.europa.eu/de/notice/549796-2024/html",
+          "ELL": "https://ted.europa.eu/el/notice/549796-2024/html",
+          "ENG": "https://ted.europa.eu/en/notice/549796-2024/html",
+          "EST": "https://ted.europa.eu/et/notice/549796-2024/html",
+          "FIN": "https://ted.europa.eu/fi/notice/549796-2024/html",
+          "FRA": "https://ted.europa.eu/fr/notice/549796-2024/html",
+          "GLE": "https://ted.europa.eu/ga/notice/549796-2024/html",
+          "HRV": "https://ted.europa.eu/hr/notice/549796-2024/html",
+          "HUN": "https://ted.europa.eu/hu/notice/549796-2024/html",
+          "ITA": "https://ted.europa.eu/it/notice/549796-2024/html",
+          "LAV": "https://ted.europa.eu/lv/notice/549796-2024/html",
+          "LIT": "https://ted.europa.eu/lt/notice/549796-2024/html",
+          "MLT": "https://ted.europa.eu/mt/notice/549796-2024/html",
+          "NLD": "https://ted.europa.eu/nl/notice/549796-2024/html",
+          "POL": "https://ted.europa.eu/pl/notice/549796-2024/html",
+          "POR": "https://ted.europa.eu/pt/notice/549796-2024/html",
+          "RON": "https://ted.europa.eu/ro/notice/549796-2024/html",
+          "SLK": "https://ted.europa.eu/sk/notice/549796-2024/html",
+          "SLV": "https://ted.europa.eu/sl/notice/549796-2024/html",
+          "SPA": "https://ted.europa.eu/es/notice/549796-2024/html",
+          "SWE": "https://ted.europa.eu/sv/notice/549796-2024/html"
+        },
+        "pdf": {
+          "BUL": "https://ted.europa.eu/bg/notice/549796-2024/pdf",
+          "CES": "https://ted.europa.eu/cs/notice/549796-2024/pdf",
+          "DAN": "https://ted.europa.eu/da/notice/549796-2024/pdf",
+          "DEU": "https://ted.europa.eu/de/notice/549796-2024/pdf",
+          "ELL": "https://ted.europa.eu/el/notice/549796-2024/pdf",
+          "ENG": "https://ted.europa.eu/en/notice/549796-2024/pdf",
+          "EST": "https://ted.europa.eu/et/notice/549796-2024/pdf",
+          "FIN": "https://ted.europa.eu/fi/notice/549796-2024/pdf",
+          "FRA": "https://ted.europa.eu/fr/notice/549796-2024/pdf",
+          "GLE": "https://ted.europa.eu/ga/notice/549796-2024/pdf",
+          "HRV": "https://ted.europa.eu/hr/notice/549796-2024/pdf",
+          "HUN": "https://ted.europa.eu/hu/notice/549796-2024/pdf",
+          "ITA": "https://ted.europa.eu/it/notice/549796-2024/pdf",
+          "LAV": "https://ted.europa.eu/lv/notice/549796-2024/pdf",
+          "LIT": "https://ted.europa.eu/lt/notice/549796-2024/pdf",
+          "MLT": "https://ted.europa.eu/mt/notice/549796-2024/pdf",
+          "NLD": "https://ted.europa.eu/nl/notice/549796-2024/pdf",
+          "POL": "https://ted.europa.eu/pl/notice/549796-2024/pdf",
+          "POR": "https://ted.europa.eu/pt/notice/549796-2024/pdf",
+          "RON": "https://ted.europa.eu/ro/notice/549796-2024/pdf",
+          "SLK": "https://ted.europa.eu/sk/notice/549796-2024/pdf",
+          "SLV": "https://ted.europa.eu/sl/notice/549796-2024/pdf",
+          "SPA": "https://ted.europa.eu/es/notice/549796-2024/pdf",
+          "SWE": "https://ted.europa.eu/sv/notice/549796-2024/pdf"
+        },
+        "pdfs": {
+          "ENG": "https://ted.europa.eu/en/notice/549796-2024/pdfs"
+        },
+        "xml": {
+          "MUL": "https://ted.europa.eu/en/notice/549796-2024/xml"
+        }
+      },
+      "notice-title": {
+        "bul": "Норвегия – Строителни и монтажни работи – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "ces": "Norsko – Stavební práce – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "dan": "Norge – Bygge- og anlægsarbejder – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "deu": "Norwegen – Bauarbeiten – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "ell": "Νορβηγία – Κατασκευαστικές εργασίες – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "eng": "Norway – Construction work – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "est": "Norra – Ehitustööd – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "fin": "Norja – Rakennustyöt – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "fra": "Norvège – Travaux de construction – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "gle": "An Iorua – Construction work – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "hrv": "Norveška – Građevinski radovi – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "hun": "Norvégia – Építési munkák – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "ita": "Norvegia – Lavori di costruzione – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "lav": "Norvēģija – Celtniecības darbi – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "lit": "Norvegija – Statybos darbai – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "mlt": "In-Norveġja – Xogħol tal-kostruzzjoni – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "nld": "Noorwegen – Bouwwerkzaamheden – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "pol": "Norwegia – Roboty budowlane – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "por": "Noruega – Construção – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "ron": "Norvegia – Lucrări de construcţii – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "slk": "Nórsko – Stavebné práce – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "slv": "Norveška – Gradbena dela – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "spa": "Noruega – Trabajos de construcción – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+        "swe": "Norge – Anläggningsarbete – Drainage area South-Vest Bergen Railway and Sørlandsbanen"
+      },
+      "notice-type": "can-standard",
+      "place-of-performance": [
+        "anyw",
+        "anyw"
+      ],
+      "publication-date": "2024-09-13+02:00",
+      "publication-number": "549796-2024",
+      "winner-name": {
+        "eng": [
+          "Veidekke Entreprenør AS",
+          "Banefjell AS"
+        ]
+      }
+    },
+    {
+      "buyer-name": {
+        "eng": [
+          "Bane NOR SF"
+        ]
+      },
+      "links": {
+        "html": {
+          "BUL": "https://ted.europa.eu/bg/notice/-/detail/250458-2026",
+          "CES": "https://ted.europa.eu/cs/notice/-/detail/250458-2026",
+          "DAN": "https://ted.europa.eu/da/notice/-/detail/250458-2026",
+          "DEU": "https://ted.europa.eu/de/notice/-/detail/250458-2026",
+          "ELL": "https://ted.europa.eu/el/notice/-/detail/250458-2026",
+          "ENG": "https://ted.europa.eu/en/notice/-/detail/250458-2026",
+          "EST": "https://ted.europa.eu/et/notice/-/detail/250458-2026",
+          "FIN": "https://ted.europa.eu/fi/notice/-/detail/250458-2026",
+          "FRA": "https://ted.europa.eu/fr/notice/-/detail/250458-2026",
+          "GLE": "https://ted.europa.eu/ga/notice/-/detail/250458-2026",
+          "HRV": "https://ted.europa.eu/hr/notice/-/detail/250458-2026",
+          "HUN": "https://ted.europa.eu/hu/notice/-/detail/250458-2026",
+          "ITA": "https://ted.europa.eu/it/notice/-/detail/250458-2026",
+          "LAV": "https://ted.europa.eu/lv/notice/-/detail/250458-2026",
+          "LIT": "https://ted.europa.eu/lt/notice/-/detail/250458-2026",
+          "MLT": "https://ted.europa.eu/mt/notice/-/detail/250458-2026",
+          "NLD": "https://ted.europa.eu/nl/notice/-/detail/250458-2026",
+          "POL": "https://ted.europa.eu/pl/notice/-/detail/250458-2026",
+          "POR": "https://ted.europa.eu/pt/notice/-/detail/250458-2026",
+          "RON": "https://ted.europa.eu/ro/notice/-/detail/250458-2026",
+          "SLK": "https://ted.europa.eu/sk/notice/-/detail/250458-2026",
+          "SLV": "https://ted.europa.eu/sl/notice/-/detail/250458-2026",
+          "SPA": "https://ted.europa.eu/es/notice/-/detail/250458-2026",
+          "SWE": "https://ted.europa.eu/sv/notice/-/detail/250458-2026"
+        },
+        "htmlDirect": {
+          "BUL": "https://ted.europa.eu/bg/notice/250458-2026/html",
+          "CES": "https://ted.europa.eu/cs/notice/250458-2026/html",
+          "DAN": "https://ted.europa.eu/da/notice/250458-2026/html",
+          "DEU": "https://ted.europa.eu/de/notice/250458-2026/html",
+          "ELL": "https://ted.europa.eu/el/notice/250458-2026/html",
+          "ENG": "https://ted.europa.eu/en/notice/250458-2026/html",
+          "EST": "https://ted.europa.eu/et/notice/250458-2026/html",
+          "FIN": "https://ted.europa.eu/fi/notice/250458-2026/html",
+          "FRA": "https://ted.europa.eu/fr/notice/250458-2026/html",
+          "GLE": "https://ted.europa.eu/ga/notice/250458-2026/html",
+          "HRV": "https://ted.europa.eu/hr/notice/250458-2026/html",
+          "HUN": "https://ted.europa.eu/hu/notice/250458-2026/html",
+          "ITA": "https://ted.europa.eu/it/notice/250458-2026/html",
+          "LAV": "https://ted.europa.eu/lv/notice/250458-2026/html",
+          "LIT": "https://ted.europa.eu/lt/notice/250458-2026/html",
+          "MLT": "https://ted.europa.eu/mt/notice/250458-2026/html",
+          "NLD": "https://ted.europa.eu/nl/notice/250458-2026/html",
+          "POL": "https://ted.europa.eu/pl/notice/250458-2026/html",
+          "POR": "https://ted.europa.eu/pt/notice/250458-2026/html",
+          "RON": "https://ted.europa.eu/ro/notice/250458-2026/html",
+          "SLK": "https://ted.europa.eu/sk/notice/250458-2026/html",
+          "SLV": "https://ted.europa.eu/sl/notice/250458-2026/html",
+          "SPA": "https://ted.europa.eu/es/notice/250458-2026/html",
+          "SWE": "https://ted.europa.eu/sv/notice/250458-2026/html"
+        },
+        "pdf": {
+          "BUL": "https://ted.europa.eu/bg/notice/250458-2026/pdf",
+          "CES": "https://ted.europa.eu/cs/notice/250458-2026/pdf",
+          "DAN": "https://ted.europa.eu/da/notice/250458-2026/pdf",
+          "DEU": "https://ted.europa.eu/de/notice/250458-2026/pdf",
+          "ELL": "https://ted.europa.eu/el/notice/250458-2026/pdf",
+          "ENG": "https://ted.europa.eu/en/notice/250458-2026/pdf",
+          "EST": "https://ted.europa.eu/et/notice/250458-2026/pdf",
+          "FIN": "https://ted.europa.eu/fi/notice/250458-2026/pdf",
+          "FRA": "https://ted.europa.eu/fr/notice/250458-2026/pdf",
+          "GLE": "https://ted.europa.eu/ga/notice/250458-2026/pdf",
+          "HRV": "https://ted.europa.eu/hr/notice/250458-2026/pdf",
+          "HUN": "https://ted.europa.eu/hu/notice/250458-2026/pdf",
+          "ITA": "https://ted.europa.eu/it/notice/250458-2026/pdf",
+          "LAV": "https://ted.europa.eu/lv/notice/250458-2026/pdf",
+          "LIT": "https://ted.europa.eu/lt/notice/250458-2026/pdf",
+          "MLT": "https://ted.europa.eu/mt/notice/250458-2026/pdf",
+          "NLD": "https://ted.europa.eu/nl/notice/250458-2026/pdf",
+          "POL": "https://ted.europa.eu/pl/notice/250458-2026/pdf",
+          "POR": "https://ted.europa.eu/pt/notice/250458-2026/pdf",
+          "RON": "https://ted.europa.eu/ro/notice/250458-2026/pdf",
+          "SLK": "https://ted.europa.eu/sk/notice/250458-2026/pdf",
+          "SLV": "https://ted.europa.eu/sl/notice/250458-2026/pdf",
+          "SPA": "https://ted.europa.eu/es/notice/250458-2026/pdf",
+          "SWE": "https://ted.europa.eu/sv/notice/250458-2026/pdf"
+        },
+        "pdfs": {
+          "ENG": "https://ted.europa.eu/en/notice/250458-2026/pdfs"
+        },
+        "xml": {
+          "MUL": "https://ted.europa.eu/en/notice/250458-2026/xml"
+        }
+      },
+      "notice-title": {
+        "bul": "Норвегия – Строителни и монтажни работи на релсови пътища и въжени линии – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "ces": "Norsko – Stavební úpravy pro železniční a lanové dopravní systémy – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "dan": "Norge – Arbejder i forbindelse med anlæg af jernbaner og kabelbaner – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "deu": "Norwegen – Bauarbeiten für Eisenbahnlinien und Seilbahnsysteme – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "ell": "Νορβηγία – Κατασκευαστικές εργασίες για σιδηρόδρομους και συστήματα καλωδιακής έλξης – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "eng": "Norway – Construction work for railways and cable transport systems – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "est": "Norra – Raudtee ja köisraudtee ehitustööd – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "fin": "Norja – Rautateiden ja köysiratojen rakennustyöt – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "fra": "Norvège – Travaux de construction de voies ferrées et de systèmes de transport par câble – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "gle": "An Iorua – Construction work for railways and cable transport systems – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "hrv": "Norveška – Građevinski radovi na sustavima željezničkih pruga i žičara – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "hun": "Norvégia – Vasút és drótköteles szállítóeszköz építése – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "ita": "Norvegia – Lavori di costruzione ferroviari e sistemi di trasporto a fune – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "lav": "Norvēģija – Dzelzceļa un trošu transporta sistēmu būvdarbi – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "lit": "Norvegija – Geležinkelių ir funikulierių transporto sistemų statybos darbai – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "mlt": "In-Norveġja – Xogħol tal-kostruzzjoni għal-ferroviji u sistemi tat-trasport bil-cabel – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "nld": "Noorwegen – Bouwwerkzaamheden voor spoorwegen en kabeltransportsystemen – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "pol": "Norwegia – Roboty budowlane w zakresie budowy kolei i systemów transportu – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "por": "Noruega – Construção de vias férreas e de sistemas de transporte por cabos – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "ron": "Norvegia – Lucrări de construcţii de căi ferate şi de sisteme de transport pe cablu – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "slk": "Nórsko – Stavebné práce na stavbe železníc a lanových dopravných systémov – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "slv": "Norveška – Gradbena dela na železniških progah in žičniških transportnih sistemih – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "spa": "Noruega – Trabajos de construcción de vías férreas y sistemas de transporte por cable – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+        "swe": "Norge – Anläggningsarbete för järnvägar och linbanesystem – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways"
+      },
+      "notice-type": "can-standard",
+      "place-of-performance": [
+        "NOR",
+        "NOR"
+      ],
+      "publication-date": "2026-04-13+02:00",
+      "publication-number": "250458-2026",
+      "winner-name": {
+        "eng": [
+          "ØYNEBRÅTEN ANLEGGSTEKNIKK AS",
+          "Banefjell AS"
+        ]
+      }
+    }
+  ],
+  "search_hits_post_filter": 2,
+  "search_hits_total": 2,
+  "search_ok": true,
+  "supplier_name": "Banefjell AS"
+}

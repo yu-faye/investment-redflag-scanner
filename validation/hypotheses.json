@@ -1,0 +1,252 @@
+{
+  "schema_version": 2,
+  "comment": "v9->v10: hypotheses are first-class, long-lived audit claims. Each entry is independent of any data source. Taps register the falsification questions they can address, and the TriangulationEngine derives severity from the cross-tap evidence ledger. v10 added claim_category=revenue_pipeline_support and the derived_analysis tap kind for cross-tap synthesizers (revenue_support_calculator, explanatory_slippage_scanner).",
+  "claim_categories": {
+    "subsidiary_specialist": "An issuer claims a named subsidiary is a specialist or established player in a domain. Tested by cross-referencing public procurement registries and the company registry.",
+    "revenue_pipeline_support": "An issuer's reported revenue in a Norway-heavy, public-procurement-exposed segment should be backed by external order flow visible in Doffin/TED in a comparable period. The derived revenue_support_calculator tap computes external_support_pct from primary procurement taps; the explanatory_slippage_scanner compares the issuer's CEO narrative against the measured revenue trend."
+  },
+  "hypotheses": [
+    {
+      "id": "hyp_qben_slam_specialist",
+      "source_company": "qben_infra_2024",
+      "claim_category": "subsidiary_specialist",
+      "entity": "SLAM Jernbaneteknikk AS",
+      "entity_aliases": ["SLAM Jernbaneteknikk", "SLAM JERNBANETEKNIKK AS"],
+      "claim": "SLAM Jernbaneteknikk AS is a specialist in rail signalling and electrification in Norway",
+      "source_pdf_anchor": {
+        "file": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "narrative_anchor": "SLAM Jernbaneteknikk AS, a specialist in rail signalling"
+      },
+      "claim_metadata": {
+        "acquired_year": 2024,
+        "geography": "Norway",
+        "domain": "rail_signalling_and_electrification",
+        "expected_naering_prefix": "42.12",
+        "ted_publication_date_from": "2022-01-01"
+      },
+      "falsification_questions": [
+        {
+          "id": "fq_direct_prime_contracts",
+          "text": "Does the entity hold direct prime contracts in the claimed domain (rail signalling for Norwegian state rail operators) within a relevant time window?",
+          "relevant_tap_kinds": ["public_procurement"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_entity_age_and_existence",
+          "text": "Is the entity a real registered company with a non-trivial operating history and an employee base consistent with a specialist contractor?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_industry_classification_match",
+          "text": "Does the entity's official NAICS / NACE classification match the claimed domain (42.12 Construction of railways)?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": false
+        },
+        {
+          "id": "fq_subcontractor_chain",
+          "text": "Does the entity appear as a named subcontractor on prime contracts in the claimed domain?",
+          "relevant_tap_kinds": ["subcontractor_directory"],
+          "blocking_for_critical": false
+        }
+      ],
+      "peer_controls": ["hyp_qben_banefjell_established"]
+    },
+
+    {
+      "id": "hyp_qben_banefjell_established",
+      "source_company": "qben_infra_2024",
+      "claim_category": "subsidiary_specialist",
+      "entity": "Banefjell AS",
+      "entity_aliases": ["Banefjell", "BANEFJELL AS"],
+      "claim": "Banefjell AS is an established player in track maintenance, concrete renovation and signal in Norway",
+      "source_pdf_anchor": {
+        "file": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "narrative_anchor": "Banefjell AS"
+      },
+      "claim_metadata": {
+        "acquired_year": 2024,
+        "geography": "Norway",
+        "domain": "track_maintenance_and_renovation",
+        "expected_naering_prefix": "42.12",
+        "ted_publication_date_from": "2022-01-01"
+      },
+      "falsification_questions": [
+        {
+          "id": "fq_direct_prime_contracts",
+          "text": "Does the entity hold direct prime contracts in the claimed domain?",
+          "relevant_tap_kinds": ["public_procurement"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_entity_age_and_existence",
+          "text": "Is the entity a real registered company with a non-trivial operating history?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_industry_classification_match",
+          "text": "Does the entity's official NAICS / NACE classification match the claimed domain?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": false
+        }
+      ],
+      "peer_controls": []
+    },
+
+    {
+      "id": "hyp_qben_team_bygg_player",
+      "source_company": "qben_infra_2024",
+      "claim_category": "subsidiary_specialist",
+      "entity": "Team Bygg AS",
+      "entity_aliases": ["Team Bygg Gruppen", "Team Bygg", "TEAM BYGG AS"],
+      "claim": "Team Bygg AS provides comprehensive resources for executing real estate projects in the Norwegian housing market",
+      "source_pdf_anchor": {
+        "file": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "narrative_anchor": "Team Bygg"
+      },
+      "claim_metadata": {
+        "acquired_year": 2024,
+        "geography": "Norway",
+        "domain": "real_estate_project_execution",
+        "expected_naering_prefix": "41",
+        "ted_publication_date_from": "2022-01-01"
+      },
+      "falsification_questions": [
+        {
+          "id": "fq_direct_prime_contracts",
+          "text": "Does the entity hold direct prime contracts in the claimed domain?",
+          "relevant_tap_kinds": ["public_procurement"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_entity_age_and_existence",
+          "text": "Is the entity a real registered company with a non-trivial operating history?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_industry_classification_match",
+          "text": "Does the entity's official NAICS / NACE classification match the claimed domain (housing construction, prefix 41)?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": false
+        },
+        {
+          "id": "fq_entity_identity_unambiguous",
+          "text": "Is the entity name unique enough that BRREG/Doffin lookups resolve to a single, unambiguous company rather than dozens of unrelated 'Team Bygg' entities?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": true
+        }
+      ],
+      "peer_controls": ["hyp_qben_banefjell_established"]
+    },
+
+    {
+      "id": "hyp_qben_nordnes_narvik_player",
+      "source_company": "qben_infra_2024",
+      "claim_category": "subsidiary_specialist",
+      "entity": "Nordnes Narvik AS",
+      "entity_aliases": ["Nordnes Narvik", "NORDNES NARVIK AS"],
+      "claim": "Nordnes Narvik AS is a key player in railway construction in North Norway",
+      "source_pdf_anchor": {
+        "file": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "narrative_anchor": "Nordnes Narvik AS"
+      },
+      "claim_metadata": {
+        "acquired_year": 2025,
+        "geography": "North_Norway",
+        "domain": "railway_construction",
+        "expected_naering_prefix": "42.12",
+        "ted_publication_date_from": "2023-01-01"
+      },
+      "falsification_questions": [
+        {
+          "id": "fq_direct_prime_contracts",
+          "text": "Does the entity hold direct prime contracts in railway construction in the relevant time window (with acquisition-period adjustment)?",
+          "relevant_tap_kinds": ["public_procurement"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_entity_age_and_existence",
+          "text": "Is the entity a real registered company with a non-trivial operating history?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_industry_classification_match",
+          "text": "Does the entity's official NAICS / NACE classification match railway construction (prefix 42.12)?",
+          "relevant_tap_kinds": ["company_registry"],
+          "blocking_for_critical": false
+        }
+      ],
+      "peer_controls": ["hyp_qben_banefjell_established"]
+    },
+
+    {
+      "id": "hyp_qben_q1_2026_revenue_pipeline",
+      "source_company": "qben_infra",
+      "claim_category": "revenue_pipeline_support",
+      "entity": "Qben Infra AB",
+      "entity_aliases": ["Qben Infra", "QBEN"],
+      "claim": "Qben Infra's Q1 2026 reported continuing-operations revenue of 169 MSEK is grounded in real external order flow from Norwegian and EU public-sector buyers, and the CEO narrative description of the quarter is consistent with the measured revenue trajectory (no explanatory slippage between negative numbers and uniformly positive language).",
+      "source_pdf_anchor": {
+        "file": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+        "narrative_anchor": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK"
+      },
+      "claim_metadata": {
+        "period_start": "2026-01-01",
+        "period_end": "2026-03-31",
+        "lookback_window_months": 18,
+        "reported_revenue_msek": 169.0,
+        "prior_period_revenue_msek": 195.0,
+        "reported_revenue_yoy_pct": -13.3,
+        "reported_period_ebita_msek": -44.0,
+        "reported_period_ebita_margin_pct": -26.0,
+        "reported_period_headline_profit_msek": 147.0,
+        "headline_profit_driver": "Rail divestment gain (one-off)",
+        "geography": "Norway-heavy infrastructure operations",
+        "expected_naering_prefix": "42",
+        "operating_subsidiaries": [
+          "SLAM Jernbaneteknikk AS",
+          "Banefjell AS",
+          "Team Bygg AS",
+          "Nordnes Narvik AS",
+          "B45 Anlegg AS"
+        ],
+        "external_support_threshold_pct": 50.0
+      },
+      "falsification_questions": [
+        {
+          "id": "fq_revenue_backed_by_external_awards",
+          "text": "Does the aggregate value of post-acquisition public-sector contract awards to Qben's operating subsidiaries in Doffin + TED, in a comparable trailing window, sum to a non-trivial share (>= external_support_threshold_pct) of the reported revenue?",
+          "relevant_tap_kinds": ["derived_analysis"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_explanatory_narrative_consistent",
+          "text": "Is the CEO/MD&A narrative wording consistent with the directional change in revenue and margin (no positive-framing slippage when KPIs deteriorate)?",
+          "relevant_tap_kinds": ["derived_analysis"],
+          "blocking_for_critical": true
+        },
+        {
+          "id": "fq_segment_disclosure_consistency",
+          "text": "Are the same KPI dimensions (segments, organic-growth split, headline-profit decomposition) disclosed in Q1 2026 as in Q2 2025?",
+          "relevant_tap_kinds": ["derived_analysis"],
+          "blocking_for_critical": false
+        },
+        {
+          "id": "fq_eu_threshold_contracts",
+          "text": "Do Qben's operating subsidiaries (B45 Anlegg, Banefjell, SLAM, Nordnes Narvik) hold any EU-directive-threshold contracts in TED in the trailing window?",
+          "relevant_tap_kinds": ["public_procurement"],
+          "blocking_for_critical": false
+        }
+      ],
+      "peer_controls": [
+        "hyp_qben_banefjell_established",
+        "hyp_qben_slam_specialist",
+        "hyp_qben_team_bygg_player",
+        "hyp_qben_nordnes_narvik_player"
+      ]
+    }
+  ]
+}

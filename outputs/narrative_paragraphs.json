@@ -1,0 +1,1076 @@
+{
+  "generated_at_utc": "2026-05-30T06:36:03+00:00",
+  "schema_version": 1,
+  "paragraphs": {
+    "qben_infra|narrative_dissonance|Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the": {
+      "headline": "[CRITICAL] Qben Infra AB: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'Aktien handlas på Nasdaq First North Premier Growth' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'Aktien handlas på Nasdaq First North Premier Growth'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra|triangulated_hypothesis|hyp_qben_q1_2026_revenue_pipeline": {
+      "headline": "[CRITICAL] Qben Infra AB: Q1 2026 revenue claim REFUTED on both axes.",
+      "body": "Reported continuing-operations revenue of 169 MSEK is grounded in external order flow at only 25% of operating subsidiaries (threshold 50%): 4 confirmed post-acquisition prime contracts across 4 peer-subsidiary hypotheses [1]. Yet the CEO-comment region contains 12 positive-framing tokens against 0 acknowledgement tokens, while revenue declined -13.3% YoY and EBITA margin sits at -26.0% [2] [3]. both derived dimensions refute (revenue_support=refutes, explanatory_slippage=refutes). Two independent axes failing in the same direction is treated as critical even without peer-tap confirms [4].",
+      "sentences": [
+        {
+          "text": "Reported continuing-operations revenue of 169 MSEK is grounded in external order flow at only 25% of operating subsidiaries (threshold 50%): 4 confirmed post-acquisition prime contracts across 4 peer-subsidiary hypotheses",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Yet the CEO-comment region contains 12 positive-framing tokens against 0 acknowledgement tokens, while revenue declined -13.3% YoY and EBITA margin sits at -26.0%",
+          "citations": [
+            "2",
+            "3"
+          ]
+        },
+        {
+          "text": "both derived dimensions refute (revenue_support=refutes, explanatory_slippage=refutes). Two independent axes failing in the same direction is treated as critical even without peer-tap confirms",
+          "citations": [
+            "4"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "derived_revenue_support cache",
+          "href": "/Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_revenue_support/qben_infra/hyp_qben_q1_2026_revenue_pipeline_revenue_support.json",
+          "kind": "cache"
+        },
+        "2": {
+          "label": "derived_explanatory_slippage cache",
+          "href": "/Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_explanatory_slippage/qben_infra/hyp_qben_q1_2026_revenue_pipeline_explanatory_slippage.json",
+          "kind": "cache"
+        },
+        "3": {
+          "label": "source PDF",
+          "href": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+          "kind": "pdf"
+        },
+        "4": {
+          "label": "engine R7 derivation",
+          "href": "#engine-rule-r7-hyp_qben_q1_2026_revenue_pipeline",
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_annual_2025|narrative_dissonance|Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, ": {
+      "headline": "[CRITICAL] Qben Infra AB (FY2025 standalone attack): narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'nettonollutsläpp av koldioxid och EU -direktiv om energieffektivitet' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'nettonollutsläpp av koldioxid och EU -direktiv om energieffektivitet'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'continuing_operations' framing in": {
+      "headline": "[CRITICAL] Qben Infra AB (FY2025 standalone attack): selective disclosure (reclassification_introduced).",
+      "body": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report [1].",
+      "sentences": [
+        {
+          "text": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report",
+          "citations": [
+            "1"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "selective_disclosure detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): new 'discontinued_operations' framing ": {
+      "headline": "[CRITICAL] Qben Infra AB (FY2025 standalone attack): selective disclosure (reclassification_introduced).",
+      "body": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report [1].",
+      "sentences": [
+        {
+          "text": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report",
+          "citations": [
+            "1"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "selective_disclosure detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in ": {
+      "headline": "[WARNING] Qben Infra AB (FY2025 standalone attack): selective disclosure (disclosure_drop).",
+      "body": "Compared with the prior reporting period, the current report drops the previously-disclosed '?' KPI [1].",
+      "sentences": [
+        {
+          "text": "Compared with the prior reporting period, the current report drops the previously-disclosed '?' KPI",
+          "citations": [
+            "1"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "selective_disclosure detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_2024|lag_causality|Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attribu": {
+      "headline": "[INFO] Qben Infra AB (FY2024 standalone attack): lag-causality break flagged.",
+      "body": "Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attributed to current period appears mechanical (IFRS consolidation language detected); lag=0Q is accounting, not synergy [1]. Caveat: True [2].",
+      "sentences": [
+        {
+          "text": "Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attributed to current period appears mechanical (IFRS consolidation language detected); lag=0Q is accounting, not synergy.",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Caveat: True",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "lag_causality detector",
+          "href": null,
+          "kind": "engine_rule"
+        },
+        "2": {
+          "label": "consolidation caveat",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'growth' narrative cited 34 times, but": {
+      "headline": "[CRITICAL] Qben Infra AB (FY2024 standalone attack): narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'Premier Growth Market' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'Premier Growth Market'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, ": {
+      "headline": "[WARNING] Qben Infra AB (FY2024 standalone attack): narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'a robust growth in demand.' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'a robust growth in demand.'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, ": {
+      "headline": "[INFO] Qben Infra AB (FY2024 standalone attack): narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'supplemented with selective acquisitions and efficient' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'supplemented with selective acquisitions and efficient'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but ": {
+      "headline": "[WARNING] Qben Infra AB (FY2024 standalone attack): narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'development, which creates favourable conditions for our' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'development, which creates favourable conditions for our'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_2024|triangulated_hypothesis|hyp_qben_slam_specialist": {
+      "headline": "[CRITICAL] Qben Infra AB (FY2024 standalone attack): SLAM Jernbaneteknikk AS -- claim REFUTED by external evidence.",
+      "body": "Issuer claim: 'SLAM Jernbaneteknikk AS is a specialist in rail signalling and electrification in Norway' [1]. doffin (public_procurement) reports not_found: Doffin returned 0 search hits and 0 confirmed awards for SLAM Jernbaneteknikk AS. For a Norwegian state-rail-adjacent specialist this is the canonical registry; absence is a weak-to-moderate refute. Subcontractor chains, private-sector clie [2]. brreg (company_registry) reports confirms: BRREG resolved 'SLAM Jernbaneteknikk AS' to orgnr 926465252 'SLAM JERNBANETEKNIKK AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433581 dataset entries containing any of the name tokens). Fo [3]. ted (public_procurement) reports not_found: TED returned 0 notices where SLAM Jernbaneteknikk AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absen [4]. Peer-control evidence confirms that the tap landscape reaches this entity class (taps brreg, doffin, ted returned `confirms` on at least one peer hypothesis) [5].",
+      "sentences": [
+        {
+          "text": "Issuer claim: 'SLAM Jernbaneteknikk AS is a specialist in rail signalling and electrification in Norway'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "doffin (public_procurement) reports not_found: Doffin returned 0 search hits and 0 confirmed awards for SLAM Jernbaneteknikk AS. For a Norwegian state-rail-adjacent specialist this is the canonical registry; absence is a weak-to-moderate refute. Subcontractor chains, private-sector clie",
+          "citations": [
+            "2"
+          ]
+        },
+        {
+          "text": "brreg (company_registry) reports confirms: BRREG resolved 'SLAM Jernbaneteknikk AS' to orgnr 926465252 'SLAM JERNBANETEKNIKK AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433581 dataset entries containing any of the name tokens). Fo",
+          "citations": [
+            "3"
+          ]
+        },
+        {
+          "text": "ted (public_procurement) reports not_found: TED returned 0 notices where SLAM Jernbaneteknikk AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absen",
+          "citations": [
+            "4"
+          ]
+        },
+        {
+          "text": "Peer-control evidence confirms that the tap landscape reaches this entity class (taps brreg, doffin, ted returned `confirms` on at least one peer hypothesis)",
+          "citations": [
+            "5"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "issuer PDF anchor",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "doffin cache",
+          "href": "external/doffin/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "3": {
+          "label": "brreg cache",
+          "href": "data/external/brreg/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "4": {
+          "label": "ted cache",
+          "href": "external/ted/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "5": {
+          "label": "peer hypotheses",
+          "href": "#peer-controls-hyp_qben_slam_specialist",
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established": {
+      "headline": "[INFO] Qben Infra AB (FY2024 standalone attack): Banefjell AS -- claim supported by external evidence.",
+      "body": "Issuer claim: 'Banefjell AS is an established player in track maintenance, concrete renovation and signal in Norway' [1]. doffin (public_procurement) reports confirms: Doffin returned 4 confirmed prime-contract awards to Banefjell AS, 2 post-acquisition and 2 pre-acquisition. This is consistent with the claim [2]. brreg (company_registry) reports confirms: BRREG resolved 'Banefjell AS' to orgnr 914019087 'BANEFJELL AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433577 dataset entries containing any of the name tokens). Founded 2014-07-30 (~11 [3]. ted (public_procurement) reports confirms: TED returned 2 EU-tier prime-contract notice(s) where Banefjell AS appears as a winner (2 post-acquisition, 0 pre-acquisition). TED is the canonical EU-wide public-procurement registry; above-threshold awards here are hard evidence of execu [4].",
+      "sentences": [
+        {
+          "text": "Issuer claim: 'Banefjell AS is an established player in track maintenance, concrete renovation and signal in Norway'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "doffin (public_procurement) reports confirms: Doffin returned 4 confirmed prime-contract awards to Banefjell AS, 2 post-acquisition and 2 pre-acquisition. This is consistent with the claim",
+          "citations": [
+            "2"
+          ]
+        },
+        {
+          "text": "brreg (company_registry) reports confirms: BRREG resolved 'Banefjell AS' to orgnr 914019087 'BANEFJELL AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433577 dataset entries containing any of the name tokens). Founded 2014-07-30 (~11",
+          "citations": [
+            "3"
+          ]
+        },
+        {
+          "text": "ted (public_procurement) reports confirms: TED returned 2 EU-tier prime-contract notice(s) where Banefjell AS appears as a winner (2 post-acquisition, 0 pre-acquisition). TED is the canonical EU-wide public-procurement registry; above-threshold awards here are hard evidence of execu",
+          "citations": [
+            "4"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "issuer PDF anchor",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "doffin cache",
+          "href": "external/doffin/qben_infra_2024/banefjell-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "3": {
+          "label": "brreg cache",
+          "href": "data/external/brreg/qben_infra_2024/banefjell-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "4": {
+          "label": "ted cache",
+          "href": "external/ted/qben_infra_2024/banefjell-as_2026-05-30.json",
+          "kind": "cache"
+        }
+      }
+    },
+    "qben_infra_2024|triangulated_hypothesis|hyp_qben_team_bygg_player": {
+      "headline": "[CRITICAL] Qben Infra AB (FY2024 standalone attack): Team Bygg AS -- claim REFUTED by external evidence.",
+      "body": "Issuer claim: 'Team Bygg AS provides comprehensive resources for executing real estate projects in the Norwegian housing market' [1]. doffin (public_procurement) reports refutes: Doffin returned 5 text-search hit(s) but none had Team Bygg AS in the official awardedNames field. The search space is noisy (name collisions) but the entity itself does not appear as a winner [2]. brreg (company_registry) reports refutes: BRREG resolved 'Team Bygg AS' to orgnr 984738161 'TEAM BYGG AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 440102 dataset entries containing any of the name tokens). Founded 2002-06-21 (~23.9 year [3]. ted (public_procurement) reports not_found: TED returned 0 notices where Team Bygg AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence [4]. Peer-control evidence confirms that the tap landscape reaches this entity class (taps brreg, doffin, ted returned `confirms` on at least one peer hypothesis) [5].",
+      "sentences": [
+        {
+          "text": "Issuer claim: 'Team Bygg AS provides comprehensive resources for executing real estate projects in the Norwegian housing market'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "doffin (public_procurement) reports refutes: Doffin returned 5 text-search hit(s) but none had Team Bygg AS in the official awardedNames field. The search space is noisy (name collisions) but the entity itself does not appear as a winner",
+          "citations": [
+            "2"
+          ]
+        },
+        {
+          "text": "brreg (company_registry) reports refutes: BRREG resolved 'Team Bygg AS' to orgnr 984738161 'TEAM BYGG AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 440102 dataset entries containing any of the name tokens). Founded 2002-06-21 (~23.9 year",
+          "citations": [
+            "3"
+          ]
+        },
+        {
+          "text": "ted (public_procurement) reports not_found: TED returned 0 notices where Team Bygg AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence",
+          "citations": [
+            "4"
+          ]
+        },
+        {
+          "text": "Peer-control evidence confirms that the tap landscape reaches this entity class (taps brreg, doffin, ted returned `confirms` on at least one peer hypothesis)",
+          "citations": [
+            "5"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "issuer PDF anchor",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "doffin cache",
+          "href": "external/doffin/qben_infra_2024/team-bygg-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "3": {
+          "label": "brreg cache",
+          "href": "data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "4": {
+          "label": "ted cache",
+          "href": "external/ted/qben_infra_2024/team-bygg-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "5": {
+          "label": "peer hypotheses",
+          "href": "#peer-controls-hyp_qben_team_bygg_player",
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "qben_infra_2024|triangulated_hypothesis|hyp_qben_nordnes_narvik_player": {
+      "headline": "[CRITICAL] Qben Infra AB (FY2024 standalone attack): Nordnes Narvik AS -- claim REFUTED by external evidence.",
+      "body": "Issuer claim: 'Nordnes Narvik AS is a key player in railway construction in North Norway' [1]. doffin (public_procurement) reports partial: Doffin returned 1 confirmed award(s) to Nordnes Narvik AS, but 1 of them predate the acquisition. The post-acquisition activity that would substantiate organic growth is absent [2]. brreg (company_registry) reports refutes: BRREG resolved 'Nordnes Narvik AS' to orgnr 991683011 'NORDNES NARVIK AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 433917 dataset entries containing any of the name tokens). Founded 2007-09-03 ( [3]. ted (public_procurement) reports not_found: TED returned 0 notices where Nordnes Narvik AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence [4]. Peer-control evidence confirms that the tap landscape reaches this entity class (taps brreg, doffin, ted returned `confirms` on at least one peer hypothesis) [5].",
+      "sentences": [
+        {
+          "text": "Issuer claim: 'Nordnes Narvik AS is a key player in railway construction in North Norway'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "doffin (public_procurement) reports partial: Doffin returned 1 confirmed award(s) to Nordnes Narvik AS, but 1 of them predate the acquisition. The post-acquisition activity that would substantiate organic growth is absent",
+          "citations": [
+            "2"
+          ]
+        },
+        {
+          "text": "brreg (company_registry) reports refutes: BRREG resolved 'Nordnes Narvik AS' to orgnr 991683011 'NORDNES NARVIK AS' (match=exact, 8 candidates inspected from the top page; BRREG free-text search reports 433917 dataset entries containing any of the name tokens). Founded 2007-09-03 (",
+          "citations": [
+            "3"
+          ]
+        },
+        {
+          "text": "ted (public_procurement) reports not_found: TED returned 0 notices where Nordnes Narvik AS appears as a winner. TED carries only EU-directive-threshold awards (~NOK 45M for works); a smaller-scale supplier may legitimately have no TED footprint. This is weaker than Doffin absence",
+          "citations": [
+            "4"
+          ]
+        },
+        {
+          "text": "Peer-control evidence confirms that the tap landscape reaches this entity class (taps brreg, doffin, ted returned `confirms` on at least one peer hypothesis)",
+          "citations": [
+            "5"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "issuer PDF anchor",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "doffin cache",
+          "href": "external/doffin/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "3": {
+          "label": "brreg cache",
+          "href": "data/external/brreg/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "4": {
+          "label": "ted cache",
+          "href": "external/ted/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+          "kind": "cache"
+        },
+        "5": {
+          "label": "peer hypotheses",
+          "href": "#peer-controls-hyp_qben_nordnes_narvik_player",
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "inin_group|narrative_dissonance|ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move": {
+      "headline": "[WARNING] ININ Group AS: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'robust megatrends.' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'robust megatrends.'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "inin_group|selective_disclosure|ININ Group AS: new 'continuing_operations' framing introduced in FY 2025, absent": {
+      "headline": "[CRITICAL] ININ Group AS: selective disclosure (reclassification_introduced).",
+      "body": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report [1].",
+      "sentences": [
+        {
+          "text": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report",
+          "citations": [
+            "1"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "selective_disclosure detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "inin_group|selective_disclosure|ININ Group AS: new 'held_for_sale' framing introduced in FY 2025, absent in Q3 2": {
+      "headline": "[CRITICAL] ININ Group AS: selective disclosure (reclassification_introduced).",
+      "body": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report [1].",
+      "sentences": [
+        {
+          "text": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report",
+          "citations": [
+            "1"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "selective_disclosure detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "inin_group|selective_disclosure|ININ Group AS: new 'discontinued_operations' framing introduced in FY 2025, abse": {
+      "headline": "[CRITICAL] ININ Group AS: selective disclosure (reclassification_introduced).",
+      "body": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report [1].",
+      "sentences": [
+        {
+          "text": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report",
+          "citations": [
+            "1"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "selective_disclosure detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "techstep|narrative_dissonance|Techstep ASA: 'growth' narrative cited 57 times, but supporting metrics move the": {
+      "headline": "[CRITICAL] Techstep ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'sustainable growth and long-term value creation.' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'sustainable growth and long-term value creation.'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "techstep|narrative_dissonance|Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move": {
+      "headline": "[WARNING] Techstep ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'customers maximise the value of their mobile estate while strengthening security, efficiency, sustainability and user' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'customers maximise the value of their mobile estate while strengthening security, efficiency, sustainability and user'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "techstep|narrative_dissonance|Techstep ASA: 'resilience' narrative cited 10 times, but supporting metrics move": {
+      "headline": "[CRITICAL] Techstep ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'a resilient foundation as Techstep continues to scale it’s our own software and services portfolio.' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'a resilient foundation as Techstep continues to scale it’s our own software and services portfolio.'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "techstep|narrative_dissonance|Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move ": {
+      "headline": "[INFO] Techstep ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'predictability, and disciplined capital allocation.' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'predictability, and disciplined capital allocation.'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "techstep|selective_disclosure|Techstep ASA: new 'held_for_sale' framing introduced in FY 2025, absent in FY 20": {
+      "headline": "[CRITICAL] Techstep ASA: selective disclosure (reclassification_introduced).",
+      "body": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report [1].",
+      "sentences": [
+        {
+          "text": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report",
+          "citations": [
+            "1"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "selective_disclosure detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "techstep|selective_disclosure|Techstep ASA: new 'discontinued_operations' framing introduced in FY 2025, absen": {
+      "headline": "[CRITICAL] Techstep ASA: selective disclosure (reclassification_introduced).",
+      "body": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report [1].",
+      "sentences": [
+        {
+          "text": "Compared with the prior reporting period, the current report newly introduces the '?' framing absent from the prior-period report",
+          "citations": [
+            "1"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "selective_disclosure detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "otovo|narrative_dissonance|Otovo ASA: 'growth' narrative cited 46 times, but supporting metrics move the op": {
+      "headline": "[CRITICAL] Otovo ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'Cost cut, portfolio sold, now re-growth' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'Cost cut, portfolio sold, now re-growth'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "otovo|narrative_dissonance|Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the": {
+      "headline": "[CRITICAL] Otovo ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'efficiency program (completed' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'efficiency program (completed'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "otovo|narrative_dissonance|Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the": {
+      "headline": "[CRITICAL] Otovo ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'greener and more robust by providing' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'greener and more robust by providing'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "otovo|narrative_dissonance|Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opp": {
+      "headline": "[WARNING] Otovo ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: '● Creating favourable conditions and' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: '● Creating favourable conditions and'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting": {
+      "headline": "[WARNING] Norwegian Air Shuttle ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'In 2025, we will have more focus on harvesting these investments while intensifying our costs-efficiency efforts.' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'In 2025, we will have more focus on harvesting these investments while intensifying our costs-efficiency efforts.'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting ": {
+      "headline": "[CRITICAL] Norwegian Air Shuttle ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'and robust governance of sustainability matters for all' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'and robust governance of sustainability matters for all'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting": {
+      "headline": "[CRITICAL] Norse Atlantic Airways ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'The affordability of tickets can largely be attributed to improved fleet efficiency, driven by advancements in technology, and more fuel-efficient aircraft.' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'The affordability of tickets can largely be attributed to improved fleet efficiency, driven by advancements in technology, and more fuel-efficient aircraft.'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting": {
+      "headline": "[CRITICAL] Norse Atlantic Airways ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'The Company’s robust operational performance was again demonstrated in 2024 as 99.6 per cent of all scheduled flights were completed as scheduled during another period of substantial growth.' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'The Company’s robust operational performance was again demonstrated in 2024 as 99.6 per cent of all scheduled flights were completed as scheduled during another period of substantial growth.'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    },
+    "north_energy|narrative_dissonance|North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics m": {
+      "headline": "[INFO] North Energy ASA: narrative-numerical dissonance flagged.",
+      "body": "Issuer narrative excerpt: 'increase efficiency significantly in comparison to' [1]. Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs [2].",
+      "sentences": [
+        {
+          "text": "Issuer narrative excerpt: 'increase efficiency significantly in comparison to'",
+          "citations": [
+            "1"
+          ]
+        },
+        {
+          "text": "Detector verdict: dissonance_detected; the positive language is not supported by the directional change in KPIs",
+          "citations": [
+            "2"
+          ]
+        }
+      ],
+      "citations": {
+        "1": {
+          "label": "PDF snippet",
+          "href": null,
+          "kind": "pdf"
+        },
+        "2": {
+          "label": "narrative_dissonance detector",
+          "href": null,
+          "kind": "engine_rule"
+        }
+      }
+    }
+  }
+}

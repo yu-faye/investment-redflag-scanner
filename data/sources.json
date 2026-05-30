@@ -1,0 +1,536 @@
+{
+  "version": "0.1",
+  "description": "Source registry for every raw report used by the pipeline. Each entry records the public URL, the local file path(s) we ingested it into, and any download caveats. This is the auditability backbone for the scanner.",
+  "generated_by_hand": true,
+  "fetched_at_utc": "2026-05-24",
+  "sources": [
+    {
+      "company": "qben_infra",
+      "label": "Q4 / Year-end report 2024 (English)",
+      "period": "2024-Q4",
+      "url": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf",
+      "issuer_page": "https://www.qben.se/en/year-end-report-january-december-2024-published/",
+      "format": "pdf",
+      "local_pdf": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+      "local_txt": "data/raw/qben_infra/2024/qben_infra_year_end_2024.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+          "exists": true,
+          "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/qben_infra/2024/qben_infra_year_end_2024.txt",
+          "exists": true,
+          "sha256": "a76748eeee1fa2ab5f0e4e36637ea9ccbbfa8e81662ea1d42127a450c719803b",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.txt"
+        }
+      }
+    },
+    {
+      "company": "qben_infra",
+      "label": "Full Annual Report 2024 (Swedish)",
+      "period": "2024-FY",
+      "url": "https://storage.mfn.se/4bd04418-dc79-464a-9ff0-bfde37b7fb50/qben-infra-arsredovisning-2024.pdf",
+      "issuer_page": "https://www.qben.se/en/qben-infra-publishes-annual-report-for-2024/",
+      "format": "pdf",
+      "local_pdf": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+      "local_txt": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.txt",
+      "language": "sv",
+      "notes": "Full Årsredovisning, complements the English Q4 report. v10 wired into qben_infra_annual_2025 prior_report for FY-vs-FY selective_disclosure comparison.",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "exists": true,
+          "sha256": "d47ba049ef5b008cc9e700b948746ff081070c8eec1806913a9830ea0738eec0",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.txt",
+          "exists": true,
+          "sha256": "d3dae1b60b81164c0a53e42436082a616a10fd72e0ebb993f6b6cde5d12a56d7",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.txt"
+        }
+      }
+    },
+    {
+      "company": "qben_infra",
+      "label": "Full Annual Report 2025 (Swedish)",
+      "period": "2025-FY",
+      "url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+      "issuer_page": "https://mfn.se/a/qben-infra/qben-infra-presents-annual-report-for-2025",
+      "format": "pdf",
+      "local_pdf": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+      "local_txt": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.txt",
+      "language": "sv",
+      "notes": "Full Årsredovisning for FY2025 (86 pages). Published 2026-05-08. Used by v10 to compute trailing-period baselines and to evidence the Q1 2026 narrative slippage.",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "exists": true,
+          "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.txt",
+          "exists": true,
+          "sha256": "d1e0ab3b3d4484acef493bd069726521c81d03375e8777c49be69c10378db5b4",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.txt"
+        }
+      }
+    },
+    {
+      "company": "qben_infra",
+      "label": "Q1 2026 interim report (Swedish)",
+      "period": "2026-Q1",
+      "url": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf",
+      "issuer_page": "https://mfn.se/a/qben-infra/interim-report-january-march-2026",
+      "format": "pdf",
+      "local_pdf": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+      "local_txt": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.txt",
+      "language": "sv",
+      "notes": "Published 2026-05-29. Headline: nettoomsättning i kvarvarande verksamhet 169 MSEK (195) - revenue DECLINED 13.3% YoY; kvartalets resultat 147 MSEK driven by Rail divestment gain; EBITA -44 MSEK vs -22 MSEK PY. Primary v10 input for explanatory_slippage_scanner and revenue_pipeline_support hypothesis.",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+          "exists": true,
+          "sha256": "df8a94c604a7e48d63a31311139da3ad5733c5167220d38b17c0ddc284e94b11",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.txt",
+          "exists": true,
+          "sha256": "aab5a037473eab9ffebe4685c1681207fa6013ff4fc16466a34a964e446ab070",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.txt"
+        }
+      }
+    },
+    {
+      "company": "qben_infra",
+      "label": "Q2 2025 interim report (English)",
+      "period": "2025-Q2",
+      "url": "https://storage.mfn.se/a331fe1a-d7b7-4ca9-9fa9-c3e59f4a7812/qben-infras-q2-report-2025.pdf",
+      "issuer_page": "https://www.qben.se/en/qben-infras-q2-report-2025/",
+      "format": "pdf",
+      "local_pdf": "data/raw/qben_infra/2025/qben_infra_q2_2025.pdf",
+      "local_txt": "data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+      "language": "en",
+      "notes": "PDF is image-heavy; pypdf extracts ~1k chars. Curated TXT is the primary input.",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/qben_infra/2025/qben_infra_q2_2025.pdf",
+          "exists": true,
+          "sha256": "dec763d016076a59949041d90422e93ec9aedb970b438714dc6af031c761abf2",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025/qben_infra_q2_2025.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+          "exists": true,
+          "sha256": "66d7912928171febb3307c91566f4067b0e84a74b19051c6384ac75353861dfa",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025/qben_infra_q2_2025.txt"
+        }
+      }
+    },
+    {
+      "company": "techstep",
+      "label": "Annual Report 2025",
+      "period": "2025-FY",
+      "url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+      "issuer_page": "https://mfn.se/ob/a/techstep/",
+      "format": "pdf",
+      "local_pdf": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+      "local_txt": "data/raw/techstep/2025/techstep_annual_2025.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "exists": true,
+          "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/techstep/2025/techstep_annual_2025.txt",
+          "exists": true,
+          "sha256": "86ea9a0a474dc2eb4339ccefa261f5b057a76afdfff7d4a451c82522cf12f98a",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.txt"
+        }
+      }
+    },
+    {
+      "company": "techstep",
+      "label": "Annual Report 2024",
+      "period": "2024-FY",
+      "url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+      "issuer_page": "https://mfn.se/ob/a/techstep/techstep-asa-annual-report-2024-95d9f617",
+      "format": "pdf",
+      "local_pdf": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "exists": true,
+          "sha256": "ec186728679320a74fba198a83b13d83269d14acd411bfdfbba78df22d511711",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/techstep/2024/techstep_annual_2024.pdf"
+        }
+      }
+    },
+    {
+      "company": "inin_group",
+      "label": "Annual Report 2025",
+      "period": "2025-FY",
+      "url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+      "issuer_page": "https://inin.no/reports-and-presentations/",
+      "format": "pdf",
+      "local_pdf": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+      "local_txt": "data/raw/inin_group/2025/inin_group_annual_2025.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "exists": true,
+          "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/inin_group/2025/inin_group_annual_2025.txt",
+          "exists": true,
+          "sha256": "b457e7f50d6ce58b7c911ba5d97b76ce8045eb870f0be242e25299ad2304984d",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.txt"
+        }
+      }
+    },
+    {
+      "company": "inin_group",
+      "label": "Q3 2024 Interim Financial Report",
+      "period": "2024-Q3",
+      "url": "https://inin.no/wp-content/uploads/2024/10/Inin-Group-Q3.2024-Interim-Financial-Report_27.10.24_1-signert.pdf",
+      "issuer_page": "https://inin.no/reports-and-presentations/",
+      "format": "pdf",
+      "local_pdf": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+      "language": "en",
+      "notes": "Used as the prior-period reference. Full ININ FY2024 annual report PDF link not publicly addressable as of last fetch.",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "exists": true,
+          "sha256": "09fa1ffc2bee241decfc5381e5f2701b2b7f14fb343cea1b46553e169a34a27a",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2024/inin_q3_2024_report.pdf"
+        }
+      }
+    },
+    {
+      "company": "inin_group",
+      "label": "H1 2024 Interim Financial Report",
+      "period": "2024-H1",
+      "url": "https://inin.no/wp-content/uploads/2024/08/Inin-Group-1H-2024-Report-signert.pdf",
+      "issuer_page": "https://inin.no/reports-and-presentations/",
+      "format": "pdf",
+      "local_pdf": "data/raw/inin_group/2024/inin_h1_2024_report.pdf",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/inin_group/2024/inin_h1_2024_report.pdf",
+          "exists": true,
+          "sha256": "4d870dcd48cf204dd018f47f238f838e2bed60582cfa44eea06ef21c7995dba0",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2024/inin_h1_2024_report.pdf"
+        }
+      }
+    },
+    {
+      "company": "inin_group",
+      "label": "Q4 2024 Company Update Presentation",
+      "period": "2024-Q4",
+      "url": "https://inin.no/wp-content/uploads/2025/03/Inin-Group-Q4-2024-result-presentation.pdf",
+      "issuer_page": "https://inin.no/reports-and-presentations/",
+      "format": "pdf",
+      "local_pdf": "data/raw/inin_group/2024/inin_q4_2024_presentation.pdf",
+      "language": "en",
+      "notes": "Slide deck, not a full interim report; kept for cross-reference only.",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/inin_group/2024/inin_q4_2024_presentation.pdf",
+          "exists": true,
+          "sha256": "29ff309bfe099785fee0f5106c6c53c005b288f85ea196ddc5b8db41edd7f262",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/inin_group/2024/inin_q4_2024_presentation.pdf"
+        }
+      }
+    },
+    {
+      "company": "k33",
+      "label": "Annual Report 2024 (English translation)",
+      "period": "2024-FY",
+      "url": "https://cdn.prod.website-files.com/645396e8d92c58b99155faf3/685eb3bd8b923b5906bc7701_ENG%20Annual%20Report%20K33%20AB%20(publ).pdf",
+      "issuer_page": "https://k33.com/ir/reports",
+      "format": "pdf",
+      "local_pdf": "data/raw/k33/2024/k33_annual_2024_en.pdf",
+      "local_txt": "data/raw/k33/2024/k33_q4_year_end_2024.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:12+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/k33/2024/k33_annual_2024_en.pdf",
+          "exists": true,
+          "sha256": "36a92fbe805883638064f6e62f796e136d6912af3f0117f2cde17dc598bd8d4e",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/k33/2024/k33_annual_2024_en.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/k33/2024/k33_q4_year_end_2024.txt",
+          "exists": true,
+          "sha256": "3fc0a913a8ffd91ee001b0b836a0ca74b7c9869c7dedaec981c17f820f5023d5",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/k33/2024/k33_q4_year_end_2024.txt"
+        }
+      }
+    },
+    {
+      "company": "k33",
+      "label": "Annual Report 2023 (Arcario AB, pre-rebrand)",
+      "period": "2023-FY",
+      "url": "https://storage.mfn.se/ae46f711-8d09-48d2-8452-2337ee50ff40/arcario-ab-arsredovisning-2023-12-31.pdf",
+      "issuer_page": "https://www.inderes.dk/en/releases/arcario-publishes-annual-report-2023",
+      "format": "pdf",
+      "local_pdf": "data/raw/k33/2023/k33_arcario_annual_2023.pdf",
+      "language": "sv",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/k33/2023/k33_arcario_annual_2023.pdf",
+          "exists": true,
+          "sha256": "bc8f9d59a662436f647f4eb27e07967bb321ad5b698c777eb91588d89d27c051",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/k33/2023/k33_arcario_annual_2023.pdf"
+        }
+      }
+    },
+    {
+      "company": "north_energy",
+      "label": "Annual Report 2025",
+      "period": "2025-FY",
+      "url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf",
+      "issuer_page": "https://northenergy.no/investor-relations/financial-reports-calendar/annual-reports/",
+      "format": "pdf",
+      "local_pdf": "data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+      "local_txt": "data/raw/north_energy/2025/north_energy_annual_2025.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+          "exists": true,
+          "sha256": "ad12857e79ea2b9d757f6fb605521de33537acdf3c0a45d64b830c065dbac8f7",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/north_energy/2025/north_energy_annual_2025.pdf"
+        },
+        "local_txt": {
+          "path": "data/raw/north_energy/2025/north_energy_annual_2025.txt",
+          "exists": true,
+          "sha256": "7bfd3c0fd76d4fbcf769485eaeaa4bc35f23259eb73c046236e91631f554e922",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/north_energy/2025/north_energy_annual_2025.txt"
+        }
+      }
+    },
+    {
+      "company": "north_energy",
+      "label": "Annual Report 2024",
+      "period": "2024-FY",
+      "url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2025/03/19/641596_North%20Energy%20annual%20report%202024.pdf",
+      "issuer_page": "https://northenergy.no/annual-report-for-2024/",
+      "format": "pdf",
+      "local_pdf": "data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_pdf": {
+          "path": "data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+          "exists": true,
+          "sha256": "9faecd1f17913a9bbbe55ff2f8ca360db710349031f9664586715a53f0f4b1d3",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/north_energy/2024/north_energy_annual_2024.pdf"
+        }
+      }
+    },
+    {
+      "company": "otovo",
+      "label": "Annual Report 2024 (text cache)",
+      "period": "2024-FY",
+      "url": "https://www.otovo.com/investor-relations/",
+      "issuer_page": "https://www.otovo.com/investor-relations/",
+      "format": "txt",
+      "local_txt": "data/raw/otovo/2024/otovo_annual_2024.txt",
+      "language": "en",
+      "notes": "Non-Middelborg benchmark. Original PDF URL not pinned in this registry.",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_txt": {
+          "path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+          "exists": true,
+          "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt"
+        }
+      }
+    },
+    {
+      "company": "otovo",
+      "label": "Q4 2024 Report (text cache)",
+      "period": "2024-Q4",
+      "url": "https://www.otovo.com/investor-relations/",
+      "issuer_page": "https://www.otovo.com/investor-relations/",
+      "format": "txt",
+      "local_txt": "data/raw/otovo/2024/otovo_q4_2024_report.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_txt": {
+          "path": "data/raw/otovo/2024/otovo_q4_2024_report.txt",
+          "exists": true,
+          "sha256": "2b76e7311beec07e5dbb20bfa6af4d5e57e534579a57c80f977a95a9541025d2",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_q4_2024_report.txt"
+        }
+      }
+    },
+    {
+      "company": "norwegian_air",
+      "label": "Annual Report 2024 (text cache)",
+      "period": "2024-FY",
+      "url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+      "issuer_page": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+      "format": "txt",
+      "local_txt": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_txt": {
+          "path": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+          "exists": true,
+          "sha256": "9aca2a33c7f92aa1620541b3bce9ffabeef9e840b82285c283ae54faa2789b59",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt"
+        }
+      }
+    },
+    {
+      "company": "norwegian_air",
+      "label": "Q4 2024 Report (text cache)",
+      "period": "2024-Q4",
+      "url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+      "issuer_page": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+      "format": "txt",
+      "local_txt": "data/raw/norwegian_air/2024/norwegian_air_q4_2024.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_txt": {
+          "path": "data/raw/norwegian_air/2024/norwegian_air_q4_2024.txt",
+          "exists": true,
+          "sha256": "969da1363448ee4a393d5fd29d575f3b5ef95774fd60f9e24f921891aa8d2cbf",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norwegian_air/2024/norwegian_air_q4_2024.txt"
+        }
+      }
+    },
+    {
+      "company": "norse_atlantic",
+      "label": "Annual Report 2024 (text cache)",
+      "period": "2024-FY",
+      "url": "https://norseatlantic.com/en/investor/reports-presentations/",
+      "issuer_page": "https://norseatlantic.com/en/investor/reports-presentations/",
+      "format": "txt",
+      "local_txt": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_txt": {
+          "path": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+          "exists": true,
+          "sha256": "8d7e2c4715b6e8ddc1b1b5eee2713f3dd7ff18178795513627235a171f3624cf",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt"
+        }
+      }
+    },
+    {
+      "company": "mowi",
+      "label": "Annual Report 2024 (text cache)",
+      "period": "2024-FY",
+      "url": "https://mowi.com/investors/financial-reports/",
+      "issuer_page": "https://mowi.com/investors/financial-reports/",
+      "format": "txt",
+      "local_txt": "data/raw/mowi/2024/mowi_annual_2024.txt",
+      "language": "en",
+      "provenance": {
+        "computed_at_utc": "2026-05-30T06:28:13+00:00",
+        "repo_head_sha": null,
+        "local_txt": {
+          "path": "data/raw/mowi/2024/mowi_annual_2024.txt",
+          "exists": true,
+          "sha256": "450fe1a19ba370793bc9283992292166fbe5a889735dc93487b193ee0a3df40d",
+          "git_sha": null,
+          "github_head_url": "https://github.com/REPLACE_ME/investment-redflag-scanner/blob/main/data/raw/mowi/2024/mowi_annual_2024.txt"
+        }
+      }
+    }
+  ],
+  "provenance_config": {
+    "github_owner": "REPLACE_ME",
+    "github_repo": "investment-redflag-scanner",
+    "branch": "main",
+    "head_sha": null,
+    "pages_url": "https://REPLACE_ME.github.io/investment-redflag-scanner/"
+  },
+  "refreshed_at_utc": "2026-05-30T06:28:13+00:00"
+}
