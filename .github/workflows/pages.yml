@@ -29,6 +29,21 @@ jobs:
           cp dashboard/* _site/dashboard/
           cp outputs/*.json _site/outputs/ 2>/dev/null || true
           cp data/sources.json _site/data/sources.json 2>/dev/null || true
+          # Ship the raw issuer PDFs so the in-page embed (renderPdfSection)
+          # can serve them under our own origin. raw.githubusercontent.com
+          # ships them with X-Frame-Options: deny + octet-stream so iframe
+          # rendering is impossible from there; Pages serves them as
+          # application/pdf same-origin which iframes happily render.
+          if [ -d data/raw ]; then
+            mkdir -p _site/data/raw
+            cp -R data/raw/. _site/data/raw/
+          fi
+          # Recursively copy any nested outputs (per-company evidence /
+          # auxiliary report bundles) so deep links resolve too.
+          if [ -d outputs ]; then
+            find outputs -mindepth 1 -type d -exec mkdir -p _site/{} \;
+            find outputs -type f \( -name "*.json" -o -name "*.png" -o -name "*.svg" -o -name "*.csv" \) -exec cp {} _site/{} \;
+          fi
           cat > _site/index.html <<'HTML'
           <!doctype html>
           <html lang="en">

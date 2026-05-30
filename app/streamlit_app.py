@@ -1169,6 +1169,211 @@ def main() -> None:
         layout="wide",
     )
 
+    # Foundry-style theme overlay. Streamlit's [theme] block in
+    # .streamlit/config.toml handles the palette primitives; this
+    # CSS adds the bits Streamlit can't theme: Inter + JetBrains
+    # Mono fonts, uppercase tracked labels, dense data tables,
+    # darker dataframe surfaces, and tighter section spacing.
+    st.markdown(
+        """
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+          :root {
+            --fdy-bg:        #0b0e13;
+            --fdy-panel:     #141a23;
+            --fdy-panel-2:   #1a2230;
+            --fdy-panel-3:   #212c3c;
+            --fdy-border:    #2a3548;
+            --fdy-text:      #eef2f8;
+            --fdy-text-2:    #c2cad7;
+            --fdy-muted:     #8390a3;
+            --fdy-accent:    #3dd6f5;
+            --fdy-critical:  #ff5d63;
+            --fdy-warning:   #f7b955;
+            --fdy-info:      #58c4ff;
+            --fdy-ok:        #4ddc97;
+            --fdy-font-ui:   "Inter", -apple-system, BlinkMacSystemFont,
+                              "Segoe UI", "PingFang SC", "Microsoft YaHei",
+                              Helvetica, Arial, sans-serif;
+            --fdy-font-mono: "JetBrains Mono", "SF Mono", Menlo, Monaco,
+                              Consolas, monospace;
+          }
+          html, body, [class*="css"], .stApp {
+            font-family: var(--fdy-font-ui) !important;
+            -webkit-font-smoothing: antialiased;
+            font-feature-settings: "cv11", "ss01", "ss03";
+            color: var(--fdy-text);
+          }
+          .stApp {
+            background:
+              radial-gradient(ellipse 80% 50% at 50% -10%,
+                              rgba(61,214,245,0.06), transparent 60%),
+              var(--fdy-bg) !important;
+          }
+          /* Title + headers tighter and higher-contrast */
+          h1, h2, h3, h4, h5 {
+            color: var(--fdy-text) !important;
+            letter-spacing: -0.01em !important;
+            font-weight: 700 !important;
+          }
+          h1 { font-size: 28px !important; }
+          h2 { font-size: 20px !important; margin-top: 1.5rem !important; }
+          h3 { font-size: 16px !important; }
+          /* Captions / hint text legible */
+          .stCaption, [data-testid="stCaptionContainer"],
+          [data-testid="stMarkdownContainer"] p {
+            color: var(--fdy-text-2);
+          }
+          /* Sidebar surface darker than main */
+          [data-testid="stSidebar"] {
+            background: #0f141b !important;
+            border-right: 1px solid var(--fdy-border);
+          }
+          [data-testid="stSidebar"] * { color: var(--fdy-text); }
+          [data-testid="stSidebar"] a {
+            color: var(--fdy-accent) !important;
+            text-decoration: none;
+          }
+          /* Numbers, code, metric values in mono */
+          code, pre, kbd, samp,
+          [data-testid="stMetricValue"],
+          [data-testid="stMetricDelta"] {
+            font-family: var(--fdy-font-mono) !important;
+          }
+          [data-testid="stMetricValue"] {
+            font-size: 28px !important;
+            font-weight: 700 !important;
+            color: var(--fdy-text);
+            font-feature-settings: "tnum";
+          }
+          [data-testid="stMetricLabel"] {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 10px !important;
+            color: var(--fdy-muted) !important;
+            font-weight: 700;
+          }
+          /* Buttons (Foundry-ish) */
+          .stButton > button, .stDownloadButton > button {
+            background: var(--fdy-panel-2);
+            color: var(--fdy-text);
+            border: 1px solid var(--fdy-border);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            transition: border-color 120ms ease, background 120ms ease;
+          }
+          .stButton > button:hover, .stDownloadButton > button:hover {
+            border-color: var(--fdy-accent);
+            background: var(--fdy-panel-3);
+            color: var(--fdy-accent);
+          }
+          /* Radio buttons (the scope selector) */
+          [data-testid="stRadio"] label { color: var(--fdy-text-2); }
+          /* Tabs */
+          .stTabs [data-baseweb="tab"] {
+            color: var(--fdy-text-2);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+          }
+          .stTabs [aria-selected="true"] {
+            color: var(--fdy-accent) !important;
+            border-bottom-color: var(--fdy-accent) !important;
+          }
+          /* Dataframe styling */
+          [data-testid="stDataFrame"] {
+            background: var(--fdy-panel);
+            border: 1px solid var(--fdy-border);
+            border-radius: 6px;
+            overflow: hidden;
+          }
+          /* Expander chrome */
+          [data-testid="stExpander"] {
+            background: var(--fdy-panel) !important;
+            border: 1px solid var(--fdy-border) !important;
+            border-radius: 6px !important;
+          }
+          [data-testid="stExpander"] summary {
+            font-weight: 600;
+            color: var(--fdy-text);
+            letter-spacing: -0.005em;
+          }
+          /* Select / multiselect / text input */
+          [data-baseweb="select"] > div,
+          [data-baseweb="input"] > div,
+          .stSelectbox > div > div {
+            background: var(--fdy-panel) !important;
+            border-color: var(--fdy-border) !important;
+            color: var(--fdy-text) !important;
+          }
+          /* Section divider */
+          hr { border-color: var(--fdy-border) !important; }
+          /* Make the pipeline / roadmap cards (already styled inline in
+             the page) align with the Foundry palette. Override the
+             light-mode hardcoded colors that ship inside the existing
+             _render_pipeline_overview() <style> block. */
+          .pipeline-card {
+            background: var(--fdy-panel) !important;
+            border: 1px solid var(--fdy-border) !important;
+            border-top: 3px solid var(--fdy-accent) !important;
+            box-shadow: none !important;
+          }
+          .pipeline-step {
+            background: transparent !important;
+            color: var(--fdy-accent) !important;
+            font-family: var(--fdy-font-mono) !important;
+            letter-spacing: 0.14em !important;
+            padding: 0 !important;
+          }
+          .pipeline-title {
+            color: var(--fdy-text) !important;
+            font-weight: 700 !important;
+          }
+          .pipeline-body {
+            color: var(--fdy-text-2) !important;
+            line-height: 1.6 !important;
+          }
+          .pipeline-body code {
+            background: var(--fdy-panel-3) !important;
+            color: var(--fdy-accent) !important;
+          }
+          .roadmap-card-head {
+            background: var(--fdy-panel-2) !important;
+            border: 1px solid var(--fdy-border) !important;
+            border-left: 3px solid var(--fdy-accent) !important;
+            color: var(--fdy-text) !important;
+          }
+          .roadmap-rank, .roadmap-kind,
+          .roadmap-gain, .roadmap-covers, .roadmap-covers code,
+          .roadmap-covers em, .roadmap-covers li {
+            color: var(--fdy-text) !important;
+          }
+          .roadmap-unblock {
+            background: rgba(247,185,85,0.16) !important;
+            border: 1px solid rgba(247,185,85,0.4) !important;
+            color: var(--fdy-warning) !important;
+          }
+          .roadmap-empty-note {
+            background: rgba(77,220,151,0.08) !important;
+            border: 1px solid rgba(77,220,151,0.35) !important;
+            color: var(--fdy-text) !important;
+          }
+          .toc-nav a {
+            color: var(--fdy-text-2) !important;
+            border-left: 2px solid transparent !important;
+            padding-left: 10px !important;
+          }
+          .toc-nav a:hover {
+            border-left-color: var(--fdy-accent) !important;
+            background: var(--fdy-panel-2) !important;
+            color: var(--fdy-text) !important;
+          }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
     st.title("Investment Red-Flag Scanner")
     st.caption(
         "Deterministic offensive-audit detectors with git-anchored "

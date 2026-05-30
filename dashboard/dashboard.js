@@ -964,21 +964,38 @@ function renderPdfSection(allFindings) {
       frag += `&search=${encodeURIComponent(prov.evidence_snippet.matched_str)}`;
     }
   }
-  // Try local file first (works on the dev server); fall back to issuer
-  // URL or GitHub permalink. Local is preferred because issuer-hosted
-  // PDFs often refuse cross-origin embedding.
+  // Embedding strategy (failure modes documented below):
+  //   1. local_path -> served by our own origin (dev server OR Pages,
+  //      since the workflow now ships data/raw/**). Same-origin so
+  //      Content-Type: application/pdf is honored and X-Frame-Options
+  //      doesn't apply -> iframe renders.
+  //   2. issuer_url -> often blocked by CSP frame-ancestors / X-FO.
+  //   3. github_raw_url -> raw.githubusercontent.com hard-codes
+  //      X-Frame-Options: deny AND Content-Type: octet-stream, so
+  //      iframe rendering is impossible. We keep it only as an
+  //      "open in new tab" fallback.
   const candidates = [];
-  if (prov.local_path) candidates.push({ label: "local", url: "../" + prov.local_path + frag });
-  if (prov.issuer_url) candidates.push({ label: "issuer", url: prov.issuer_url + frag });
-  if (prov.github_raw_url) candidates.push({ label: "github raw", url: prov.github_raw_url + frag });
+  if (prov.local_path) {
+    candidates.push({ label: "Local", url: "../" + prov.local_path + frag, embeddable: true });
+  }
+  if (prov.issuer_url) {
+    candidates.push({ label: "Issuer", url: prov.issuer_url + frag, embeddable: true });
+  }
+  if (prov.github_raw_url) {
+    candidates.push({ label: "GitHub", url: prov.github_raw_url + frag, embeddable: false });
+  }
   if (!candidates.length) {
     host.innerHTML = `<p class="drill-empty">No source PDF URL recorded for this finding.</p>`;
     return;
   }
-  const primary = candidates[0];
-  const linksHtml = candidates.map((c) =>
-    `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.label)}</a>`
-  ).join(" \u00b7 ");
+  const primary = candidates.find((c) => c.embeddable) || candidates[0];
+  const linksHtml = candidates
+    .map(
+      (c) =>
+        `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.label)} \u2197</a>`
+    )
+    .join(" \u00b7 ");
+
   host.innerHTML = `
     <div class="pdf-host-head">
       <div>
@@ -986,10 +1003,41 @@ function renderPdfSection(allFindings) {
         \u00b7 ${escapeHtml(prov.label || prov.period || "")}
         ${page ? `\u00b7 page ${escapeHtml(String(page))}` : ""}
       </div>
-      <div>Open externally: ${linksHtml}</div>
+      <div class="pdf-host-links">Open: ${linksHtml}</div>
     </div>
-    <iframe src="${escapeHtml(primary.url)}" title="Source PDF" loading="lazy"></iframe>
+    <div class="pdf-host-frame">
+      <iframe id="pdf-iframe" src="${escapeHtml(primary.url)}"
+              title="Source PDF" loading="lazy"></iframe>
+      <div class="pdf-host-fallback" id="pdf-host-fallback" hidden>
+        <p>
+          Your browser refused to embed the source PDF in this frame
+          (common when the publisher sets <code>X-Frame-Options</code>
+          or <code>Content-Security-Policy: frame-ancestors</code>).
+        </p>
+        <p>
+          Use one of the external links above to open the document at
+          page <strong>${page ? escapeHtml(String(page)) : "n/a"}</strong>
+          in a new tab.
+        </p>
+      </div>
+    </div>
   `;
+
+  // Heuristic: if the iframe never fires `load` within 4s, assume it
+  // is being blocked and reveal the fallback. We can't reliably detect
+  // X-Frame blocking from JS (same-origin policy hides the error) so
+  // a soft timeout is the standard pattern.
+  const iframe = document.getElementById("pdf-iframe");
+  const fallback = document.getElementById("pdf-host-fallback");
+  let loaded = false;
+  if (iframe) {
+    iframe.addEventListener("load", () => {
+      loaded = true;
+    });
+    setTimeout(() => {
+      if (!loaded && fallback) fallback.hidden = false;
+    }, 4000);
+  }
 }
 
 /* ------------------------- ToC scroll-spy ------------------------------- */

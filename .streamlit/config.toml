@@ -1,0 +1,21 @@
+# Foundry-style theme for the Streamlit dashboard.
+# Mirrors the static HTML dashboard palette in dashboard/dashboard.css.
+# Streamlit only takes a handful of theme tokens here; finer-grained
+# typography (Inter / JetBrains Mono, uppercase tracked labels, dense
+# data tables) is layered on with the <style> block injected at the top
+# of main() in app/streamlit_app.py.
+
+[theme]
+base = "dark"
+primaryColor = "#3dd6f5"
+backgroundColor = "#0b0e13"
+secondaryBackgroundColor = "#141a23"
+textColor = "#eef2f8"
+font = "sans serif"
+
+[server]
+runOnSave = true
+headless = true
+
+[browser]
+gatherUsageStats = false
