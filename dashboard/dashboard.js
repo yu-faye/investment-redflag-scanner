@@ -996,7 +996,17 @@ function renderPdfSection(allFindings) {
     )
     .join(" \u00b7 ");
 
-  host.innerHTML = `
+  // Browser sniff: iOS Safari (any WebKit on iOS, plus Safari-on-iPadOS
+  // which masquerades as Mac) cannot reliably render PDFs in inline
+  // viewers - it always wants to download/preview them. For that one
+  // case we skip the embed and surface a single big "open externally"
+  // CTA so the user isn't staring at a blank frame.
+  const ua = navigator.userAgent || "";
+  const isIOS =
+    /iPad|iPhone|iPod/.test(ua) ||
+    (/Macintosh/.test(ua) && "ontouchend" in document);
+
+  const headHtml = `
     <div class="pdf-host-head">
       <div>
         <strong>${escapeHtml(f.company_name || f.company || "")}</strong>
@@ -1005,39 +1015,54 @@ function renderPdfSection(allFindings) {
       </div>
       <div class="pdf-host-links">Open: ${linksHtml}</div>
     </div>
-    <div class="pdf-host-frame">
-      <iframe id="pdf-iframe" src="${escapeHtml(primary.url)}"
-              title="Source PDF" loading="lazy"></iframe>
-      <div class="pdf-host-fallback" id="pdf-host-fallback" hidden>
-        <p>
-          Your browser refused to embed the source PDF in this frame
-          (common when the publisher sets <code>X-Frame-Options</code>
-          or <code>Content-Security-Policy: frame-ancestors</code>).
-        </p>
-        <p>
-          Use one of the external links above to open the document at
-          page <strong>${page ? escapeHtml(String(page)) : "n/a"}</strong>
-          in a new tab.
-        </p>
-      </div>
-    </div>
   `;
 
-  // Heuristic: if the iframe never fires `load` within 4s, assume it
-  // is being blocked and reveal the fallback. We can't reliably detect
-  // X-Frame blocking from JS (same-origin policy hides the error) so
-  // a soft timeout is the standard pattern.
-  const iframe = document.getElementById("pdf-iframe");
-  const fallback = document.getElementById("pdf-host-fallback");
-  let loaded = false;
-  if (iframe) {
-    iframe.addEventListener("load", () => {
-      loaded = true;
-    });
-    setTimeout(() => {
-      if (!loaded && fallback) fallback.hidden = false;
-    }, 4000);
+  if (isIOS) {
+    host.innerHTML = `
+      ${headHtml}
+      <div class="pdf-host-mobile">
+        <p class="pdf-host-mobile-lead">
+          iOS Safari can't render embedded PDFs inline. Tap below to
+          open the document in a new tab at the matched page.
+        </p>
+        <a class="pdf-host-cta" href="${escapeHtml(primary.url)}"
+           target="_blank" rel="noopener">
+          Open ${escapeHtml(prov.label || "source PDF")}
+          ${page ? ` (page ${escapeHtml(String(page))})` : ""} \u2197
+        </a>
+      </div>
+    `;
+    return;
   }
+
+  // Desktop / Android: use <object> with <embed> nested as fallback.
+  // <iframe> is what we used before, but Safari's PDFKit-backed
+  // renderer routinely fails to fire iframe.onload (which was making
+  // our soft-timeout false-positive) AND sometimes refuses to render
+  // PDFs inside iframes at all. <object> + <embed> is the
+  // most-compatible same-origin pattern across Chrome, Firefox,
+  // Safari and Edge.
+  host.innerHTML = `
+    ${headHtml}
+    <div class="pdf-host-frame">
+      <object data="${escapeHtml(primary.url)}"
+              type="application/pdf"
+              class="pdf-host-object"
+              aria-label="Source PDF">
+        <embed src="${escapeHtml(primary.url)}"
+               type="application/pdf"
+               class="pdf-host-object" />
+        <div class="pdf-host-fallback">
+          <p>
+            This browser can't display PDFs inline. Use one of the
+            external links above to open the document at page
+            <strong>${page ? escapeHtml(String(page)) : "n/a"}</strong>
+            in a new tab.
+          </p>
+        </div>
+      </object>
+    </div>
+  `;
 }
 
 /* ------------------------- ToC scroll-spy ------------------------------- */
