@@ -845,6 +845,27 @@ tbody tr:hover td { color: var(--text); }
 .cc-row.vd-neutral  .cc-glyph { color: var(--muted-2); }
 .cc-row.vd-error    .cc-glyph { color: var(--critical); }
 
+/* Evidence visuals (sentence context, PDF snippet image, per-number
+ * provenance, external-collision tables) shown inline at the bottom
+ * of the drill panel so the analyst doesn't have to scroll back up
+ * to the leaderboard cell drawer. */
+.drill-evidence {
+  margin: 18px 0 0;
+  padding: 14px 16px 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.drill-evidence-head {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.drill-ctx { margin-bottom: 12px; }
+
 /* Library filter banner above the leaderboard */
 .library-active {
   background: var(--accent-soft);

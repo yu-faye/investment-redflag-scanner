@@ -805,7 +805,8 @@ function renderDrillSection(allFindings) {
   `;
   const narrativeHtml = renderV10Block(f) || `<p class="drill-empty">No plain-English summary written for this finding yet.</p>`;
   const crossCheckHtml = renderPerFindingCrossCheck(f);
-  host.innerHTML = headerHtml + narrativeHtml + crossCheckHtml;
+  const evidenceHtml = renderDrillEvidenceBlock(f);
+  host.innerHTML = headerHtml + narrativeHtml + crossCheckHtml + evidenceHtml;
   const btn = document.getElementById("drill-jump-pdf");
   if (btn) {
     btn.addEventListener("click", () => {
@@ -813,6 +814,77 @@ function renderDrillSection(allFindings) {
       if (pdfSec) pdfSec.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
+}
+
+/* Evidence visuals for the drill panel. Reuses the same per-snippet
+ * and per-metric building blocks the leaderboard row drawer uses
+ * (renderMetricEvidence, renderExternalCollision and the narrative
+ * snippet figure), but rendered inline inside "Why we flagged it"
+ * so the analyst no longer has to scroll back up to the table cell.
+ *
+ * Hierarchy:
+ *   1. Highlighted sentence context (prev + matched + next text)
+ *   2. Narrative snippet image (cropped PDF page) -- clickable; opens
+ *      the source PDF at the right page in a new tab
+ *   3. Per-number provenance (one row per cited metric, each with
+ *      its own cropped PDF snippet)
+ *   4. External collision (Doffin/BRREG tables, with notice links)
+ */
+function renderDrillEvidenceBlock(f) {
+  const prov = f.provenance || {};
+  const locator = prov.excerpt_locator || {};
+  const ctx = locator.sentence_context;
+  const excerpt = f.claim_excerpt || "";
+  const snippet = f.evidence_snippet || prov.evidence_snippet;
+  const metricEvidence = f.metric_evidence || [];
+  const externalEvidence = f.external_evidence || [];
+  if (
+    !ctx && !excerpt && !snippet &&
+    !(metricEvidence && metricEvidence.length) &&
+    !(externalEvidence && externalEvidence.length)
+  ) {
+    return "";
+  }
+
+  let bodyHtml = "";
+  if (ctx) {
+    const prev = ctx.prev || "";
+    const match = ctx.match || excerpt || "";
+    const next = ctx.next || "";
+    bodyHtml = `
+      <div class="ctx-text drill-ctx">
+        ${prev ? `<span class="ctx-prev">${escapeHtml(prev)}</span> ` : ""}
+        <mark class="ctx-match">${escapeHtml(match)}</mark>
+        ${next ? ` <span class="ctx-next">${escapeHtml(next)}</span>` : ""}
+      </div>
+    `;
+  } else if (excerpt) {
+    bodyHtml = `<div class="ctx-text drill-ctx"><mark>${escapeHtml(excerpt)}</mark></div>`;
+  }
+
+  const narrativeJump = buildSnippetJump(prov, snippet && snippet.page, (locator || {}).normalised_search);
+  const snippetHtml = snippet && snippet.path
+    ? wrapSnippetLink(
+        narrativeJump,
+        `<figure class="evidence-snippet clickable" title="Open source PDF at page ${escapeHtml(snippet.page || "?")} ${narrativeJump ? "(opens in new tab)" : "(no source URL available)"}">
+           <img src="../${escapeHtml(snippet.path)}" alt="Evidence snippet from page ${escapeHtml(snippet.page || "?")}" loading="lazy" />
+           <figcaption>${narrativeJump ? "&#x21D7; " : ""}Narrative snippet \u00b7 page ${escapeHtml(snippet.page || "?")} \u00b7 ${escapeHtml(snippet.width || "?")}\u00d7${escapeHtml(snippet.height || "?")} px</figcaption>
+         </figure>`
+      )
+    : "";
+
+  const metricsHtml = renderMetricEvidence(metricEvidence, prov);
+  const externalHtml = renderExternalCollision(externalEvidence, f || {});
+
+  return `
+    <div class="drill-evidence">
+      <div class="drill-evidence-head">Evidence from the report</div>
+      ${bodyHtml}
+      ${snippetHtml}
+      ${metricsHtml}
+      ${externalHtml}
+    </div>
+  `;
 }
 
 /* Friendly label for an internal rule_id. Falls back to the id itself
