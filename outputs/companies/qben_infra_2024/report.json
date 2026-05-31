@@ -4,7 +4,7 @@
   "ticker": "QBEN",
   "exchange": "Nasdaq First North Premier",
   "middelborg_link": "Same as qben_infra; isolates the 2024 year-end narrative against 2024 actuals (no prior comparison).",
-  "generated_at_utc": "2026-05-31T03:44:17+00:00",
+  "generated_at_utc": "2026-05-31T03:48:04+00:00",
   "current_period": "Q4 2024",
   "prior_period": null,
   "source_used": {
@@ -612,11 +612,11 @@
           "locator": {
             "page": 2,
             "bbox": {
-              "x0": 44.828060150146484,
+              "x0": 44.82806396484375,
               "top": 424.0978698730469,
               "x1": 82.49708557128906,
               "bottom": 434.1191711425781,
-              "width": 37.66902542114258,
+              "width": 37.66902160644531,
               "height": 10.02130126953125
             },
             "matched_str": "Net sales",
@@ -631,11 +631,11 @@
             "size_bytes": 9989,
             "page": 2,
             "bbox": {
-              "x0": 44.828060150146484,
+              "x0": 44.82806396484375,
               "top": 424.0978698730469,
               "x1": 82.49708557128906,
               "bottom": 434.1191711425781,
-              "width": 37.66902542114258,
+              "width": 37.66902160644531,
               "height": 10.02130126953125
             },
             "matched_str": "Net sales",
@@ -1061,11 +1061,11 @@
           "locator": {
             "page": 2,
             "bbox": {
-              "x0": 44.828060150146484,
+              "x0": 44.82806396484375,
               "top": 424.0978698730469,
               "x1": 82.49708557128906,
               "bottom": 434.1191711425781,
-              "width": 37.66902542114258,
+              "width": 37.66902160644531,
               "height": 10.02130126953125
             },
             "matched_str": "Net sales",
@@ -1080,11 +1080,11 @@
             "size_bytes": 9989,
             "page": 2,
             "bbox": {
-              "x0": 44.828060150146484,
+              "x0": 44.82806396484375,
               "top": 424.0978698730469,
               "x1": 82.49708557128906,
               "bottom": 434.1191711425781,
-              "width": 37.66902542114258,
+              "width": 37.66902160644531,
               "height": 10.02130126953125
             },
             "matched_str": "Net sales",
