@@ -871,7 +871,13 @@ def main():
     with open(dash_path, "w", encoding="utf-8") as f:
         json.dump(dashboard, f, ensure_ascii=False, indent=2)
 
-    top = top_headlines(headlines_pool, k=15)
+    # Ship every finding to the dashboard, not just the top N. The
+    # severity weight in priority_scorer is heavy enough that any
+    # fixed cap (we used k=15 before) ends up filled entirely with
+    # critical rows -- warning / info rows never even reach the UI
+    # for the analyst to evaluate. Letting the leaderboard show the
+    # full pool lets the UI filters do the triage instead.
+    top = top_headlines(headlines_pool, k=len(headlines_pool))
     leaderboard_path = os.path.join(OUTPUT_DIR, "leaderboard.json")
     with open(leaderboard_path, "w", encoding="utf-8") as f:
         json.dump({
@@ -886,7 +892,9 @@ def main():
         and not c["middelborg_link"].lower().startswith("not a middelborg")
     }
     middelborg_headlines = [h for h in headlines_pool if h["company"] in middelborg_ids]
-    middelborg_top = top_headlines(middelborg_headlines, k=15)
+    # Same uncapped policy for the Middelborg-only scope -- same
+    # rationale as the all-scope leaderboard above.
+    middelborg_top = top_headlines(middelborg_headlines, k=len(middelborg_headlines))
     middelborg_leaderboard_path = os.path.join(OUTPUT_DIR, "middelborg_leaderboard.json")
     with open(middelborg_leaderboard_path, "w", encoding="utf-8") as f:
         json.dump({

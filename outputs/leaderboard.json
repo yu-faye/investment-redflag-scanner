@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-31T09:09:53+00:00",
+  "generated_at_utc": "2026-05-31T10:31:58+00:00",
   "pages_url": "https://yu-faye.github.io/investment-redflag-scanner/",
   "top_findings": [
     {
@@ -115,11 +115,11 @@
         "label": "Annual Report 2025",
         "period": "2025-FY",
         "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner",
         "excerpt_locator": {
@@ -142,10 +142,10 @@
         "pdf_page_hit": 6,
         "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=6",
         "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=6&search=sustainable%20growth%20and%20long-term%20value%20creation.",
-        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6",
-        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=sustainable%20growth%20and%20long-term%20value%20creation.",
-        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6",
-        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=sustainable%20growth%20and%20long-term%20value%20creation.",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=sustainable%20growth%20and%20long-term%20value%20creation.",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=sustainable%20growth%20and%20long-term%20value%20creation.",
         "evidence_snippet": {
           "path": "outputs/evidence/techstep/91232bc6c780.png",
           "width": 1095,
@@ -231,11 +231,11 @@
         "label": "Annual Report 2024 (text cache)",
         "period": "2024-FY",
         "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/otovo/2024/otovo_annual_2024.txt",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/otovo/2024/otovo_annual_2024.txt",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -262,11 +262,11 @@
           "locator": {
             "page": 2,
             "bbox": {
-              "x0": 44.82806396484375,
+              "x0": 44.828060150146484,
               "top": 424.0978698730469,
               "x1": 82.49708557128906,
               "bottom": 434.1191711425781,
-              "width": 37.66902160644531,
+              "width": 37.66902542114258,
               "height": 10.02130126953125
             },
             "matched_str": "Net sales",
@@ -281,11 +281,11 @@
             "size_bytes": 9989,
             "page": 2,
             "bbox": {
-              "x0": 44.82806396484375,
+              "x0": 44.828060150146484,
               "top": 424.0978698730469,
               "x1": 82.49708557128906,
               "bottom": 434.1191711425781,
-              "width": 37.66902160644531,
+              "width": 37.66902542114258,
               "height": 10.02130126953125
             },
             "matched_str": "Net sales",
@@ -313,11 +313,11 @@
         "label": "Q4 / Year-end report 2024 (English)",
         "period": "2024-Q4",
         "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner",
         "excerpt_locator": {
@@ -340,10 +340,10 @@
         "pdf_page_hit": 2,
         "issuer_url_at_page": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=2",
         "issuer_url_at_phrase": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=2&search=Premier%20Growth%20Market",
-        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2",
-        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2&search=Premier%20Growth%20Market",
-        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2",
-        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2&search=Premier%20Growth%20Market",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2&search=Premier%20Growth%20Market",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2&search=Premier%20Growth%20Market",
         "evidence_snippet": {
           "path": "outputs/evidence/qben_infra_2024/ac174acfe5de.png",
           "width": 1095,
@@ -706,11 +706,11 @@
         "label": "Q1 2026 interim report (Swedish)",
         "period": "2026-Q1",
         "sha256": "df8a94c604a7e48d63a31311139da3ad5733c5167220d38b17c0ddc284e94b11",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner",
         "excerpt_locator": {
@@ -733,10 +733,10 @@
         "pdf_page_hit": 2,
         "issuer_url_at_page": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf#page=2",
         "issuer_url_at_phrase": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf#page=2&search=Nettooms%C3%A4ttningen%20i%20kvarvarande%20verksamhet%20uppgick%20till%20169%20MSEK",
-        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2",
-        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2&search=Nettooms%C3%A4ttningen%20i%20kvarvarande%20verksamhet%20uppgick%20till%20169%20MSEK",
-        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2",
-        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2&search=Nettooms%C3%A4ttningen%20i%20kvarvarande%20verksamhet%20uppgick%20till%20169%20MSEK",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2&search=Nettooms%C3%A4ttningen%20i%20kvarvarande%20verksamhet%20uppgick%20till%20169%20MSEK",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2&search=Nettooms%C3%A4ttningen%20i%20kvarvarande%20verksamhet%20uppgick%20till%20169%20MSEK",
         "evidence_snippet": {
           "path": "outputs/evidence/qben_infra/b95186e9e41b.png",
           "width": 1095,
@@ -1032,11 +1032,11 @@
         "label": "Q4 / Year-end report 2024 (English)",
         "period": "2024-Q4",
         "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner",
         "excerpt_locator": {
@@ -1059,10 +1059,10 @@
         "pdf_page_hit": 3,
         "issuer_url_at_page": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3",
         "issuer_url_at_phrase": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3&search=SLAM%20Jernbaneteknikk%20AS%2C%20a%20specialist%20in%20rail%20signalling",
-        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
-        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=SLAM%20Jernbaneteknikk%20AS%2C%20a%20specialist%20in%20rail%20signalling",
-        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
-        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=SLAM%20Jernbaneteknikk%20AS%2C%20a%20specialist%20in%20rail%20signalling",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=SLAM%20Jernbaneteknikk%20AS%2C%20a%20specialist%20in%20rail%20signalling",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=SLAM%20Jernbaneteknikk%20AS%2C%20a%20specialist%20in%20rail%20signalling",
         "evidence_snippet": {
           "path": "outputs/evidence/qben_infra_2024/aa4770fd56f3.png",
           "width": 1095,
@@ -1343,11 +1343,11 @@
         "label": "Q4 / Year-end report 2024 (English)",
         "period": "2024-Q4",
         "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -1614,11 +1614,11 @@
         "label": "Q4 / Year-end report 2024 (English)",
         "period": "2024-Q4",
         "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner",
         "excerpt_locator": {
@@ -1641,10 +1641,10 @@
         "pdf_page_hit": 3,
         "issuer_url_at_page": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3",
         "issuer_url_at_phrase": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3&search=Nordnes%20Narvik%20AS",
-        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
-        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=Nordnes%20Narvik%20AS",
-        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
-        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=Nordnes%20Narvik%20AS",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=Nordnes%20Narvik%20AS",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=Nordnes%20Narvik%20AS",
         "evidence_snippet": {
           "path": "outputs/evidence/qben_infra_2024/d6b8b4703dbd.png",
           "width": 1095,
@@ -1709,11 +1709,11 @@
         "label": "Full Annual Report 2025 (Swedish)",
         "period": "2025-FY",
         "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -1749,11 +1749,11 @@
         "label": "Full Annual Report 2025 (Swedish)",
         "period": "2025-FY",
         "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -1789,11 +1789,11 @@
         "label": "Annual Report 2025",
         "period": "2025-FY",
         "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -1829,11 +1829,11 @@
         "label": "Annual Report 2025",
         "period": "2025-FY",
         "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -1869,11 +1869,11 @@
         "label": "Annual Report 2025",
         "period": "2025-FY",
         "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -1909,11 +1909,11 @@
         "label": "Annual Report 2025",
         "period": "2025-FY",
         "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -1949,11 +1949,11 @@
         "label": "Annual Report 2025",
         "period": "2025-FY",
         "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner"
       },
@@ -2074,11 +2074,11 @@
         "label": "Annual Report 2025",
         "period": "2025-FY",
         "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
-        "git_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
-        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf",
-        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
         "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
-        "repo_head_sha": "5119d94cb76dfdaa09599e0ca9f952d45b400d5a",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
         "owner": "yu-faye",
         "repo": "investment-redflag-scanner",
         "excerpt_locator": {
@@ -2101,10 +2101,10 @@
         "pdf_page_hit": 6,
         "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=6",
         "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=6&search=a%20resilient%20foundation%20as%20Techstep%20continues%20to%20scale",
-        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6",
-        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=a%20resilient%20foundation%20as%20Techstep%20continues%20to%20scale",
-        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6",
-        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/5119d94cb76dfdaa09599e0ca9f952d45b400d5a/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=a%20resilient%20foundation%20as%20Techstep%20continues%20to%20scale",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=a%20resilient%20foundation%20as%20Techstep%20continues%20to%20scale",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=a%20resilient%20foundation%20as%20Techstep%20continues%20to%20scale",
         "evidence_snippet": {
           "path": "outputs/evidence/techstep/552a24aa363e.png",
           "width": 1095,
@@ -2137,6 +2137,2331 @@
           "height": 8.0
         },
         "key": "552a24aa363e"
+      }
+    },
+    {
+      "company": "otovo",
+      "company_name": "Otovo ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "otovo|narrative_dissonance|Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the",
+      "subtype": null,
+      "severity": "critical",
+      "priority_score": 8.55,
+      "headline": "Otovo ASA: 'efficiency' narrative cited 9 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-8.0, ebita_margin_pct=-51.0).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "efficiency program (completed",
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -8.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": -51.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+        "kind": "local_txt",
+        "issuer_url": "https://www.otovo.com/investor-relations/",
+        "issuer_page": "https://www.otovo.com/investor-relations/",
+        "language": "en",
+        "label": "Annual Report 2024 (text cache)",
+        "period": "2024-FY",
+        "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "norse_atlantic",
+      "company_name": "Norse Atlantic Airways ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting",
+      "subtype": null,
+      "severity": "critical",
+      "priority_score": 8.1,
+      "headline": "Norse Atlantic Airways ASA: 'efficiency' narrative cited 8 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-1.0, ebita_margin_pct=-16.0).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "The affordability of tickets can largely be attributed to improved fleet efficiency, driven by advancements in technology, and more fuel-efficient aircraft.",
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -1.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": -16.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "kind": "local_txt",
+        "issuer_url": "https://norseatlantic.com/en/investor/reports-presentations/",
+        "issuer_page": "https://norseatlantic.com/en/investor/reports-presentations/",
+        "language": "en",
+        "label": "Annual Report 2024 (text cache)",
+        "period": "2024-FY",
+        "sha256": "8d7e2c4715b6e8ddc1b1b5eee2713f3dd7ff18178795513627235a171f3624cf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "otovo",
+      "company_name": "Otovo ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "otovo|narrative_dissonance|Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the",
+      "subtype": null,
+      "severity": "critical",
+      "priority_score": 7.2,
+      "headline": "Otovo ASA: 'resilience' narrative cited 6 times, but supporting metrics move the opposite way (interest_coverage_ratio=0.5, net_debt_to_ebitda=9.9).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "greener and more robust by providing",
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 0.5,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 9.9,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+        "kind": "local_txt",
+        "issuer_url": "https://www.otovo.com/investor-relations/",
+        "issuer_page": "https://www.otovo.com/investor-relations/",
+        "language": "en",
+        "label": "Annual Report 2024 (text cache)",
+        "period": "2024-FY",
+        "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "qben_infra_annual_2025",
+      "company_name": "Qben Infra AB (FY2025 standalone attack)",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "qben_infra_annual_2025|narrative_dissonance|Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, ",
+      "subtype": null,
+      "severity": "critical",
+      "priority_score": 6.75,
+      "headline": "Qben Infra AB (FY2025 standalone attack): 'efficiency' narrative cited 5 times, but supporting metrics move the opposite way (ebita_margin_pct=-10.6).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "nettonollutsläpp av koldioxid och EU -direktiv om energieffektivitet",
+      "metric_evidence": [
+        {
+          "metric": "ebita_margin_pct",
+          "value": -10.6,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 5,
+            "bbox": {
+              "x0": 362.4093017578125,
+              "top": 180.32577514648438,
+              "x1": 382.9121398925781,
+              "bottom": 190.33583068847656,
+              "width": 20.502838134765625,
+              "height": 10.010055541992188
+            },
+            "matched_str": "-10,6",
+            "strategy": "value",
+            "context_distance": 149.8203420639038,
+            "context_term": "EBITA-margin",
+            "confidence": "medium"
+          },
+          "snippet": {
+            "path": "outputs/evidence/qben_infra_annual_2025/metric_0c51810f0e87.png",
+            "width": 1095,
+            "height": 61,
+            "size_bytes": 14523,
+            "page": 5,
+            "bbox": {
+              "x0": 362.4093017578125,
+              "top": 180.32577514648438,
+              "x1": 382.9121398925781,
+              "bottom": 190.33583068847656,
+              "width": 20.502838134765625,
+              "height": 10.010055541992188
+            },
+            "matched_str": "-10,6",
+            "confidence": "medium",
+            "context_term": "EBITA-margin"
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+        "issuer_page": "https://mfn.se/a/qben-infra/qben-infra-presents-annual-report-for-2025",
+        "language": "sv",
+        "label": "Full Annual Report 2025 (Swedish)",
+        "period": "2025-FY",
+        "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "pdf_page_hit": 7,
+        "issuer_url_at_page": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf#page=7",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf#page=7",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf#page=7"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "qben_infra",
+      "company_name": "Qben Infra AB",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "qben_infra|narrative_dissonance|Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the",
+      "subtype": null,
+      "severity": "critical",
+      "priority_score": 5.85,
+      "headline": "Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the opposite way (revenue_yoy_pct=-13.3, organic_growth_pct=-13.3).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "Aktien handlas på Nasdaq First North Premier Growth",
+      "metric_evidence": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -13.3,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_curation",
+          "locator": {
+            "page": 2,
+            "bbox": {
+              "x0": 63.86399841308594,
+              "top": 75.58995056152344,
+              "x1": 365.18798828125,
+              "bottom": 86.13795471191406,
+              "width": 301.32398986816406,
+              "height": 10.548004150390625
+            },
+            "matched_str": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK (195)",
+            "strategy": "anchor",
+            "context_distance": null,
+            "context_term": null
+          },
+          "snippet": {
+            "path": "outputs/evidence/qben_infra/metric_351a459b3697.png",
+            "width": 1095,
+            "height": 62,
+            "size_bytes": 20188,
+            "page": 2,
+            "bbox": {
+              "x0": 63.86399841308594,
+              "top": 75.58995056152344,
+              "x1": 365.18798828125,
+              "bottom": 86.13795471191406,
+              "width": 301.32398986816406,
+              "height": 10.548004150390625
+            },
+            "matched_str": "Nettoomsättningen i kvarvarande verksamhet uppgick till 169 MSEK (195)",
+            "confidence": null,
+            "context_term": null
+          },
+          "note": "Continuing operations only. Reported figures: 169 / 195 MSEK -> -13.3% YoY decline."
+        },
+        {
+          "metric": "organic_growth_pct",
+          "value": -13.3,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf",
+        "issuer_page": "https://mfn.se/a/qben-infra/interim-report-january-march-2026",
+        "language": "sv",
+        "label": "Q1 2026 interim report (Swedish)",
+        "period": "2026-Q1",
+        "sha256": "df8a94c604a7e48d63a31311139da3ad5733c5167220d38b17c0ddc284e94b11",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 10,
+          "bbox": {
+            "x0": 311.23,
+            "top": 611.1368799999999,
+            "x1": 529.2099999999999,
+            "bottom": 635.698,
+            "width": 217.9799999999999,
+            "height": 24.561120000000074
+          },
+          "sentence_context": {
+            "prev": "Organisk tillväxt: >10% i genomsnittlig årlig tillväxt EBITA-marginal: >10% Nettoskuld / EBITDA: Under 2,0x Utdelning: Upp till 30% av periodens resultat M&A-aktivitet: Aktivt söka och genomföra kompletterande förvärv Organisation Antalet anställda i Qben Infra var 385 vid periodens slut.",
+            "match": "Aktien Aktien handlas på Nasdaq First North Premier Growth Market under tickern QBEN.",
+            "next": "Antalet aktier uppgick till 79 827 620 vid kvartalets slut och aktiekapitalet uppgick till 1 108 717 kr."
+          },
+          "normalised_search": "Aktien handlas på Nasdaq First North Premier Growth"
+        },
+        "pdf_page_hit": 10,
+        "issuer_url_at_page": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf#page=10",
+        "issuer_url_at_phrase": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf#page=10&search=Aktien%20handlas%20p%C3%A5%20Nasdaq%20First%20North%20Premier%20Growth",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=10",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=10&search=Aktien%20handlas%20p%C3%A5%20Nasdaq%20First%20North%20Premier%20Growth",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=10",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=10&search=Aktien%20handlas%20p%C3%A5%20Nasdaq%20First%20North%20Premier%20Growth",
+        "evidence_snippet": {
+          "path": "outputs/evidence/qben_infra/c29a841a3ade.png",
+          "width": 1095,
+          "height": 90,
+          "size_bytes": 23550,
+          "page": 10,
+          "bbox": {
+            "x0": 311.23,
+            "top": 611.1368799999999,
+            "x1": 529.2099999999999,
+            "bottom": 635.698,
+            "width": 217.9799999999999,
+            "height": 24.561120000000074
+          },
+          "key": "c29a841a3ade"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/qben_infra/c29a841a3ade.png",
+        "width": 1095,
+        "height": 90,
+        "size_bytes": 23550,
+        "page": 10,
+        "bbox": {
+          "x0": 311.23,
+          "top": 611.1368799999999,
+          "x1": 529.2099999999999,
+          "bottom": 635.698,
+          "width": 217.9799999999999,
+          "height": 24.561120000000074
+        },
+        "key": "c29a841a3ade"
+      }
+    },
+    {
+      "company": "norwegian_air",
+      "company_name": "Norwegian Air Shuttle ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting ",
+      "subtype": null,
+      "severity": "critical",
+      "priority_score": 5.85,
+      "headline": "Norwegian Air Shuttle ASA: 'resilience' narrative cited 3 times, but supporting metrics move the opposite way (interest_coverage_ratio=2.4, net_debt_to_ebitda=4.8).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "and robust governance of sustainability matters for all",
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 2.4,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 4.8,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "kind": "local_txt",
+        "issuer_url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+        "issuer_page": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+        "language": "en",
+        "label": "Annual Report 2024 (text cache)",
+        "period": "2024-FY",
+        "sha256": "9aca2a33c7f92aa1620541b3bce9ffabeef9e840b82285c283ae54faa2789b59",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "norse_atlantic",
+      "company_name": "Norse Atlantic Airways ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "norse_atlantic|narrative_dissonance|Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting",
+      "subtype": null,
+      "severity": "critical",
+      "priority_score": 5.85,
+      "headline": "Norse Atlantic Airways ASA: 'resilience' narrative cited 3 times, but supporting metrics move the opposite way (interest_coverage_ratio=0.3, net_debt_to_ebitda=99.0).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "The Company’s robust operational performance was again demonstrated in 2024 as 99.6 per cent of all scheduled flights were completed as scheduled during another period of substantial growth.",
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 0.3,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 99.0,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "kind": "local_txt",
+        "issuer_url": "https://norseatlantic.com/en/investor/reports-presentations/",
+        "issuer_page": "https://norseatlantic.com/en/investor/reports-presentations/",
+        "language": "en",
+        "label": "Annual Report 2024 (text cache)",
+        "period": "2024-FY",
+        "sha256": "8d7e2c4715b6e8ddc1b1b5eee2713f3dd7ff18178795513627235a171f3624cf",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "norwegian_air",
+      "company_name": "Norwegian Air Shuttle ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "norwegian_air|narrative_dissonance|Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting",
+      "subtype": null,
+      "severity": "warning",
+      "priority_score": 3.53,
+      "headline": "Norwegian Air Shuttle ASA: 'efficiency' narrative cited 37 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-3.4, ebita_margin_pct=5.3).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "In 2025, we will have more focus on harvesting these investments while intensifying our costs-efficiency efforts.",
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -3.4,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 5.3,
+          "expected_direction": "up",
+          "score": 1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "weak_support",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "kind": "local_txt",
+        "issuer_url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+        "issuer_page": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+        "language": "en",
+        "label": "Annual Report 2024 (text cache)",
+        "period": "2024-FY",
+        "sha256": "9aca2a33c7f92aa1620541b3bce9ffabeef9e840b82285c283ae54faa2789b59",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "qben_infra_2024",
+      "company_name": "Qben Infra AB (FY2024 standalone attack)",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, ",
+      "subtype": null,
+      "severity": "warning",
+      "priority_score": 2.48,
+      "headline": "Qben Infra AB (FY2024 standalone attack): 'resilience' narrative cited 1 times, but supporting metrics move the opposite way (interest_coverage_ratio=1.2, net_debt_to_ebitda=8.5).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "a robust growth in demand.",
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 1.2,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 8.5,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf",
+        "issuer_page": "https://www.qben.se/en/year-end-report-january-december-2024-published/",
+        "language": "en",
+        "label": "Q4 / Year-end report 2024 (English)",
+        "period": "2024-Q4",
+        "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 3,
+          "bbox": {
+            "x0": 42.6,
+            "top": 615.43144,
+            "x1": 147.67716,
+            "bottom": 623.9514399999999,
+            "width": 105.07715999999999,
+            "height": 8.519999999999982
+          },
+          "sentence_context": {
+            "prev": "Investments are expected to continue increasing over the next ten years as a result of previously neglected maintenance and a growing focus on critical social infrastructure.",
+            "match": "In electrification and rail expansion in particular we are seeing a robust growth in demand.",
+            "next": "These areas are characterised by high barriers to entry, with technical complexity, extensive regulatory requirements and strict safety standards making it difficult for new players to find their way into the market."
+          },
+          "normalised_search": "a robust growth in demand."
+        },
+        "pdf_page_hit": 3,
+        "issuer_url_at_page": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3",
+        "issuer_url_at_phrase": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3&search=a%20robust%20growth%20in%20demand.",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=a%20robust%20growth%20in%20demand.",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=a%20robust%20growth%20in%20demand.",
+        "evidence_snippet": {
+          "path": "outputs/evidence/qben_infra_2024/8e015982d781.png",
+          "width": 1095,
+          "height": 58,
+          "size_bytes": 21631,
+          "page": 3,
+          "bbox": {
+            "x0": 42.6,
+            "top": 615.43144,
+            "x1": 147.67716,
+            "bottom": 623.9514399999999,
+            "width": 105.07715999999999,
+            "height": 8.519999999999982
+          },
+          "key": "8e015982d781"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/qben_infra_2024/8e015982d781.png",
+        "width": 1095,
+        "height": 58,
+        "size_bytes": 21631,
+        "page": 3,
+        "bbox": {
+          "x0": 42.6,
+          "top": 615.43144,
+          "x1": 147.67716,
+          "bottom": 623.9514399999999,
+          "width": 105.07715999999999,
+          "height": 8.519999999999982
+        },
+        "key": "8e015982d781"
+      }
+    },
+    {
+      "company": "qben_infra_2024",
+      "company_name": "Qben Infra AB (FY2024 standalone attack)",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but ",
+      "subtype": null,
+      "severity": "warning",
+      "priority_score": 2.48,
+      "headline": "Qben Infra AB (FY2024 standalone attack): 'demand' narrative cited 1 times, but supporting metrics move the opposite way (revenue_yoy_pct=-2.0).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "development, which creates favourable conditions for our",
+      "metric_evidence": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -2.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_curation",
+          "locator": {
+            "page": 2,
+            "bbox": {
+              "x0": 44.828060150146484,
+              "top": 424.0978698730469,
+              "x1": 82.49708557128906,
+              "bottom": 434.1191711425781,
+              "width": 37.66902542114258,
+              "height": 10.02130126953125
+            },
+            "matched_str": "Net sales",
+            "strategy": "anchor",
+            "context_distance": null,
+            "context_term": null
+          },
+          "snippet": {
+            "path": "outputs/evidence/qben_infra_2024/metric_4a38eef03002.png",
+            "width": 1095,
+            "height": 61,
+            "size_bytes": 9989,
+            "page": 2,
+            "bbox": {
+              "x0": 44.828060150146484,
+              "top": 424.0978698730469,
+              "x1": 82.49708557128906,
+              "bottom": 434.1191711425781,
+              "width": 37.66902542114258,
+              "height": 10.02130126953125
+            },
+            "matched_str": "Net sales",
+            "confidence": null,
+            "context_term": null
+          },
+          "note": "Approximation derived from FY2024 income statement Net sales row vs FY2023 comparator."
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf",
+        "issuer_page": "https://www.qben.se/en/year-end-report-january-december-2024-published/",
+        "language": "en",
+        "label": "Q4 / Year-end report 2024 (English)",
+        "period": "2024-Q4",
+        "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 3,
+          "bbox": {
+            "x0": 42.6,
+            "top": 541.6314399999999,
+            "x1": 262.72272,
+            "bottom": 550.1514399999999,
+            "width": 220.12272,
+            "height": 8.519999999999982
+          },
+          "sentence_context": {
+            "prev": "The transition to fossil-free energy systems and reduced climate impact require comprehensive investments in power grids and rail, while urbanisation and growing cities are driving demand for more efficient transportation and energy infrastructure.",
+            "match": "Both Sweden and Norway have announced record-high investments in rail, power grids and sustainable urban development, which creates favourable conditions for our business.",
+            "next": "Investments are expected to continue increasing over the next ten years as a result of previously neglected maintenance and a growing focus on critical social infrastructure."
+          },
+          "normalised_search": "development, which creates favourable conditions for our"
+        },
+        "pdf_page_hit": 3,
+        "issuer_url_at_page": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3",
+        "issuer_url_at_phrase": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3&search=development%2C%20which%20creates%20favourable%20conditions%20for%20our",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=development%2C%20which%20creates%20favourable%20conditions%20for%20our",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=development%2C%20which%20creates%20favourable%20conditions%20for%20our",
+        "evidence_snippet": {
+          "path": "outputs/evidence/qben_infra_2024/cdce39f14b28.png",
+          "width": 1095,
+          "height": 58,
+          "size_bytes": 18454,
+          "page": 3,
+          "bbox": {
+            "x0": 42.6,
+            "top": 541.6314399999999,
+            "x1": 262.72272,
+            "bottom": 550.1514399999999,
+            "width": 220.12272,
+            "height": 8.519999999999982
+          },
+          "key": "cdce39f14b28"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/qben_infra_2024/cdce39f14b28.png",
+        "width": 1095,
+        "height": 58,
+        "size_bytes": 18454,
+        "page": 3,
+        "bbox": {
+          "x0": 42.6,
+          "top": 541.6314399999999,
+          "x1": 262.72272,
+          "bottom": 550.1514399999999,
+          "width": 220.12272,
+          "height": 8.519999999999982
+        },
+        "key": "cdce39f14b28"
+      }
+    },
+    {
+      "company": "inin_group",
+      "company_name": "ININ Group AS",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "inin_group|narrative_dissonance|ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move",
+      "subtype": null,
+      "severity": "warning",
+      "priority_score": 2.48,
+      "headline": "ININ Group AS: 'resilience' narrative cited 1 times, but supporting metrics move the opposite way (interest_coverage_ratio=1.5, net_debt_to_ebitda=4.2).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "robust megatrends.",
+      "metric_evidence": [
+        {
+          "metric": "interest_coverage_ratio",
+          "value": 1.5,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 42,
+            "bbox": {
+              "x0": 152.67140197753906,
+              "top": 151.0118865966797,
+              "x1": 160.05235290527344,
+              "bottom": 156.79408264160156,
+              "width": 7.380950927734375,
+              "height": 5.782196044921875
+            },
+            "matched_str": "1,5",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/inin_group/metric_b587529df2b6.png",
+            "width": 1588,
+            "height": 52,
+            "size_bytes": 13455,
+            "page": 42,
+            "bbox": {
+              "x0": 152.67140197753906,
+              "top": 151.0118865966797,
+              "x1": 160.05235290527344,
+              "bottom": 156.79408264160156,
+              "width": 7.380950927734375,
+              "height": 5.782196044921875
+            },
+            "matched_str": "1,5",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "net_debt_to_ebitda",
+          "value": 4.2,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 4,
+            "bbox": {
+              "x0": 431.5425720214844,
+              "top": 443.43890380859375,
+              "x1": 449.568115234375,
+              "bottom": 452.2549133300781,
+              "width": 18.025543212890625,
+              "height": 8.816009521484375
+            },
+            "matched_str": "4.2%",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/inin_group/metric_746c24e44a2b.png",
+            "width": 1588,
+            "height": 59,
+            "size_bytes": 3851,
+            "page": 4,
+            "bbox": {
+              "x0": 431.5425720214844,
+              "top": 443.43890380859375,
+              "x1": 449.568115234375,
+              "bottom": 452.2549133300781,
+              "width": 18.025543212890625,
+              "height": 8.816009521484375
+            },
+            "matched_str": "4.2%",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+        "issuer_page": "https://inin.no/reports-and-presentations/",
+        "language": "en",
+        "label": "Annual Report 2025",
+        "period": "2025-FY",
+        "sha256": "764d8af4d0adcbfbd525a724ee44c8d10685ee91bd344dd3da9f81579f9faede",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 4,
+          "bbox": {
+            "x0": 30.0,
+            "top": 328.06039999999996,
+            "x1": 115.09500000000003,
+            "bottom": 338.06039999999996,
+            "width": 85.09500000000003,
+            "height": 10.0
+          },
+          "sentence_context": {
+            "prev": "Inin Group combines private equity ownership and value creation mindset with an industrial approach and long-term ownership perspective.",
+            "match": "The group has chosen a diversified approach with several platforms, all with niche markets that are driven by robust megatrends.",
+            "next": "As of 31 December 2025, Inin Group consisted of three investment platforms: Qben Infra AB Qben Infra is Inin Group’s largest shareholders, owning 94.90% of all outstanding shares at year-end 2025."
+          },
+          "normalised_search": "robust megatrends."
+        },
+        "pdf_page_hit": 4,
+        "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf#page=4",
+        "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf#page=4&search=robust%20megatrends.",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf#page=4",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf#page=4&search=robust%20megatrends.",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf#page=4",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/inin_group/2025/inin_group_annual_2025.pdf#page=4&search=robust%20megatrends.",
+        "evidence_snippet": {
+          "path": "outputs/evidence/inin_group/e61286d4d063.png",
+          "width": 1588,
+          "height": 61,
+          "size_bytes": 24698,
+          "page": 4,
+          "bbox": {
+            "x0": 30.0,
+            "top": 328.06039999999996,
+            "x1": 115.09500000000003,
+            "bottom": 338.06039999999996,
+            "width": 85.09500000000003,
+            "height": 10.0
+          },
+          "key": "e61286d4d063"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/inin_group/e61286d4d063.png",
+        "width": 1588,
+        "height": 61,
+        "size_bytes": 24698,
+        "page": 4,
+        "bbox": {
+          "x0": 30.0,
+          "top": 328.06039999999996,
+          "x1": 115.09500000000003,
+          "bottom": 338.06039999999996,
+          "width": 85.09500000000003,
+          "height": 10.0
+        },
+        "key": "e61286d4d063"
+      }
+    },
+    {
+      "company": "otovo",
+      "company_name": "Otovo ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "otovo|narrative_dissonance|Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opp",
+      "subtype": null,
+      "severity": "warning",
+      "priority_score": 2.48,
+      "headline": "Otovo ASA: 'demand' narrative cited 1 times, but supporting metrics move the opposite way (revenue_yoy_pct=-42.0, order_intake_yoy_pct=-30.0).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "● Creating favourable conditions and",
+      "metric_evidence": [
+        {
+          "metric": "revenue_yoy_pct",
+          "value": -42.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "order_intake_yoy_pct",
+          "value": -30.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "dissonance_detected",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/otovo/2024/otovo_annual_2024.txt",
+        "kind": "local_txt",
+        "issuer_url": "https://www.otovo.com/investor-relations/",
+        "issuer_page": "https://www.otovo.com/investor-relations/",
+        "language": "en",
+        "label": "Annual Report 2024 (text cache)",
+        "period": "2024-FY",
+        "sha256": "6ee6420a1f402523e26a2bda21413c0e3b61b55880f09b493393df68cf6f032a",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/otovo/2024/otovo_annual_2024.txt",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "qben_infra_annual_2025",
+      "company_name": "Qben Infra AB (FY2025 standalone attack)",
+      "rule_id": "selective_disclosure",
+      "composite_key": "qben_infra_annual_2025|selective_disclosure|Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in ",
+      "subtype": null,
+      "severity": "warning",
+      "priority_score": 2.19,
+      "headline": "Qben Infra AB (FY2025 standalone attack): KPI 'net_debt_to_ebitda' disclosed in FY 2024 Årsredovisning disappeared in FY 2025 Årsredovisning.",
+      "consolidation_caveat": null,
+      "claim_excerpt": null,
+      "metric_evidence": null,
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "disclosure_drop",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+        "issuer_page": "https://mfn.se/a/qben-infra/qben-infra-presents-annual-report-for-2025",
+        "language": "sv",
+        "label": "Full Annual Report 2025 (Swedish)",
+        "period": "2025-FY",
+        "sha256": "ee3248b02c7b7cf479914890f1536774915c84edac52ed64d79fae9102e422af",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner"
+      },
+      "evidence_snippet": null
+    },
+    {
+      "company": "techstep",
+      "company_name": "Techstep ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "techstep|narrative_dissonance|Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move",
+      "subtype": null,
+      "severity": "warning",
+      "priority_score": 1.72,
+      "headline": "Techstep ASA: 'efficiency' narrative cited 13 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-1.0, ebita_margin_pct=1.2).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "customers maximise the value of their mobile estate while strengthening security, efficiency, sustainability and user",
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -1.0,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 97,
+            "bbox": {
+              "x0": 450.79730224609375,
+              "top": 602.6749877929688,
+              "x1": 460.97930908203125,
+              "bottom": 611.074951171875,
+              "width": 10.1820068359375,
+              "height": 8.39996337890625
+            },
+            "matched_str": "-1,0",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_fd8a5d3aa208.png",
+            "width": 1095,
+            "height": 58,
+            "size_bytes": 8840,
+            "page": 97,
+            "bbox": {
+              "x0": 450.79730224609375,
+              "top": 602.6749877929688,
+              "x1": 460.97930908203125,
+              "bottom": 611.074951171875,
+              "width": 10.1820068359375,
+              "height": 8.39996337890625
+            },
+            "matched_str": "-1,0",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 1.2,
+          "expected_direction": "up",
+          "score": 1,
+          "source": "manual_curation",
+          "locator": {
+            "page": 118,
+            "bbox": {
+              "x0": 301.6399841308594,
+              "top": 504.8999328613281,
+              "x1": 353.59991455078125,
+              "bottom": 516.0999145507812,
+              "width": 51.959930419921875,
+              "height": 11.199981689453125
+            },
+            "matched_str": "EBITA margin",
+            "strategy": "anchor",
+            "context_distance": null,
+            "context_term": null
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_26ae6f9c82da.png",
+            "width": 1095,
+            "height": 64,
+            "size_bytes": 10034,
+            "page": 118,
+            "bbox": {
+              "x0": 301.6399841308594,
+              "top": 504.8999328613281,
+              "x1": 353.59991455078125,
+              "bottom": 516.0999145507812,
+              "width": 51.959930419921875,
+              "height": 11.199981689453125
+            },
+            "matched_str": "EBITA margin",
+            "confidence": null,
+            "context_term": null
+          },
+          "note": "EBITA margin row in the multi-year highlights table."
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "weak_support",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+        "issuer_page": "https://mfn.se/ob/a/techstep/",
+        "language": "en",
+        "label": "Annual Report 2025",
+        "period": "2025-FY",
+        "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 4,
+          "bbox": {
+            "x0": 50.0,
+            "top": 240.10000000000002,
+            "x1": 510.90400000000017,
+            "bottom": 248.10000000000002,
+            "width": 460.90400000000017,
+            "height": 8.0
+          },
+          "sentence_context": {
+            "prev": "Our solutions enable a modern, mobile workforce across both office workers and frontline environments in sectors such as retail, finance, energy, logistics, manufacturing and healthcare.",
+            "match": "By combining proprietary software, deep expertise and strong partnerships across the mobility ecosystem, we help customers maximise the value of their mobile estate while strengthening security, efficiency, sustainability and user experience.",
+            "next": "Techstep is recognised by Gartner as a “Managed Mobility Service provider” in its Market Guide—reflecting our position and ambition to transform workplace mobility."
+          },
+          "normalised_search": "customers maximise the value of their mobile estate"
+        },
+        "pdf_page_hit": 4,
+        "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=4",
+        "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=4&search=customers%20maximise%20the%20value%20of%20their%20mobile%20estate",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=4",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=4&search=customers%20maximise%20the%20value%20of%20their%20mobile%20estate",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=4",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=4&search=customers%20maximise%20the%20value%20of%20their%20mobile%20estate",
+        "evidence_snippet": {
+          "path": "outputs/evidence/techstep/8fa0c845af3b.png",
+          "width": 1095,
+          "height": 57,
+          "size_bytes": 20050,
+          "page": 4,
+          "bbox": {
+            "x0": 50.0,
+            "top": 240.10000000000002,
+            "x1": 510.90400000000017,
+            "bottom": 248.10000000000002,
+            "width": 460.90400000000017,
+            "height": 8.0
+          },
+          "key": "8fa0c845af3b"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/techstep/8fa0c845af3b.png",
+        "width": 1095,
+        "height": 57,
+        "size_bytes": 20050,
+        "page": 4,
+        "bbox": {
+          "x0": 50.0,
+          "top": 240.10000000000002,
+          "x1": 510.90400000000017,
+          "bottom": 248.10000000000002,
+          "width": 460.90400000000017,
+          "height": 8.0
+        },
+        "key": "8fa0c845af3b"
+      }
+    },
+    {
+      "company": "qben_infra_2024",
+      "company_name": "Qben Infra AB (FY2024 standalone attack)",
+      "rule_id": "triangulated_hypothesis",
+      "composite_key": "qben_infra_2024|triangulated_hypothesis|hyp_qben_banefjell_established",
+      "subtype": "subsidiary_specialist",
+      "severity": "info",
+      "priority_score": 1.5,
+      "headline": "Qben Infra AB (FY2024 standalone attack): claim 'Banefjell AS is an established player in track maintenance, concrete renovation and signal in Norway' -- triangulation = doffin=confirms, brreg=confirms, ted=confirms; derived severity = info.",
+      "consolidation_caveat": null,
+      "claim_excerpt": "Banefjell AS",
+      "metric_evidence": null,
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": null,
+      "triangulation": {
+        "hypothesis_id": "hyp_qben_banefjell_established",
+        "claim_category": "subsidiary_specialist",
+        "derived_severity": "info",
+        "verdict_summary": {
+          "confirms": 3
+        },
+        "confirming_taps": [
+          "doffin",
+          "brreg",
+          "ted"
+        ],
+        "refuting_taps": [],
+        "distinct_taps": [
+          "brreg",
+          "doffin",
+          "ted"
+        ],
+        "total_ledger_entries": 5,
+        "resolved_falsification_questions": [
+          "fq_direct_prime_contracts",
+          "fq_entity_age_and_existence",
+          "fq_industry_classification_match"
+        ],
+        "pending_falsification_questions": [],
+        "blockers_for_critical": [],
+        "peer_control_status": {
+          "checked": false,
+          "peer_ids": [],
+          "taps_with_passing_peer": []
+        },
+        "next_recommended_taps": [],
+        "latest_per_tap": {
+          "doffin": {
+            "addresses_questions": [
+              "fq_direct_prime_contracts"
+            ],
+            "confidence": 0.85,
+            "entity_match_orgnr": null,
+            "error": null,
+            "gathered_at_utc": "2026-05-30T06:23:37+00:00",
+            "hypothesis_id": "hyp_qben_banefjell_established",
+            "narrative": "Doffin returned 4 confirmed prime-contract awards to Banefjell AS, 2 post-acquisition and 2 pre-acquisition. This is consistent with the claim.",
+            "payload_sha256": "acfb8d71b7d16ff14a4e15b3e7ac1dcaa0aebb5b1e0e61046cfd55d28fe5688c",
+            "payload_summary": {
+              "confirmed_award_count": 4,
+              "confirmed_awards": [
+                {
+                  "awarded_names": [
+                    "ØYNEBRÅTEN ANLEGGSTEKNIKK AS",
+                    "Banefjell AS"
+                  ],
+                  "buyer_names": [
+                    "Bane NOR SF"
+                  ],
+                  "heading": "Rammeavtale - Drenering Sørlands-, Vestfold- og Gjøvikbanen m/sidebaner",
+                  "notice_id": "2026-106600",
+                  "public_url": "https://www.doffin.no/notices/2026-106600",
+                  "publication_date": "2026-04-13"
+                },
+                {
+                  "awarded_names": [
+                    "Veidekke Entreprenør AS",
+                    "Banefjell AS"
+                  ],
+                  "buyer_names": [
+                    "Bane NOR SF"
+                  ],
+                  "heading": "Drenering Område Sør-Vest Bergensbanen og Sørlandsbanen",
+                  "notice_id": "2024-113007",
+                  "public_url": "https://www.doffin.no/notices/2024-113007",
+                  "publication_date": "2024-09-13"
+                },
+                {
+                  "awarded_names": [
+                    "Anton W. Johansen",
+                    "Banefjell AS",
+                    "GARDA SIKRING AS",
+                    "ALLSIKRING AS"
+                  ],
+                  "buyer_names": [
+                    "Bane NOR SF"
+                  ],
+                  "heading": "Rammeavtale - Gjerding - Område Sør/Vest",
+                  "notice_id": "2023-307031",
+                  "public_url": "https://www.doffin.no/notices/2023-307031",
+                  "publication_date": "2023-08-02"
+                },
+                {
+                  "awarded_names": [
+                    "Banedrift AS",
+                    "Nettpartner AS",
+                    "Rail Production AS",
+                    "Otera Infra",
+                    "Veidekke Entreprenør AS",
+                    "Baneservice AS",
+                    "Rallarservice AS",
+                    "Team 1435 AS",
+                    "Railcom AS",
+                    "OneCo Infra AS",
+                    "Totalprosjekt Namsskogan AS",
+                    "Spordrift Prosjekt AS",
+                    "NRC Norge AS",
+                    "Res Track Nordic AS",
+                    "Infranord Norge AS",
+                    "Trym Bygg og Anlegg AS",
+                    "Banefjell AS",
+                    "Sæterdal Elektro",
+                    "Rail Infrastructure AS"
+                  ],
+                  "buyer_names": [
+                    "Bane NOR SF"
+                  ],
+                  "heading": "Parallelle rammeavtaler jernbanetekniske entrepriser",
+                  "notice_id": "2022-982593",
+                  "public_url": "https://www.doffin.no/notices/2022-982593",
+                  "publication_date": "2022-09-05"
+                }
+              ],
+              "post_acquisition_award_count": 2,
+              "pre_acquisition_award_count": 2,
+              "search_hits_total": 4
+            },
+            "query_url": "https://api.doffin.no/webclient/api/v2/search-api/search",
+            "raw_payload_ref": "external/doffin/qben_infra_2024/banefjell-as_2026-05-30.json",
+            "tap_id": "doffin",
+            "tap_kind": "public_procurement",
+            "verdict": "confirms"
+          },
+          "brreg": {
+            "addresses_questions": [
+              "fq_entity_age_and_existence",
+              "fq_industry_classification_match"
+            ],
+            "confidence": 0.85,
+            "entity_match_orgnr": "914019087",
+            "error": null,
+            "gathered_at_utc": "2026-05-30T06:23:41+00:00",
+            "hypothesis_id": "hyp_qben_banefjell_established",
+            "narrative": "BRREG resolved 'Banefjell AS' to orgnr 914019087 'BANEFJELL AS' (match=exact+naics, 8 candidates inspected from the top page; BRREG free-text search reports 433577 dataset entries containing any of the name tokens). Founded 2014-07-30 (~11.8 years old). Reports 60 employees. NAICS=42.120 (Bygging av jernbaner og undergrunnsbaner).",
+            "payload_sha256": "179020ab1cc3f3bdfaa8303ab63fedb51fa5376506f730feb9fa57ad02122097",
+            "payload_summary": {
+              "candidates_summary": [
+                {
+                  "antallAnsatte": 60,
+                  "konkurs": false,
+                  "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                  "naeringskode1": "42.120",
+                  "navn": "BANEFJELL AS",
+                  "orgnr": "914019087",
+                  "slettedato": null,
+                  "stiftelsesdato": "2014-07-30",
+                  "underAvvikling": false
+                },
+                {
+                  "antallAnsatte": null,
+                  "konkurs": false,
+                  "naering_label": "Kjøp og salg av egen fast eiendom",
+                  "naeringskode1": "68.110",
+                  "navn": "AS SITT AS",
+                  "orgnr": "929139550",
+                  "slettedato": null,
+                  "stiftelsesdato": "2022-04-07",
+                  "underAvvikling": false
+                },
+                {
+                  "antallAnsatte": null,
+                  "konkurs": false,
+                  "naering_label": "Oppføring av bygninger",
+                  "naeringskode1": "41.000",
+                  "navn": "AS & AS HOLDING AS",
+                  "orgnr": "929647238",
+                  "slettedato": null,
+                  "stiftelsesdato": "2022-07-31",
+                  "underAvvikling": false
+                },
+                {
+                  "antallAnsatte": null,
+                  "konkurs": false,
+                  "naering_label": "Uoppgitt",
+                  "naeringskode1": "00.000",
+                  "navn": "AS BEST AS",
+                  "orgnr": "933664716",
+                  "slettedato": null,
+                  "stiftelsesdato": "2024-05-29",
+                  "underAvvikling": false
+                },
+                {
+                  "antallAnsatte": null,
+                  "konkurs": false,
+                  "naering_label": "Konsulentvirksomhet tilknyttet informasjonsteknologi og forvaltning og drift av it-systemer",
+                  "naeringskode1": "62.200",
+                  "navn": "AS HARBITZ AS",
+                  "orgnr": "927026872",
+                  "slettedato": null,
+                  "stiftelsesdato": "2021-04-08",
+                  "underAvvikling": false
+                },
+                {
+                  "antallAnsatte": null,
+                  "konkurs": false,
+                  "naering_label": "Uoppgitt",
+                  "naeringskode1": "00.000",
+                  "navn": "AS HOLDING AS",
+                  "orgnr": "918591052",
+                  "slettedato": null,
+                  "stiftelsesdato": "2017-01-10",
+                  "underAvvikling": false
+                },
+                {
+                  "antallAnsatte": null,
+                  "konkurs": false,
+                  "naering_label": "Andre egeninvesteringsselskaper",
+                  "naeringskode1": "64.323",
+                  "navn": "AS INVEST AS",
+                  "orgnr": "989028774",
+                  "slettedato": null,
+                  "stiftelsesdato": "2005-11-01",
+                  "underAvvikling": false
+                },
+                {
+                  "antallAnsatte": null,
+                  "konkurs": false,
+                  "naering_label": "Byggeteknisk konsulentvirksomhet",
+                  "naeringskode1": "71.121",
+                  "navn": "AS KONSULT AS",
+                  "orgnr": "919161426",
+                  "slettedato": null,
+                  "stiftelsesdato": "2017-05-29",
+                  "underAvvikling": false
+                }
+              ],
+              "matched_by": "exact+naics",
+              "top_match": {
+                "antallAnsatte": 60,
+                "konkurs": false,
+                "naering_label": "Bygging av jernbaner og undergrunnsbaner",
+                "naeringskode1": "42.120",
+                "navn": "BANEFJELL AS",
+                "orgnr": "914019087",
+                "slettedato": null,
+                "stiftelsesdato": "2014-07-30",
+                "underAvvikling": false
+              },
+              "total_hits": 433577
+            },
+            "query_url": "https://data.brreg.no/enhetsregisteret/api/enheter?navn=Banefjell%20AS&size=25",
+            "raw_payload_ref": "data/external/brreg/qben_infra_2024/banefjell-as_2026-05-30.json",
+            "tap_id": "brreg",
+            "tap_kind": "company_registry",
+            "verdict": "confirms"
+          },
+          "ted": {
+            "addresses_questions": [
+              "fq_direct_prime_contracts"
+            ],
+            "confidence": 0.85,
+            "entity_match_orgnr": null,
+            "error": null,
+            "gathered_at_utc": "2026-05-30T06:23:47+00:00",
+            "hypothesis_id": "hyp_qben_banefjell_established",
+            "narrative": "TED returned 2 EU-tier prime-contract notice(s) where Banefjell AS appears as a winner (2 post-acquisition, 0 pre-acquisition). TED is the canonical EU-wide public-procurement registry; above-threshold awards here are hard evidence of executing capability.",
+            "payload_sha256": "ee7960d097783eda3c39303b8120f8fd4556f565750d17a9c1b4fb41468358a2",
+            "payload_summary": {
+              "confirmed_award_count": 2,
+              "confirmed_awards": [
+                {
+                  "buyer_names": [
+                    "Bane NOR SF"
+                  ],
+                  "heading": "Norway – Construction work – Drainage area South-Vest Bergen Railway and Sørlandsbanen",
+                  "notice_id": "549796-2024",
+                  "place_of_performance": [
+                    "anyw",
+                    "anyw"
+                  ],
+                  "public_url": "https://ted.europa.eu/en/notice/-/detail/549796-2024",
+                  "publication_date": "2024-09-13",
+                  "winner_names": [
+                    "Veidekke Entreprenør AS",
+                    "Banefjell AS"
+                  ]
+                },
+                {
+                  "buyer_names": [
+                    "Bane NOR SF"
+                  ],
+                  "heading": "Norway – Construction work for railways and cable transport systems – Framework agreement - Drainage of the Sørlands, Vestfold and Gjøvik railways with side railways",
+                  "notice_id": "250458-2026",
+                  "place_of_performance": [
+                    "NOR",
+                    "NOR"
+                  ],
+                  "public_url": "https://ted.europa.eu/en/notice/-/detail/250458-2026",
+                  "publication_date": "2026-04-13",
+                  "winner_names": [
+                    "ØYNEBRÅTEN ANLEGGSTEKNIKK AS",
+                    "Banefjell AS"
+                  ]
+                }
+              ],
+              "post_acquisition_award_count": 2,
+              "pre_acquisition_award_count": 0,
+              "search_hits_total": 2,
+              "ted_threshold_caveat": "TED carries EU-directive-threshold notices only (~NOK 45M for works, ~NOK 1.4-2M for goods/services). Absence on TED is weaker evidence than absence on Doffin."
+            },
+            "query_url": "https://api.ted.europa.eu/v3/notices/search",
+            "raw_payload_ref": "external/ted/qben_infra_2024/banefjell-as_2026-05-30.json",
+            "tap_id": "ted",
+            "tap_kind": "public_procurement",
+            "verdict": "confirms"
+          }
+        },
+        "category_rule_notes": []
+      },
+      "hypothesis_id": "hyp_qben_banefjell_established",
+      "entity": "Banefjell AS",
+      "claim": "Banefjell AS is an established player in track maintenance, concrete renovation and signal in Norway",
+      "provenance": {
+        "local_path": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf",
+        "issuer_page": "https://www.qben.se/en/year-end-report-january-december-2024-published/",
+        "language": "en",
+        "label": "Q4 / Year-end report 2024 (English)",
+        "period": "2024-Q4",
+        "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 3,
+          "bbox": {
+            "x0": 440.70736,
+            "top": 321.26144,
+            "x1": 487.95928000000004,
+            "bottom": 329.78144,
+            "width": 47.25192000000004,
+            "height": 8.519999999999982
+          },
+          "sentence_context": {
+            "prev": "Before the merger in 2024, ININ carried out several key acquisitions that further strengthen our position as a specialised operator in the Nordic infrastructure services market.",
+            "match": "SLAM Jernbaneteknikk AS, a specialist in rail signalling and electrification in Norway, and Banefjell AS, an established player in track maintenance, concrete renovation and signal systems, were acquired in March.",
+            "next": "A declaration of intent was signed regarding an acquisition of Trasé AS, a company that specialises in transport infrastructure."
+          },
+          "normalised_search": "Banefjell AS"
+        },
+        "pdf_page_hit": 3,
+        "issuer_url_at_page": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3",
+        "issuer_url_at_phrase": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3&search=Banefjell%20AS",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=Banefjell%20AS",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=Banefjell%20AS",
+        "evidence_snippet": {
+          "path": "outputs/evidence/qben_infra_2024/6e808d4bf3fe.png",
+          "width": 1095,
+          "height": 58,
+          "size_bytes": 22107,
+          "page": 3,
+          "bbox": {
+            "x0": 440.70736,
+            "top": 321.26144,
+            "x1": 487.95928000000004,
+            "bottom": 329.78144,
+            "width": 47.25192000000004,
+            "height": 8.519999999999982
+          },
+          "key": "6e808d4bf3fe"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/qben_infra_2024/6e808d4bf3fe.png",
+        "width": 1095,
+        "height": 58,
+        "size_bytes": 22107,
+        "page": 3,
+        "bbox": {
+          "x0": 440.70736,
+          "top": 321.26144,
+          "x1": 487.95928000000004,
+          "bottom": 329.78144,
+          "width": 47.25192000000004,
+          "height": 8.519999999999982
+        },
+        "key": "6e808d4bf3fe"
+      }
+    },
+    {
+      "company": "qben_infra_2024",
+      "company_name": "Qben Infra AB (FY2024 standalone attack)",
+      "rule_id": "lag_causality",
+      "composite_key": "qben_infra_2024|lag_causality|Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attribu",
+      "subtype": null,
+      "severity": "info",
+      "priority_score": 1.0,
+      "headline": "Qben Infra AB (FY2024 standalone attack): 'acquisition_completed' impact attributed to current period appears mechanical (IFRS consolidation language detected); lag=0Q is accounting, not synergy.",
+      "consolidation_caveat": true,
+      "claim_excerpt": "increase is attributable primarily to the consolidation of ININ from late November",
+      "metric_evidence": null,
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "mechanical_consolidation_effect",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf",
+        "issuer_page": "https://www.qben.se/en/year-end-report-january-december-2024-published/",
+        "language": "en",
+        "label": "Q4 / Year-end report 2024 (English)",
+        "period": "2024-Q4",
+        "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 4,
+          "bbox": {
+            "x0": 42.6,
+            "top": 323.648,
+            "x1": 372.0,
+            "bottom": 332.64799999999997,
+            "width": 329.4,
+            "height": 8.999999999999943
+          },
+          "sentence_context": {
+            "prev": "Fourth quarter of 2024 (October–December) Net sales and earnings Net sales for the fourth quarter totalled SEK 292 million (235), up 24 per cent.",
+            "match": "The increase is attributable primarily to the consolidation of ININ from late November as well as completed acquisitions.",
+            "next": "EBITA for the fourth quarter was SEK -114 million (43) and adjusted EBITA was SEK -19 million The decrease is attributable to negative earnings for ININ and the acquisition of ICP as well as transaction costs in conjunction with the acquisition of ININ and the listing of the company’s shares (see below)."
+          },
+          "normalised_search": "increase is attributable primarily to the consolidation of"
+        },
+        "pdf_page_hit": 4,
+        "issuer_url_at_page": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=4",
+        "issuer_url_at_phrase": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=4&search=increase%20is%20attributable%20primarily%20to%20the%20consolidation%20of",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=4",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=4&search=increase%20is%20attributable%20primarily%20to%20the%20consolidation%20of",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=4",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=4&search=increase%20is%20attributable%20primarily%20to%20the%20consolidation%20of",
+        "evidence_snippet": {
+          "path": "outputs/evidence/qben_infra_2024/b553447ca18d.png",
+          "width": 1095,
+          "height": 59,
+          "size_bytes": 23223,
+          "page": 4,
+          "bbox": {
+            "x0": 42.6,
+            "top": 323.648,
+            "x1": 372.0,
+            "bottom": 332.64799999999997,
+            "width": 329.4,
+            "height": 8.999999999999943
+          },
+          "key": "b553447ca18d"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/qben_infra_2024/b553447ca18d.png",
+        "width": 1095,
+        "height": 59,
+        "size_bytes": 23223,
+        "page": 4,
+        "bbox": {
+          "x0": 42.6,
+          "top": 323.648,
+          "x1": 372.0,
+          "bottom": 332.64799999999997,
+          "width": 329.4,
+          "height": 8.999999999999943
+        },
+        "key": "b553447ca18d"
+      }
+    },
+    {
+      "company": "north_energy",
+      "company_name": "North Energy ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "north_energy|narrative_dissonance|North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics m",
+      "subtype": null,
+      "severity": "info",
+      "priority_score": 0.3,
+      "headline": "North Energy ASA: 'efficiency' narrative cited 2 times, but supporting metrics move the opposite way (gross_margin_yoy_change_pct=-0.5, ebita_margin_pct=5.0).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "increase efficiency significantly in comparison to",
+      "metric_evidence": [
+        {
+          "metric": "gross_margin_yoy_change_pct",
+          "value": -0.5,
+          "expected_direction": "up",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 11,
+            "bbox": {
+              "x0": 688.3602905273438,
+              "top": 491.7549743652344,
+              "x1": 702.923828125,
+              "bottom": 505.24749755859375,
+              "width": 14.56353759765625,
+              "height": 13.492523193359375
+            },
+            "matched_str": "0.5",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/north_energy/metric_65ee83de5487.png",
+            "width": 1588,
+            "height": 68,
+            "size_bytes": 26235,
+            "page": 11,
+            "bbox": {
+              "x0": 688.3602905273438,
+              "top": 491.7549743652344,
+              "x1": 702.923828125,
+              "bottom": 505.24749755859375,
+              "width": 14.56353759765625,
+              "height": 13.492523193359375
+            },
+            "matched_str": "0.5",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "ebita_margin_pct",
+          "value": 5.0,
+          "expected_direction": "up",
+          "score": 1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 54,
+            "bbox": {
+              "x0": 622.9288330078125,
+              "top": 363.3724060058594,
+              "x1": 642.9942626953125,
+              "bottom": 376.86492919921875,
+              "width": 20.0654296875,
+              "height": 13.492523193359375
+            },
+            "matched_str": "5.00",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/north_energy/metric_0a92378f52f0.png",
+            "width": 1588,
+            "height": 68,
+            "size_bytes": 27262,
+            "page": 54,
+            "bbox": {
+              "x0": 622.9288330078125,
+              "top": 363.3724060058594,
+              "x1": 642.9942626953125,
+              "bottom": 376.86492919921875,
+              "width": 20.0654296875,
+              "height": 13.492523193359375
+            },
+            "matched_str": "5.00",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "weak_support",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf",
+        "issuer_page": "https://northenergy.no/investor-relations/financial-reports-calendar/annual-reports/",
+        "language": "en",
+        "label": "Annual Report 2025",
+        "period": "2025-FY",
+        "sha256": "ad12857e79ea2b9d757f6fb605521de33537acdf3c0a45d64b830c065dbac8f7",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 9,
+          "bbox": {
+            "x0": 310.9621000000001,
+            "top": 434.79080000000016,
+            "x1": 528.8423500000002,
+            "bottom": 445.29080000000016,
+            "width": 217.88025000000016,
+            "height": 10.5
+          },
+          "sentence_context": {
+            "prev": "Wind Catching Systems AS WCS is a developer of floating offshore wind technology and intends to enable offshore wind operators and developers to produce electricity at a cost that competes with other energy sources, without subsidies.",
+            "match": "The company is currently developing floating multi-turbine technology (“WCS concept”) that is expected to cut acreage use by more than 80% and increase efficiency significantly in comparison to conventional floating offshore wind farms.",
+            "next": "Wind Catching Systems continued making good progress in developing its innovative solution for floating offshore wind production and attracted further financial support through additional With the successful introduction of Reach Remote 1 and 2, Reach Subsea went ahead with the scale-up plan through ordering Reach Remote 3 and 4 from Kongsberg Maritime, with expected delivery in 2027."
+          },
+          "normalised_search": "increase efficiency significantly in comparison to"
+        },
+        "pdf_page_hit": 9,
+        "issuer_url_at_page": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf#page=9",
+        "issuer_url_at_phrase": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf#page=9&search=increase%20efficiency%20significantly%20in%20comparison%20to",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/north_energy/2025/north_energy_annual_2025.pdf#page=9",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/north_energy/2025/north_energy_annual_2025.pdf#page=9&search=increase%20efficiency%20significantly%20in%20comparison%20to",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/north_energy/2025/north_energy_annual_2025.pdf#page=9",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/north_energy/2025/north_energy_annual_2025.pdf#page=9&search=increase%20efficiency%20significantly%20in%20comparison%20to",
+        "evidence_snippet": {
+          "path": "outputs/evidence/north_energy/6d56ded422d8.png",
+          "width": 1588,
+          "height": 62,
+          "size_bytes": 21022,
+          "page": 9,
+          "bbox": {
+            "x0": 310.9621000000001,
+            "top": 434.79080000000016,
+            "x1": 528.8423500000002,
+            "bottom": 445.29080000000016,
+            "width": 217.88025000000016,
+            "height": 10.5
+          },
+          "key": "6d56ded422d8"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/north_energy/6d56ded422d8.png",
+        "width": 1588,
+        "height": 62,
+        "size_bytes": 21022,
+        "page": 9,
+        "bbox": {
+          "x0": 310.9621000000001,
+          "top": 434.79080000000016,
+          "x1": 528.8423500000002,
+          "bottom": 445.29080000000016,
+          "width": 217.88025000000016,
+          "height": 10.5
+        },
+        "key": "6d56ded422d8"
+      }
+    },
+    {
+      "company": "qben_infra_2024",
+      "company_name": "Qben Infra AB (FY2024 standalone attack)",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "qben_infra_2024|narrative_dissonance|Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, ",
+      "subtype": null,
+      "severity": "info",
+      "priority_score": 0.28,
+      "headline": "Qben Infra AB (FY2024 standalone attack): 'discipline' narrative cited 1 times, but supporting metrics move the opposite way (working_capital_to_revenue_pct=25.0, capex_to_depreciation_ratio=1.0).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "supplemented with selective acquisitions and efficient",
+      "metric_evidence": [
+        {
+          "metric": "working_capital_to_revenue_pct",
+          "value": 25.0,
+          "expected_direction": "down",
+          "score": -1,
+          "source": "unverified",
+          "locator": null,
+          "snippet": null,
+          "note": null
+        },
+        {
+          "metric": "capex_to_depreciation_ratio",
+          "value": 1.0,
+          "expected_direction": "neutral",
+          "score": 1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 21,
+            "bbox": {
+              "x0": 282.53399658203125,
+              "top": 412.1199951171875,
+              "x1": 294.70196533203125,
+              "bottom": 422.66796875,
+              "width": 12.16796875,
+              "height": 10.5479736328125
+            },
+            "matched_str": "1,0",
+            "strategy": "value",
+            "context_distance": null,
+            "context_term": null,
+            "confidence": "low_no_context"
+          },
+          "snippet": {
+            "path": "outputs/evidence/qben_infra_2024/metric_d97e8d2c3104.png",
+            "width": 1095,
+            "height": 62,
+            "size_bytes": 14932,
+            "page": 21,
+            "bbox": {
+              "x0": 282.53399658203125,
+              "top": 412.1199951171875,
+              "x1": 294.70196533203125,
+              "bottom": 422.66796875,
+              "width": 12.16796875,
+              "height": 10.5479736328125
+            },
+            "matched_str": "1,0",
+            "confidence": "low_no_context",
+            "context_term": null
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "weak_support",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf",
+        "issuer_page": "https://www.qben.se/en/year-end-report-january-december-2024-published/",
+        "language": "en",
+        "label": "Q4 / Year-end report 2024 (English)",
+        "period": "2024-Q4",
+        "sha256": "30d2ac84a5d1172cc7de92605ffe7542626f4c03463db825ab04a652df473bbd",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 3,
+          "bbox": {
+            "x0": 42.6,
+            "top": 317.30143999999996,
+            "x1": 249.3378,
+            "bottom": 325.82143999999994,
+            "width": 206.7378,
+            "height": 8.519999999999982
+          },
+          "sentence_context": {
+            "prev": "During the year, we continued to strengthen our position in the Nordic infrastructure services market through a combination of organic growth and strategic acquisitions.",
+            "match": "This is entirely in line with our strategy of developing our company organically, supplemented with selective acquisitions and efficient utilization of synergies.",
+            "next": "With the merger with ININ Group in 2024, we have established a strong Group with a diversified portfolio of over 20 companies in four infrastructure niches: Construction, Rail, Power, and Testing, Inspection & Certification (TIC)."
+          },
+          "normalised_search": "supplemented with selective acquisitions and efficient"
+        },
+        "pdf_page_hit": 3,
+        "issuer_url_at_page": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3",
+        "issuer_url_at_phrase": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf#page=3&search=supplemented%20with%20selective%20acquisitions%20and%20efficient",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=supplemented%20with%20selective%20acquisitions%20and%20efficient",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=supplemented%20with%20selective%20acquisitions%20and%20efficient",
+        "evidence_snippet": {
+          "path": "outputs/evidence/qben_infra_2024/7b86f80e0326.png",
+          "width": 1095,
+          "height": 58,
+          "size_bytes": 21705,
+          "page": 3,
+          "bbox": {
+            "x0": 42.6,
+            "top": 317.30143999999996,
+            "x1": 249.3378,
+            "bottom": 325.82143999999994,
+            "width": 206.7378,
+            "height": 8.519999999999982
+          },
+          "key": "7b86f80e0326"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/qben_infra_2024/7b86f80e0326.png",
+        "width": 1095,
+        "height": 58,
+        "size_bytes": 21705,
+        "page": 3,
+        "bbox": {
+          "x0": 42.6,
+          "top": 317.30143999999996,
+          "x1": 249.3378,
+          "bottom": 325.82143999999994,
+          "width": 206.7378,
+          "height": 8.519999999999982
+        },
+        "key": "7b86f80e0326"
+      }
+    },
+    {
+      "company": "techstep",
+      "company_name": "Techstep ASA",
+      "rule_id": "narrative_dissonance",
+      "composite_key": "techstep|narrative_dissonance|Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move ",
+      "subtype": null,
+      "severity": "info",
+      "priority_score": 0.28,
+      "headline": "Techstep ASA: 'discipline' narrative cited 1 times, but supporting metrics move the opposite way (working_capital_to_revenue_pct=15.0, capex_to_depreciation_ratio=1.5).",
+      "consolidation_caveat": null,
+      "claim_excerpt": "predictability, and disciplined capital allocation.",
+      "metric_evidence": [
+        {
+          "metric": "working_capital_to_revenue_pct",
+          "value": 15.0,
+          "expected_direction": "down",
+          "score": 1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 109,
+            "bbox": {
+              "x0": 446.7959899902344,
+              "top": 480.5249938964844,
+              "x1": 461.2080078125,
+              "bottom": 488.92498779296875,
+              "width": 14.412017822265625,
+              "height": 8.399993896484375
+            },
+            "matched_str": "15,00",
+            "strategy": "value",
+            "context_distance": 576.0880432128906,
+            "context_term": "working capital",
+            "confidence": "medium"
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_53bbeb69d0f7.png",
+            "width": 1095,
+            "height": 57,
+            "size_bytes": 11275,
+            "page": 109,
+            "bbox": {
+              "x0": 446.7959899902344,
+              "top": 480.5249938964844,
+              "x1": 461.2080078125,
+              "bottom": 488.92498779296875,
+              "width": 14.412017822265625,
+              "height": 8.399993896484375
+            },
+            "matched_str": "15,00",
+            "confidence": "medium",
+            "context_term": "working capital"
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        },
+        {
+          "metric": "capex_to_depreciation_ratio",
+          "value": 1.5,
+          "expected_direction": "neutral",
+          "score": -1,
+          "source": "manual_unverified",
+          "locator": {
+            "page": 88,
+            "bbox": {
+              "x0": 307.0959777832031,
+              "top": 137.62498474121094,
+              "x1": 320.1999816894531,
+              "bottom": 146.02499389648438,
+              "width": 13.10400390625,
+              "height": 8.400009155273438
+            },
+            "matched_str": "1.5 %",
+            "strategy": "value",
+            "context_distance": 379.4409637451172,
+            "context_term": "depreciation",
+            "confidence": "medium"
+          },
+          "snippet": {
+            "path": "outputs/evidence/techstep/metric_84eadef16394.png",
+            "width": 1095,
+            "height": 58,
+            "size_bytes": 8797,
+            "page": 88,
+            "bbox": {
+              "x0": 307.0959777832031,
+              "top": 137.62498474121094,
+              "x1": 320.1999816894531,
+              "bottom": 146.02499389648438,
+              "width": 13.10400390625,
+              "height": 8.400009155273438
+            },
+            "matched_str": "1.5 %",
+            "confidence": "medium",
+            "context_term": "depreciation"
+          },
+          "note": "Manual override; auto-locator best-effort match. Verify against the cropped snippet."
+        }
+      ],
+      "external_evidence": null,
+      "subsidiary": null,
+      "subsidiary_claimed_role": null,
+      "subsidiary_acquired_year": null,
+      "verdict": "weak_support",
+      "triangulation": null,
+      "hypothesis_id": null,
+      "entity": null,
+      "claim": null,
+      "provenance": {
+        "local_path": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "kind": "local_pdf",
+        "issuer_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+        "issuer_page": "https://mfn.se/ob/a/techstep/",
+        "language": "en",
+        "label": "Annual Report 2025",
+        "period": "2025-FY",
+        "sha256": "3ec1a90865d8b708ae69b853df9d463132918e151caa817950b5715b960b1cc7",
+        "git_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "github_blob_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "github_raw_url": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "github_head_url": "https://github.com/yu-faye/investment-redflag-scanner/blob/main/data/raw/techstep/2025/techstep_annual_2025.pdf",
+        "repo_head_sha": "ceb751f116dab611658cace401d87544d2af4be0",
+        "owner": "yu-faye",
+        "repo": "investment-redflag-scanner",
+        "excerpt_locator": {
+          "page": 8,
+          "bbox": {
+            "x0": 50.0,
+            "top": 93.60000000000002,
+            "x1": 241.35999999999993,
+            "bottom": 101.60000000000002,
+            "width": 191.35999999999993,
+            "height": 8.0
+          },
+          "sentence_context": {
+            "prev": "",
+            "match": "Our strategic focus remains firmly anchored in long-term value creation through profitable growth, increased predictability, and disciplined capital allocation.",
+            "next": "In closing, I extend my gratitude to our employees, partners, and shareholders for their continued support."
+          },
+          "normalised_search": "predictability, and disciplined capital allocation."
+        },
+        "pdf_page_hit": 8,
+        "issuer_url_at_page": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=8",
+        "issuer_url_at_phrase": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf#page=8&search=predictability%2C%20and%20disciplined%20capital%20allocation.",
+        "github_blob_url_at_page": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=8",
+        "github_blob_url_at_phrase": "https://github.com/yu-faye/investment-redflag-scanner/blob/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=8&search=predictability%2C%20and%20disciplined%20capital%20allocation.",
+        "github_raw_url_at_page": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=8",
+        "github_raw_url_at_phrase": "https://raw.githubusercontent.com/yu-faye/investment-redflag-scanner/ceb751f116dab611658cace401d87544d2af4be0/data/raw/techstep/2025/techstep_annual_2025.pdf#page=8&search=predictability%2C%20and%20disciplined%20capital%20allocation.",
+        "evidence_snippet": {
+          "path": "outputs/evidence/techstep/6ad63340b647.png",
+          "width": 1095,
+          "height": 57,
+          "size_bytes": 9495,
+          "page": 8,
+          "bbox": {
+            "x0": 50.0,
+            "top": 93.60000000000002,
+            "x1": 241.35999999999993,
+            "bottom": 101.60000000000002,
+            "width": 191.35999999999993,
+            "height": 8.0
+          },
+          "key": "6ad63340b647"
+        }
+      },
+      "evidence_snippet": {
+        "path": "outputs/evidence/techstep/6ad63340b647.png",
+        "width": 1095,
+        "height": 57,
+        "size_bytes": 9495,
+        "page": 8,
+        "bbox": {
+          "x0": 50.0,
+          "top": 93.60000000000002,
+          "x1": 241.35999999999993,
+          "bottom": 101.60000000000002,
+          "width": 191.35999999999993,
+          "height": 8.0
+        },
+        "key": "6ad63340b647"
       }
     }
   ]
