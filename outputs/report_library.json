@@ -1,0 +1,362 @@
+{
+  "generated_at_utc": "2026-05-31T03:44:38+00:00",
+  "schema_version": 1,
+  "companies": [
+    {
+      "id": "qben_infra_2024",
+      "name": "Qben Infra AB (FY2024 standalone attack)",
+      "ticker": "QBEN",
+      "exchange": "Nasdaq First North Premier",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "Q4 2024",
+          "period_id": "2024",
+          "role": "current",
+          "finding_count": 9,
+          "critical": 4,
+          "warning": 2,
+          "info": 3,
+          "primary_pdf": "data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
+          "primary_file": "data/raw/qben_infra/2024/qben_infra_year_end_2024.txt",
+          "source_url": "https://www.qben.se/en/wp-content/uploads/sites/2/2025/02/Qben-Infra-Year-End-report-2024.pdf",
+          "has_findings": true
+        }
+      ],
+      "report_count": 1,
+      "total_findings": 9,
+      "total_critical": 4
+    },
+    {
+      "id": "techstep",
+      "name": "Techstep ASA",
+      "ticker": "TECH",
+      "exchange": "Oslo Bors",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2025",
+          "period_id": "2025",
+          "role": "current",
+          "finding_count": 6,
+          "critical": 4,
+          "warning": 1,
+          "info": 1,
+          "primary_pdf": "data/raw/techstep/2025/techstep_annual_2025.pdf",
+          "primary_file": "data/raw/techstep/2025/techstep_annual_2025.txt",
+          "source_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzE5MzAmYXR0YWNobWVudElkPTMyNDU1Mw/techstep_asa_annual_report_2025.pdf",
+          "has_findings": true
+        },
+        {
+          "period": "FY 2024",
+          "period_id": "2024",
+          "role": "peer_control",
+          "finding_count": 0,
+          "critical": 0,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": "data/raw/techstep/2024/techstep_annual_2024.pdf",
+          "primary_file": null,
+          "source_url": "https://mb.cision.com/Main/16587/4143193/3420605.pdf",
+          "has_findings": false
+        }
+      ],
+      "report_count": 2,
+      "total_findings": 6,
+      "total_critical": 4
+    },
+    {
+      "id": "inin_group",
+      "name": "ININ Group AS",
+      "ticker": "ININ",
+      "exchange": "Euronext Growth Oslo",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2025",
+          "period_id": "2025",
+          "role": "current",
+          "finding_count": 4,
+          "critical": 3,
+          "warning": 1,
+          "info": 0,
+          "primary_pdf": "data/raw/inin_group/2025/inin_group_annual_2025.pdf",
+          "primary_file": "data/raw/inin_group/2025/inin_group_annual_2025.txt",
+          "source_url": "https://storage.mfn.se/c/aHR0cHM6Ly9hcGkzLm9zbG8ub3Nsb2JvcnMubm8vdjEvbmV3c3JlYWRlci9hdHRhY2htZW50P21lc3NhZ2VJZD02NzI5MjImYXR0YWNobWVudElkPTMyNTQ1NQ/inin_2025-arsrapport_inkl.pdf",
+          "has_findings": true
+        },
+        {
+          "period": "Q3 2024 Interim",
+          "period_id": "2024",
+          "role": "peer_control",
+          "finding_count": 0,
+          "critical": 0,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": "data/raw/inin_group/2024/inin_q3_2024_report.pdf",
+          "primary_file": null,
+          "source_url": "https://inin.no/wp-content/uploads/2024/10/Inin-Group-Q3.2024-Interim-Financial-Report_27.10.24_1-signert.pdf",
+          "has_findings": false
+        }
+      ],
+      "report_count": 2,
+      "total_findings": 4,
+      "total_critical": 3
+    },
+    {
+      "id": "otovo",
+      "name": "Otovo ASA",
+      "ticker": "OTOVO",
+      "exchange": "Euronext Oslo Bors",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2024",
+          "period_id": "2024",
+          "role": "current",
+          "finding_count": 4,
+          "critical": 3,
+          "warning": 1,
+          "info": 0,
+          "primary_pdf": null,
+          "primary_file": "data/raw/otovo/2024/otovo_annual_2024.txt",
+          "source_url": "https://www.otovo.com/investor-relations/",
+          "has_findings": true
+        }
+      ],
+      "report_count": 1,
+      "total_findings": 4,
+      "total_critical": 3
+    },
+    {
+      "id": "qben_infra_annual_2025",
+      "name": "Qben Infra AB (FY2025 standalone attack)",
+      "ticker": "QBEN",
+      "exchange": "Nasdaq First North Premier",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2025 Årsredovisning",
+          "period_id": "2025-FY",
+          "role": "current",
+          "finding_count": 4,
+          "critical": 3,
+          "warning": 1,
+          "info": 0,
+          "primary_pdf": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf",
+          "primary_file": "data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.txt",
+          "source_url": "https://storage.mfn.se/b80b857f-ecb2-44b8-a090-772db205b955/qben-infra-arsredovisning-2025.pdf",
+          "has_findings": true
+        },
+        {
+          "period": "FY 2024 Årsredovisning",
+          "period_id": "2024-FY",
+          "role": "peer_control",
+          "finding_count": 0,
+          "critical": 0,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.pdf",
+          "primary_file": "data/raw/qben_infra/2024_annual/qben_infra_annual_2024_se.txt",
+          "source_url": "https://storage.mfn.se/4bd04418-dc79-464a-9ff0-bfde37b7fb50/qben-infra-arsredovisning-2024.pdf",
+          "has_findings": false
+        }
+      ],
+      "report_count": 2,
+      "total_findings": 4,
+      "total_critical": 3
+    },
+    {
+      "id": "norse_atlantic",
+      "name": "Norse Atlantic Airways ASA",
+      "ticker": "NORSE",
+      "exchange": "Euronext Expand Oslo",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2024",
+          "period_id": "2024",
+          "role": "current",
+          "finding_count": 2,
+          "critical": 2,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": null,
+          "primary_file": "data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
+          "source_url": "https://norseatlantic.com/en/investor/reports-presentations/",
+          "has_findings": true
+        }
+      ],
+      "report_count": 1,
+      "total_findings": 2,
+      "total_critical": 2
+    },
+    {
+      "id": "qben_infra",
+      "name": "Qben Infra AB",
+      "ticker": "QBEN",
+      "exchange": "Nasdaq First North Premier",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "Q1 2026",
+          "period_id": "2026-Q1",
+          "role": "current",
+          "finding_count": 2,
+          "critical": 2,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+          "primary_file": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.txt",
+          "source_url": "https://storage.mfn.se/0e6734a5-b3ba-464d-999b-aac14bb6ebf3/260529-qben-infra-q1-2026.pdf",
+          "has_findings": true
+        },
+        {
+          "period": "Q2 2025",
+          "period_id": "2025-Q2",
+          "role": "peer_control",
+          "finding_count": 0,
+          "critical": 0,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": "data/raw/qben_infra/2025/qben_infra_q2_2025.pdf",
+          "primary_file": "data/raw/qben_infra/2025/qben_infra_q2_2025.txt",
+          "source_url": "https://storage.mfn.se/a331fe1a-d7b7-4ca9-9fa9-c3e59f4a7812/qben-infras-q2-report-2025.pdf",
+          "has_findings": false
+        }
+      ],
+      "report_count": 2,
+      "total_findings": 2,
+      "total_critical": 2
+    },
+    {
+      "id": "norwegian_air",
+      "name": "Norwegian Air Shuttle ASA",
+      "ticker": "NAS",
+      "exchange": "Oslo Bors",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2024",
+          "period_id": "2024",
+          "role": "current",
+          "finding_count": 2,
+          "critical": 1,
+          "warning": 1,
+          "info": 0,
+          "primary_pdf": null,
+          "primary_file": "data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
+          "source_url": "https://www.norwegian.com/no/about/company/investor-relations/reports-and-presentations/",
+          "has_findings": true
+        }
+      ],
+      "report_count": 1,
+      "total_findings": 2,
+      "total_critical": 1
+    },
+    {
+      "id": "north_energy",
+      "name": "North Energy ASA",
+      "ticker": "NORTH",
+      "exchange": "Euronext Expand Oslo",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2025",
+          "period_id": "2025",
+          "role": "current",
+          "finding_count": 1,
+          "critical": 0,
+          "warning": 0,
+          "info": 1,
+          "primary_pdf": "data/raw/north_energy/2025/north_energy_annual_2025.pdf",
+          "primary_file": "data/raw/north_energy/2025/north_energy_annual_2025.txt",
+          "source_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2026/03/23/669041_North%20Energy%20annual%20report%202025.pdf",
+          "has_findings": true
+        },
+        {
+          "period": "FY 2024",
+          "period_id": "2024",
+          "role": "peer_control",
+          "finding_count": 0,
+          "critical": 0,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": "data/raw/north_energy/2024/north_energy_annual_2024.pdf",
+          "primary_file": null,
+          "source_url": "https://live.euronext.com/sites/default/files/company_press_releases/attachments_oslo/2025/03/19/641596_North%20Energy%20annual%20report%202024.pdf",
+          "has_findings": false
+        }
+      ],
+      "report_count": 2,
+      "total_findings": 1,
+      "total_critical": 0
+    },
+    {
+      "id": "k33",
+      "name": "K33 AB (publ)",
+      "ticker": "K33",
+      "exchange": "Nasdaq First North Growth Market",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2024 (Q4 year-end report)",
+          "period_id": "2024",
+          "role": "current",
+          "finding_count": 0,
+          "critical": 0,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": "data/raw/k33/2024/k33_annual_2024_en.pdf",
+          "primary_file": "data/raw/k33/2024/k33_q4_year_end_2024.txt",
+          "source_url": "https://cdn.prod.website-files.com/645396e8d92c58b99155faf3/685eb3bd8b923b5906bc7701_ENG%20Annual%20Report%20K33%20AB%20(publ).pdf",
+          "has_findings": false
+        },
+        {
+          "period": "FY 2023 (Arcario pre-rebrand)",
+          "period_id": "2023",
+          "role": "peer_control",
+          "finding_count": 0,
+          "critical": 0,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": "data/raw/k33/2023/k33_arcario_annual_2023.pdf",
+          "primary_file": null,
+          "source_url": "https://storage.mfn.se/ae46f711-8d09-48d2-8452-2337ee50ff40/arcario-ab-arsredovisning-2023-12-31.pdf",
+          "has_findings": false
+        }
+      ],
+      "report_count": 2,
+      "total_findings": 0,
+      "total_critical": 0
+    },
+    {
+      "id": "mowi",
+      "name": "Mowi ASA",
+      "ticker": "MOWI",
+      "exchange": "Oslo Bors",
+      "middelborg_link": true,
+      "reports": [
+        {
+          "period": "FY 2024",
+          "period_id": "2024",
+          "role": "current",
+          "finding_count": 0,
+          "critical": 0,
+          "warning": 0,
+          "info": 0,
+          "primary_pdf": null,
+          "primary_file": "data/raw/mowi/2024/mowi_annual_2024.txt",
+          "source_url": "https://mowi.com/investors/financial-reports/",
+          "has_findings": false
+        }
+      ],
+      "report_count": 1,
+      "total_findings": 0,
+      "total_critical": 0
+    }
+  ],
+  "company_count": 11,
+  "report_count": 17,
+  "finding_count": 34
+}

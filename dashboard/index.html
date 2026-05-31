@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Investment Red-Flag Scanner</title>
-    <!-- Foundry-style type system: Inter for UI, JetBrains Mono for
-         numerics + rule ids + hashes. Preconnect + display=swap so the
-         first paint never blocks on the font fetch. -->
+    <title>Investment Red Flag Scanner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,10 +14,9 @@
   </head>
   <body>
     <div class="app-layout">
-      <!-- Left sticky table of contents -->
       <aside class="toc-sidebar">
         <div class="toc-brand">
-          <div class="toc-title">Red-Flag Scanner</div>
+          <div class="toc-title">Red Flag Scanner</div>
           <div class="toc-sub">deterministic offensive audit</div>
         </div>
         <nav class="toc-nav">
@@ -31,6 +27,15 @@
           <a href="#drill-section" class="toc-link" data-target="drill-section">Drill into a finding</a>
           <a href="#pdf-section" class="toc-link" data-target="pdf-section">Embedded source PDF</a>
         </nav>
+
+        <!-- Report library: company > report tree. Built from
+             outputs/report_library.json at load time. Clicking a node
+             filters the leaderboard + drill + PDF to that report. -->
+        <div class="toc-section-head">Report library</div>
+        <div class="toc-library" id="toc-library">
+          <p class="toc-library-empty">Loading reports...</p>
+        </div>
+
         <div class="toc-meta">
           <div class="toc-meta-row">
             <span class="toc-meta-key">Generated</span>
@@ -47,69 +52,63 @@
         </div>
       </aside>
 
-      <!-- Main content column -->
       <main class="main-col">
         <header class="page-head">
-          <h1>Investment Red-Flag Scanner</h1>
+          <h1>Investment Red Flag Scanner</h1>
           <p class="page-sub">
-            Deterministic offensive-audit detectors against Middelborg-linked
-            Nordic issuers, with click-through provenance to the originating
-            PDF page.
+            Deterministic offensive audit detectors against Nordic
+            issuers tied to Middelborg. Every finding traces back to the
+            exact page of the original report.
           </p>
         </header>
 
         <!-- 1. Pipeline overview ============================================= -->
         <section class="section" id="pipeline">
-          <h2 class="section-title">Pipeline</h2>
+          <h2 class="section-title">How it works</h2>
           <p class="section-sub">
-            Five deterministic steps from issuer PDF to traceable finding.
-            Every step's output is auditable on disk.
+            Five simple steps. The whole pipeline is reproducible and
+            auditable, no opaque models in the loop today.
           </p>
           <div class="pipeline-strip">
             <div class="pipeline-card" style="--card-accent:#3498db;">
               <div class="pipeline-step">Step 1</div>
-              <div class="pipeline-title">Ingest</div>
+              <div class="pipeline-title">Collect</div>
               <div class="pipeline-body">
-                Pull issuer PDFs, extract text + curated metrics,
-                hash + version-pin every byte in
-                <code>sources.json</code>.
+                Pull published financial reports from issuers and
+                version pin every byte.
               </div>
             </div>
             <div class="pipeline-card" style="--card-accent:#9b59b6;">
               <div class="pipeline-step">Step 2</div>
-              <div class="pipeline-title">Hypothesise</div>
+              <div class="pipeline-title">Semantic rules</div>
               <div class="pipeline-body">
-                Each audit claim is a falsifiable JSON object in
-                <code>hypotheses.json</code> with explicit questions
-                and peer controls.
+                Apply deterministic semantic rules to spot claims worth
+                checking. <em>Coming soon: Claude API for deeper
+                language analysis on disputed claims.</em>
               </div>
             </div>
             <div class="pipeline-card" style="--card-accent:#1abc9c;">
               <div class="pipeline-step">Step 3</div>
-              <div class="pipeline-title">Gather evidence</div>
+              <div class="pipeline-title">Evidence gathering</div>
               <div class="pipeline-body">
-                Independent <em>taps</em> (public-procurement registries,
-                company registry, derived cross-tap analyzers) emit
-                standardised verdicts. Every raw response is cached
-                with sha256.
+                Cross check each claim against independent public
+                registries (procurement, company registry, EU tenders).
               </div>
             </div>
             <div class="pipeline-card" style="--card-accent:#e67e22;">
               <div class="pipeline-step">Step 4</div>
               <div class="pipeline-title">Triangulate</div>
               <div class="pipeline-body">
-                A single rule-bound engine combines verdicts. Severity
-                is <strong>derived</strong>, never set by any one tap.
-                Single-source absence cannot drive critical.
+                Combine evidence streams into one verdict per claim. No
+                single source can drive a critical flag on its own.
               </div>
             </div>
             <div class="pipeline-card" style="--card-accent:#7f8c8d;">
               <div class="pipeline-step">Step 5</div>
               <div class="pipeline-title">Trace</div>
               <div class="pipeline-body">
-                Every finding has a Sankey lane, an auditor narrative
-                paragraph, and a nested argument tree with citations
-                linking back to the cache JSON or the PDF page.
+                Every finding links back to the exact source page so
+                any reader can re derive the conclusion.
               </div>
             </div>
           </div>
@@ -119,9 +118,10 @@
         <section class="section" id="leaderboard-section">
           <h2 class="section-title">Findings leaderboard</h2>
           <p class="section-sub">
-            Click the &darr; arrow in front of any company name to drill into
+            Click the &darr; arrow in front of any company name to open
             that finding's full reasoning chain in the
-            <a href="#drill-section">Drill into a finding</a> section below.
+            <a href="#drill-section">Drill into a finding</a> section
+            below.
           </p>
           <div class="controls">
             <div class="scope-tabs" role="tablist">
@@ -156,6 +156,11 @@
               </label>
             </div>
           </div>
+
+          <!-- Active Report library filter banner (shown when the user
+               clicked a report in the sidebar). -->
+          <p class="library-active" id="library-active" hidden></p>
+
           <div class="kpis">
             <div class="kpi kpi-total">
               <span class="kpi-num" id="kpi-total">0</span>
@@ -198,12 +203,12 @@
         <section class="section" id="landscape-section">
           <h2 class="section-title">Logic chain landscape</h2>
           <p class="section-sub">
-            Every finding flows left-to-right: <em>issuer &rarr; claim/rule
-            &rarr; falsification question &rarr; tap evidence (verdict)
-            &rarr; derived severity</em>. Click any node to filter the
-            leaderboard above to only those findings whose reasoning passes
-            through that node. Lane width = number of distinct findings
-            using that path.
+            Every finding flows left to right: <em>issuer, claim or
+            rule, falsification question, tap evidence (verdict),
+            derived severity</em>. Click any node to filter the
+            leaderboard above to only the findings whose reasoning
+            passes through that node. Lane width is the count of
+            distinct findings using that path.
           </p>
           <div id="sankey-host" class="sankey-host">
             <svg id="sankey-svg"></svg>
@@ -215,14 +220,14 @@
         <section class="section" id="matrix-section">
           <h2 class="section-title">Triangulation matrix</h2>
           <p class="section-sub">
-            Every audit hypothesis (rows) cross-checked against every
-            available external data source family (columns). Cell verdicts:
-            &check; confirms, &#9680; partial, &#10007; refutes, &oslash;
-            not_found, &#9702; neutral, ! error, &mdash; not yet queried.
-            A claim is only allowed to graduate to <em>critical</em> when at
-            least two independent taps agree AND every
-            <em>blocking_for_critical</em> falsification question has been
-            addressed.
+            Every audit hypothesis (rows) cross checked against every
+            available external data source family (columns). Cell
+            verdicts: &check; confirms, &#9680; partial, &#10007;
+            refutes, &oslash; not_found, &#9702; neutral, ! error,
+            &mdash; not yet queried. A claim only graduates to
+            <em>critical</em> when at least two independent taps agree
+            AND every <em>blocking_for_critical</em> falsification
+            question has been addressed.
           </p>
           <div class="matrix-wrap">
             <table id="triangulation-matrix"></table>
@@ -230,10 +235,10 @@
 
           <h3 class="subsection-title">Audit roadmap</h3>
           <p class="section-sub">
-            Which external data source would maximally raise triangulation
-            coverage across all open hypotheses next. Ranked by total
-            expected information gain. Implementing one of these adds a
-            new column to the matrix above.
+            Which external data source would maximally raise
+            triangulation coverage across all open hypotheses next.
+            Ranked by total expected information gain. Implementing one
+            of these adds a new column to the matrix above.
           </p>
           <ol id="audit-roadmap" class="roadmap-list"></ol>
         </section>
@@ -258,27 +263,27 @@
         <section class="section" id="pdf-section">
           <h2 class="section-title">Embedded source PDF</h2>
           <p class="section-sub">
-            The publisher-hosted PDF for the currently-drilled finding,
-            opened at the matched page when the locator produced one.
-            If your browser blocks cross-origin PDF embedding, use the
-            jump links instead.
+            The original report for the currently drilled finding,
+            opened to the matched page with the evidence phrase
+            highlighted. Built on PDF.js so it renders the same way in
+            Chrome, Firefox and Safari.
           </p>
           <div id="pdf-host" class="pdf-host">
-            <p class="drill-empty">Select a finding above to embed its source PDF here.</p>
+            <p class="drill-empty">Select a finding above to load its source PDF here.</p>
           </div>
         </section>
 
         <footer>
           <p>
-            Priority score is a deterministic <strong>ranking heuristic</strong>,
-            not a p-value. Every finding stores its inputs so the ordering
-            can be re-derived or replaced. Source files (and every
-            individual metric value) are anchored to PDF page + bbox and
-            pre-cropped as evidence snippets, with immutable git-commit
-            permalinks when available.
+            Priority score is a deterministic <strong>ranking
+            heuristic</strong>, not a p value. Every finding stores its
+            inputs so the ordering can be re derived or replaced. Source
+            files (and every individual metric value) are anchored to
+            PDF page and bbox and pre cropped as evidence snippets,
+            with immutable git commit permalinks when available.
           </p>
           <p>
-            Machine-readable:
+            Machine readable:
             <a href="../outputs/middelborg_leaderboard.json">middelborg_leaderboard.json</a> &middot;
             <a href="../outputs/leaderboard.json">leaderboard.json</a> &middot;
             <a href="../outputs/triangulation_matrix.json">triangulation_matrix.json</a> &middot;
@@ -286,6 +291,7 @@
             <a href="../outputs/sankey_data.json">sankey_data.json</a> &middot;
             <a href="../outputs/argument_trees.json">argument_trees.json</a> &middot;
             <a href="../outputs/narrative_paragraphs.json">narrative_paragraphs.json</a> &middot;
+            <a href="../outputs/report_library.json">report_library.json</a> &middot;
             <a href="../data/sources.json">sources.json</a>
           </p>
         </footer>

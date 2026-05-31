@@ -780,37 +780,38 @@ def _render_landscape_section() -> None:
 
 
 def _render_pipeline_overview() -> None:
-    """5-step deterministic-audit pipeline rendered as a clean horizontal
-    strip of numbered cards. Lives at the very top of the page."""
+    """5 step deterministic audit pipeline. Lives at the top of the
+    page. Copy intentionally abstract: the engineering details are
+    one click away (the matrix, the JSON files), the overview is for
+    a non engineer reader who wants the gist in 10 seconds."""
     steps = [
         {
             "n": "1",
-            "title": "Ingest",
+            "title": "Collect",
             "color": "#2980b9",
             "body": (
-                "Pull issuer PDFs, extract text + curated metrics, "
-                "hash + version-pin every byte in <code>sources.json</code>."
+                "Pull published financial reports from issuers and "
+                "version pin every byte."
             ),
         },
         {
             "n": "2",
-            "title": "Hypothesise",
+            "title": "Semantic rules",
             "color": "#8e44ad",
             "body": (
-                "Each audit claim is a falsifiable JSON object in "
-                "<code>hypotheses.json</code> with explicit questions "
-                "and peer controls."
+                "Apply deterministic semantic rules to spot claims "
+                "worth checking. "
+                "<em>Coming soon: Claude API for deeper language "
+                "analysis on disputed claims.</em>"
             ),
         },
         {
             "n": "3",
-            "title": "Gather evidence",
+            "title": "Evidence gathering",
             "color": "#16a085",
             "body": (
-                "Independent <em>taps</em> (public-procurement registries, "
-                "company registry, derived cross-tap analyzers) emit "
-                "standardised verdicts. Every raw response is cached "
-                "with sha256."
+                "Cross check each claim against independent public "
+                "registries (procurement, company registry, EU tenders)."
             ),
         },
         {
@@ -818,9 +819,8 @@ def _render_pipeline_overview() -> None:
             "title": "Triangulate",
             "color": "#d35400",
             "body": (
-                "A single rule-bound engine combines verdicts. Severity "
-                "is <strong>derived</strong>, never set by any one tap. "
-                "Single-source absence cannot drive critical."
+                "Combine evidence streams into one verdict per claim. "
+                "No single source can drive a critical flag on its own."
             ),
         },
         {
@@ -828,9 +828,8 @@ def _render_pipeline_overview() -> None:
             "title": "Trace",
             "color": "#2c3e50",
             "body": (
-                "Every finding has a Sankey lane, an auditor narrative "
-                "paragraph, and a nested argument tree with citations "
-                "linking back to the cache JSON or the PDF page."
+                "Every finding links back to the exact source page so "
+                "any reader can re derive the conclusion."
             ),
         },
     ]
@@ -1134,13 +1133,12 @@ def _render_drill_section(filtered: pd.DataFrame) -> None:
 
 
 def _render_sidebar_toc(payload: dict) -> None:
-    """Left sidebar: site navigation (anchor links) + run metadata.
-    Replaces the old severity/rule/company filter sidebar."""
+    """Left sidebar: site navigation + report library + run metadata."""
     with st.sidebar:
         st.markdown("### Contents")
         st.markdown(
             '<nav class="toc-nav">'
-            '<a href="#pipeline">Pipeline</a>'
+            '<a href="#how-it-works">How it works</a>'
             '<a href="#findings-leaderboard">Findings leaderboard</a>'
             '<a href="#logic-chain-landscape">Logic chain landscape</a>'
             '<a href="#triangulation-matrix">Triangulation matrix</a>'
@@ -1149,6 +1147,36 @@ def _render_sidebar_toc(payload: dict) -> None:
             '</nav>',
             unsafe_allow_html=True,
         )
+        st.divider()
+        st.markdown("### Report library")
+        lib = _load_optional_json(PROJECT_ROOT / "outputs" / "report_library.json")
+        if not lib or not lib.get("companies"):
+            st.caption("No reports indexed yet.")
+        else:
+            for c in lib["companies"]:
+                total_f = c.get("total_findings", 0)
+                total_c = c.get("total_critical", 0)
+                meta = f"{c.get('report_count', 0)} \u00B7 {total_f} findings"
+                if total_c:
+                    meta += f" \u00B7 {total_c} crit"
+                with st.expander(f"{c.get('name','?')}  ({meta})", expanded=False):
+                    for r in c.get("reports", []):
+                        sev_dot = "\u25CF " if r["critical"] > 0 else (
+                            "\u25D0 " if r["warning"] > 0 else (
+                                "\u25CB " if r["finding_count"] == 0 else "\u25CB "
+                            )
+                        )
+                        sev_color = "#ff5d63" if r["critical"] else (
+                            "#f7b955" if r["warning"] else "#8390a3"
+                        )
+                        peer = " *(peer)*" if r["role"] == "peer_control" else ""
+                        st.markdown(
+                            f"<span style='color:{sev_color}'>{sev_dot}</span> "
+                            f"**{r['period']}**{peer} \u2014 "
+                            f"{r['finding_count']} findings "
+                            f"(C{r['critical']} W{r['warning']} I{r['info']})",
+                            unsafe_allow_html=True,
+                        )
         st.divider()
         st.caption(f"Generated: {payload.get('generated_at_utc') or 'n/a'}")
         pages_url = payload.get("pages_url")
@@ -1164,7 +1192,7 @@ def _render_sidebar_toc(payload: dict) -> None:
 
 def main() -> None:
     st.set_page_config(
-        page_title="Investment Red-Flag Scanner",
+        page_title="Investment Red Flag Scanner",
         page_icon=":mag:",
         layout="wide",
     )
@@ -1374,15 +1402,15 @@ def main() -> None:
         unsafe_allow_html=True,
     )
 
-    st.title("Investment Red-Flag Scanner")
+    st.title("Investment Red Flag Scanner")
     st.caption(
-        "Deterministic offensive-audit detectors with git-anchored "
+        "Deterministic offensive audit detectors with git anchored "
         "provenance. Priority score is a deterministic ranking heuristic, "
         "not a statistical test."
     )
 
     # === 1. Pipeline overview =============================================
-    st.header("Pipeline", anchor="pipeline")
+    st.header("How it works", anchor="how-it-works")
     _render_pipeline_overview()
 
     # === Load data (single source for every section below) ================

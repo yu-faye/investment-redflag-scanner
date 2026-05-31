@@ -598,6 +598,110 @@ def _run_triangulation(targets, *, skip_taps=False):
     return triangulated_by_company, states, hypotheses, matrix, roadmap
 
 
+def build_report_library(companies_cfg, headlines_pool):
+    """Build the company -> reports tree consumed by the dashboard
+    sidebar. Companies and prior-report controls are pulled from
+    companies.json so reports with zero findings still show up. Each
+    report node gets a severity breakdown derived from the headlines
+    pool (which is what feeds the leaderboard)."""
+    # Index findings by (company_id, period). The id + period pair is
+    # the only stable join key here: prov.label is normalised by the
+    # report loader and routinely differs from the label in
+    # companies.json (e.g. "Annual Report 2025" vs "FY 2025"), but
+    # prov.period is identical to current_report.period because both
+    # are pulled from the same companies.json entry at run start.
+    from collections import defaultdict
+
+    findings_by_key = defaultdict(list)
+    for f in headlines_pool:
+        prov = f.get("provenance") or {}
+        company_id = f.get("company") or "?"
+        period = prov.get("period") or "?"
+        findings_by_key[(company_id, period)].append(f)
+
+    def _sev_buckets(fs):
+        out = {"critical": 0, "warning": 0, "info": 0}
+        for f in fs:
+            sev = f.get("severity")
+            if sev in out:
+                out[sev] += 1
+        return out
+
+    def _match_findings(cid, configured_period):
+        """Exact match first, then year prefix fallback because the
+        runner sometimes upgrades a bare '2025' from companies.json
+        into '2025-FY' / '2025-Q4' / etc. via the report loader."""
+        exact = findings_by_key.get((cid, configured_period))
+        if exact:
+            return exact
+        if not configured_period:
+            return []
+        prefix = str(configured_period) + "-"
+        fuzzy = []
+        for (fid, fp), fs in findings_by_key.items():
+            if fid == cid and fp and fp.startswith(prefix):
+                fuzzy.extend(fs)
+        return fuzzy
+
+    companies_out = []
+    for cfg in companies_cfg:
+        display_name = cfg.get("name") or cfg.get("id")
+        company_id = cfg.get("id")
+        reports = []
+        for role, key in (("current", "current_report"), ("peer_control", "prior_report")):
+            entry = cfg.get(key)
+            if not entry:
+                continue
+            period_id = entry.get("period")
+            period_label = entry.get("label") or period_id or "?"
+            matched = _match_findings(company_id, period_id)
+            sev = _sev_buckets(matched)
+            reports.append({
+                "period": period_label,
+                "period_id": period_id,
+                "role": role,
+                "finding_count": len(matched),
+                "critical": sev["critical"],
+                "warning": sev["warning"],
+                "info": sev["info"],
+                "primary_pdf": entry.get("primary_pdf"),
+                "primary_file": entry.get("primary_file"),
+                "source_url": entry.get("source_url"),
+                "has_findings": len(matched) > 0,
+            })
+        companies_out.append({
+            "id": cfg.get("id"),
+            "name": display_name,
+            "ticker": cfg.get("ticker"),
+            "exchange": cfg.get("exchange"),
+            "middelborg_link": bool(cfg.get("middelborg_link")),
+            "reports": reports,
+            "report_count": len(reports),
+            "total_findings": sum(r["finding_count"] for r in reports),
+            "total_critical": sum(r["critical"] for r in reports),
+        })
+
+    # Note: any orphan finding whose (company_id, period) doesn't
+    # appear in companies.json is dropped from the library. The
+    # leaderboard still surfaces it. In practice this only happens
+    # mid migration; companies.json is the source of truth.
+
+    companies_out.sort(key=lambda c: (
+        -c.get("total_critical", 0),
+        -c.get("total_findings", 0),
+        c.get("name") or "",
+    ))
+
+    return {
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "schema_version": 1,
+        "companies": companies_out,
+        "company_count": len(companies_out),
+        "report_count": sum(c["report_count"] for c in companies_out),
+        "finding_count": sum(c["total_findings"] for c in companies_out),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--company", help="Run only this company id", default=None)
@@ -876,6 +980,22 @@ def main():
     print(
         f"Sankey: {sankey_path} ({len(sankey_data['nodes'])} nodes, "
         f"{len(sankey_data['links'])} links)"
+    )
+
+    # Report library: a company -> reports tree consumed by the
+    # dashboard sidebar. Built from companies.json (so peer / control
+    # reports show up even when they have zero findings of their own)
+    # plus the headlines pool (so each report gets a severity breakdown
+    # and a count of triggered findings). The whole library is a single
+    # static JSON; refresh whenever a new report is added to companies.
+    library_payload = build_report_library(targets, headlines_pool)
+    library_path = os.path.join(OUTPUT_DIR, "report_library.json")
+    with open(library_path, "w", encoding="utf-8") as f:
+        json.dump(library_payload, f, ensure_ascii=False, indent=2)
+    print(
+        f"Report library: {library_path} ("
+        f"{len(library_payload['companies'])} companies, "
+        f"{sum(len(c['reports']) for c in library_payload['companies'])} reports)"
     )
 
     print(f"Summary: {agg_path}")

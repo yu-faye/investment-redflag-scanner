@@ -1,0 +1,88 @@
+name: Run detectors on new reports
+
+# Triggers whenever a contributor pushes a new financial report, edits
+# the company / hypothesis config, or changes detector code. The
+# workflow runs the full deterministic pipeline, commits the
+# regenerated outputs/*.json back to main, which then trips the
+# separate pages.yml workflow and the public dashboard auto refreshes.
+#
+# What this gives you operationally:
+#   - Drop a new PDF into data/raw/<company>/<period>/foo.pdf
+#   - Add (or edit) the matching companies.json entry
+#   - git push
+#   - ~2 minutes later the dashboard at yu-faye.github.io shows the
+#     new finding, with the source PDF embedded and the matched
+#     phrase highlighted. No manual detector run.
+#
+# Notes:
+#   - We pass --skip-external-taps so the public CI never needs to
+#     talk to Doffin/BRREG/TED. The cached evidence in data/ledger/
+#     is reused. Refresh the ledger by running the script locally
+#     when you want new external evidence.
+#   - The "auto commit outputs" step only writes when the diff is
+#     non empty, so a no op push doesn't create churn.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/raw/**'
+      - 'validation/**'
+      - 'configs/**'
+      - 'src/**'
+      - 'requirements.txt'
+      - '.github/workflows/run-detectors.yml'
+  workflow_dispatch:
+
+# Don't pile up; if a second push lands while we're still running,
+# cancel the previous run.
+concurrency:
+  group: run-detectors-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  run-detectors:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run detectors (cached external evidence)
+        run: |
+          python validation/run_real_report.py --skip-external-taps
+
+      - name: Refresh provenance URLs
+        run: |
+          if [ -f scripts/refresh_provenance.py ]; then
+            python scripts/refresh_provenance.py || true
+          fi
+
+      - name: Commit regenerated outputs (if changed)
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add outputs/ data/sources.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No output diff to commit."
+          else
+            git commit -m "ci: auto regenerate detector outputs
+
+            Triggered by ${{ github.event_name }} on ${{ github.sha }}.
+            Source diff: ${{ github.event.compare }}"
+            git push
+          fi

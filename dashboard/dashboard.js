@@ -1,10 +1,8 @@
-/* Investment Red-Flag Scanner dashboard
+/* Investment Red Flag Scanner dashboard
  *
- * Loads two leaderboard JSONs (middelborg + all), wires filters, renders the
- * table, and exposes 3 click-through destinations per finding:
- *   - Issuer PDF at the matched page (publisher's hosted PDF)
- *   - Immutable GitHub commit permalink (works forever)
- *   - Local file:// URL (offline review)
+ * Loads two leaderboard JSONs (middelborg + all), wires filters, renders
+ * the table, and exposes click through destinations per finding plus an
+ * embedded PDF viewer with the matched evidence highlighted.
  */
 
 const SCOPES = {
@@ -32,18 +30,28 @@ let v10Sankey = null;
 let v10Trees = null;
 let v10Paragraphs = null;
 
+// Report library: company -> reports tree shown in the sidebar so the
+// analyst can see every report that has been ingested (not just the
+// findings). Optional; load failure just hides the section.
+const REPORT_LIBRARY_FILE = "../outputs/report_library.json";
+let reportLibrary = null;
+
 const state = {
   scope: "middelborg",
   severity: "",
   rule: "",
   company: "",
-  // v10: when a Sankey node is clicked, leaderboard rows are filtered to
+  // When a Sankey node is clicked, leaderboard rows are filtered to
   // only those whose composite_key is in `sankeyFilterKeys`.
   sankeyFilterKeys: null,
   sankeyFilterLabel: "",
-  // v11 layout: the currently-drilled finding (composite_key). Drives
-  // the Drill into a finding + Embedded source PDF sections at the
-  // bottom of the page.
+  // When a report library node is clicked, leaderboard rows are
+  // filtered to that company + period pair.
+  libraryFilterCompany: "",
+  libraryFilterPeriod: "",
+  // The currently drilled finding (composite_key). Drives the Drill
+  // into a finding + Embedded source PDF sections at the bottom of
+  // the page.
   selectedKey: null,
 };
 
@@ -110,6 +118,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // the v10 payloads have arrived.
     if (SCOPES[state.scope].data) render();
   });
+
+  // Report library sidebar: build from the dedicated payload first,
+  // fall back to deriving from the leaderboard if the payload isn't
+  // there yet (older runs).
+  fetchJson(REPORT_LIBRARY_FILE)
+    .then((d) => { reportLibrary = d; renderReportLibrary(); })
+    .catch(() => {
+      // Fallback: derive a minimal library from the leaderboard data
+      // once it's loaded.
+      const tryDerive = () => {
+        const data = SCOPES.all.data || SCOPES.middelborg.data;
+        if (!data) { setTimeout(tryDerive, 400); return; }
+        reportLibrary = deriveLibraryFromLeaderboard(data);
+        renderReportLibrary();
+      };
+      tryDerive();
+    });
 });
 
 function fetchJson(path) {
@@ -220,6 +245,15 @@ function matchesFilters(f) {
   }
   if (state.sankeyFilterKeys) {
     if (!state.sankeyFilterKeys.has(compositeKeyOf(f))) return false;
+  }
+  if (state.libraryFilterCompany) {
+    const label = f.company_name || f.company || "";
+    if (label !== state.libraryFilterCompany) return false;
+  }
+  if (state.libraryFilterPeriod) {
+    const prov = f.provenance || {};
+    const period = prov.label || prov.period || "";
+    if (period !== state.libraryFilterPeriod) return false;
   }
   return true;
 }
@@ -918,7 +952,9 @@ function renderSankey() {
 
 /* ------------------------- Drill section -------------------------------- */
 /* Renders the auditor narrative paragraph + argument tree for the
- * currently-selected finding into the Drill into a finding section.
+ * currently selected finding into the Drill into a finding section.
+ * Also surfaces a Jump to PDF button that scrolls the page down to the
+ * embedded PDF viewer with the matched evidence already highlighted.
  */
 function renderDrillSection(allFindings) {
   const host = document.getElementById("drill-host");
@@ -934,133 +970,105 @@ function renderDrillSection(allFindings) {
     ? f.headline
     : (f.headline && f.headline.en) || "";
   const sevBadge = `<span class="sev-badge sev-${escapeHtml(f.severity || "")}">${escapeHtml(f.severity || "")}</span>`;
+  const prov = f.provenance || {};
+  const page = prov.pdf_page_hit;
+  const hasPdf = !!prov.local_path || !!prov.github_raw_url || !!prov.issuer_url;
+  const jumpBtn = hasPdf
+    ? `<button type="button" id="drill-jump-pdf" class="drill-jump-pdf" title="Scroll to the embedded PDF below, jumped to ${page ? "page " + page : "the start"} with the evidence highlighted">
+         Open in PDF below${page ? " &middot; page " + escapeHtml(String(page)) : ""} &darr;
+       </button>`
+    : "";
   const headerHtml = `
     <div class="drill-head">
-      <h3>${escapeHtml(f.company_name || f.company || "")} \u2014 ${escapeHtml(f.rule_id || "")} ${sevBadge}</h3>
+      <h3>${escapeHtml(f.company_name || f.company || "")} &middot; ${escapeHtml(f.rule_id || "")} ${sevBadge}</h3>
       <p class="drill-blockquote">${escapeHtml(headline)}</p>
+      ${jumpBtn}
     </div>
   `;
   host.innerHTML = headerHtml + v10Html;
+  const btn = document.getElementById("drill-jump-pdf");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const pdfSec = document.getElementById("pdf-section");
+      if (pdfSec) pdfSec.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
 }
 
 /* ------------------------- Embedded PDF section ------------------------- */
+/* Renders an iframe pointing at our PDF.js based viewer (pdf-viewer.html)
+ * with ?file=, ?page= and ?search= URL params. The viewer renders the
+ * PDF to canvas + a selectable text layer and applies an <mark> overlay
+ * to the search phrase. Works identically in Chrome, Firefox, Safari
+ * and Edge (and on iOS Safari, where native PDF embedding fails). */
 function renderPdfSection(allFindings) {
   const host = document.getElementById("pdf-host");
   if (!host) return;
   const f = findFindingByKey(allFindings, state.selectedKey);
   if (!f) {
-    host.innerHTML = `<p class="drill-empty">Select a finding above to embed its source PDF here.</p>`;
+    host.innerHTML = `<p class="drill-empty">Select a finding above to load its source PDF here.</p>`;
     return;
   }
   const prov = f.provenance || {};
   const locator = prov.excerpt_locator || {};
   const page = prov.pdf_page_hit;
-  let frag = "";
-  if (page) {
-    frag = `#page=${page}`;
-    if (locator.normalised_search) {
-      frag += `&search=${encodeURIComponent(locator.normalised_search)}`;
-    } else if (prov.evidence_snippet && prov.evidence_snippet.matched_str) {
-      frag += `&search=${encodeURIComponent(prov.evidence_snippet.matched_str)}`;
-    }
+  // Highlight phrase: prefer the locator's normalised search string,
+  // fall back to the matched substring from the evidence snippet.
+  let searchPhrase = "";
+  if (locator.normalised_search) searchPhrase = locator.normalised_search;
+  else if (prov.evidence_snippet && prov.evidence_snippet.matched_str) {
+    searchPhrase = prov.evidence_snippet.matched_str;
   }
-  // Embedding strategy (failure modes documented below):
-  //   1. local_path -> served by our own origin (dev server OR Pages,
-  //      since the workflow now ships data/raw/**). Same-origin so
-  //      Content-Type: application/pdf is honored and X-Frame-Options
-  //      doesn't apply -> iframe renders.
-  //   2. issuer_url -> often blocked by CSP frame-ancestors / X-FO.
-  //   3. github_raw_url -> raw.githubusercontent.com hard-codes
-  //      X-Frame-Options: deny AND Content-Type: octet-stream, so
-  //      iframe rendering is impossible. We keep it only as an
-  //      "open in new tab" fallback.
-  const candidates = [];
-  if (prov.local_path) {
-    candidates.push({ label: "Local", url: "../" + prov.local_path + frag, embeddable: true });
-  }
-  if (prov.issuer_url) {
-    candidates.push({ label: "Issuer", url: prov.issuer_url + frag, embeddable: true });
-  }
-  if (prov.github_raw_url) {
-    candidates.push({ label: "GitHub", url: prov.github_raw_url + frag, embeddable: false });
-  }
-  if (!candidates.length) {
+  // Pick a same origin PDF URL when possible. Pages serves
+  // data/raw/** with application/pdf so PDF.js can fetch it via
+  // XHR without a CORS preflight.
+  let fileUrl = null;
+  if (prov.local_path) fileUrl = "../" + prov.local_path;
+  else if (prov.github_raw_url) fileUrl = prov.github_raw_url;
+  else if (prov.issuer_url) fileUrl = prov.issuer_url;
+
+  if (!fileUrl) {
     host.innerHTML = `<p class="drill-empty">No source PDF URL recorded for this finding.</p>`;
     return;
   }
-  const primary = candidates.find((c) => c.embeddable) || candidates[0];
-  const linksHtml = candidates
+
+  // Build the viewer URL. The viewer (dashboard/pdf-viewer.html) reads
+  // these three URL params and applies highlighting on load.
+  const qs = new URLSearchParams();
+  qs.set("file", fileUrl);
+  if (page) qs.set("page", String(page));
+  if (searchPhrase) qs.set("search", searchPhrase);
+  const viewerUrl = "pdf-viewer.html?" + qs.toString();
+
+  // External jump links (separate tabs) for users who want the
+  // publisher's hosted PDF or the immutable GitHub permalink.
+  const externals = [];
+  if (prov.local_path) externals.push({ label: "Local", url: "../" + prov.local_path + (page ? `#page=${page}` : "") });
+  if (prov.issuer_url_at_phrase || prov.issuer_url) externals.push({ label: "Issuer", url: prov.issuer_url_at_phrase || prov.issuer_url_at_page || prov.issuer_url });
+  if (prov.github_blob_url_at_phrase || prov.github_blob_url) externals.push({ label: "GitHub", url: prov.github_blob_url_at_phrase || prov.github_blob_url_at_page || prov.github_blob_url });
+  const linksHtml = externals
     .map(
       (c) =>
         `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.label)} \u2197</a>`
     )
-    .join(" \u00b7 ");
+    .join(" &middot; ");
 
-  // Browser sniff: iOS Safari (any WebKit on iOS, plus Safari-on-iPadOS
-  // which masquerades as Mac) cannot reliably render PDFs in inline
-  // viewers - it always wants to download/preview them. For that one
-  // case we skip the embed and surface a single big "open externally"
-  // CTA so the user isn't staring at a blank frame.
-  const ua = navigator.userAgent || "";
-  const isIOS =
-    /iPad|iPhone|iPod/.test(ua) ||
-    (/Macintosh/.test(ua) && "ontouchend" in document);
-
-  const headHtml = `
+  host.innerHTML = `
     <div class="pdf-host-head">
       <div>
         <strong>${escapeHtml(f.company_name || f.company || "")}</strong>
-        \u00b7 ${escapeHtml(prov.label || prov.period || "")}
-        ${page ? `\u00b7 page ${escapeHtml(String(page))}` : ""}
+        &middot; ${escapeHtml(prov.label || prov.period || "")}
+        ${page ? ` &middot; page ${escapeHtml(String(page))}` : ""}
+        ${searchPhrase ? ` &middot; <span class="pdf-host-search">highlight: <code>${escapeHtml(searchPhrase.length > 60 ? searchPhrase.slice(0, 60) + "\u2026" : searchPhrase)}</code></span>` : ""}
       </div>
-      <div class="pdf-host-links">Open: ${linksHtml}</div>
+      <div class="pdf-host-links">Open externally: ${linksHtml || "<span style='opacity:0.5'>none</span>"}</div>
     </div>
-  `;
-
-  if (isIOS) {
-    host.innerHTML = `
-      ${headHtml}
-      <div class="pdf-host-mobile">
-        <p class="pdf-host-mobile-lead">
-          iOS Safari can't render embedded PDFs inline. Tap below to
-          open the document in a new tab at the matched page.
-        </p>
-        <a class="pdf-host-cta" href="${escapeHtml(primary.url)}"
-           target="_blank" rel="noopener">
-          Open ${escapeHtml(prov.label || "source PDF")}
-          ${page ? ` (page ${escapeHtml(String(page))})` : ""} \u2197
-        </a>
-      </div>
-    `;
-    return;
-  }
-
-  // Desktop / Android: use <object> with <embed> nested as fallback.
-  // <iframe> is what we used before, but Safari's PDFKit-backed
-  // renderer routinely fails to fire iframe.onload (which was making
-  // our soft-timeout false-positive) AND sometimes refuses to render
-  // PDFs inside iframes at all. <object> + <embed> is the
-  // most-compatible same-origin pattern across Chrome, Firefox,
-  // Safari and Edge.
-  host.innerHTML = `
-    ${headHtml}
     <div class="pdf-host-frame">
-      <object data="${escapeHtml(primary.url)}"
-              type="application/pdf"
+      <iframe src="${escapeHtml(viewerUrl)}"
               class="pdf-host-object"
-              aria-label="Source PDF">
-        <embed src="${escapeHtml(primary.url)}"
-               type="application/pdf"
-               class="pdf-host-object" />
-        <div class="pdf-host-fallback">
-          <p>
-            This browser can't display PDFs inline. Use one of the
-            external links above to open the document at page
-            <strong>${page ? escapeHtml(String(page)) : "n/a"}</strong>
-            in a new tab.
-          </p>
-        </div>
-      </object>
+              title="Source PDF viewer"
+              allow="fullscreen"
+              loading="lazy"></iframe>
     </div>
   `;
 }
@@ -1088,5 +1096,164 @@ function bindTocScrollSpy() {
   linkByTarget.forEach((_link, id) => {
     const el = document.getElementById(id);
     if (el) observer.observe(el);
+  });
+}
+
+/* ======================================================================
+ * Report library (sidebar tree)
+ * ----------------------------------------------------------------------
+ * Renders companies -> reports tree in the left sidebar. Clicking a
+ * report node filters the leaderboard + drill + PDF sections to just
+ * that company + period pair. Clicking the company name (or "All
+ * reports") clears the per report filter but keeps the company filter.
+ * ====================================================================== */
+
+function deriveLibraryFromLeaderboard(data) {
+  const findings = (data && data.top_findings) || [];
+  const map = new Map();
+  for (const f of findings) {
+    const prov = f.provenance || {};
+    const company = f.company_name || f.company || "?";
+    const period = prov.label || prov.period || "(unknown period)";
+    if (!map.has(company)) map.set(company, { name: company, reports: new Map() });
+    const c = map.get(company);
+    if (!c.reports.has(period)) {
+      c.reports.set(period, { period, finding_count: 0, critical: 0, warning: 0, info: 0, has_findings: true });
+    }
+    const r = c.reports.get(period);
+    r.finding_count += 1;
+    if (f.severity && r[f.severity] !== undefined) r[f.severity] += 1;
+  }
+  const companies = Array.from(map.values()).map((c) => ({
+    name: c.name,
+    reports: Array.from(c.reports.values()),
+  }));
+  companies.sort((a, b) => a.name.localeCompare(b.name));
+  return { schema_version: 0, source: "derived_from_leaderboard", companies };
+}
+
+function renderReportLibrary() {
+  const host = document.getElementById("toc-library");
+  if (!host) return;
+  const lib = reportLibrary || {};
+  const companies = lib.companies || [];
+  if (!companies.length) {
+    host.innerHTML = `<p class="toc-library-empty">No reports indexed yet.</p>`;
+    return;
+  }
+  const parts = companies.map((c) => {
+    const reports = c.reports || [];
+    const totalFindings = reports.reduce((s, r) => s + (r.finding_count || 0), 0);
+    const totalCritical = reports.reduce((s, r) => s + (r.critical || 0), 0);
+    const reportsHtml = reports.map((r) => {
+      const sevDot = r.critical > 0
+        ? `<span class="lib-sev lib-sev-critical" title="${r.critical} critical">\u25CF</span>`
+        : r.warning > 0
+        ? `<span class="lib-sev lib-sev-warning" title="${r.warning} warning">\u25CF</span>`
+        : r.info > 0
+        ? `<span class="lib-sev lib-sev-info" title="${r.info} info">\u25CF</span>`
+        : `<span class="lib-sev lib-sev-none" title="no findings">\u25CB</span>`;
+      const peerTag = r.role === "peer_control"
+        ? `<span class="lib-tag-peer" title="Used as peer control / YoY baseline">peer</span>`
+        : "";
+      const isActive =
+        state.libraryFilterCompany === c.name &&
+        state.libraryFilterPeriod === r.period
+          ? " is-active"
+          : "";
+      return `
+        <a href="#leaderboard-section"
+           class="lib-report${isActive}"
+           data-company="${escapeHtml(c.name)}"
+           data-period="${escapeHtml(r.period)}">
+          ${sevDot}
+          <span class="lib-report-period">${escapeHtml(r.period)}</span>
+          ${r.finding_count > 0 ? `<span class="lib-report-count">${r.finding_count}</span>` : ""}
+          ${peerTag}
+        </a>`;
+    }).join("");
+    const isCompanyActive =
+      state.libraryFilterCompany === c.name && !state.libraryFilterPeriod
+        ? " is-active"
+        : "";
+    return `
+      <details class="lib-company" ${isCompanyActive ? "open" : ""}>
+        <summary class="lib-company-summary${isCompanyActive}">
+          <span class="lib-company-name">${escapeHtml(c.name)}</span>
+          <span class="lib-company-meta">${reports.length}\u00B7${totalFindings}${totalCritical > 0 ? `\u00B7<span class='lib-sev-critical'>${totalCritical}</span>` : ""}</span>
+        </summary>
+        ${reportsHtml}
+      </details>`;
+  });
+  const clearHtml = (state.libraryFilterCompany || state.libraryFilterPeriod)
+    ? `<a href="#" id="lib-clear" class="lib-clear">Clear report filter \u00D7</a>`
+    : "";
+  host.innerHTML = `${clearHtml}<div class="lib-tree">${parts.join("")}</div>`;
+
+  host.querySelectorAll(".lib-report").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      state.libraryFilterCompany = a.dataset.company || "";
+      state.libraryFilterPeriod = a.dataset.period || "";
+      renderReportLibrary();
+      const data = SCOPES[state.scope].data || { top_findings: [] };
+      const matching = data.top_findings.find(matchesFilters);
+      if (matching) state.selectedKey = compositeKeyOf(matching);
+      render();
+      updateLibraryBanner();
+      const lbsec = document.getElementById("leaderboard-section");
+      if (lbsec) lbsec.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+  host.querySelectorAll(".lib-company-summary").forEach((s) => {
+    s.addEventListener("click", (e) => {
+      // Only intercept when clicking the company name area, not the
+      // disclosure triangle. We use the data attribute to know which.
+      const company = s.parentElement.querySelector(".lib-company-name")?.textContent;
+      // Optional: filter by company alone when summary is clicked.
+      if (e.detail === 2 && company) {
+        e.preventDefault();
+        state.libraryFilterCompany = company;
+        state.libraryFilterPeriod = "";
+        renderReportLibrary();
+        render();
+        updateLibraryBanner();
+      }
+    });
+  });
+  const clear = document.getElementById("lib-clear");
+  if (clear) {
+    clear.addEventListener("click", (e) => {
+      e.preventDefault();
+      state.libraryFilterCompany = "";
+      state.libraryFilterPeriod = "";
+      renderReportLibrary();
+      render();
+      updateLibraryBanner();
+    });
+  }
+}
+
+function updateLibraryBanner() {
+  const banner = document.getElementById("library-active");
+  if (!banner) return;
+  if (!state.libraryFilterCompany && !state.libraryFilterPeriod) {
+    banner.hidden = true;
+    banner.innerHTML = "";
+    return;
+  }
+  const label = state.libraryFilterPeriod
+    ? `${state.libraryFilterCompany} &middot; ${state.libraryFilterPeriod}`
+    : state.libraryFilterCompany;
+  banner.hidden = false;
+  banner.innerHTML = `Report filter: <strong>${escapeHtml(label)}</strong> <a href="#" id="banner-clear">Clear \u00D7</a>`;
+  const c = document.getElementById("banner-clear");
+  if (c) c.addEventListener("click", (e) => {
+    e.preventDefault();
+    state.libraryFilterCompany = "";
+    state.libraryFilterPeriod = "";
+    renderReportLibrary();
+    render();
+    updateLibraryBanner();
   });
 }

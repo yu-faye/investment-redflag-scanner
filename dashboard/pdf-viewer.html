@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF viewer</title>
+    <!--
+      Self contained PDF.js viewer for the Red Flag Scanner dashboard.
+
+      URL params:
+        ?file=<absolute or relative URL to the PDF>
+        ?page=<initial page, 1 indexed>
+        ?search=<phrase to highlight on load>
+
+      Why we ship this instead of relying on <object> or <iframe src="x.pdf">:
+        - Safari's built in PDFKit renderer can't apply URL fragment
+          search highlights (#search=phrase doesn't work).
+        - <iframe> + browser native PDF viewers disagree on which URL
+          params they support, and iOS Safari refuses to embed PDFs at
+          all.
+        - PDF.js renders to canvas + a selectable text layer, so we can
+          paint our own highlight overlay using the search phrase that
+          our locator already extracted. Same behaviour across Chrome,
+          Firefox, Safari, Edge and mobile.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    />
+    <style>
+      :root {
+        --bg:        #0b0e13;
+        --panel:     #141a23;
+        --panel-2:   #1a2230;
+        --border:    #2a3548;
+        --text:      #eef2f8;
+        --text-2:    #c2cad7;
+        --muted:     #8390a3;
+        --accent:    #3dd6f5;
+        --highlight: #f7b955;
+        --font-ui:   "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                     "PingFang SC", "Microsoft YaHei", Helvetica, Arial,
+                     sans-serif;
+        --font-mono: "JetBrains Mono", "SF Mono", Menlo, Monaco, Consolas,
+                     monospace;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0; padding: 0; height: 100%;
+        background: var(--bg); color: var(--text);
+        font-family: var(--font-ui);
+        -webkit-font-smoothing: antialiased;
+      }
+      #toolbar {
+        position: sticky; top: 0; z-index: 10;
+        display: flex; gap: 10px; align-items: center;
+        flex-wrap: wrap;
+        padding: 10px 14px;
+        background: var(--panel);
+        border-bottom: 1px solid var(--border);
+        font-size: 13px;
+      }
+      #toolbar button, #toolbar input {
+        background: var(--panel-2);
+        color: var(--text);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 6px 10px;
+        font-family: inherit;
+        font-size: 12.5px;
+        transition: border-color 120ms ease, color 120ms ease;
+      }
+      #toolbar button { cursor: pointer; font-weight: 600; }
+      #toolbar button:hover:not(:disabled) {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      #toolbar button:disabled { opacity: 0.4; cursor: default; }
+      #toolbar input { min-width: 160px; }
+      #toolbar input:focus { outline: none; border-color: var(--accent); }
+      #page-info, #match-info {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--muted);
+        letter-spacing: 0.04em;
+      }
+      #match-info { margin-left: 6px; }
+      #status {
+        color: var(--muted);
+        font-size: 11px;
+        font-family: var(--font-mono);
+        margin-left: auto;
+      }
+      #viewer {
+        padding: 20px 14px 40px;
+        display: flex; flex-direction: column;
+        align-items: center; gap: 18px;
+      }
+      .page-wrap {
+        position: relative;
+        background: #fff;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55);
+        max-width: 100%;
+      }
+      .page-wrap canvas { display: block; max-width: 100%; height: auto; }
+      .text-layer {
+        position: absolute;
+        left: 0; top: 0; right: 0; bottom: 0;
+        overflow: hidden;
+        opacity: 0.2;
+        line-height: 1;
+        font-family: sans-serif;
+      }
+      .text-layer > span {
+        position: absolute;
+        white-space: pre;
+        transform-origin: 0 0;
+        cursor: text;
+        color: transparent;
+      }
+      .text-layer mark {
+        background: rgba(247, 185, 85, 0.85);
+        color: #000;
+        padding: 0;
+        border-radius: 1px;
+      }
+      .page-wrap.is-target::before {
+        content: "";
+        position: absolute;
+        inset: -3px;
+        border: 2px solid var(--accent);
+        border-radius: 2px;
+        pointer-events: none;
+        animation: target-pulse 1.6s ease-out 0.4s 2;
+      }
+      @keyframes target-pulse {
+        0%, 100% { opacity: 0.9; }
+        50% { opacity: 0.2; }
+      }
+      .error {
+        padding: 28px;
+        font-family: var(--font-mono);
+        color: var(--highlight);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="toolbar">
+      <button id="prev" type="button">&larr; Prev</button>
+      <span id="page-info">--</span>
+      <button id="next" type="button">Next &rarr;</button>
+      <input id="search-box" type="search" placeholder="Find in PDF..." />
+      <button id="search-btn" type="button">Highlight</button>
+      <button id="search-clear" type="button">Clear</button>
+      <span id="match-info"></span>
+      <span id="status">loading...</span>
+    </div>
+    <div id="viewer">
+      <p class="error" id="error-msg" hidden></p>
+    </div>
+
+    <!-- PDF.js (legacy build for broader browser support including
+         Safari). The legacy build is ES5 and works back to ~Safari 13. -->
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.min.js"></script>
+    <script>
+      (function () {
+        const PDFJS_VERSION = "3.11.174";
+        const CDN_BASE = "https://cdn.jsdelivr.net/npm/pdfjs-dist@" + PDFJS_VERSION;
+        if (window.pdfjsLib) {
+          pdfjsLib.GlobalWorkerOptions.workerSrc =
+            CDN_BASE + "/legacy/build/pdf.worker.min.js";
+        }
+
+        function getParam(name) {
+          const m = new URLSearchParams(location.search);
+          const v = m.get(name);
+          return v ? v.trim() : "";
+        }
+
+        const fileUrl = getParam("file");
+        let targetPage = Math.max(1, parseInt(getParam("page") || "1", 10) || 1);
+        const initialSearch = getParam("search");
+
+        const viewer = document.getElementById("viewer");
+        const errorMsg = document.getElementById("error-msg");
+        const status = document.getElementById("status");
+        const pageInfo = document.getElementById("page-info");
+        const matchInfo = document.getElementById("match-info");
+        const searchBox = document.getElementById("search-box");
+        const searchBtn = document.getElementById("search-btn");
+        const searchClear = document.getElementById("search-clear");
+        const prevBtn = document.getElementById("prev");
+        const nextBtn = document.getElementById("next");
+
+        let pdf = null;
+        let currentVisiblePage = 1;
+        const pageContainers = new Map();
+
+        function showError(msg) {
+          status.textContent = "error";
+          errorMsg.hidden = false;
+          errorMsg.textContent = msg;
+        }
+
+        if (!fileUrl) {
+          showError("Missing ?file= parameter.");
+          return;
+        }
+        if (!window.pdfjsLib) {
+          showError("PDF.js failed to load from CDN.");
+          return;
+        }
+
+        async function load() {
+          try {
+            pdf = await pdfjsLib.getDocument({ url: fileUrl }).promise;
+            status.textContent = "rendering...";
+            await renderAll();
+            status.textContent = "ready";
+            pageInfo.textContent = currentVisiblePage + " / " + pdf.numPages;
+            updateButtons();
+            if (initialSearch) {
+              searchBox.value = initialSearch;
+              applySearch(initialSearch);
+            }
+            scrollToPage(targetPage, true);
+          } catch (e) {
+            console.error(e);
+            showError("Failed to load PDF: " + (e && e.message ? e.message : e));
+          }
+        }
+
+        function pageWidthForScale() {
+          const w = Math.min(window.innerWidth - 32, 1100);
+          return Math.max(320, w);
+        }
+
+        async function renderAll() {
+          const targetW = pageWidthForScale();
+          viewer.innerHTML = "";
+          viewer.appendChild(errorMsg);
+          for (let i = 1; i <= pdf.numPages; i++) {
+            await renderOne(i, targetW);
+          }
+        }
+
+        async function renderOne(num, targetW) {
+          const page = await pdf.getPage(num);
+          const unscaled = page.getViewport({ scale: 1 });
+          const scale = Math.min(2.0, Math.max(0.8, targetW / unscaled.width));
+          const viewport = page.getViewport({ scale });
+
+          const wrap = document.createElement("div");
+          wrap.className = "page-wrap";
+          wrap.dataset.page = String(num);
+          wrap.style.width = viewport.width + "px";
+          wrap.style.height = viewport.height + "px";
+
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.floor(viewport.width);
+          canvas.height = Math.floor(viewport.height);
+          wrap.appendChild(canvas);
+
+          const textLayer = document.createElement("div");
+          textLayer.className = "text-layer";
+          textLayer.style.width = viewport.width + "px";
+          textLayer.style.height = viewport.height + "px";
+          wrap.appendChild(textLayer);
+
+          viewer.appendChild(wrap);
+          pageContainers.set(num, wrap);
+
+          await page.render({
+            canvasContext: canvas.getContext("2d"),
+            viewport,
+          }).promise;
+
+          try {
+            const textContent = await page.getTextContent();
+            const renderTask = pdfjsLib.renderTextLayer({
+              textContentSource: textContent,
+              container: textLayer,
+              viewport,
+              textDivs: [],
+            });
+            if (renderTask && renderTask.promise) await renderTask.promise;
+            else if (renderTask) await renderTask;
+          } catch (e) {
+            // Text layer is optional, only used for highlight + select.
+          }
+        }
+
+        /* Highlight: walk every text-layer span, wrap matches in <mark>.
+           This is a single span approach so phrases that span two text
+           runs (rare for short evidence tokens) won't fully highlight.
+           For our locator output (mostly short numeric phrases like
+           "169 MSEK" or "EBITA marginal") single span is enough. */
+        function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+        function escapeHtml(s) {
+          return s.replace(/[&<>"']/g, function (c) {
+            return ({
+              "&": "&amp;", "<": "&lt;", ">": "&gt;",
+              '"': "&quot;", "'": "&#39;"
+            })[c];
+          });
+        }
+
+        function applySearch(rawTerm) {
+          const term = (rawTerm || "").trim();
+          let count = 0;
+          let firstHit = null;
+          const spans = document.querySelectorAll(".text-layer span");
+          spans.forEach(function (span) {
+            const text = span.textContent || "";
+            span.innerHTML = escapeHtml(text);
+          });
+          if (!term) {
+            matchInfo.textContent = "";
+            return;
+          }
+          const re = new RegExp(escapeRe(term), "gi");
+          spans.forEach(function (span) {
+            const text = span.textContent || "";
+            if (!re.test(text)) { re.lastIndex = 0; return; }
+            re.lastIndex = 0;
+            const replaced = escapeHtml(text).replace(re, function (m) {
+              count++;
+              return "<mark>" + m + "</mark>";
+            });
+            span.innerHTML = replaced;
+            if (!firstHit) firstHit = span;
+          });
+          matchInfo.textContent = count + " match" + (count === 1 ? "" : "es");
+          if (firstHit) firstHit.scrollIntoView({ block: "center", behavior: "smooth" });
+        }
+
+        function scrollToPage(num, mark) {
+          const el = pageContainers.get(num);
+          if (!el) return;
+          el.scrollIntoView({ behavior: "auto", block: "start" });
+          if (mark) {
+            el.classList.add("is-target");
+            setTimeout(function () { el.classList.remove("is-target"); }, 3600);
+          }
+        }
+
+        function updateButtons() {
+          if (!pdf) return;
+          prevBtn.disabled = currentVisiblePage <= 1;
+          nextBtn.disabled = currentVisiblePage >= pdf.numPages;
+        }
+
+        /* Track which page is currently in the viewport so prev / next
+           and the page counter make sense for an analyst scrolling
+           through. */
+        function bindScrollSpy() {
+          if (!("IntersectionObserver" in window)) return;
+          const observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                const num = parseInt(entry.target.dataset.page || "0", 10);
+                if (num) {
+                  currentVisiblePage = num;
+                  pageInfo.textContent = num + " / " + pdf.numPages;
+                  updateButtons();
+                }
+              });
+            },
+            { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+          );
+          pageContainers.forEach(function (el) { observer.observe(el); });
+        }
+
+        prevBtn.addEventListener("click", function () {
+          if (currentVisiblePage > 1) scrollToPage(currentVisiblePage - 1, false);
+        });
+        nextBtn.addEventListener("click", function () {
+          if (currentVisiblePage < pdf.numPages) scrollToPage(currentVisiblePage + 1, false);
+        });
+        searchBtn.addEventListener("click", function () { applySearch(searchBox.value); });
+        searchBox.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") { e.preventDefault(); applySearch(searchBox.value); }
+        });
+        searchClear.addEventListener("click", function () {
+          searchBox.value = "";
+          applySearch("");
+        });
+
+        load().then(function () { if (pdf) bindScrollSpy(); });
+      })();
+    </script>
+  </body>
+</html>

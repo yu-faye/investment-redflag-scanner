@@ -160,6 +160,130 @@ code, pre, kbd, samp,
   font-weight: 600;
 }
 
+/* Report library tree (sidebar) ------------------------------------- */
+.toc-section-head {
+  padding: 18px 18px 8px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+  border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
+.toc-library {
+  padding: 0 10px 12px;
+  border-bottom: 1px solid var(--border);
+  max-height: 320px;
+  overflow-y: auto;
+}
+.toc-library-empty {
+  color: var(--muted);
+  font-size: 11px;
+  padding: 6px 8px;
+  font-family: var(--font-mono);
+}
+.lib-clear {
+  display: block;
+  padding: 6px 8px;
+  font-size: 10.5px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.lib-clear:hover { color: #6ee3ff; text-decoration: none; }
+.lib-tree { display: flex; flex-direction: column; gap: 1px; }
+.lib-company { padding: 0; }
+.lib-company > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  transition: background 120ms ease, color 120ms ease;
+}
+.lib-company > summary::-webkit-details-marker { display: none; }
+.lib-company > summary::before {
+  content: "\25B8";
+  color: var(--muted);
+  font-size: 9px;
+  transition: transform 120ms ease;
+  display: inline-block;
+  width: 10px;
+}
+.lib-company[open] > summary::before { transform: rotate(90deg); }
+.lib-company > summary:hover { background: var(--panel-2); color: var(--text); }
+.lib-company > summary.is-active { color: var(--accent); }
+.lib-company-name { flex: 1; min-width: 0; word-break: break-word; }
+.lib-company-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.lib-report {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px 5px 24px;
+  font-size: 11.5px;
+  color: var(--text-2);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 120ms ease, color 120ms ease;
+}
+.lib-report:hover {
+  background: var(--panel-2);
+  color: var(--text);
+  text-decoration: none;
+}
+.lib-report.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.lib-report-period { flex: 1; min-width: 0; word-break: break-word; }
+.lib-report-count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  background: var(--panel-3);
+  color: var(--text);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-weight: 700;
+}
+.lib-tag-peer {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 1px 4px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+.lib-sev { font-size: 10px; line-height: 1; width: 10px; text-align: center; }
+.lib-sev-critical { color: var(--critical); }
+.lib-sev-warning  { color: var(--warning); }
+.lib-sev-info     { color: var(--info); }
+.lib-sev-none     { color: var(--muted-2); }
+
+.pdf-host-search code {
+  background: var(--panel-3);
+  color: var(--accent);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
 .toc-meta { padding: 16px 18px; font-size: 11px; color: var(--muted); }
 .toc-meta-row { display: flex; flex-direction: column; margin-bottom: 10px; }
 .toc-meta-key {
@@ -625,6 +749,46 @@ tbody tr:hover td { color: var(--text); }
   color: var(--text);
   background: var(--panel-2);
   border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Jump to PDF button (top of drill section) */
+.drill-jump-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 7px 14px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(61,214,245,0.4);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease, transform 120ms ease;
+}
+.drill-jump-pdf:hover {
+  background: var(--accent);
+  color: #06121a;
+  transform: translateY(-1px);
+}
+
+/* Library filter banner above the leaderboard */
+.library-active {
+  background: var(--accent-soft);
+  border: 1px solid rgba(61,214,245,0.4);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  margin: 0 0 14px;
+  font-size: 12.5px;
+  color: var(--text);
+}
+.library-active a {
+  color: var(--accent);
+  font-weight: 700;
+  margin-left: 12px;
 }
 
 /* Embedded PDF viewer */
