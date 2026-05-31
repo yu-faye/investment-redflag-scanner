@@ -1,8 +1,9 @@
 /* Investment Red Flag Scanner dashboard
  *
- * Loads two leaderboard JSONs (middelborg + all), wires filters, renders
- * the table, and exposes click through destinations per finding plus an
- * embedded PDF viewer with the matched evidence highlighted.
+ * Loads two leaderboard JSONs (middelborg + all), wires the filters
+ * and the report-library sidebar, renders the table and exposes a
+ * per-row drill panel + an embedded PDF viewer with the matched
+ * evidence highlighted.
  */
 
 const SCOPES = {
@@ -10,29 +11,20 @@ const SCOPES = {
   all: { file: "../outputs/leaderboard.json", data: null },
 };
 
-// v9: optional artefacts. If they 404 (older runs) the panels just stay
-// hidden -- we don't want a missing v9 file to break the v7/v8 dashboard.
-const V9_FILES = {
-  matrix: "../outputs/triangulation_matrix.json",
-  roadmap: "../outputs/audit_roadmap.json",
-};
-let v9Matrix = null;
-let v9Roadmap = null;
-
-// v10: argument trees, narrative paragraphs, top-level Sankey of the
-// reasoning landscape. All optional; load failures hide the section.
-const V10_FILES = {
-  sankey: "../outputs/sankey_data.json",
+// Auxiliary payloads used inside the per-finding drill panel only.
+// Loaded once at startup; loading failures simply hide the relevant
+// sub-blocks in the drill.
+const AUX_FILES = {
   trees: "../outputs/argument_trees.json",
   paragraphs: "../outputs/narrative_paragraphs.json",
 };
-let v10Sankey = null;
 let v10Trees = null;
 let v10Paragraphs = null;
 
 // Report library: company -> reports tree shown in the sidebar so the
 // analyst can see every report that has been ingested (not just the
-// findings). Optional; load failure just hides the section.
+// ones that produced findings). Optional; load failure just hides
+// the section.
 const REPORT_LIBRARY_FILE = "../outputs/report_library.json";
 let reportLibrary = null;
 
@@ -41,16 +33,16 @@ const state = {
   severity: "",
   rule: "",
   company: "",
-  // When a Sankey node is clicked, leaderboard rows are filtered to
-  // only those whose composite_key is in `sankeyFilterKeys`.
-  sankeyFilterKeys: null,
-  sankeyFilterLabel: "",
   // When a report library node is clicked, leaderboard rows are
-  // filtered to that company + period pair.
+  // filtered to that company + the concrete prov.period strings that
+  // joined to that report in run_real_report.build_report_library
+  // (e.g. company="Techstep ASA", libraryFilterPeriods=["2025-FY"]).
   libraryFilterCompany: "",
-  libraryFilterPeriod: "",
-  // The currently drilled finding (composite_key). Drives the Drill
-  // into a finding + Embedded source PDF sections at the bottom of
+  libraryFilterPeriods: null,
+  // Human label shown in the active-filter banner above the table.
+  libraryFilterLabel: "",
+  // The currently drilled finding (composite_key). Drives the
+  // "Why we flagged it" + "Source PDF" sections at the bottom of
   // the page.
   selectedKey: null,
 };
@@ -83,39 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
         )}</td></tr>`;
     });
 
-  // v9 panels: tolerant load. Missing files just hide the section.
-  fetchJson(V9_FILES.matrix)
-    .then((d) => {
-      v9Matrix = d;
-      return fetchJson(V9_FILES.roadmap);
-    })
-    .then((d) => {
-      v9Roadmap = d;
-      renderTriangulationMatrix();
-      renderAuditRoadmap();
-    })
-    .catch(() => {
-      const sec = document.getElementById("matrix-section");
-      if (sec) sec.hidden = true;
-    });
-
-  // v10 panels: same tolerant pattern.
+  // Drill-panel aux payloads: tolerant load. Missing files just hide
+  // the corresponding sub-blocks inside the drill panel.
   Promise.all([
-    fetchJson(V10_FILES.sankey).catch(() => null),
-    fetchJson(V10_FILES.trees).catch(() => null),
-    fetchJson(V10_FILES.paragraphs).catch(() => null),
-  ]).then(([s, t, p]) => {
-    v10Sankey = s;
+    fetchJson(AUX_FILES.trees).catch(() => null),
+    fetchJson(AUX_FILES.paragraphs).catch(() => null),
+  ]).then(([t, p]) => {
     v10Trees = t;
     v10Paragraphs = p;
-    if (v10Sankey) {
-      renderSankey();
-    } else {
-      const sec = document.getElementById("landscape-section");
-      if (sec) sec.hidden = true;
-    }
-    // Re-render rows so narrative paragraphs / argument trees appear once
-    // the v10 payloads have arrived.
+    // Re-render rows once narrative paragraphs / argument trees have
+    // arrived so the drill panel picks them up.
     if (SCOPES[state.scope].data) render();
   });
 
@@ -243,17 +212,18 @@ function matchesFilters(f) {
     const label = f.company_name || f.company;
     if (label !== state.company) return false;
   }
-  if (state.sankeyFilterKeys) {
-    if (!state.sankeyFilterKeys.has(compositeKeyOf(f))) return false;
-  }
   if (state.libraryFilterCompany) {
     const label = f.company_name || f.company || "";
     if (label !== state.libraryFilterCompany) return false;
   }
-  if (state.libraryFilterPeriod) {
+  if (state.libraryFilterPeriods && state.libraryFilterPeriods.length) {
+    // Match against the concrete prov.period strings the library
+    // payload told us joined to this report (set up server-side in
+    // build_report_library). prov.label is unreliable for joining
+    // because the loader rewrites it.
     const prov = f.provenance || {};
-    const period = prov.label || prov.period || "";
-    if (period !== state.libraryFilterPeriod) return false;
+    const period = prov.period || "";
+    if (!state.libraryFilterPeriods.includes(period)) return false;
   }
   return true;
 }
@@ -641,111 +611,57 @@ function escapeHtml(s) {
     .replace(/'/g, "&#39;");
 }
 
-/* ------------------------- v9 panels ------------------------------------ */
-
-const VERDICT_GLYPH = {
-  confirms: { glyph: "\u2713", label: "confirms", cls: "vd-confirms" },
-  partial:  { glyph: "\u25D0", label: "partial",  cls: "vd-partial"  },
-  refutes:  { glyph: "\u2717", label: "refutes",  cls: "vd-refutes"  },
-  not_found:{ glyph: "\u2298", label: "not_found",cls: "vd-not-found"},
-  neutral:  { glyph: "\u25E6", label: "neutral",  cls: "vd-neutral"  },
-  error:    { glyph: "!",      label: "error",    cls: "vd-error"    },
+/* ------------------------- Per-finding cross-check map ------------------ */
+/* Plain-language verdict labels used inside the drill panel only. */
+const VERDICT_LABEL = {
+  confirms:   { glyph: "\u2713", label: "matches the report",      cls: "vd-confirms"  },
+  partial:    { glyph: "\u25D0", label: "partly matches",          cls: "vd-partial"   },
+  refutes:    { glyph: "\u2717", label: "contradicts the report",  cls: "vd-refutes"   },
+  not_found:  { glyph: "\u2298", label: "nothing in the registry", cls: "vd-not-found" },
+  neutral:    { glyph: "\u25E6", label: "no clear signal",         cls: "vd-neutral"   },
+  error:      { glyph: "!",      label: "lookup failed",           cls: "vd-error"     },
 };
 
-function renderTriangulationMatrix() {
-  if (!v9Matrix || !v9Matrix.rows || !v9Matrix.rows.length) return;
-  const el = document.getElementById("triangulation-matrix");
-  if (!el) return;
-
-  // Only include tap_kinds that actually have at least one non-null cell.
-  const activeTapKinds = v9Matrix.tap_kinds.filter((kind) =>
-    v9Matrix.rows.some((r) => r.cells_by_kind && r.cells_by_kind[kind])
-  );
-  // Always include the pending tap_kinds appearing in any next_recommended_taps.
-  v9Matrix.rows.forEach((r) => {
-    (r.next_recommended_taps || []).forEach((rec) => {
-      if (!activeTapKinds.includes(rec.tap_kind)) activeTapKinds.push(rec.tap_kind);
-    });
-  });
-
-  const head = `
-    <thead>
-      <tr>
-        <th class="m-col-entity">Hypothesis (entity)</th>
-        <th class="m-col-severity">Derived</th>
-        ${activeTapKinds.map((k) => `<th class="m-col-tap" title="${escapeHtml(k)}">${escapeHtml(formatTapKind(k))}</th>`).join("")}
-        <th class="m-col-next">Next recommended tap</th>
-      </tr>
-    </thead>
+/* Renders the per-finding "What we checked" panel for a triangulated
+ * finding. Reads from finding.triangulation.verdicts (one row per
+ * external source we queried) and prints a plain-language table:
+ *   source name -> what came back -> what it means
+ * For non-triangulated rules (narrative_dissonance, selective_disclosure,
+ * lag_causality) returns "" so the drill panel just shows the narrative
+ * paragraph + argument tree.
+ */
+function renderPerFindingCrossCheck(f) {
+  const t = f && f.triangulation;
+  if (!t) return "";
+  const verdicts = t.verdicts || [];
+  if (!verdicts.length) return "";
+  const rows = verdicts.map((v) => {
+    const meta = VERDICT_LABEL[v.verdict] || { glyph: "?", label: v.verdict || "?", cls: "vd-other" };
+    const srcLabel = (v.tap_kind || v.tap_id || "external source").replace(/_/g, " ");
+    const narrative = v.narrative || v.summary || "";
+    return `
+      <tr class="cc-row ${meta.cls}">
+        <td class="cc-source">${escapeHtml(srcLabel)}</td>
+        <td class="cc-verdict"><span class="cc-glyph">${meta.glyph}</span> ${escapeHtml(meta.label)}</td>
+        <td class="cc-narrative">${escapeHtml(narrative)}</td>
+      </tr>`;
+  }).join("");
+  const sev = t.derived_severity || f.severity || "info";
+  return `
+    <div class="cross-check-block">
+      <div class="cross-check-head">
+        <strong>What we checked, in plain English</strong>
+        <span class="cc-sev cc-sev-${escapeHtml(sev)}">Final read: ${escapeHtml(sev)}</span>
+      </div>
+      <table class="cross-check-table">
+        <thead><tr><th>Where we looked</th><th>What it said</th><th>What we found</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
   `;
-
-  const body = v9Matrix.rows.map((r) => {
-    const severity = r.derived_severity || "info";
-    const sevClass = `sev-cell sev-${severity}`;
-    const cells = activeTapKinds.map((kind) => {
-      const cell = (r.cells_by_kind || {})[kind];
-      if (!cell) {
-        return `<td class="m-cell m-cell-empty" title="not yet queried">\u2014</td>`;
-      }
-      const v = VERDICT_GLYPH[cell.verdict] || { glyph: "?", label: cell.verdict, cls: "vd-other" };
-      const tip = `${cell.tap_id} verdict=${cell.verdict} conf=${cell.confidence}\n${(cell.narrative || "").slice(0, 240)}`;
-      return `<td class="m-cell ${v.cls}" title="${escapeHtml(tip)}">${v.glyph}<span class="m-cell-confidence">${escapeHtml(cell.confidence ?? "")}</span></td>`;
-    }).join("");
-    const next = (r.next_recommended_taps && r.next_recommended_taps[0])
-      ? `<span class="m-next-pill" title="${escapeHtml(JSON.stringify(r.next_recommended_taps[0]))}">${escapeHtml(formatTapKind(r.next_recommended_taps[0].tap_kind))}${r.next_recommended_taps[0].blocking_for_critical ? " \u2605" : ""}</span>`
-      : `<span class="m-next-empty">\u2014</span>`;
-    const blockers = (r.blockers_for_critical && r.blockers_for_critical.length)
-      ? `<details class="m-blockers"><summary>${r.blockers_for_critical.length} blocker(s)</summary><ul>${r.blockers_for_critical.map((b) => `<li>${escapeHtml(b)}</li>`).join("")}</ul></details>`
-      : "";
-    return `
-      <tr>
-        <td class="m-col-entity">
-          <div class="m-entity">${escapeHtml(r.entity || r.hypothesis_id)}</div>
-          <div class="m-claim">${escapeHtml(r.claim || "")}</div>
-          ${blockers}
-        </td>
-        <td class="${sevClass}">${escapeHtml(severity)}</td>
-        ${cells}
-        <td class="m-col-next">${next}</td>
-      </tr>
-    `;
-  }).join("");
-
-  el.innerHTML = head + "<tbody>" + body + "</tbody>";
 }
 
-function renderAuditRoadmap() {
-  if (!v9Roadmap || !v9Roadmap.recommended_taps) return;
-  const el = document.getElementById("audit-roadmap");
-  if (!el) return;
-  if (!v9Roadmap.recommended_taps.length) {
-    el.innerHTML = `<li class="roadmap-empty">All applicable tap_kinds for every hypothesis have already been queried. No new external data source would raise coverage right now.</li>`;
-    return;
-  }
-  el.innerHTML = v9Roadmap.recommended_taps.map((r, idx) => {
-    const unblock = r.would_unblock_critical_for || [];
-    const covers = (r.covers_hypotheses || []).map((h) =>
-      `<li><code>${escapeHtml(h.entity || h.hypothesis_id)}</code> &mdash; addresses <em>${escapeHtml(h.question_id)}</em>${h.blocking_for_critical ? ' <span class="roadmap-star">\u2605 blocking</span>' : ''}</li>`
-    ).join("");
-    return `
-      <li class="roadmap-item">
-        <div class="roadmap-head">
-          <span class="roadmap-rank">#${idx + 1}</span>
-          <span class="roadmap-kind">${escapeHtml(formatTapKind(r.tap_kind))}</span>
-          <span class="roadmap-gain" title="Sum of expected_information_gain across hypotheses">+${r.total_information_gain.toFixed(2)} info gain</span>
-          ${unblock.length ? `<span class="roadmap-unblock">would unblock critical for ${unblock.length} hypothesis(es)</span>` : ""}
-        </div>
-        <ul class="roadmap-covers">${covers}</ul>
-      </li>
-    `;
-  }).join("");
-}
-
-function formatTapKind(k) {
-  return String(k || "").replace(/_/g, " ");
-}
-
-/* ------------------------- v10 panels ----------------------------------- */
+/* ------------------------- Drill panel helpers -------------------------- */
 
 function compositeKeyOf(f) {
   if (f.composite_key) return f.composite_key;
@@ -804,9 +720,12 @@ function renderNarrativeParagraph(para) {
 
 function renderArgumentTreeOpen(tree) {
   if (!tree) return "";
+  // Collapsed by default. The drill panel has plenty of content
+  // without it; the analyst can expand when they want the
+  // step-by-step breakdown.
   return `
-    <details class="v10-tree-root" open>
-      <summary><span class="v10-tree-tag">Argument tree</span> click to collapse</summary>
+    <details class="v10-tree-root">
+      <summary><span class="v10-tree-tag">Step by step reasoning</span> click to expand</summary>
       ${renderArgumentTreeNode(tree, 0)}
     </details>
   `;
@@ -840,152 +759,53 @@ function renderArgumentTreeNode(node, depth) {
   `;
 }
 
-function renderSankey() {
-  if (!v10Sankey || !window.d3 || !window.d3.sankey) {
-    const sec = document.getElementById("landscape-section");
-    if (sec) sec.hidden = true;
-    return;
-  }
-  const svg = d3.select("#sankey-svg");
-  const host = document.getElementById("sankey-host");
-  const width = Math.max(640, host ? host.clientWidth : 900);
-  const nodeCount = v10Sankey.nodes.length;
-  const height = Math.max(360, Math.min(900, 22 * nodeCount + 80));
-  svg.attr("viewBox", `0 0 ${width} ${height}`).attr("width", "100%").attr("height", height);
-  svg.selectAll("*").remove();
-
-  const idx = new Map();
-  v10Sankey.nodes.forEach((n, i) => idx.set(n.id, i));
-  const sankeyData = {
-    nodes: v10Sankey.nodes.map((n) => ({ ...n })),
-    links: v10Sankey.links.map((l) => ({
-      source: idx.get(l.source),
-      target: idx.get(l.target),
-      value: l.value,
-      color: l.color,
-      verdict: l.verdict,
-      finding_keys: l.finding_keys || [],
-    })),
-  };
-
-  const layout = d3.sankey()
-    .nodeWidth(14)
-    .nodePadding(10)
-    .extent([[10, 10], [width - 220, height - 10]]);
-
-  const { nodes, links } = layout(sankeyData);
-
-  // Layer captions.
-  const layerLabels = v10Sankey.layer_labels || [];
-  svg.append("g").selectAll("text.v10-sk-layer")
-    .data(layerLabels)
-    .enter()
-    .append("text")
-    .attr("class", "v10-sk-layer")
-    .attr("x", (_, i) => 10 + ((width - 230) / Math.max(layerLabels.length - 1, 1)) * i)
-    .attr("y", 8)
-    .text((d) => d);
-
-  svg.append("g")
-    .attr("fill", "none")
-    .attr("stroke-opacity", 0.45)
-    .selectAll("path")
-    .data(links)
-    .enter()
-    .append("path")
-    .attr("d", d3.sankeyLinkHorizontal())
-    .attr("stroke", (d) => d.color || "#bdc3c7")
-    .attr("stroke-width", (d) => Math.max(1, d.width))
-    .append("title")
-    .text((d) => `${d.source.name} -> ${d.target.name}\nvalue=${d.value.toFixed(2)}\nfindings=${d.finding_keys.length}\nverdict=${d.verdict || "-"}`);
-
-  const nodeG = svg.append("g")
-    .selectAll("g")
-    .data(nodes)
-    .enter()
-    .append("g")
-    .attr("class", "v10-sk-node")
-    .style("cursor", "pointer")
-    .on("click", function (event, d) {
-      // Aggregate finding_keys from every link touching this node.
-      const keys = new Set();
-      links.forEach((l) => {
-        if (l.source.id === d.id || l.target.id === d.id) {
-          (l.finding_keys || []).forEach((k) => keys.add(k));
-        }
-      });
-      if (keys.size === 0) return;
-      state.sankeyFilterKeys = keys;
-      state.sankeyFilterLabel = d.name;
-      const label = document.getElementById("sankey-active");
-      if (label) {
-        label.hidden = false;
-        label.innerHTML = `Leaderboard filter active: <strong>${escapeHtml(d.name)}</strong> (${keys.size} finding(s)). <a href="#" id="sankey-clear">Clear</a>`;
-        const clear = document.getElementById("sankey-clear");
-        if (clear) clear.addEventListener("click", (e) => {
-          e.preventDefault();
-          state.sankeyFilterKeys = null;
-          state.sankeyFilterLabel = "";
-          label.hidden = true;
-          render();
-        });
-      }
-      render();
-    });
-  nodeG.append("rect")
-    .attr("x", (d) => d.x0)
-    .attr("y", (d) => d.y0)
-    .attr("height", (d) => Math.max(2, d.y1 - d.y0))
-    .attr("width", (d) => d.x1 - d.x0)
-    .attr("fill", (d) => d.color || "#888")
-    .attr("stroke", "#444")
-    .append("title")
-    .text((d) => `${d.name}\nlayer=${d.layer} category=${d.category}\nvalue=${d.value ? d.value.toFixed(2) : "?"}`);
-  nodeG.append("text")
-    .attr("x", (d) => d.x1 + 6)
-    .attr("y", (d) => (d.y0 + d.y1) / 2)
-    .attr("dy", "0.32em")
-    .attr("text-anchor", "start")
-    .attr("class", "v10-sk-nlabel")
-    .text((d) => d.name.length > 38 ? d.name.slice(0, 36) + "\u2026" : d.name);
-}
-
 /* ------------------------- Drill section -------------------------------- */
-/* Renders the auditor narrative paragraph + argument tree for the
- * currently selected finding into the Drill into a finding section.
- * Also surfaces a Jump to PDF button that scrolls the page down to the
- * embedded PDF viewer with the matched evidence already highlighted.
+/* Builds the "Why we flagged it" panel for the currently selected
+ * finding. Stack from top to bottom:
+ *   1. Header: company name, rule, severity, headline, jump-to-PDF
+ *   2. Plain-English summary paragraph (narrative_writer output)
+ *   3. "What we checked, in plain English" cross-check table -- only
+ *      for triangulated_hypothesis findings; other rule families skip
+ *      this since they have no external verdict table
+ *   4. Step-by-step reasoning tree (collapsible, defaults closed)
  */
 function renderDrillSection(allFindings) {
   const host = document.getElementById("drill-host");
   if (!host) return;
   const f = findFindingByKey(allFindings, state.selectedKey);
   if (!f) {
-    host.innerHTML = `<p class="drill-empty">Click the \u2193 arrow in front of any company name in the Findings leaderboard to drill in here.</p>`;
+    host.innerHTML = `<p class="drill-empty">Click the \u2193 arrow in front of any row in the table above to read the full reasoning here.</p>`;
     return;
   }
-  const v10Html = renderV10Block(f) ||
-    `<p class="drill-empty">No narrative or argument tree was generated for this finding.</p>`;
   const headline = typeof f.headline === "string"
     ? f.headline
     : (f.headline && f.headline.en) || "";
-  const sevBadge = `<span class="sev-badge sev-${escapeHtml(f.severity || "")}">${escapeHtml(f.severity || "")}</span>`;
+  const sev = f.severity || "info";
+  const sevBadge = `<span class="sev-badge sev-${escapeHtml(sev)}">${escapeHtml(sev)}</span>`;
   const prov = f.provenance || {};
   const page = prov.pdf_page_hit;
   const hasPdf = !!prov.local_path || !!prov.github_raw_url || !!prov.issuer_url;
   const jumpBtn = hasPdf
-    ? `<button type="button" id="drill-jump-pdf" class="drill-jump-pdf" title="Scroll to the embedded PDF below, jumped to ${page ? "page " + page : "the start"} with the evidence highlighted">
-         Open in PDF below${page ? " &middot; page " + escapeHtml(String(page)) : ""} &darr;
+    ? `<button type="button" id="drill-jump-pdf" class="drill-jump-pdf" title="Scroll to the source PDF below, opened at ${page ? "page " + page : "the start"} with the evidence highlighted in yellow.">
+         Show me in the PDF below${page ? " &middot; page " + escapeHtml(String(page)) : ""} &darr;
        </button>`
     : "";
+  const ruleLabel = friendlyRuleName(f.rule_id);
+  const reportLabel = prov.label || prov.period || "";
   const headerHtml = `
     <div class="drill-head">
-      <h3>${escapeHtml(f.company_name || f.company || "")} &middot; ${escapeHtml(f.rule_id || "")} ${sevBadge}</h3>
+      <h3>${escapeHtml(f.company_name || f.company || "")} ${sevBadge}</h3>
+      <p class="drill-subline">
+        <span class="drill-rule">${escapeHtml(ruleLabel)}</span>
+        ${reportLabel ? `<span class="drill-report">${escapeHtml(reportLabel)}</span>` : ""}
+      </p>
       <p class="drill-blockquote">${escapeHtml(headline)}</p>
       ${jumpBtn}
     </div>
   `;
-  host.innerHTML = headerHtml + v10Html;
+  const narrativeHtml = renderV10Block(f) || `<p class="drill-empty">No plain-English summary written for this finding yet.</p>`;
+  const crossCheckHtml = renderPerFindingCrossCheck(f);
+  host.innerHTML = headerHtml + narrativeHtml + crossCheckHtml;
   const btn = document.getElementById("drill-jump-pdf");
   if (btn) {
     btn.addEventListener("click", () => {
@@ -993,6 +813,19 @@ function renderDrillSection(allFindings) {
       if (pdfSec) pdfSec.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
+}
+
+/* Friendly label for an internal rule_id. Falls back to the id itself
+ * when the rule isn't in the map; that's intentional so newly added
+ * detectors at least show their id rather than an empty string. */
+function friendlyRuleName(ruleId) {
+  const map = {
+    narrative_dissonance: "Story vs numbers",
+    selective_disclosure: "What the report leaves out",
+    lag_causality: "Said vs delivered",
+    triangulated_hypothesis: "Report vs outside sources",
+  };
+  return map[ruleId] || ruleId || "";
 }
 
 /* ------------------------- Embedded PDF section ------------------------- */
@@ -1108,19 +941,33 @@ function bindTocScrollSpy() {
  * reports") clears the per report filter but keeps the company filter.
  * ====================================================================== */
 
+/* Sidebar fallback when outputs/report_library.json is missing (older
+ * runs). Derives a minimal company -> reports map directly from the
+ * leaderboard payload. The derived periods come from prov.period so
+ * the JS filter will hit them the same way the real library does. */
 function deriveLibraryFromLeaderboard(data) {
   const findings = (data && data.top_findings) || [];
   const map = new Map();
   for (const f of findings) {
     const prov = f.provenance || {};
     const company = f.company_name || f.company || "?";
-    const period = prov.label || prov.period || "(unknown period)";
+    const periodKey = prov.period || "(unknown period)";
+    const periodLabel = prov.label || periodKey;
     if (!map.has(company)) map.set(company, { name: company, reports: new Map() });
     const c = map.get(company);
-    if (!c.reports.has(period)) {
-      c.reports.set(period, { period, finding_count: 0, critical: 0, warning: 0, info: 0, has_findings: true });
+    if (!c.reports.has(periodKey)) {
+      c.reports.set(periodKey, {
+        period: periodLabel,
+        period_id: periodKey,
+        matched_periods: [periodKey],
+        finding_count: 0,
+        critical: 0,
+        warning: 0,
+        info: 0,
+        has_findings: true,
+      });
     }
-    const r = c.reports.get(period);
+    const r = c.reports.get(periodKey);
     r.finding_count += 1;
     if (f.severity && r[f.severity] !== undefined) r[f.severity] += 1;
   }
@@ -1130,6 +977,14 @@ function deriveLibraryFromLeaderboard(data) {
   }));
   companies.sort((a, b) => a.name.localeCompare(b.name));
   return { schema_version: 0, source: "derived_from_leaderboard", companies };
+}
+
+function _periodsEqual(a, b) {
+  if (!a || !b) return false;
+  if (a.length !== b.length) return false;
+  const sa = [...a].sort();
+  const sb = [...b].sort();
+  return sa.every((v, i) => v === sb[i]);
 }
 
 function renderReportLibrary() {
@@ -1143,82 +998,99 @@ function renderReportLibrary() {
   }
   const parts = companies.map((c) => {
     const reports = c.reports || [];
-    const totalFindings = reports.reduce((s, r) => s + (r.finding_count || 0), 0);
-    const totalCritical = reports.reduce((s, r) => s + (r.critical || 0), 0);
     const reportsHtml = reports.map((r) => {
+      // Filter key is the matched_periods array generated by
+      // build_report_library() server-side; falls back to the human
+      // period label so the sidebar still works for older payloads
+      // that pre-date the matched_periods field.
+      const periodsKey = (r.matched_periods && r.matched_periods.length)
+        ? r.matched_periods
+        : (r.period_id ? [r.period_id] : [r.period]);
       const sevDot = r.critical > 0
-        ? `<span class="lib-sev lib-sev-critical" title="${r.critical} critical">\u25CF</span>`
+        ? `<span class="lib-sev lib-sev-critical" title="this report has critical flags">\u25CF</span>`
         : r.warning > 0
-        ? `<span class="lib-sev lib-sev-warning" title="${r.warning} warning">\u25CF</span>`
+        ? `<span class="lib-sev lib-sev-warning" title="this report has warnings">\u25CF</span>`
         : r.info > 0
-        ? `<span class="lib-sev lib-sev-info" title="${r.info} info">\u25CF</span>`
-        : `<span class="lib-sev lib-sev-none" title="no findings">\u25CB</span>`;
+        ? `<span class="lib-sev lib-sev-info" title="this report has info flags">\u25CF</span>`
+        : `<span class="lib-sev lib-sev-none" title="no flags on this report">\u25CB</span>`;
       const peerTag = r.role === "peer_control"
-        ? `<span class="lib-tag-peer" title="Used as peer control / YoY baseline">peer</span>`
+        ? `<span class="lib-tag-peer" title="Used as a year-over-year baseline">prior</span>`
         : "";
       const isActive =
         state.libraryFilterCompany === c.name &&
-        state.libraryFilterPeriod === r.period
+        _periodsEqual(state.libraryFilterPeriods, periodsKey)
           ? " is-active"
           : "";
       return `
-        <a href="#leaderboard-section"
+        <a href="#"
            class="lib-report${isActive}"
            data-company="${escapeHtml(c.name)}"
-           data-period="${escapeHtml(r.period)}">
+           data-periods="${escapeHtml(JSON.stringify(periodsKey))}"
+           data-label="${escapeHtml(r.period)}">
           ${sevDot}
           <span class="lib-report-period">${escapeHtml(r.period)}</span>
-          ${r.finding_count > 0 ? `<span class="lib-report-count">${r.finding_count}</span>` : ""}
           ${peerTag}
         </a>`;
     }).join("");
     const isCompanyActive =
-      state.libraryFilterCompany === c.name && !state.libraryFilterPeriod
+      state.libraryFilterCompany === c.name &&
+      (!state.libraryFilterPeriods || !state.libraryFilterPeriods.length)
         ? " is-active"
         : "";
     return `
       <details class="lib-company" ${isCompanyActive ? "open" : ""}>
-        <summary class="lib-company-summary${isCompanyActive}">
+        <summary class="lib-company-summary${isCompanyActive ? " is-active" : ""}">
           <span class="lib-company-name">${escapeHtml(c.name)}</span>
-          <span class="lib-company-meta">${reports.length}\u00B7${totalFindings}${totalCritical > 0 ? `\u00B7<span class='lib-sev-critical'>${totalCritical}</span>` : ""}</span>
         </summary>
         ${reportsHtml}
       </details>`;
   });
-  const clearHtml = (state.libraryFilterCompany || state.libraryFilterPeriod)
-    ? `<a href="#" id="lib-clear" class="lib-clear">Clear report filter \u00D7</a>`
+  const hasFilter = state.libraryFilterCompany ||
+    (state.libraryFilterPeriods && state.libraryFilterPeriods.length);
+  const clearHtml = hasFilter
+    ? `<a href="#" id="lib-clear" class="lib-clear">Clear filter \u00D7</a>`
     : "";
   host.innerHTML = `${clearHtml}<div class="lib-tree">${parts.join("")}</div>`;
 
   host.querySelectorAll(".lib-report").forEach((a) => {
     a.addEventListener("click", (e) => {
       e.preventDefault();
+      let periods = [];
+      try { periods = JSON.parse(a.dataset.periods || "[]"); } catch (_) { periods = []; }
       state.libraryFilterCompany = a.dataset.company || "";
-      state.libraryFilterPeriod = a.dataset.period || "";
-      renderReportLibrary();
+      state.libraryFilterPeriods = periods;
+      state.libraryFilterLabel = a.dataset.label || "";
+      // Pick the first matching row as the new drill target so the
+      // "Why we flagged it" panel below also updates in place. If no
+      // row matches we leave the previous selection alone.
       const data = SCOPES[state.scope].data || { top_findings: [] };
       const matching = data.top_findings.find(matchesFilters);
       if (matching) state.selectedKey = compositeKeyOf(matching);
+      renderReportLibrary();
       render();
       updateLibraryBanner();
-      const lbsec = document.getElementById("leaderboard-section");
-      if (lbsec) lbsec.scrollIntoView({ behavior: "smooth", block: "start" });
+      // No scrollIntoView: the user wants the leaderboard to update
+      // silently without the page jumping anywhere.
     });
   });
   host.querySelectorAll(".lib-company-summary").forEach((s) => {
     s.addEventListener("click", (e) => {
-      // Only intercept when clicking the company name area, not the
-      // disclosure triangle. We use the data attribute to know which.
+      // Double-click on a company name = filter to that company only,
+      // clear the per-report filter. Single click keeps the native
+      // <details> toggle behaviour.
+      if (e.detail !== 2) return;
       const company = s.parentElement.querySelector(".lib-company-name")?.textContent;
-      // Optional: filter by company alone when summary is clicked.
-      if (e.detail === 2 && company) {
-        e.preventDefault();
-        state.libraryFilterCompany = company;
-        state.libraryFilterPeriod = "";
-        renderReportLibrary();
-        render();
-        updateLibraryBanner();
-      }
+      if (!company) return;
+      e.preventDefault();
+      state.libraryFilterCompany = company;
+      state.libraryFilterPeriods = null;
+      state.libraryFilterLabel = "";
+      const data = SCOPES[state.scope].data || { top_findings: [] };
+      const matching = data.top_findings.find(matchesFilters);
+      if (matching) state.selectedKey = compositeKeyOf(matching);
+      renderReportLibrary();
+      render();
+      updateLibraryBanner();
     });
   });
   const clear = document.getElementById("lib-clear");
@@ -1226,7 +1098,8 @@ function renderReportLibrary() {
     clear.addEventListener("click", (e) => {
       e.preventDefault();
       state.libraryFilterCompany = "";
-      state.libraryFilterPeriod = "";
+      state.libraryFilterPeriods = null;
+      state.libraryFilterLabel = "";
       renderReportLibrary();
       render();
       updateLibraryBanner();
@@ -1237,21 +1110,24 @@ function renderReportLibrary() {
 function updateLibraryBanner() {
   const banner = document.getElementById("library-active");
   if (!banner) return;
-  if (!state.libraryFilterCompany && !state.libraryFilterPeriod) {
+  const hasFilter = state.libraryFilterCompany ||
+    (state.libraryFilterPeriods && state.libraryFilterPeriods.length);
+  if (!hasFilter) {
     banner.hidden = true;
     banner.innerHTML = "";
     return;
   }
-  const label = state.libraryFilterPeriod
-    ? `${state.libraryFilterCompany} &middot; ${state.libraryFilterPeriod}`
+  const label = state.libraryFilterLabel
+    ? `${state.libraryFilterCompany} &middot; ${state.libraryFilterLabel}`
     : state.libraryFilterCompany;
   banner.hidden = false;
-  banner.innerHTML = `Report filter: <strong>${escapeHtml(label)}</strong> <a href="#" id="banner-clear">Clear \u00D7</a>`;
+  banner.innerHTML = `Showing flags for: <strong>${escapeHtml(label)}</strong> <a href="#" id="banner-clear">Clear \u00D7</a>`;
   const c = document.getElementById("banner-clear");
   if (c) c.addEventListener("click", (e) => {
     e.preventDefault();
     state.libraryFilterCompany = "";
-    state.libraryFilterPeriod = "";
+    state.libraryFilterPeriods = null;
+    state.libraryFilterLabel = "";
     renderReportLibrary();
     render();
     updateLibraryBanner();

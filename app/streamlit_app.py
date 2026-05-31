@@ -597,186 +597,13 @@ def _render_pdf_panel(row: dict, items: list) -> None:
             pass
 
 
-def _render_triangulation_matrix_section() -> None:
-    """Hypothesis x tap-kind matrix + the audit roadmap. Renders inline
-    (no outer expander) so it lives under its own page anchor and can be
-    targeted from the sidebar table of contents."""
-    matrix = _load_optional_json(V9_MATRIX_PATH)
-    roadmap = _load_optional_json(V9_ROADMAP_PATH)
-    if not matrix or not (matrix.get("rows") or []):
-        st.info(
-            "No triangulation matrix yet. Run "
-            "`.venv/bin/python validation/run_real_report.py` first."
-        )
-        return
-
-    st.markdown(
-        "Each row is an **audit hypothesis** (a verbatim claim from a "
-        "PDF). Each column is an **external data source family**. Cells "
-        "show the verdict returned by the most recent tap. A hypothesis "
-        "is only allowed to graduate to **critical** when (a) >= 2 taps "
-        "agree, (b) every `blocking_for_critical` falsification question "
-        "has been addressed, and (c) the peer-control rule passes. "
-        "Single-source absence cannot drive critical."
-    )
-
-    active_kinds = [
-        k for k in matrix.get("tap_kinds", [])
-        if any(
-            (r.get("cells_by_kind") or {}).get(k) for r in matrix["rows"]
-        )
-    ]
-    for r in matrix["rows"]:
-        for rec in r.get("next_recommended_taps") or []:
-            if rec["tap_kind"] not in active_kinds:
-                active_kinds.append(rec["tap_kind"])
-
-    matrix_rows = []
-    for r in matrix["rows"]:
-        cells = r.get("cells_by_kind") or {}
-        row = {
-            "Entity": r.get("entity") or r.get("hypothesis_id"),
-            "Derived severity": r.get("derived_severity") or "?",
-        }
-        for kind in active_kinds:
-            cell = cells.get(kind)
-            if cell:
-                row[kind.replace("_", " ")] = (
-                    f"{_VERDICT_DISPLAY.get(cell['verdict'], cell['verdict'])} "
-                    f"({cell.get('confidence')})"
-                )
-            else:
-                row[kind.replace("_", " ")] = "\u2014"
-        nrt = (r.get("next_recommended_taps") or [None])[0]
-        row["Next tap"] = (
-            f"{nrt['tap_kind']}"
-            + (" \u2605" if nrt.get("blocking_for_critical") else "")
-            if nrt
-            else "\u2014"
-        )
-        matrix_rows.append(row)
-    st.dataframe(
-        pd.DataFrame(matrix_rows),
-        use_container_width=True,
-        hide_index=True,
-    )
-
-    for r in matrix["rows"]:
-        blockers = r.get("blockers_for_critical") or []
-        if not blockers:
-            continue
-        with st.expander(
-            f"Why '{r.get('entity')}' is not yet critical ({len(blockers)} blocker(s))",
-            expanded=False,
-        ):
-            for b in blockers:
-                st.write(f"\u2022 {b}")
-
-    st.markdown("---")
-    st.markdown("### Audit roadmap")
-    st.markdown(
-        "Which external data source would maximally raise triangulation "
-        "coverage next. Implementing one of these adds a new column to "
-        "the matrix above."
-    )
-    recs = (roadmap or {}).get("recommended_taps") or []
-    if not recs:
-        st.markdown(
-            '<div class="roadmap-empty-note">All applicable tap kinds for '
-            'every hypothesis have already been queried. No new external '
-            'data source would raise coverage right now.</div>',
-            unsafe_allow_html=True,
-        )
-        return
-
-    # Plain-black, high-contrast cards instead of Streamlit's coloured
-    # inline markup -- the user explicitly asked for readable contrast.
-    for idx, rec in enumerate(recs):
-        unblock = rec.get("would_unblock_critical_for") or []
-        head_html = (
-            f'<div class="roadmap-card-head">'
-            f'<span class="roadmap-rank">#{idx + 1}</span> '
-            f'<span class="roadmap-kind">{rec["tap_kind"].replace("_", " ")}</span> '
-            f'<span class="roadmap-gain">+{rec["total_information_gain"]:.2f} info gain</span>'
-            + (
-                f' <span class="roadmap-unblock">would unblock critical '
-                f'for {len(unblock)} hypothesis(es)</span>'
-                if unblock else ""
-            )
-            + '</div>'
-        )
-        st.markdown(head_html, unsafe_allow_html=True)
-        bullet_lines = []
-        for h in rec.get("covers_hypotheses") or []:
-            block_tag = (
-                ' <span class="roadmap-blocking">[blocking]</span>'
-                if h.get("blocking_for_critical")
-                else ""
-            )
-            bullet_lines.append(
-                f'<li><code>{h.get("entity") or h.get("hypothesis_id")}</code> '
-                f'\u2014 addresses <em>{h.get("question_id")}</em>{block_tag}</li>'
-            )
-        if bullet_lines:
-            st.markdown(
-                f'<ul class="roadmap-covers">{"".join(bullet_lines)}</ul>',
-                unsafe_allow_html=True,
-            )
-
-
-def _render_landscape_section() -> None:
-    """Sankey of the global reasoning landscape, rendered inline (no
-    outer expander) so it lives under its own page anchor."""
-    data = _load_optional_json(V10_SANKEY_PATH)
-    if not data or not (data.get("nodes") or []):
-        st.info("No Sankey payload yet -- run the pipeline once.")
-        return
-    try:
-        import plotly.graph_objects as go
-    except ImportError:
-        st.info(
-            "Install plotly to render the Sankey: `pip install plotly`."
-        )
-        return
-
-    st.caption(
-        "One flow unit per finding, split across falsification questions "
-        "and tap evidence. Layers: issuer \u2192 claim/rule \u2192 question "
-        "\u2192 tap evidence (verdict) \u2192 derived severity. Hover for "
-        "tooltip; node colours follow tap verdict "
-        "(green=confirms, red=refutes, orange=not_found)."
-    )
-    idx = {n["id"]: i for i, n in enumerate(data["nodes"])}
-    fig = go.Figure(go.Sankey(
-        node=dict(
-            label=[n["name"] for n in data["nodes"]],
-            color=[n.get("color") for n in data["nodes"]],
-            pad=14,
-            thickness=14,
-            line=dict(color="#444", width=0.5),
-        ),
-        link=dict(
-            source=[idx[l["source"]] for l in data["links"]],
-            target=[idx[l["target"]] for l in data["links"]],
-            value=[l["value"] for l in data["links"]],
-            color=[l.get("color") for l in data["links"]],
-            customdata=[
-                [l.get("verdict") or "-", len(l.get("finding_keys") or [])]
-                for l in data["links"]
-            ],
-            hovertemplate=(
-                "%{source.label} \u2192 %{target.label}<br>"
-                "value=%{value:.2f}<br>"
-                "verdict=%{customdata[0]}<br>"
-                "findings=%{customdata[1]}<extra></extra>"
-            ),
-        ),
-    ))
-    fig.update_layout(
-        margin=dict(l=10, r=10, t=20, b=10),
-        height=max(360, min(900, 22 * len(data["nodes"]) + 80)),
-    )
-    st.plotly_chart(fig, use_container_width=True)
+# Note: the standalone "Triangulation matrix" and "Logic chain
+# landscape" (Sankey) sections were removed because the user wanted
+# the evaluation breakdown to appear per finding (inside the drill
+# panel) rather than as global cross-cutting views. The matrix /
+# roadmap / sankey payloads are still generated by the pipeline for
+# anyone who wants to inspect them; the drill section's per-finding
+# cross-check table reads from finding.triangulation directly.
 
 
 def _render_pipeline_overview() -> None:
@@ -1121,6 +948,7 @@ def _render_drill_section(filtered: pd.DataFrame) -> None:
         ]
     )
     _render_v10_finding_block(raw_finding, composite_key)
+    _render_per_finding_cross_check(raw_finding)
     st.divider()
 
     _render_evidence_snippet(row, items)
@@ -1132,6 +960,42 @@ def _render_drill_section(filtered: pd.DataFrame) -> None:
     _render_provenance_card(row)
 
 
+_PLAIN_VERDICT = {
+    "confirms":   ("\u2713", "matches the report"),
+    "partial":    ("\u25D0", "partly matches"),
+    "refutes":    ("\u2717", "contradicts the report"),
+    "not_found":  ("\u2298", "nothing in the registry"),
+    "neutral":    ("\u25E6", "no clear signal"),
+    "error":      ("!",      "lookup failed"),
+}
+
+
+def _render_per_finding_cross_check(raw_finding: dict) -> None:
+    """Plain-English per-finding cross-check table. Renders only when
+    the finding has a triangulation.verdicts list (i.e. it came from
+    the triangulated_hypothesis rule). Other rule families have all
+    the context they need in the narrative paragraph above."""
+    t = (raw_finding or {}).get("triangulation") or {}
+    verdicts = t.get("verdicts") or []
+    if not verdicts:
+        return
+    rows = []
+    for v in verdicts:
+        glyph, plain = _PLAIN_VERDICT.get(
+            v.get("verdict") or "", ("?", v.get("verdict") or "?")
+        )
+        src = (v.get("tap_kind") or v.get("tap_id") or "external source").replace("_", " ")
+        rows.append({
+            "Where we looked": src,
+            "What it said": f"{glyph} {plain}",
+            "What we found": v.get("narrative") or v.get("summary") or "",
+        })
+    st.markdown("#### What we checked, in plain English")
+    sev = t.get("derived_severity") or raw_finding.get("severity") or "info"
+    st.caption(f"Final read across all sources: **{sev}**")
+    st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+
+
 def _render_sidebar_toc(payload: dict) -> None:
     """Left sidebar: site navigation + report library + run metadata."""
     with st.sidebar:
@@ -1139,11 +1003,9 @@ def _render_sidebar_toc(payload: dict) -> None:
         st.markdown(
             '<nav class="toc-nav">'
             '<a href="#how-it-works">How it works</a>'
-            '<a href="#findings-leaderboard">Findings leaderboard</a>'
-            '<a href="#logic-chain-landscape">Logic chain landscape</a>'
-            '<a href="#triangulation-matrix">Triangulation matrix</a>'
-            '<a href="#drill-into-a-finding">Drill into a finding</a>'
-            '<a href="#embedded-source-pdf">Embedded source PDF</a>'
+            '<a href="#red-flags">Red flags</a>'
+            '<a href="#why-we-flagged-it">Why we flagged it</a>'
+            '<a href="#source-pdf">Source PDF</a>'
             '</nav>',
             unsafe_allow_html=True,
         )
@@ -1153,28 +1015,28 @@ def _render_sidebar_toc(payload: dict) -> None:
         if not lib or not lib.get("companies"):
             st.caption("No reports indexed yet.")
         else:
+            # Plain list, no count badges. The static dashboard handles
+            # interactive filtering via JS; the Streamlit version is
+            # navigational only here.
             for c in lib["companies"]:
-                total_f = c.get("total_findings", 0)
-                total_c = c.get("total_critical", 0)
-                meta = f"{c.get('report_count', 0)} \u00B7 {total_f} findings"
-                if total_c:
-                    meta += f" \u00B7 {total_c} crit"
-                with st.expander(f"{c.get('name','?')}  ({meta})", expanded=False):
+                with st.expander(c.get("name", "?"), expanded=False):
                     for r in c.get("reports", []):
-                        sev_dot = "\u25CF " if r["critical"] > 0 else (
-                            "\u25D0 " if r["warning"] > 0 else (
-                                "\u25CB " if r["finding_count"] == 0 else "\u25CB "
-                            )
-                        )
-                        sev_color = "#ff5d63" if r["critical"] else (
-                            "#f7b955" if r["warning"] else "#8390a3"
-                        )
-                        peer = " *(peer)*" if r["role"] == "peer_control" else ""
+                        if r["critical"] > 0:
+                            sev_color = "#ff5d63"
+                            dot = "\u25CF"
+                        elif r["warning"] > 0:
+                            sev_color = "#f7b955"
+                            dot = "\u25CF"
+                        elif r["info"] > 0:
+                            sev_color = "#3dd6f5"
+                            dot = "\u25CF"
+                        else:
+                            sev_color = "#8390a3"
+                            dot = "\u25CB"
+                        peer = "  *(prior)*" if r["role"] == "peer_control" else ""
                         st.markdown(
-                            f"<span style='color:{sev_color}'>{sev_dot}</span> "
-                            f"**{r['period']}**{peer} \u2014 "
-                            f"{r['finding_count']} findings "
-                            f"(C{r['critical']} W{r['warning']} I{r['info']})",
+                            f"<span style='color:{sev_color}'>{dot}</span> "
+                            f"**{r['period']}**{peer}",
                             unsafe_allow_html=True,
                         )
         st.divider()
@@ -1404,9 +1266,9 @@ def main() -> None:
 
     st.title("Investment Red Flag Scanner")
     st.caption(
-        "Deterministic offensive audit detectors with git anchored "
-        "provenance. Priority score is a deterministic ranking heuristic, "
-        "not a statistical test."
+        "Reads the financial reports of Nordic listed companies and "
+        "flags things that do not add up. Every flag links back to the "
+        "exact page of the original report."
     )
 
     # === 1. Pipeline overview =============================================
@@ -1459,31 +1321,24 @@ def main() -> None:
         & df["Company"].isin(sel_co)
     ].reset_index(drop=True)
 
-    # === 2. Findings leaderboard ==========================================
-    st.header("Findings leaderboard", anchor="findings-leaderboard")
+    # === 2. Red flags =====================================================
+    st.header("Red flags", anchor="red-flags")
     _render_leaderboard_section(filtered)
 
-    # === 3. Logic chain landscape (Sankey) ================================
-    st.header("Logic chain landscape", anchor="logic-chain-landscape")
-    _render_landscape_section()
-
-    # === 4. Triangulation matrix + audit roadmap ==========================
-    st.header("Triangulation matrix", anchor="triangulation-matrix")
-    _render_triangulation_matrix_section()
-
-    # === 5. Drill into a finding ==========================================
-    st.header("Drill into a finding", anchor="drill-into-a-finding")
+    # === 3. Why we flagged it =============================================
+    st.header("Why we flagged it", anchor="why-we-flagged-it")
+    st.caption(
+        "Pick a row above. Below is a plain reading of what the report "
+        "says, what the outside data says, and why they do not match."
+    )
     _render_drill_section(filtered)
 
-    # === 6. Embedded source PDF ==========================================
-    st.header("Embedded source PDF", anchor="embedded-source-pdf")
+    # === 4. Source PDF ====================================================
+    st.header("Source PDF", anchor="source-pdf")
     st.caption(
-        "Single shared viewer driven by the row currently selected in the "
-        "leaderboard. Click any 'Show in PDF below' button in the Drill "
-        "section above to (a) re-scroll this viewer to the corresponding "
-        "bbox and (b) slide the page down here. Repeated clicks are "
-        "supported -- each click forces the viewer to re-mount with the "
-        "new scroll target."
+        "The original report, opened to the matched page with the "
+        "evidence highlighted in yellow. Use the 'Show me in the PDF "
+        "below' button in the section above to jump straight here."
     )
     if not filtered.empty:
         max_idx = len(filtered) - 1

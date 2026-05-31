@@ -630,18 +630,23 @@ def build_report_library(companies_cfg, headlines_pool):
     def _match_findings(cid, configured_period):
         """Exact match first, then year prefix fallback because the
         runner sometimes upgrades a bare '2025' from companies.json
-        into '2025-FY' / '2025-Q4' / etc. via the report loader."""
+        into '2025-FY' / '2025-Q4' / etc. via the report loader.
+        Returns (findings, matched_period_strings) - the strings are
+        the concrete prov.period values that joined, which JS uses to
+        filter the leaderboard."""
         exact = findings_by_key.get((cid, configured_period))
         if exact:
-            return exact
+            return exact, [configured_period]
         if not configured_period:
-            return []
+            return [], []
         prefix = str(configured_period) + "-"
         fuzzy = []
+        matched_periods = []
         for (fid, fp), fs in findings_by_key.items():
             if fid == cid and fp and fp.startswith(prefix):
                 fuzzy.extend(fs)
-        return fuzzy
+                matched_periods.append(fp)
+        return fuzzy, matched_periods
 
     companies_out = []
     for cfg in companies_cfg:
@@ -654,11 +659,17 @@ def build_report_library(companies_cfg, headlines_pool):
                 continue
             period_id = entry.get("period")
             period_label = entry.get("label") or period_id or "?"
-            matched = _match_findings(company_id, period_id)
+            matched, matched_periods = _match_findings(company_id, period_id)
             sev = _sev_buckets(matched)
             reports.append({
                 "period": period_label,
                 "period_id": period_id,
+                # Concrete prov.period strings that joined here. JS
+                # filters by `prov.period in matched_periods` because
+                # the human label from companies.json (e.g. "Q4 2024")
+                # never equals the loader-upgraded period on findings
+                # (e.g. "2024-Q4").
+                "matched_periods": matched_periods,
                 "role": role,
                 "finding_count": len(matched),
                 "critical": sev["critical"],

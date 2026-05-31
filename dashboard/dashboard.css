@@ -224,12 +224,6 @@ code, pre, kbd, samp,
 .lib-company > summary:hover { background: var(--panel-2); color: var(--text); }
 .lib-company > summary.is-active { color: var(--accent); }
 .lib-company-name { flex: 1; min-width: 0; word-break: break-word; }
-.lib-company-meta {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  color: var(--muted);
-  white-space: nowrap;
-}
 .lib-report {
   display: flex;
   align-items: center;
@@ -251,15 +245,6 @@ code, pre, kbd, samp,
   color: var(--accent);
 }
 .lib-report-period { flex: 1; min-width: 0; word-break: break-word; }
-.lib-report-count {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  background: var(--panel-3);
-  color: var(--text);
-  padding: 1px 5px;
-  border-radius: 3px;
-  font-weight: 700;
-}
 .lib-tag-peer {
   font-family: var(--font-mono);
   font-size: 9px;
@@ -774,6 +759,91 @@ tbody tr:hover td { color: var(--text); }
   color: #06121a;
   transform: translateY(-1px);
 }
+
+/* Subline under the drill header (rule + report period) */
+.drill-subline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+.drill-rule {
+  font-weight: 700;
+  color: var(--text-2);
+  padding: 2px 8px;
+  background: var(--panel-2);
+  border-radius: 4px;
+}
+.drill-report {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+/* "What we checked, in plain English" per-finding cross-check table */
+.cross-check-block {
+  margin: 18px 0 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px 16px;
+}
+.cross-check-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.cc-sev {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.cc-sev-critical { background: rgba(255,82,82,0.12); color: var(--critical); }
+.cc-sev-warning  { background: rgba(255,184,0,0.12);  color: var(--warning); }
+.cc-sev-info     { background: rgba(61,214,245,0.10); color: var(--info); }
+.cross-check-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  color: var(--text);
+}
+.cross-check-table th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.cross-check-table td {
+  padding: 8px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+}
+.cross-check-table tr:last-child td { border-bottom: none; }
+.cc-source { font-weight: 600; color: var(--text); width: 22%; }
+.cc-verdict { width: 30%; }
+.cc-glyph { font-family: var(--font-mono); margin-right: 4px; }
+.cc-narrative { color: var(--text-2); line-height: 1.5; }
+.cc-row.vd-confirms .cc-glyph { color: var(--info); }
+.cc-row.vd-partial  .cc-glyph { color: var(--warning); }
+.cc-row.vd-refutes  .cc-glyph { color: var(--critical); }
+.cc-row.vd-not-found .cc-glyph { color: var(--muted-2); }
+.cc-row.vd-neutral  .cc-glyph { color: var(--muted-2); }
+.cc-row.vd-error    .cc-glyph { color: var(--critical); }
 
 /* Library filter banner above the leaderboard */
 .library-active {
