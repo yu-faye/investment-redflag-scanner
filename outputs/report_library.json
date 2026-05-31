@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-31T03:48:47+00:00",
+  "generated_at_utc": "2026-05-31T09:09:53+00:00",
   "schema_version": 1,
   "companies": [
     {
@@ -12,6 +12,9 @@
         {
           "period": "Q4 2024",
           "period_id": "2024",
+          "matched_periods": [
+            "2024-Q4"
+          ],
           "role": "current",
           "finding_count": 9,
           "critical": 4,
@@ -37,6 +40,9 @@
         {
           "period": "FY 2025",
           "period_id": "2025",
+          "matched_periods": [
+            "2025-FY"
+          ],
           "role": "current",
           "finding_count": 6,
           "critical": 4,
@@ -50,6 +56,7 @@
         {
           "period": "FY 2024",
           "period_id": "2024",
+          "matched_periods": [],
           "role": "peer_control",
           "finding_count": 0,
           "critical": 0,
@@ -75,6 +82,9 @@
         {
           "period": "FY 2025",
           "period_id": "2025",
+          "matched_periods": [
+            "2025-FY"
+          ],
           "role": "current",
           "finding_count": 4,
           "critical": 3,
@@ -88,6 +98,7 @@
         {
           "period": "Q3 2024 Interim",
           "period_id": "2024",
+          "matched_periods": [],
           "role": "peer_control",
           "finding_count": 0,
           "critical": 0,
@@ -113,6 +124,9 @@
         {
           "period": "FY 2024",
           "period_id": "2024",
+          "matched_periods": [
+            "2024-FY"
+          ],
           "role": "current",
           "finding_count": 4,
           "critical": 3,
@@ -138,6 +152,9 @@
         {
           "period": "FY 2025 Årsredovisning",
           "period_id": "2025-FY",
+          "matched_periods": [
+            "2025-FY"
+          ],
           "role": "current",
           "finding_count": 4,
           "critical": 3,
@@ -151,6 +168,7 @@
         {
           "period": "FY 2024 Årsredovisning",
           "period_id": "2024-FY",
+          "matched_periods": [],
           "role": "peer_control",
           "finding_count": 0,
           "critical": 0,
@@ -176,6 +194,9 @@
         {
           "period": "FY 2024",
           "period_id": "2024",
+          "matched_periods": [
+            "2024-FY"
+          ],
           "role": "current",
           "finding_count": 2,
           "critical": 2,
@@ -201,6 +222,9 @@
         {
           "period": "Q1 2026",
           "period_id": "2026-Q1",
+          "matched_periods": [
+            "2026-Q1"
+          ],
           "role": "current",
           "finding_count": 2,
           "critical": 2,
@@ -214,6 +238,7 @@
         {
           "period": "Q2 2025",
           "period_id": "2025-Q2",
+          "matched_periods": [],
           "role": "peer_control",
           "finding_count": 0,
           "critical": 0,
@@ -239,6 +264,9 @@
         {
           "period": "FY 2024",
           "period_id": "2024",
+          "matched_periods": [
+            "2024-FY"
+          ],
           "role": "current",
           "finding_count": 2,
           "critical": 1,
@@ -264,6 +292,9 @@
         {
           "period": "FY 2025",
           "period_id": "2025",
+          "matched_periods": [
+            "2025-FY"
+          ],
           "role": "current",
           "finding_count": 1,
           "critical": 0,
@@ -277,6 +308,7 @@
         {
           "period": "FY 2024",
           "period_id": "2024",
+          "matched_periods": [],
           "role": "peer_control",
           "finding_count": 0,
           "critical": 0,
@@ -302,6 +334,7 @@
         {
           "period": "FY 2024 (Q4 year-end report)",
           "period_id": "2024",
+          "matched_periods": [],
           "role": "current",
           "finding_count": 0,
           "critical": 0,
@@ -315,6 +348,7 @@
         {
           "period": "FY 2023 (Arcario pre-rebrand)",
           "period_id": "2023",
+          "matched_periods": [],
           "role": "peer_control",
           "finding_count": 0,
           "critical": 0,
@@ -340,6 +374,7 @@
         {
           "period": "FY 2024",
           "period_id": "2024",
+          "matched_periods": [],
           "role": "current",
           "finding_count": 0,
           "critical": 0,
