@@ -691,21 +691,69 @@ function renderV10Block(f) {
   return `<div class="v10-block">${paraHtml}${treeHtml}</div>`;
 }
 
+/* If a PDF citation href is a GitHub blob URL, rewrite it so that
+ * clicking the link opens our own pdf-viewer.html in a new tab with
+ * page + search-highlight params. That gives the analyst the same
+ * marked-up reading experience as the embedded viewer below, even
+ * when they want it in a separate tab. Plain non-PDF hrefs are
+ * passed through unchanged. */
+function rewritePdfCiteHref(href, kind) {
+  if (!href) return "";
+  if (kind !== "pdf") return href;
+  // Pull `#page=N&search=phrase` fragment off the back of the URL so
+  // we can hand the bare PDF URL to the viewer.
+  let bareUrl = href;
+  let page = "";
+  let search = "";
+  const hashIdx = href.indexOf("#");
+  if (hashIdx >= 0) {
+    bareUrl = href.slice(0, hashIdx);
+    const frag = href.slice(hashIdx + 1);
+    frag.split("&").forEach((piece) => {
+      const [k, v = ""] = piece.split("=");
+      if (k === "page") page = decodeURIComponent(v);
+      else if (k === "search") search = decodeURIComponent(v);
+    });
+  }
+  // GitHub blob URLs render the file as a webpage; the raw URL serves
+  // the PDF binary which PDF.js can fetch with CORS.
+  const rawUrl = bareUrl.replace(
+    /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\//,
+    "https://raw.githubusercontent.com/$1/$2/"
+  );
+  // Only re-route if we have something the viewer can actually load.
+  // Cross-origin issuer URLs are skipped because raw.githubusercontent
+  // is the only host we know serves PDF with permissive CORS.
+  if (!/^https:\/\/raw\.githubusercontent\.com\//.test(rawUrl)) {
+    return href;
+  }
+  const qs = new URLSearchParams();
+  qs.set("file", rawUrl);
+  if (page) qs.set("page", page);
+  if (search) qs.set("search", search);
+  return "pdf-viewer.html?" + qs.toString();
+}
+
 function renderNarrativeParagraph(para) {
   if (!para) return "";
-  // Replace [N] markers in body with clickable <a> anchors to the
-  // citation list below.
+  // [N] markers in body anchor-jump in-page to <li id="cite-N"> in
+  // the citation list below. Pure footnote behaviour; no page jump.
   const bodyHtml = escapeHtml(para.body || "").replace(/\[(\d+)\]/g, (_, n) =>
     `<a class="v10-cite" href="#cite-${n}" data-cite="${n}">[${n}]</a>`
   );
   const citationsList = Object.entries(para.citations || {})
     .map(([num, c]) => {
-      const href = c.href || "";
+      const rawHref = c.href || "";
+      const href = rewritePdfCiteHref(rawHref, c.kind);
       const safeHref = href ? escapeHtml(href) : "";
       const safeLabel = escapeHtml(c.label || "evidence");
+      // Title attribute is the original URL so a hover-tooltip shows
+      // the real destination, even after rewriting through the
+      // pdf-viewer wrapper.
+      const titleAttr = rawHref ? ` title="${escapeHtml(rawHref)}"` : ` title="no link available for this label"`;
       const inner = safeHref
-        ? `<a href="${safeHref}" target="_blank" rel="noopener">${safeLabel}</a>`
-        : `<span class="v10-cite-nolink">${safeLabel}</span>`;
+        ? `<a href="${safeHref}" target="_blank" rel="noopener"${titleAttr}>${safeLabel}</a>`
+        : `<span class="v10-cite-nolink"${titleAttr}>${safeLabel}</span>`;
       return `<li id="cite-${escapeHtml(num)}" class="v10-cite-${escapeHtml(c.kind || "evidence")}"><span class="v10-cite-num">[${escapeHtml(num)}]</span> ${inner}</li>`;
     })
     .join("");
@@ -733,9 +781,14 @@ function renderArgumentTreeOpen(tree) {
 
 function renderArgumentTreeNode(node, depth) {
   if (!node) return "";
-  const links = (node.links || []).filter((l) => l && l.href).map((l) =>
-    `<a class="v10-tree-link" href="${escapeHtml(l.href)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`
-  ).join(" \u00b7 ");
+  // Same PDF-cite rewrite as the narrative footnotes: if a tree link
+  // points at a github.com blob URL with a page anchor, send it
+  // through pdf-viewer.html so the highlight survives.
+  const links = (node.links || []).filter((l) => l && l.href).map((l) => {
+    const isPdf = /\.pdf(\?|#|$)/i.test(l.href);
+    const href = isPdf ? rewritePdfCiteHref(l.href, "pdf") : l.href;
+    return `<a class="v10-tree-link" href="${escapeHtml(href)}" target="_blank" rel="noopener" title="${escapeHtml(l.href)}">${escapeHtml(l.label)}</a>`;
+  }).join(" \u00b7 ");
   const meta = node.metadata && Object.keys(node.metadata).length
     ? `<dl class="v10-tree-meta">${Object.entries(node.metadata).filter(([, v]) => v !== null && v !== undefined && v !== "").map(([k, v]) =>
         `<dt>${escapeHtml(k)}</dt><dd>${escapeHtml(typeof v === "object" ? JSON.stringify(v) : String(v))}</dd>`
@@ -945,16 +998,43 @@ function renderPdfSection(allFindings) {
   if (searchPhrase) qs.set("search", searchPhrase);
   const viewerUrl = "pdf-viewer.html?" + qs.toString();
 
-  // External jump links (separate tabs) for users who want the
-  // publisher's hosted PDF or the immutable GitHub permalink.
+  // External jump links (separate tabs). The first one re-opens this
+  // same PDF.js viewer in a standalone tab, which is the only way to
+  // get highlight on Safari + iOS (where Apple's native PDF viewer
+  // ignores #search= URL fragments). The others go to the publisher
+  // page / GitHub permalink for citation purposes -- those WILL NOT
+  // be highlighted because their viewers are out of our control.
   const externals = [];
-  if (prov.local_path) externals.push({ label: "Local", url: "../" + prov.local_path + (page ? `#page=${page}` : "") });
-  if (prov.issuer_url_at_phrase || prov.issuer_url) externals.push({ label: "Issuer", url: prov.issuer_url_at_phrase || prov.issuer_url_at_page || prov.issuer_url });
-  if (prov.github_blob_url_at_phrase || prov.github_blob_url) externals.push({ label: "GitHub", url: prov.github_blob_url_at_phrase || prov.github_blob_url_at_page || prov.github_blob_url });
+  externals.push({
+    label: "Highlighted viewer",
+    url: viewerUrl,
+    note: "our PDF.js viewer with the matched phrase pre-highlighted",
+  });
+  if (prov.local_path) {
+    externals.push({
+      label: "Local PDF",
+      url: "../" + prov.local_path + (page ? `#page=${page}` : ""),
+      note: "raw PDF file (browser default viewer; highlight not guaranteed)",
+    });
+  }
+  if (prov.issuer_url_at_phrase || prov.issuer_url) {
+    externals.push({
+      label: "Issuer PDF",
+      url: prov.issuer_url_at_phrase || prov.issuer_url_at_page || prov.issuer_url,
+      note: "publisher's hosted copy; highlight depends on their viewer (often none on Safari)",
+    });
+  }
+  if (prov.github_blob_url_at_phrase || prov.github_blob_url) {
+    externals.push({
+      label: "GitHub permalink",
+      url: prov.github_blob_url_at_phrase || prov.github_blob_url_at_page || prov.github_blob_url,
+      note: "commit-pinned URL of the exact file we scanned",
+    });
+  }
   const linksHtml = externals
     .map(
       (c) =>
-        `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.label)} \u2197</a>`
+        `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener" title="${escapeHtml(c.note || "")}">${escapeHtml(c.label)} \u2197</a>`
     )
     .join(" &middot; ");
 

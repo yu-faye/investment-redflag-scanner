@@ -32,6 +32,104 @@ _SEVERITY_PREFIX = {
 }
 
 
+# ---- Citation-href helpers -----------------------------------------------
+# All helpers below return a string URL or None. The dashboard JS treats
+# None hrefs as non-clickable labels, so it's fine to leave a citation
+# unlinked when no stable URL exists for it (better than fabricating a
+# dead anchor).
+
+
+def _pdf_anchor_href(prov: Dict[str, Any]) -> Optional[str]:
+    """Build the most specific cross-origin PDF URL we have for the
+    finding's source page. Preference: at-phrase > at-page > base blob.
+    GitHub blob URLs are commit-pinned (immutable) and always work
+    cross-origin, which is exactly what we want for a citation."""
+    if not prov:
+        return None
+    for key in (
+        "github_blob_url_at_phrase",
+        "github_blob_url_at_page",
+        "github_blob_url",
+        "issuer_url_at_phrase",
+        "issuer_url_at_page",
+        "issuer_url",
+    ):
+        v = prov.get(key)
+        if v:
+            return v
+    return None
+
+
+def _github_source_url(prov: Dict[str, Any], repo_relpath: str) -> Optional[str]:
+    """Build a commit-pinned https://github.com/<owner>/<repo>/blob/<sha>/<path>
+    URL for a piece of our own source code. Used so cites like
+    'narrative_dissonance detector' actually link back to the code that
+    produced the verdict."""
+    if not prov or not repo_relpath:
+        return None
+    owner = prov.get("owner")
+    repo = prov.get("repo")
+    sha = prov.get("repo_head_sha") or prov.get("git_sha")
+    if owner and repo and sha:
+        return f"https://github.com/{owner}/{repo}/blob/{sha}/{repo_relpath}"
+    # Fallback: parse an existing blob URL so we don't depend on
+    # owner/repo/sha being on every detector's provenance.
+    blob = prov.get("github_blob_url") or prov.get("github_head_url")
+    if blob and "/blob/" in blob:
+        base, sha_and_path = blob.split("/blob/", 1)
+        sha = sha_and_path.split("/", 1)[0]
+        return f"{base}/blob/{sha}/{repo_relpath}"
+    return None
+
+
+# Repository roots that may appear at the start of an absolute path. Used
+# to strip the machine-specific prefix so we can build a portable URL.
+# Order matters: longest / most specific first.
+_REPO_ROOT_MARKERS = ("qben_redflag_scanner/",)
+
+
+def _cache_url(prov: Dict[str, Any], raw_payload_ref: Optional[str]) -> Optional[str]:
+    """Convert a tap cache path (which is recorded as an absolute filesystem
+    path on whatever machine produced the run) into a portable
+    commit-pinned GitHub URL. Falls back to the literal path string when
+    we can't figure out the repo root."""
+    if not raw_payload_ref:
+        return None
+    repo_rel = None
+    for marker in _REPO_ROOT_MARKERS:
+        idx = raw_payload_ref.find(marker)
+        if idx >= 0:
+            repo_rel = raw_payload_ref[idx + len(marker):]
+            break
+    if not repo_rel:
+        # Probably already repo-relative; keep as-is for GH source link.
+        repo_rel = raw_payload_ref.lstrip("./")
+    url = _github_source_url(prov, repo_rel)
+    return url or raw_payload_ref
+
+
+_DETECTOR_SOURCE_PATH = {
+    "narrative_dissonance": "src/detectors/narrative_dissonance.py",
+    "selective_disclosure": "src/detectors/selective_disclosure.py",
+    "lag_causality": "src/detectors/lag_causality.py",
+    "triangulated_hypothesis": "src/triangulation/engine.py",
+}
+
+
+def _detector_source_cite(
+    prov: Dict[str, Any], detector_id: str, label: Optional[str] = None
+) -> Dict[str, Any]:
+    """Build a clickable citation dict pointing at the source code of a
+    detector / engine rule on GitHub."""
+    rel = _DETECTOR_SOURCE_PATH.get(detector_id)
+    href = _github_source_url(prov, rel) if rel else None
+    return {
+        "label": label or f"{detector_id} detector",
+        "href": href,
+        "kind": "engine_rule",
+    }
+
+
 def write_paragraph(finding: Dict[str, Any]) -> Dict[str, Any]:
     """Top-level dispatch. Returns a paragraph dict; never raises."""
     rule_id = finding.get("rule_id")
@@ -140,7 +238,7 @@ def _write_revenue_pipeline(finding: Dict[str, Any]) -> Dict[str, Any]:
                 [
                     {
                         "label": "derived_revenue_support cache",
-                        "href": rev_entry.get("raw_payload_ref"),
+                        "href": _cache_url(finding.get("provenance") or {}, rev_entry.get("raw_payload_ref")),
                         "kind": "cache",
                     }
                 ],
@@ -148,6 +246,11 @@ def _write_revenue_pipeline(finding: Dict[str, Any]) -> Dict[str, Any]:
         )
 
     if rev_yoy is not None and ebita_margin is not None and pos_count is not None:
+        # The slippage tap records `source_pdf` as a bare repo-relative
+        # path (e.g. data/raw/...); that's not a valid external href.
+        # Promote it to the finding's commit-pinned GitHub blob URL so
+        # the citation actually opens the right PDF.
+        prov_for_pdf = finding.get("provenance") or {}
         sentences.append(
             (
                 f"Yet the CEO-comment region contains {pos_count} positive-"
@@ -157,12 +260,12 @@ def _write_revenue_pipeline(finding: Dict[str, Any]) -> Dict[str, Any]:
                 [
                     {
                         "label": "derived_explanatory_slippage cache",
-                        "href": slip_entry.get("raw_payload_ref"),
+                        "href": _cache_url(finding.get("provenance") or {}, slip_entry.get("raw_payload_ref")),
                         "kind": "cache",
                     },
                     {
                         "label": "source PDF",
-                        "href": slip_summary.get("source_pdf"),
+                        "href": _pdf_anchor_href(prov_for_pdf),
                         "kind": "pdf",
                     },
                 ],
@@ -170,13 +273,18 @@ def _write_revenue_pipeline(finding: Dict[str, Any]) -> Dict[str, Any]:
         )
 
     if rule_notes:
+        # R7 is the revenue_pipeline_support category rule inside the
+        # triangulation engine. Point straight at the engine source so
+        # the reader can audit the logic. Previously this used an
+        # in-page anchor (#engine-rule-r7-...) that points nowhere.
+        prov = finding.get("provenance") or {}
         sentences.append(
             (
                 rule_notes[0].split(":", 1)[-1].strip().rstrip(".") if ":" in rule_notes[0] else rule_notes[0],
                 [
                     {
                         "label": "engine R7 derivation",
-                        "href": f"#engine-rule-r7-{hyp_id}",
+                        "href": _github_source_url(prov, "src/triangulation/engine.py"),
                         "kind": "engine_rule",
                     }
                 ],
@@ -217,13 +325,20 @@ def _write_subsidiary_specialist(finding: Dict[str, Any]) -> Dict[str, Any]:
     )
 
     sentences: List[Tuple[str, List[Dict[str, Any]]]] = []
+    # Use the helper so this cite gets the most-specific available URL
+    # (github_blob_url_at_phrase preferred). Previous code looked up
+    # `local_pdf` which doesn't exist; the real field is `local_path`,
+    # but a local_path is dashboard-relative so it would not work as a
+    # plain href anyway. Commit-pinned GitHub blob URL is the right
+    # choice for a cross-origin citation.
+    prov = finding.get("provenance") or {}
     sentences.append(
         (
             f"Issuer claim: '{claim[:200]}'",
             [
                 {
                     "label": "issuer PDF anchor",
-                    "href": (finding.get("provenance") or {}).get("local_pdf"),
+                    "href": _pdf_anchor_href(prov),
                     "kind": "pdf",
                 }
             ],
@@ -242,7 +357,7 @@ def _write_subsidiary_specialist(finding: Dict[str, Any]) -> Dict[str, Any]:
                 [
                     {
                         "label": f"{tap_id} cache",
-                        "href": raw_ref,
+                        "href": _cache_url(prov, raw_ref),
                         "kind": "cache",
                     }
                 ],
@@ -254,6 +369,9 @@ def _write_subsidiary_specialist(finding: Dict[str, Any]) -> Dict[str, Any]:
     if peer_status.get("checked"):
         peers_passing = peer_status.get("taps_with_passing_peer") or []
         if peers_passing:
+            # Point at the hypotheses config so the reader can see the
+            # actual peer hypothesis definitions. Previously linked to
+            # a non-existent in-page anchor (#peer-controls-...).
             sentences.append(
                 (
                     "Peer-control evidence confirms that the tap landscape "
@@ -262,7 +380,7 @@ def _write_subsidiary_specialist(finding: Dict[str, Any]) -> Dict[str, Any]:
                     [
                         {
                             "label": "peer hypotheses",
-                            "href": f"#peer-controls-{finding.get('hypothesis_id','?')}",
+                            "href": _github_source_url(prov, "validation/hypotheses.json"),
                             "kind": "engine_rule",
                         }
                     ],
@@ -280,7 +398,11 @@ def _write_narrative_dissonance(finding: Dict[str, Any]) -> Dict[str, Any]:
     company = finding.get("company_name") or finding.get("company") or "Issuer"
     metric_align = finding.get("metric_alignment") or {}
     snippet = finding.get("claim_excerpt") or ""
-    prov = (finding.get("provenance") or {}).get("current") or {}
+    # Provenance is flat on the finding (NOT nested under "current").
+    # The previous code looked up prov.current.* which always returned
+    # None, so every PDF citation in this paragraph type used to be
+    # un-clickable in the dashboard.
+    prov = finding.get("provenance") or {}
 
     headline = (
         f"{_SEVERITY_PREFIX.get(severity, '[NOTE]')} {company}: narrative-"
@@ -294,9 +416,8 @@ def _write_narrative_dissonance(finding: Dict[str, Any]) -> Dict[str, Any]:
                 f"Issuer narrative excerpt: '{snippet[:200]}'",
                 [
                     {
-                        "label": "PDF snippet",
-                        "href": prov.get("evidence_snippet")
-                        or prov.get("pdf_url"),
+                        "label": "issuer PDF (jump + highlight)",
+                        "href": _pdf_anchor_href(prov),
                         "kind": "pdf",
                     }
                 ],
@@ -304,18 +425,27 @@ def _write_narrative_dissonance(finding: Dict[str, Any]) -> Dict[str, Any]:
         )
     metric_pieces = [f"{k}={v}" for k, v in metric_align.items()]
     if metric_pieces:
+        # `metric audit` cites the per-rule config that maps narrative
+        # families to supporting metrics. Stable repo path so we can
+        # safely build a github source URL for it.
         sentences.append(
             (
                 f"Measured KPIs move against the narrative: "
                 f"{'; '.join(metric_pieces)}",
-                [{"label": "metric audit", "href": None, "kind": "calculation"}],
+                [
+                    {
+                        "label": "configs/claim_metric_map.json",
+                        "href": _github_source_url(prov, "configs/claim_metric_map.json"),
+                        "kind": "calculation",
+                    }
+                ],
             )
         )
     sentences.append(
         (
             "Detector verdict: dissonance_detected; the positive language is "
             "not supported by the directional change in KPIs",
-            [{"label": "narrative_dissonance detector", "href": None, "kind": "engine_rule"}],
+            [_detector_source_cite(prov, "narrative_dissonance")],
         )
     )
     return _new_paragraph(headline, sentences)
@@ -329,6 +459,7 @@ def _write_selective_disclosure(finding: Dict[str, Any]) -> Dict[str, Any]:
     company = finding.get("company_name") or finding.get("company") or "Issuer"
     kpi_id = finding.get("kpi_id") or "?"
     verdict = finding.get("verdict") or "?"
+    prov = finding.get("provenance") or {}
 
     if verdict == "reclassification_introduced":
         action_word = (
@@ -351,13 +482,7 @@ def _write_selective_disclosure(finding: Dict[str, Any]) -> Dict[str, Any]:
         (
             f"Compared with the prior reporting period, the current report "
             f"{action_word}",
-            [
-                {
-                    "label": "selective_disclosure detector",
-                    "href": None,
-                    "kind": "engine_rule",
-                }
-            ],
+            [_detector_source_cite(prov, "selective_disclosure")],
         )
     ]
     if finding.get("kpi_weight") is not None:
@@ -366,7 +491,13 @@ def _write_selective_disclosure(finding: Dict[str, Any]) -> Dict[str, Any]:
                 f"The KPI carries weight {finding['kpi_weight']:g} in the "
                 "internal registry, so the change materially shifts the "
                 "investor's KPI menu",
-                [{"label": "configs/kpi_registry.json", "href": None, "kind": "calculation"}],
+                [
+                    {
+                        "label": "configs/kpi_registry.json",
+                        "href": _github_source_url(prov, "configs/kpi_registry.json"),
+                        "kind": "calculation",
+                    }
+                ],
             )
         )
     return _new_paragraph(headline, sentences)
@@ -378,6 +509,7 @@ def _write_selective_disclosure(finding: Dict[str, Any]) -> Dict[str, Any]:
 def _write_lag_causality(finding: Dict[str, Any]) -> Dict[str, Any]:
     severity = finding.get("severity") or "info"
     company = finding.get("company_name") or finding.get("company") or "Issuer"
+    prov = finding.get("provenance") or {}
     headline = (
         f"{_SEVERITY_PREFIX.get(severity, '[NOTE]')} {company}: lag-causality "
         "break flagged."
@@ -385,14 +517,20 @@ def _write_lag_causality(finding: Dict[str, Any]) -> Dict[str, Any]:
     sentences: List[Tuple[str, List[Dict[str, Any]]]] = [
         (
             finding.get("headline") or "Lag causality concern detected",
-            [{"label": "lag_causality detector", "href": None, "kind": "engine_rule"}],
+            [_detector_source_cite(prov, "lag_causality")],
         )
     ]
     if finding.get("consolidation_caveat"):
         sentences.append(
             (
                 f"Caveat: {finding['consolidation_caveat']}",
-                [{"label": "consolidation caveat", "href": None, "kind": "engine_rule"}],
+                [
+                    {
+                        "label": "consolidation caveat",
+                        "href": _github_source_url(prov, "configs/lag_rules.json"),
+                        "kind": "engine_rule",
+                    }
+                ],
             )
         )
     return _new_paragraph(headline, sentences)
