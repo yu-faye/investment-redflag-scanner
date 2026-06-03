@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-31T10:34:08+00:00",
+  "generated_at_utc": "2026-06-03T05:33:18+00:00",
   "schema_version": 1,
   "paragraphs": {
     "qben_infra|narrative_dissonance|Qben Infra AB: 'growth' narrative cited 3 times, but supporting metrics move the": {
@@ -21,13 +21,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=10&search=Aktien%20handlas%20p%C3%A5%20Nasdaq%20First%20North%20Premier%20Growth",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -59,22 +59,22 @@
       "citations": {
         "1": {
           "label": "derived_revenue_support cache",
-          "href": "/Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_revenue_support/qben_infra/hyp_qben_q1_2026_revenue_pipeline_revenue_support.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/external/derived_revenue_support/qben_infra/hyp_qben_q1_2026_revenue_pipeline_revenue_support.json",
           "kind": "cache"
         },
         "2": {
           "label": "derived_explanatory_slippage cache",
-          "href": "/Users/yufei/JobDoc/qben_redflag_scanner/data/external/derived_explanatory_slippage/qben_infra/hyp_qben_q1_2026_revenue_pipeline_explanatory_slippage.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/external/derived_explanatory_slippage/qben_infra/hyp_qben_q1_2026_revenue_pipeline_explanatory_slippage.json",
           "kind": "cache"
         },
         "3": {
           "label": "source PDF",
-          "href": "data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2026_q1/qben_infra_q1_2026.pdf#page=2&search=Nettooms%C3%A4ttningen%20i%20kvarvarande%20verksamhet%20uppgick%20till%20169%20MSEK",
           "kind": "pdf"
         },
         "4": {
           "label": "engine R7 derivation",
-          "href": "#engine-rule-r7-hyp_qben_q1_2026_revenue_pipeline",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/triangulation/engine.py",
           "kind": "engine_rule"
         }
       }
@@ -98,13 +98,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2025_annual/qben_infra_annual_2025_se.pdf#page=7",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -123,7 +123,7 @@
       "citations": {
         "1": {
           "label": "selective_disclosure detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/selective_disclosure.py",
           "kind": "engine_rule"
         }
       }
@@ -142,7 +142,7 @@
       "citations": {
         "1": {
           "label": "selective_disclosure detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/selective_disclosure.py",
           "kind": "engine_rule"
         }
       }
@@ -161,7 +161,7 @@
       "citations": {
         "1": {
           "label": "selective_disclosure detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/selective_disclosure.py",
           "kind": "engine_rule"
         }
       }
@@ -186,12 +186,12 @@
       "citations": {
         "1": {
           "label": "lag_causality detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/lag_causality.py",
           "kind": "engine_rule"
         },
         "2": {
           "label": "consolidation caveat",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/configs/lag_rules.json",
           "kind": "engine_rule"
         }
       }
@@ -215,13 +215,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=2&search=Premier%20Growth%20Market",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -245,13 +245,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=a%20robust%20growth%20in%20demand.",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -275,13 +275,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=supplemented%20with%20selective%20acquisitions%20and%20efficient",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -305,13 +305,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=development%2C%20which%20creates%20favourable%20conditions%20for%20our",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -354,27 +354,27 @@
       "citations": {
         "1": {
           "label": "issuer PDF anchor",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=SLAM%20Jernbaneteknikk%20AS%2C%20a%20specialist%20in%20rail%20signalling",
           "kind": "pdf"
         },
         "2": {
           "label": "doffin cache",
-          "href": "external/doffin/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/external/doffin/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
           "kind": "cache"
         },
         "3": {
           "label": "brreg cache",
-          "href": "data/external/brreg/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/external/brreg/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
           "kind": "cache"
         },
         "4": {
           "label": "ted cache",
-          "href": "external/ted/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/external/ted/qben_infra_2024/slam-jernbaneteknikk-as_2026-05-30.json",
           "kind": "cache"
         },
         "5": {
           "label": "peer hypotheses",
-          "href": "#peer-controls-hyp_qben_slam_specialist",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/validation/hypotheses.json",
           "kind": "engine_rule"
         }
       }
@@ -411,22 +411,22 @@
       "citations": {
         "1": {
           "label": "issuer PDF anchor",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=Banefjell%20AS",
           "kind": "pdf"
         },
         "2": {
           "label": "doffin cache",
-          "href": "external/doffin/qben_infra_2024/banefjell-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/external/doffin/qben_infra_2024/banefjell-as_2026-05-30.json",
           "kind": "cache"
         },
         "3": {
           "label": "brreg cache",
-          "href": "data/external/brreg/qben_infra_2024/banefjell-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/external/brreg/qben_infra_2024/banefjell-as_2026-05-30.json",
           "kind": "cache"
         },
         "4": {
           "label": "ted cache",
-          "href": "external/ted/qben_infra_2024/banefjell-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/external/ted/qben_infra_2024/banefjell-as_2026-05-30.json",
           "kind": "cache"
         }
       }
@@ -469,27 +469,27 @@
       "citations": {
         "1": {
           "label": "issuer PDF anchor",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf",
           "kind": "pdf"
         },
         "2": {
           "label": "doffin cache",
-          "href": "external/doffin/qben_infra_2024/team-bygg-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/external/doffin/qben_infra_2024/team-bygg-as_2026-05-30.json",
           "kind": "cache"
         },
         "3": {
           "label": "brreg cache",
-          "href": "data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/external/brreg/qben_infra_2024/team-bygg-as_2026-05-30.json",
           "kind": "cache"
         },
         "4": {
           "label": "ted cache",
-          "href": "external/ted/qben_infra_2024/team-bygg-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/external/ted/qben_infra_2024/team-bygg-as_2026-05-30.json",
           "kind": "cache"
         },
         "5": {
           "label": "peer hypotheses",
-          "href": "#peer-controls-hyp_qben_team_bygg_player",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/validation/hypotheses.json",
           "kind": "engine_rule"
         }
       }
@@ -532,27 +532,27 @@
       "citations": {
         "1": {
           "label": "issuer PDF anchor",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/qben_infra/2024/qben_infra_year_end_2024.pdf#page=3&search=Nordnes%20Narvik%20AS",
           "kind": "pdf"
         },
         "2": {
           "label": "doffin cache",
-          "href": "external/doffin/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/external/doffin/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
           "kind": "cache"
         },
         "3": {
           "label": "brreg cache",
-          "href": "data/external/brreg/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/external/brreg/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
           "kind": "cache"
         },
         "4": {
           "label": "ted cache",
-          "href": "external/ted/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/external/ted/qben_infra_2024/nordnes-narvik-as_2026-05-30.json",
           "kind": "cache"
         },
         "5": {
           "label": "peer hypotheses",
-          "href": "#peer-controls-hyp_qben_nordnes_narvik_player",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/validation/hypotheses.json",
           "kind": "engine_rule"
         }
       }
@@ -576,13 +576,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/inin_group/2025/inin_group_annual_2025.pdf#page=4&search=robust%20megatrends.",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -601,7 +601,7 @@
       "citations": {
         "1": {
           "label": "selective_disclosure detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/selective_disclosure.py",
           "kind": "engine_rule"
         }
       }
@@ -620,7 +620,7 @@
       "citations": {
         "1": {
           "label": "selective_disclosure detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/selective_disclosure.py",
           "kind": "engine_rule"
         }
       }
@@ -639,7 +639,7 @@
       "citations": {
         "1": {
           "label": "selective_disclosure detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/selective_disclosure.py",
           "kind": "engine_rule"
         }
       }
@@ -663,13 +663,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=sustainable%20growth%20and%20long-term%20value%20creation.",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -693,13 +693,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/techstep/2025/techstep_annual_2025.pdf#page=4&search=customers%20maximise%20the%20value%20of%20their%20mobile%20estate",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -723,13 +723,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/techstep/2025/techstep_annual_2025.pdf#page=6&search=a%20resilient%20foundation%20as%20Techstep%20continues%20to%20scale",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -753,13 +753,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/techstep/2025/techstep_annual_2025.pdf#page=8&search=predictability%2C%20and%20disciplined%20capital%20allocation.",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -778,7 +778,7 @@
       "citations": {
         "1": {
           "label": "selective_disclosure detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/selective_disclosure.py",
           "kind": "engine_rule"
         }
       }
@@ -797,7 +797,7 @@
       "citations": {
         "1": {
           "label": "selective_disclosure detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/selective_disclosure.py",
           "kind": "engine_rule"
         }
       }
@@ -821,13 +821,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/otovo/2024/otovo_annual_2024.txt",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -851,13 +851,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/otovo/2024/otovo_annual_2024.txt",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -881,13 +881,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/otovo/2024/otovo_annual_2024.txt",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -911,13 +911,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/otovo/2024/otovo_annual_2024.txt",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -941,13 +941,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -971,13 +971,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/norwegian_air/2024/norwegian_air_annual_2024.txt",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -1001,13 +1001,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -1031,13 +1031,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/norse_atlantic/2024/norse_atlantic_annual_2024.txt",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
@@ -1061,13 +1061,13 @@
       ],
       "citations": {
         "1": {
-          "label": "PDF snippet",
-          "href": null,
+          "label": "issuer PDF (jump + highlight)",
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/data/raw/north_energy/2025/north_energy_annual_2025.pdf#page=9&search=increase%20efficiency%20significantly%20in%20comparison%20to",
           "kind": "pdf"
         },
         "2": {
           "label": "narrative_dissonance detector",
-          "href": null,
+          "href": "https://github.com/yu-faye/investment-redflag-scanner/blob/dd70d247cdd91310d777e44776cea202171649f7/src/detectors/narrative_dissonance.py",
           "kind": "engine_rule"
         }
       }
